@@ -18,7 +18,7 @@ function [RedRobotsOut,BlueRobotsOut,BallOut] = RandomStep(RedRobots,BlueRobots,
        
        %Tests
        if abs(RedRobotsOut(i).X) > 3-0.15
-           RedRobotsOut(i).Theta = RedRobots(i).Theta + sgn(RedRobots(i).Theta) * pi./2;
+           RedRobotsOut(i).Theta = pi - RedRobots(i).Theta;
            RedRobotsOut(i).X = v_robot * cos(RedRobotsOut(i).Theta) + RedRobots(i).X;
            RedRobotsOut(i).Y = v_robot * sin(RedRobotsOut(i).Theta) + RedRobots(i).Y;
        end
@@ -28,7 +28,7 @@ function [RedRobotsOut,BlueRobotsOut,BallOut] = RandomStep(RedRobots,BlueRobots,
            RedRobotsOut(i).Y = v_robot * sin(RedRobotsOut(i).Theta) + RedRobots(i).Y;
        end
        if abs(BlueRobotsOut(i).X) > 3-0.15
-           BlueRobotsOut(i).Theta = BlueRobots(i).Theta + sgn(BlueRobots(i).Theta) * pi./2;
+           BlueRobotsOut(i).Theta = pi - BlueRobots(i).Theta;
            BlueRobotsOut(i).X = v_robot * cos(BlueRobotsOut(i).Theta) + BlueRobots(i).X;
            BlueRobotsOut(i).Y = v_robot * sin(BlueRobotsOut(i).Theta) + BlueRobots(i).Y;
        end
@@ -44,10 +44,17 @@ function [RedRobotsOut,BlueRobotsOut,BallOut] = RandomStep(RedRobots,BlueRobots,
     BallOut.Theta = Ball.Theta;
     BallOut.V = Ball.V * 0.99;
     % Tests
-     if (abs(Ball.X) > 3 - 0.05 || abs(Ball.Y) > 2-0.05)
+     if abs(Ball.X) > 3 - 0.05
+         BallOut.Theta = pi - Ball.Theta;
+         BallOut.X = v_ball * Ball.V * cos(BallOut.Theta) + Ball.X;
+         BallOut.Y = v_ball * Ball.V * sin(BallOut.Theta) + Ball.Y;
+     end
+         
+     if abs(Ball.Y) > 2-0.05
          BallOut.Theta = -Ball.Theta;
          BallOut.X = v_ball * Ball.V * cos(BallOut.Theta) + Ball.X;
          BallOut.Y = v_ball * Ball.V * sin(BallOut.Theta) + Ball.Y;
+     end
     
 end
 
