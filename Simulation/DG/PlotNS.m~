@@ -31,7 +31,7 @@ function PlotNS()
     circle_y = Pitch_w./2;
     
     global ball_r;
-    global robot_r;
+    
 
 
 %1. Playing field fringe
@@ -61,7 +61,7 @@ function PlotNS()
 %1. Robots
     r = evalin('caller', 'r');
     for i=1:8
-        circle(r(i).x,r(i).y,robot_r,'b',false);
+        circle(r(i).x,r(i).y,0.2,'b',false);
     end
 
 %2. Ball
