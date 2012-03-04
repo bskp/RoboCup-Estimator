@@ -1,4 +1,4 @@
-function cyrcle(Pos_x,Pos_y,r)
+function circle(Pos_x,Pos_y,r)
 %CYRCLE Summary of this function goes here
 %   Detailed explanation goes here
 

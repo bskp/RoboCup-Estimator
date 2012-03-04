@@ -11,7 +11,7 @@ global Pitch_l;
 global Pitch_w;
 %Pitch_l = 6;
 %Pitch_w = 4;
-cyrcle_r = 0.6;
+circle_r = 0.6;
 PenaltyArea_l = 2.2;
 PenaltyArea_w = 0.6;
 
@@ -28,8 +28,8 @@ PenaltyPointL_x = 1.8;
 PenaltyPointR_x = 4.2;
 PenaltyPoint_y = Pitch_w./2;
 
-cyrcle_x = Pitch_l./2;
-cyrcle_y = Pitch_w./2;
+circle_x = Pitch_l./2;
+circle_y = Pitch_w./2;
 
 
 %1. Playing field fringe
@@ -37,7 +37,7 @@ rectangle('position', [ 0 0 Pitch_l Pitch_w]);
 
 %2. Center circle
 hold on;
-cyrcle(cyrcle_x,cyrcle_y,cyrcle_r);
+circle(circle_x,circle_y,circle_r);
 
 
 %3. Penalty Area
@@ -53,8 +53,8 @@ rectangle('position', [ (Pitch_l./2)-(cline_w./2) 0 cline_w cline_l]);
 
 %5. Penalty points
 
-cyrcle(PenaltyPointL_x,PenaltyPoint_y,PenaltyPoint_r);
-cyrcle(PenaltyPointR_x,PenaltyPoint_y,PenaltyPoint_r);
+circle(PenaltyPointL_x,PenaltyPoint_y,PenaltyPoint_r);
+circle(PenaltyPointR_x,PenaltyPoint_y,PenaltyPoint_r);
 
 %-----Creates the robots and the ball-----%
 %1. Robots
