@@ -6,11 +6,12 @@
 
 % SETTINGS
 
+global dt;
 clear all;
 
 steps = 1e3;
+dt = 0.1; %[s/step]
 
-%% - - - - - Global Parameters - - - - - %
 % Field Parameter (Rules2011.pdf)
 global Field;
     Field.width = 6; %[m]

@@ -19,7 +19,7 @@ function RobotStep = dummy_step(Robot)
                 RobotStep(i).dir = Robot(j).dir;
                 RobotStep(j).dir = d;
                 
-                
+                % Step towards new direction
                 RobotStep(i).x = RobotParam.velocity * 2 * cos(RobotStep(i).dir) + RobotStep(i).x;
                 RobotStep(i).y = RobotParam.velocity * 2 * sin(RobotStep(i).dir) + RobotStep(i).y;
                 RobotStep(j).x = RobotParam.velocity * 2 * cos(RobotStep(j).dir) + RobotStep(j).x;

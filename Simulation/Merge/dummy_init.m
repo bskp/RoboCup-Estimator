@@ -1,10 +1,10 @@
 function Robot = dummy_init()
 %DUMMY_INIT
 
-    global RobotParam;
+    global RobotParam dt;
     RobotParam.radius = 0.15; %[m]
-    RobotParam.velocity = 0.01; %[m/step]
-    RobotParam.changeOfDir = pi./6; %[rad/step]
+    RobotParam.velocity = 0.01 *dt; %[m/s]
+    RobotParam.changeOfDir = pi./6 *dt; %[rad/s]
 
     Robot(1) = struct('color', 'blue', 'x', -1, 'y', -1, 'dir', 0);
     Robot(2) = struct('color', 'blue', 'x', -1, 'y', 0, 'dir', 0);
