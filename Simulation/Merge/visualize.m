@@ -8,6 +8,7 @@ global BallParam;
 %% - - - - - Field - - - - - %
     clf
     axis([-3.7 3.7 -2.7 2.7]);
+    axis equal;
     rectangle('position', [-Field.width./2 -Field.height./2 Field.width Field.height],'facecolor','green');
     hold on;
     % CenterCircle

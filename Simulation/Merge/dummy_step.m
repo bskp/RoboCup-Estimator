@@ -10,6 +10,24 @@ function RobotStep = dummy_step(Robot)
         RobotStep(i).y = RobotParam.velocity * sin(Robot(i).dir) + Robot(i).y;
         RobotStep(i).dir = omega(1,i)*RobotParam.changeOfDir + Robot(i).dir;
     end
+    
+    for i = 1:8
+        for j = (i+1):8
+            d = sqrt( (Robot(i).x-Robot(j).x)^2+(Robot(i).y-Robot(j).y)^2);
+            if (d < 2*RobotParam.radius)
+                d = Robot(i).dir;
+                RobotStep(i).dir = Robot(j).dir;
+                RobotStep(j).dir = d;
+                
+                
+                RobotStep(i).x = RobotParam.velocity * 2 * cos(RobotStep(i).dir) + RobotStep(i).x;
+                RobotStep(i).y = RobotParam.velocity * 2 * sin(RobotStep(i).dir) + RobotStep(i).y;
+                RobotStep(j).x = RobotParam.velocity * 2 * cos(RobotStep(j).dir) + RobotStep(j).x;
+                RobotStep(j).y = RobotParam.velocity * 2 * sin(RobotStep(j).dir) + RobotStep(j).y;
+            end
+        end
+    end
+    
 
 end
 
