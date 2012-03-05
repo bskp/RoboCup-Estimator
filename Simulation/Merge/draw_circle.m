@@ -12,6 +12,7 @@ if filled == 1
     fill(Pos_x + r*x,Pos_y + r*y,color);
 else
     plot(Pos_x + r*x,Pos_y + r*y,color);
+end
     
 xlim(xl);
 ylim(yl);

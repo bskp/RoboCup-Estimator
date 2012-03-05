@@ -10,7 +10,7 @@ function  RoboCupSim(steps)
     BlueRobots(2) = struct('X',1,'Y',0,'Theta',pi);
     BlueRobots(3) = struct('X',1,'Y',1,'Theta',pi);
 
-    Ball =  struct('X',0,'Y',0,'Theta',0,'V',1);
+    Ball =  struct('X',0,'Y',0,'Theta',pi./2,'V',1);
 
 %Loop
     for i=1:steps

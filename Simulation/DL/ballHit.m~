@@ -1,0 +1,12 @@
+function [hit] = ballHit(RedRobots,BlueRobots,Ball)
+%BALLHIT
+    hit = 0;
+    for i=1:3
+        dX = Ball.X - RedRobots(i).X;
+        dY = Ball.Y - RedRobots(i).Y;
+        
+        if dX.^2 + dY.^2 < 0.04
+            hit = 1;
+
+end
+

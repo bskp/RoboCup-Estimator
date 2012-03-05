@@ -16,7 +16,9 @@ field.height = 4; % m
 
 % INIT
 
-player = struct('team', {}, 'x', {}, 'y', {}, 'dir', {});
+global robot = struct('team', {}, 'x', {}, 'y', {}, 'dir', {});
+global robot_model;
+global field;
 
 dummy_init;
 ball_init;
@@ -32,4 +34,5 @@ for s = 1:steps
     %collide;
     
     visualize;
+    pause(0.1);
 end

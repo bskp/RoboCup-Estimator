@@ -42,8 +42,9 @@ function [RedRobotsOut,BlueRobotsOut,BallOut] = RandomStep(RedRobots,BlueRobots,
     BallOut.X = v_ball * Ball.V * cos(Ball.Theta) + Ball.X;
     BallOut.Y = v_ball * Ball.V * sin(Ball.Theta) + Ball.Y;
     BallOut.Theta = Ball.Theta;
-    BallOut.V = Ball.V * 0.99;
-    % Tests
+    BallOut.V = Ball.V * 0.995;
+    
+    % Ball Tests
      if abs(Ball.X) > 3 - 0.05
          BallOut.Theta = pi - Ball.Theta;
          BallOut.X = v_ball * Ball.V * cos(BallOut.Theta) + Ball.X;
@@ -55,6 +56,24 @@ function [RedRobotsOut,BlueRobotsOut,BallOut] = RandomStep(RedRobots,BlueRobots,
          BallOut.X = v_ball * Ball.V * cos(BallOut.Theta) + Ball.X;
          BallOut.Y = v_ball * Ball.V * sin(BallOut.Theta) + Ball.Y;
      end
-    
+     
+     for i=1:3
+        dXR = Ball.X - RedRobots(i).X;
+        dYR = Ball.Y - RedRobots(i).Y;
+        if dXR.^2 + dYR.^2 < 0.04
+            BallOut.Theta = angle(dXR + i*dYR);
+            BallOut.V = 1;
+            BallOut.X = v_ball * BallOut.V * cos(BallOut.Theta) + Ball.X;
+            BallOut.Y = v_ball * BallOut.V * sin(BallOut.Theta) + Ball.Y;
+        end
+        dXB = Ball.X - BlueRobots(i).X;
+        dYB = Ball.Y - BlueRobots(i).Y;
+        if dXB.^2 + dYB.^2 < 0.04
+            BallOut.Theta = angle(dXB + i*dYB);
+            BallOut.V = 1;
+            BallOut.X = v_ball * BallOut.V * cos(BallOut.Theta) + Ball.X;
+            BallOut.Y = v_ball * BallOut.V * sin(BallOut.Theta) + Ball.Y;
+        end
+     end 
 end
 
