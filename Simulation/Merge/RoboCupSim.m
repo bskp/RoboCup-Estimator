@@ -6,8 +6,8 @@
 
 % SETTINGS
 
-global dt;
 clear all;
+global dt
 
 steps = 1e3;
 dt = 0.1; %[s/step]
