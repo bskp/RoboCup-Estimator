@@ -2,8 +2,11 @@ function visualize(Robot,Ball)
 %VISUALIZE
 
 global Field;
+global RobotParam;
+global BallParam;
 
 %% - - - - - Field - - - - - %
+    clf
     axis([-3.7 3.7 -2.7 2.7]);
     rectangle('position', [-Field.width./2 -Field.height./2 Field.width Field.height],'facecolor','green');
     hold on;
@@ -24,15 +27,11 @@ global Field;
 
     
 %% - - - - - Robots - - - - - %
-    for i=1:3
-        draw_circle(RedRobots(i).X,RedRobots(i).Y,robot_r,'r',1);
-        Xstep = RedRobots(i).X + robot_r * cos(RedRobots(i).Theta);
-        Ystep = RedRobots(i).Y + robot_r * sin(RedRobots(i).Theta);
-        line([RedRobots(i).X Xstep],[RedRobots(i).Y Ystep],'Color','k'); 
-        draw_circle(BlueRobots(i).X,BlueRobots(i).Y,robot_r,'b',1);
-        Xstep = BlueRobots(i).X + robot_r * cos(BlueRobots(i).Theta);
-        Ystep = BlueRobots(i).Y + robot_r * sin(BlueRobots(i).Theta);
-        line([BlueRobots(i).X Xstep],[BlueRobots(i).Y Ystep],'Color','k');
+    for i=1:8
+        draw_circle(Robot(i).x, Robot(i).y, RobotParam.radius, Robot(i).color, 1);
+        xdir = Robot(i).x + RobotParam.radius * cos(Robot(i).dir);
+        ydir = Robot(i).y + RobotParam.radius * sin(Robot(i).dir);
+        line([Robot(i).x xdir],[Robot(i).y ydir],'Color','k'); 
     end
 end
 

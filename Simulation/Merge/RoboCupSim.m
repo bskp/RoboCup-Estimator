@@ -24,23 +24,18 @@ global Field;
     Field.penaltyPointLocation = 1.8; %[m]
 
 %% - - - - - Initalization - - - - - %
-
-%global robot;
-%    robot = struct('team', {}, 'x', {}, 'y', {}, 'dir', {});
 global RobotParam;
 global BallParam;
-%global field;
     
     Robot = dummy_init();
     Ball = ball_init();
+    visualize(Robot,Ball)
 
 %% - - - - - Loop - - - - - %
 
 for s = 1:steps
-    
-    dummy_step;
-    ball_step; %collide;
-    
+    Robot = dummy_step(Robot);
+    Ball = ball_step(Ball); %collide;
     visualize(Robot,Ball);
     pause(0.01);
 end

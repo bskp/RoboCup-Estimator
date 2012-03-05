@@ -1,4 +1,4 @@
-function draw_circle(Pos_x,Pos_y,r,color,filled)
+function draw_circle(pos_x, pos_y, r, color, filled)
 %DRAW_CIRCLE
 
 xl = xlim;      % Originalgrösse merken
@@ -9,9 +9,9 @@ x=cos(phi);
 y=sin(phi);
 
 if filled == 1
-    fill(Pos_x + r*x,Pos_y + r*y,color);
+    fill(pos_x + r*x,pos_y + r*y,color);
 else
-    plot(Pos_x + r*x,Pos_y + r*y,color);
+    plot(pos_x + r*x,pos_y + r*y,color);
 end
     
 xlim(xl);

@@ -6,6 +6,7 @@ global RobotParam;
 global BallParam;
 
 %% - - - - - Field - - - - - %
+    clf
     axis([-3.7 3.7 -2.7 2.7]);
     rectangle('position', [-Field.width./2 -Field.height./2 Field.width Field.height],'facecolor','green');
     hold on;
@@ -32,5 +33,8 @@ global BallParam;
         ydir = Robot(i).y + RobotParam.radius * sin(Robot(i).dir);
         line([Robot(i).x xdir],[Robot(i).y ydir],'Color','k'); 
     end
+    
+%% - - - - - Ball - - - - - %
+    draw_circle(Ball.x, Ball.y, BallParam.radius, 'r', 1);
 end
 

@@ -37,13 +37,11 @@ global BallParam;
 %% - - - - - Loop - - - - - %
 
 for s = 1:steps
-    
-    %dummy_step;
-    %ball_step;
-    
-    
-    %collide;
+    Robot(1).x
+    Robot = dummy_step(Robot);
+    Robot(1).x
+    %ball_step; %collide;
     
     visualize(Robot,Ball);
-    pause(0.1);
+    pause(0.01);
 end
