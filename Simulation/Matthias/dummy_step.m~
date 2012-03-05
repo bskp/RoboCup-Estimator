@@ -1,0 +1,5 @@
+% generates random player movements according to unicycle model
+
+for i = 1:num_players;
+    player(i).dir = player(i).dir + rand
+end
