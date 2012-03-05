@@ -12,6 +12,20 @@ function RobotStep = dummy_step(Robot)
     end
     
     for i = 1:8
+        % Boundaries collision
+        if abs(RobotStep(i).x) > 3 - RobotParam.radius
+            RobotStep(i).dir = pi - Robot(i).dir;
+            RobotStep(i).x = RobotParam.velocity * cos(RobotStep(i).dir) + Robot(i).x;
+            RobotStep(i).y = RobotParam.velocity * sin(RobotStep(i).dir) + Robot(i).y;
+        end
+        
+        if abs(RobotStep(i).y) > 2 - RobotParam.radius
+            RobotStep(i).dir = -Robot(i).dir;
+            RobotStep(i).x = RobotParam.velocity * cos(RobotStep(i).dir) + Robot(i).x;
+            RobotStep(i).y = RobotParam.velocity * sin(RobotStep(i).dir) + Robot(i).y;
+        end
+        
+        % Robot collision
         for j = (i+1):8
             d = sqrt( (Robot(i).x-Robot(j).x)^2+(Robot(i).y-Robot(j).y)^2);
             if (d < 2*RobotParam.radius)

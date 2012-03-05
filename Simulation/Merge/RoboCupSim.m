@@ -32,10 +32,9 @@ global BallParam;
     visualize(Robot,Ball)
 
 %% - - - - - Loop - - - - - %
-
 for s = 1:steps
     Robot = dummy_step(Robot);
-    Ball = ball_step(Ball); %collide;
+    Ball = ball_step(Ball,Robot);
     visualize(Robot,Ball);
-    pause(0.01);
+    pause(0.005);
 end
