@@ -1,0 +1,10 @@
+% Generates random player starting positions
+
+dummy_speed = 0.1 
+
+for i = 1:10;
+    player(i).team = mod(i, 2);
+    player(i).x = rand * field_width;
+    player(i).y = rand * field_height;
+    player(i).dir = rand * 2*PI;
+end
