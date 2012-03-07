@@ -9,7 +9,7 @@
 clear all;
 global dt;
 
-steps = 1e3;
+steps = 2e3;
 dt = 0.1; %[s/step]
 
 % Field Parameter (Rules2011.pdf)
@@ -37,5 +37,5 @@ for s = 1:steps
     Robot = dummy_step(Robot);
     Ball = ball_step(Ball,Robot);
     visualize(Robot,Ball);
-    pause(0.005);
+    pause(0.001);
 end

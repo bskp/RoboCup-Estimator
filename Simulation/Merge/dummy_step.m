@@ -11,20 +11,7 @@ function RobotStep = dummy_step(Robot)
         RobotStep(i).dir = omega(1,i) *RobotParam.changeOfDir + Robot(i).dir;
     end
     
-    for i = 1:8
-        % Boundaries collision
-        if abs(RobotStep(i).x) > 3 - RobotParam.radius
-            RobotStep(i).dir = pi - Robot(i).dir;
-            RobotStep(i).x = RobotParam.velocity * cos(RobotStep(i).dir) + Robot(i).x;
-            RobotStep(i).y = RobotParam.velocity * sin(RobotStep(i).dir) + Robot(i).y;
-        end
-        
-        if abs(RobotStep(i).y) > 2 - RobotParam.radius
-            RobotStep(i).dir = -Robot(i).dir;
-            RobotStep(i).x = RobotParam.velocity * cos(RobotStep(i).dir) + Robot(i).x;
-            RobotStep(i).y = RobotParam.velocity * sin(RobotStep(i).dir) + Robot(i).y;
-        end
-        
+    for i = 1:8        
         % Robot collision
         for j = (i+1):8
             d = sqrt( (Robot(i).x-Robot(j).x)^2+(Robot(i).y-Robot(j).y)^2);
@@ -39,6 +26,19 @@ function RobotStep = dummy_step(Robot)
                 RobotStep(j).x = RobotParam.velocity * 2 * cos(RobotStep(j).dir) + RobotStep(j).x;
                 RobotStep(j).y = RobotParam.velocity * 2 * sin(RobotStep(j).dir) + RobotStep(j).y;
             end
+        end
+        
+        % Boundaries collision
+        if abs(RobotStep(i).x) > 3 - RobotParam.radius
+            RobotStep(i).dir = pi - Robot(i).dir;
+            RobotStep(i).x = RobotParam.velocity * cos(RobotStep(i).dir) + Robot(i).x;
+            RobotStep(i).y = RobotParam.velocity * sin(RobotStep(i).dir) + Robot(i).y;
+        end
+        
+        if abs(RobotStep(i).y) > 2 - RobotParam.radius
+            RobotStep(i).dir = -Robot(i).dir;
+            RobotStep(i).x = RobotParam.velocity * cos(RobotStep(i).dir) + Robot(i).x;
+            RobotStep(i).y = RobotParam.velocity * sin(RobotStep(i).dir) + Robot(i).y;
         end
     end
     
