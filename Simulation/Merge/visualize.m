@@ -32,7 +32,8 @@ global BallParam;
         draw_circle(Robot(i).x, Robot(i).y, RobotParam.radius, Robot(i).color, 1);
         xdir = Robot(i).x + RobotParam.radius * cos(Robot(i).dir);
         ydir = Robot(i).y + RobotParam.radius * sin(Robot(i).dir);
-        line([Robot(i).x xdir],[Robot(i).y ydir],'Color','k'); 
+        line([Robot(i).x xdir],[Robot(i).y ydir],'Color','k');
+        text(Robot(i).x, Robot(i).y,num2str(mod(i,4)+1));
     end
     
 %% - - - - - Ball - - - - - %
