@@ -7,7 +7,7 @@ function BallStep = ball_step(Ball,Robot)
     BallStep.x = BallParam.velocity * Ball.velocity * cos(Ball.dir) + Ball.x;
     BallStep.y = BallParam.velocity * Ball.velocity * sin(Ball.dir) + Ball.y;
     BallStep.dir = Ball.dir;
-    BallStep.velocity = Ball.velocity * BallParam.firction;
+    BallStep.velocity = Ball.velocity * BallParam.friction;
     
     % Boundaries collision
     if abs(BallStep.x) > 3 - BallParam.radius

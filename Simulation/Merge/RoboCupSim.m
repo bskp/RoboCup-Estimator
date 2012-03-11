@@ -23,6 +23,12 @@ global Field;
     Field.centerCircleRadius = 0.6; %[m]
     Field.pointRadius = 0.05; %[m]
     Field.penaltyPointLocation = 1.8; %[m]
+    
+    
+global Noise;
+    Noise.process.pos = 1e-2;
+    Noise.process.dir = 1e-2 * 2*pi;
+    
 
 %% - - - - - Initalization - - - - - %
 global RobotParam;
@@ -38,6 +44,7 @@ global Score;
 %% - - - - - Loop - - - - - %
 for s = 1:steps
     Robot = dummy_step(Robot);
+    Robot = dummy_processnoise(Robot);
     Ball = ball_step(Ball,Robot);
     visualize(Robot,Ball);
     pause(0.001);
