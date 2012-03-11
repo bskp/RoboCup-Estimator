@@ -27,6 +27,9 @@ global Field;
 %% - - - - - Initalization - - - - - %
 global RobotParam;
 global BallParam;
+global Score;
+    Score.blue = 0;
+    Score.pink = 0;
     
     Robot = dummy_init();
     Ball = ball_init();

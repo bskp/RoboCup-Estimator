@@ -4,6 +4,8 @@ function visualize(Robot,Ball)
 global Field;
 global RobotParam;
 global BallParam;
+global Score;
+
 
 %% - - - - - Field - - - - - %
     clf
@@ -37,5 +39,8 @@ global BallParam;
     
 %% - - - - - Ball - - - - - %
     draw_circle(Ball.x, Ball.y, BallParam.radius, 'r', 1);
+    
+%% - - - - - Score - - - - - %
+    text(0,2.4,[num2str(Score.blue),' : ', num2str(Score.pink)],'FontSize',16,'HorizontalAlignment','center');
 end
 
