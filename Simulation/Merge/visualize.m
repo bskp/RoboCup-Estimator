@@ -1,4 +1,4 @@
-function visualize(Robots, Ball, colors)
+function visualize(Robots, Ball, colors, labels)
 %VISUALIZE
 
 % Robots:
