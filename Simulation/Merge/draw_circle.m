@@ -4,7 +4,7 @@ function draw_circle(pos_x, pos_y, r, color, filled)
 xl = xlim;      % Originalgrösse merken
 yl = ylim;
 
-phi=linspace(0,2*pi);
+phi=linspace(0,2*pi,48);
 x=cos(phi);
 y=sin(phi);
 

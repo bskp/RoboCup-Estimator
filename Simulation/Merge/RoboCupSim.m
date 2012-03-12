@@ -32,7 +32,9 @@ global Noise;
     Noise.measure.pos = 1e-1; %[m]
 
 %% - - - - - Initalization - - - - - %
+figure('units','normalized','position',[0.1,0,0.4,0.9]);
 colorcode;
+
 global RobotParam;
 global BallParam;
 global Score;
@@ -48,7 +50,17 @@ for s = 1:steps
     Ball = ball_step(Ball,Robot);
     Robot_m = dummy_measure(Robot);
     
-    visualize( [Robot_m; Robot],Ball, [orange; blue]);
+    clf
+    subplot(2,1,1)
+    visualize(Robot,Robot_m,Ball);      % Ich habe die Funktion jetzt trotzdem
+                                        % als einzelne gelassen - aber
+                                        % dafür innerhalb viele Funktionen,
+                                        % hat jemand eine schönere Lösung?
+                                        % (DL)
+                                        % Kann man mit MATLAB noch anders 
+                                        % kommentieren?
+    subplot(2,1,2)
+    visualize(Robot_m,Robot_m,Ball);
     
     pause(0.001);
 end

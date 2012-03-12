@@ -6,8 +6,8 @@ C2 = 1e-6;                  % [F]
 R = 50;                     % [ohm]
 T = 1e-6;                   % Sampling rate [s]
 
-f = 1e5;
-input = @(x) sin(f*x);      % Input function
+w = 1e5;
+input = @(x) exp(-w*x./20).*sin(w*x);     % Input function
 t = [0:T:1e3*T];            % Timevector for simulation
 u = input(t);               % Inputvector
 
@@ -21,15 +21,10 @@ A_bar = [0,0,-1/L;0,-R/C1,R/C1;1/C2,R/C2,-R/C2];
 B_bar = [1/L;0;0];
 C = [0,0,1];
 D = 0;
+sys = ss(A_bar,B_bar,C,D);
 
-% Discrete time matrices
-A = expm(A_bar*T);
-%syms tau
-%B = int(expm(A*(T-tau))*B_bar,0,T);
-B = 1e-6 * B_bar;
-
-% State space model
-sys = ss(A,B,C,D,T);
+% Convert to discrete time matrices
+sysd = c2d(sys,T);
 
 %----------- Computation -----------%
 
@@ -39,24 +34,22 @@ xlabel('Time [s]');
 ylabel('Amplitude [V]');
 title('Input signal');
 
-y1 = lsim(sys,u,t);
+[x_noise,y_measured] = noisy_model(sysd,R_e,Q_e,t,u);
 subplot(2,2,2)
-plot(t,y1)
+plot(t,sysd.c*x_noise+sysd.d*u)
 xlabel('Time [s]');
 ylabel('Amplitude [V]');
 title('Output signal');
 
-[x,y2] = noisy_model(sys,R_e,Q_e,t,u);
 subplot(2,2,3)
-plot(t,y2)
+plot(t,y_measured)
 xlabel('Time [s]');
 ylabel('Amplitude [V]');
-title('Noisy output signal');
+title('Measured output signal');
 
-y3 = kalman_filter(sys,R_e,Q_e,u,y2);
+y_filtered = kalman_filter(sysd,R_e,Q_e,u,y_measured);
 subplot(2,2,4)
-plot(t,y3)
+plot(t,y_filtered)
 xlabel('Time [s]');
 ylabel('Amplitude [V]');
 title('Filtered output signal');
-
