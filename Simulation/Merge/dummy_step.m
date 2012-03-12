@@ -12,6 +12,19 @@ function RobotStep = dummy_step(Robot)
         RobotStep(i).dir = d_omega(i) + Robot(i).dir;
     end
     
+    % make sum noiz
+    global Noise;
+    d = randn(8,3);
+    
+    for i=1:8
+        RobotStep(i).color = RobotStep(i).color;
+        RobotStep(i).x = RobotStep(i).x + d(i,1) * Noise.process.pos;
+        RobotStep(i).y = RobotStep(i).y + d(i,2) * Noise.process.pos;
+        RobotStep(i).dir =  RobotStep(i).dir + d(i,3) * Noise.process.dir;
+    end
+    
+    % COLLISION DETECTION
+    
     for i = 1:8        
         % Robot collision
         for j = (i+1):8

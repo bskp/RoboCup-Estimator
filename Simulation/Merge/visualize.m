@@ -1,5 +1,12 @@
-function visualize(Robot,Ball)
+function visualize(Robots, Ball, colors)
 %VISUALIZE
+
+% Robots:
+%   Set1Robot1  Set1Robot2 ...
+%   Set2Robot1  Set2Robot2 ...
+%   Set3Robot1  ...           
+%   ...               This allows to plot multiple states of robots at once
+
 
 global Field;
 global RobotParam;
@@ -28,15 +35,21 @@ global BallParam;
 
     
 %% - - - - - Robots - - - - - %
+num_sets = size(Robots, 1);
+
+for set = 1:num_sets
     for i=1:8
-        draw_circle(Robot(i).x, Robot(i).y, RobotParam.radius, Robot(i).color, 1);
-        xdir = Robot(i).x + RobotParam.radius * cos(Robot(i).dir);
-        ydir = Robot(i).y + RobotParam.radius * sin(Robot(i).dir);
-        line([Robot(i).x xdir],[Robot(i).y ydir],'Color','k');
-        text(Robot(i).x, Robot(i).y,num2str(mod(i,4)+1));
+        draw_circle(Robots(set,i).x, Robots(set,i).y, RobotParam.radius, colors(set,:), 1);
+        if ( ~isnan(Robots(set,i).dir) )
+            xdir = Robots(set,i).x + RobotParam.radius * cos(Robots(set,i).dir);
+            ydir = Robots(set,i).y + RobotParam.radius * sin(Robots(set,i).dir);
+            line([Robots(set,i).x xdir],[Robots(set,i).y ydir],'Color','k');
+        end
+        text(Robots(set,i).x, Robots(set,i).y,num2str(mod(i,4)+1));
     end
+end
     
 %% - - - - - Ball - - - - - %
     draw_circle(Ball.x, Ball.y, BallParam.radius, 'r', 1);
+    
 end
-

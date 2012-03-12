@@ -26,23 +26,26 @@ global Field;
     
     
 global Noise;
-    Noise.process.pos = 1e-2;
-    Noise.process.dir = 1e-2 * 2*pi;
+    Noise.process.pos = 1e-2 *dt; % [m/step]
+    Noise.process.dir = 1e-2 * 2*pi *dt; %[rad/step]
     
+    Noise.measure.pos = 1e-1; %[m]
 
 %% - - - - - Initalization - - - - - %
+colorcode;
 global RobotParam;
 global BallParam;
     
     Robot = dummy_init();
     Ball = ball_init();
-    visualize(Robot,Ball)
 
 %% - - - - - Loop - - - - - %
 for s = 1:steps
     Robot = dummy_step(Robot);
-    Robot = dummy_processnoise(Robot);
     Ball = ball_step(Ball,Robot);
-    visualize(Robot,Ball);
+    Robot_m = dummy_measure(Robot);
+    
+    visualize( [Robot_m; Robot],Ball, [orange; blue]);
+    
     pause(0.001);
 end
