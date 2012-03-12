@@ -1,5 +1,7 @@
+clear;
+
 %-----Values for simulation-----%
-n=50;               %length of the simulation
+n=30;               %length of the simulation
 x1=1;               %Constant measure value
 
 %-----System values-----%

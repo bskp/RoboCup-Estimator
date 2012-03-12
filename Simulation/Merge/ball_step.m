@@ -14,6 +14,7 @@ function BallStep = ball_step(Ball,Robot)
          BallStep.dir = pi - Ball.dir;
          BallStep.x = BallParam.velocity * Ball.velocity * cos(BallStep.dir) + Ball.x;
          BallStep.y = BallParam.velocity * Ball.velocity * sin(BallStep.dir) + Ball.y;
+         scorecounter;
     end
     if abs(BallStep.y) > 2 - BallParam.radius
          BallStep.dir = -Ball.dir;
