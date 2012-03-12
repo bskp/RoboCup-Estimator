@@ -1,23 +1,23 @@
-function visualize(Robots, Ball, colors, labels)
+function visualize(Robot, Robot_meas, Ball)
 %VISUALIZE
-
-% Robots:
-%   Set1Robot1  Set1Robot2 ...
-%   Set2Robot1  Set2Robot2 ...
-%   Set3Robot1  ...           
-%   ...               This allows to plot multiple states of robots at once
-
-
-global Field;
-global RobotParam;
-global BallParam;
-global Score;
-
-
-%% - - - - - Field - - - - - %
-    clf
     axis([-3.7 3.7 -2.7 2.7]);
     axis equal;
+    
+    plot_field();
+    
+    plot_robot_measured(Robot_meas);
+    plot_robot(Robot);
+    
+    plot_ball(Ball);
+    
+    plot_score();
+    
+end
+
+
+function plot_field()
+%PLOT_FIELD
+    global Field;
     rectangle('position', [-Field.width./2 -Field.height./2 Field.width Field.height],'facecolor','green');
     hold on;
     % CenterCircle
@@ -34,27 +34,37 @@ global Score;
     rectangle('position', [ Field.width./2-0.01 -Field.goalHeight./2 Field.goalWidth Field.goalHeight], 'facecolor', 'r');
     %Center line
     line([0, 0],[-Field.height./2, Field.height./2],'Color','k');
+end
 
-    
-%% - - - - - Robots - - - - - %
-num_sets = size(Robots, 1);
+function plot_robot(Robot)
+%PLOT_ROBOT
+    global RobotParam;
 
-for set = 1:num_sets
-    for i=1:8
-        draw_circle(Robots(set,i).x, Robots(set,i).y, RobotParam.radius, colors(set,:), 1);
-        if ( ~isnan(Robots(set,i).dir) )
-            xdir = Robots(set,i).x + RobotParam.radius * cos(Robots(set,i).dir);
-            ydir = Robots(set,i).y + RobotParam.radius * sin(Robots(set,i).dir);
-            line([Robots(set,i).x xdir],[Robots(set,i).y ydir],'Color','k');
+        for i=1:8
+        draw_circle(Robot(i).x, Robot(i).y, RobotParam.radius, Robot(i).color, 1);
+            if ( ~isnan(Robot(i).dir) )
+                xdir = Robot(i).x + RobotParam.radius * cos(Robot(i).dir);
+                ydir = Robot(i).y + RobotParam.radius * sin(Robot(i).dir);
+                line([Robot(i).x xdir],[Robot(i).y ydir],'Color','k');
+            end
+            text(Robot(i).x, Robot(i).y,num2str(mod(i,4)+1));
         end
-        text(Robots(set,i).x, Robots(set,i).y,num2str(mod(i,4)+1));
+end
+
+function plot_robot_measured(Robot)
+    global RobotParam;
+    
+    for i=1:8
+        draw_circle(Robot(i).x, Robot(i).y, RobotParam.radius, Robot(i).color, 0);
     end
 end
-    
-%% - - - - - Ball - - - - - %
+
+function plot_ball(Ball)
+    global BallParam;    
     draw_circle(Ball.x, Ball.y, BallParam.radius, 'r', 1);
-    
-%% - - - - - Score - - - - - %
-    text(0,2.4,[num2str(Score.blue),' : ', num2str(Score.pink)],'FontSize',16,'HorizontalAlignment','center');
 end
 
+function plot_score()
+    global Score;
+    text(0,2.4,[num2str(Score.blue),' : ', num2str(Score.pink)],'FontSize',16,'HorizontalAlignment','center');
+end
