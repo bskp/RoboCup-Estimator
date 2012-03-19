@@ -21,6 +21,7 @@ A_bar = [0,0,-1/L;0,-R/C1,R/C1;1/C2,R/C2,-R/C2];
 B_bar = [1/L;0;0];
 C = [0,0,1];
 D = 0;
+
 sys = ss(A_bar,B_bar,C,D);
 
 % Convert to discrete time matrices
