@@ -22,7 +22,18 @@ B_bar = [1/L;0;0];
 C = [0,0,1];
 D = 0;
 
+<<<<<<< HEAD
 sys = ss(A_bar,B_bar,C,D);
+=======
+% Discrete time matrices
+A = expm(A_bar*T);
+%syms tau
+%B = int(expm(A*(T-tau))*B_bar,0,T);
+%B = 1e-6 * B_bar
+B = inv(A_bar)*(A-ones(3))*B_bar;
+
+
+>>>>>>> Adaption of Integration from discretization
 
 % Convert to discrete time matrices
 sysd = c2d(sys,T);
