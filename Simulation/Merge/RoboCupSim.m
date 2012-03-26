@@ -51,16 +51,15 @@ for s = 1:steps
     Robot_m = dummy_measure(Robot);
     
     clf
-    subplot(2,1,1)
-    visualize(Robot,Robot_m,Ball);      % Ich habe die Funktion jetzt trotzdem
-                                        % als einzelne gelassen - aber
-                                        % dafür innerhalb viele Funktionen,
-                                        % hat jemand eine schönere Lösung?
-                                        % (DL)
-                                        % Kann man mit MATLAB noch anders 
-                                        % kommentieren?
-    subplot(2,1,2)
-    visualize(Robot_m,Robot_m,Ball);
+    %subplot(2,1,1)
+    
+    plot_env(Ball);
+
+    plot_robot(Robot, '0-t'); % circles, direction, team color
+    plot_robot(Robot_m, '+w');; % crosses, black
+    
+    %subplot(2,1,2)
+    %visualize(Robot_m,Robot_m,Ball);
     
     pause(0.001);
 end

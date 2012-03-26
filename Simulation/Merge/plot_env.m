@@ -1,19 +1,10 @@
-function visualize(Robot, Robot_meas, Ball)
-%VISUALIZE
+function plot_env(Ball)
     axis([-3.7 3.7 -2.7 2.7]);
     axis equal;
-    
     plot_field();
-    
-    plot_robot_measured(Robot_meas);
-    plot_robot(Robot);
-    
     plot_ball(Ball);
-    
     plot_score();
-    
 end
-
 
 function plot_field()
 %PLOT_FIELD
@@ -34,29 +25,6 @@ function plot_field()
     rectangle('position', [ Field.width./2-0.01 -Field.goalHeight./2 Field.goalWidth Field.goalHeight], 'facecolor', 'r');
     %Center line
     line([0, 0],[-Field.height./2, Field.height./2],'Color','k');
-end
-
-function plot_robot(Robot)
-%PLOT_ROBOT
-    global RobotParam;
-
-        for i=1:8
-        draw_circle(Robot(i).x, Robot(i).y, RobotParam.radius, Robot(i).color, 1);
-            if ( ~isnan(Robot(i).dir) )
-                xdir = Robot(i).x + RobotParam.radius * cos(Robot(i).dir);
-                ydir = Robot(i).y + RobotParam.radius * sin(Robot(i).dir);
-                line([Robot(i).x xdir],[Robot(i).y ydir],'Color','k');
-            end
-            text(Robot(i).x, Robot(i).y,num2str(mod(i,4)+1));
-        end
-end
-
-function plot_robot_measured(Robot)
-    global RobotParam;
-    
-    for i=1:8
-        draw_circle(Robot(i).x, Robot(i).y, RobotParam.radius, Robot(i).color, 0);
-    end
 end
 
 function plot_ball(Ball)
