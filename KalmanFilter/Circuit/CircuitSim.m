@@ -31,7 +31,6 @@ A = expm(A_bar*T);
 %B = 1e-6 * B_bar
 B = inv(A_bar)*(A-ones(3))*B_bar;
 
-
 % Convert to discrete time matrices
 sysd = c2d(sys,T);
 
