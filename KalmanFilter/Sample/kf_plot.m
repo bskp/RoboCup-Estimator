@@ -52,3 +52,21 @@ legend([h1(1)],'kalman gain');
 title('Kalman gain');
 ylabel('Kalman gain, k');
 set(gca,'XLim',xlim); %Set limits the same as first graph
+
+
+figure(2);
+c=linspace(0,n);
+%h1=plot(j+0.25,X_apriori,'b.','Marker','square');
+h1=plot(j,X_apriori,'b');
+hold on
+%h2=plot(j+0.5,X_aposteriori,'g.','Marker','square');
+h2=plot(j,X_aposteriori,'g');
+h3=plot(c,x1,'k');
+h4=plot(j,x,'r.','Marker','*');
+hold off
+%Formatting of the plot
+legend([h1(1) h2(1) h3(1) h4(1)],'a priori','a posteriori','truth value','noisy measurements');
+title('State with a priori and a posteriori elements');
+ylabel('State, x');
+xlim=[0 length(j)+1];
+set(gca,'XLim',xlim);
