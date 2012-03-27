@@ -24,8 +24,8 @@ D = 0;
 
 % Discrete time matrices
 A = expm(A_bar*T);
-%syms tau
-%B = int(expm(A*(T-tau))*B_bar,0,T);
+%g = @(var) expm(A_bar.*(T-var))*B_bar;
+%B = quad(g,0,T);
 B = 1e-6 * B_bar;
 
 % State space model
