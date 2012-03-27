@@ -11,7 +11,7 @@ y=sin(phi);
 if filled == 1
     fill(pos_x + r*x,pos_y + r*y,color);
 else
-    plot(pos_x + r*x,pos_y + r*y,color);
+    plot(pos_x + r*x,pos_y + r*y,'Color',color);
 end
     
 xlim(xl);

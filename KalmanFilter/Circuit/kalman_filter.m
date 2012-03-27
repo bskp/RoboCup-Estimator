@@ -6,7 +6,6 @@ function y = kalman_filter(sys,R,Q,u,y_hat)
 % Y_HAT.
 
 %----------- Init -----------%
-
 [m,n] = size(sys.a);
 x_apriori = zeros(n,1);
 P_apriori = eye(n);
