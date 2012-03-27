@@ -42,6 +42,8 @@ global Score;
     Score.pink = 0;
     
     Robot = dummy_init();
+    Robot_estimate = Robot;
+    %P = 0;
     Ball = ball_init();
 
 %% - - - - - Loop - - - - - %
@@ -49,17 +51,19 @@ for s = 1:steps
     Robot = dummy_step(Robot);
     Ball = ball_step(Ball,Robot);
     Robot_m = dummy_measure(Robot);
+    %[Robot_estimate P] = ext_kalman_filter(Robot_estimate, P);
     
     clf
-    %subplot(2,1,1)
-    
+    subplot(2,1,1)
     plot_env(Ball);
 
     plot_robot(Robot, '0-t'); % circles, direction, team color
-    plot_robot(Robot_m, '+w');; % crosses, black
+    plot_robot(Robot_m, '+w'); % crosses, black
     
-    %subplot(2,1,2)
-    %visualize(Robot_m,Robot_m,Ball);
+    subplot(2,1,2)
+    plot_env(Ball);
+    %plot_robot(Robot_estimate, '0-t');
+    plot_robot(Robot_m, '+w');
     
     pause(0.001);
 end
