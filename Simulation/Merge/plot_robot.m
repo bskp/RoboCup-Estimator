@@ -35,7 +35,7 @@ function plot_robot(Robot, style)
     for l = style
         hit = strfind(c.letters, l);
         if (hit)
-            color = c.(fn{hit})
+            color = c.(fn{hit});
         end
     end
     
