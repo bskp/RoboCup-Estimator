@@ -1,0 +1,56 @@
+
+%-----Section 3: Kalman Filtering-------%
+\section{Kalman Filtering}
+
+\subsection{Linear Kalman Filter}
+There exists a recursive Kalman filter algorithm for discrete time systems.\cite{IntroKF} This ongoing Kalman filter cycle can be divided into two groups of equations: \newline
+\begin{enumerate}
+	\item Time update equations
+	\begin{equation}\label{TupEq}
+		\begin{aligned}
+    			\hat{x}_{k}^{-}=A\hat{x}_{k-1}+Bu_{k-1} \\
+    			P_{k}^{-}=AP_{k-1}A^{T}+Q
+  		\end{aligned}
+	\end{equation}
+%	\begin{equation}\label{TupEq_1}
+%		\hat{x}_{k}^{-}=A\hat{x}_{k-1}+Bu_{k-1}
+%	\end{equation}
+%	\begin{equation}\label{TupEq_2}
+%		P_{k}^{-}=AP_{k-1}A^{T}+Q
+%	\end{equation}
+	\item Measurement update equations
+	\begin{equation}\label{MupEq}
+		\begin{aligned}
+    			K_{k}=P_{k}^{-}H^{T}(HP_{k}^{-}H^{T}+R)^{-1} \\
+    			\hat{x}_{k}=A\hat{x}_{k-1}^{-}+K_{k}(z_{k}-H\hat{x}_{k}^{-}) \\
+			P_{k}=(I-K_{k}H)P_{k}^{-}
+  		\end{aligned}
+	\end{equation}
+%	\begin{equation}
+%		K_{k}=P_{k}^{-}H^{T}(HP_{k}^{-}H^{T}+R)^{-1}
+%	\end{equation}
+%	\begin{equation}
+%		\hat{x}_{k}=A\hat{x}_{k-1}^{-}+K_{k}(z_{k}-H\hat{x}_{k}^{-})
+%	\end{equation}
+%	\begin{equation}
+%		P_{k}=(I-K_{k}H)P_{k}^{-}
+%	\end{equation}
+\end{enumerate}
+
+To test this algorithm and to learn something about applying the Kalman filter on linear system we created an example. A detailed description of the following example can be found in appendix \ref{ExampleKF}. \newline 
+We consider a linear, timeinvariant model, given by the following circuit diagram in Figure \ref{KFcircuit}.
+\begin{figure}[htbp]
+	\centering
+    	\includegraphics[width=12cm]{./3_KalmanFilter/circuit_diagram}
+  	\caption{Example: Linear electrical circuit.}
+  	\label{KFcircuit}
+\end{figure}
+First we added process noise and measurement noise to the system output. The aim is to get an estimation of the noisy output. Therefore we applied the Kalman filter algorithm based on the equations \ref{TupEq}. In the figure \ref{KFchart}, above we can see the input signal and the ideal measurement of the output signal. That ideal measurement includes process noise, which can obviously not be filtered by the Kalman filtering algorithm. Below one can see the noisy measurement on the left side and the filtered output on the right side.
+\begin{figure}[htbp]
+	\centering
+    	\includegraphics[width=12cm]{./3_KalmanFilter/KFchart}
+  	\caption{Example: Input signal, output signal, noisy output, and filtered ouptut.}
+  	\label{KFchart}
+\end{figure}
+\subsection{Extended Kalman Filter (EKF)}
+

@@ -1,0 +1,34 @@
+\documentclass[11pt, oneside, a4paper]{article}
+\pagestyle{headings}
+
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{multicol}
+\usepackage{alltt}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage[german, english]{babel}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage[official]{eurosym}
+\usepackage{scrpage2}
+\usepackage{pdfpages}
+
+% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
+\begin{document}
+\include{titlepage}   	% includes title page.tex
+\include{abstract}      % includes abstract.tex
+\tableofcontents        	% generates the table of content
+\newpage
+\listoffigures		% generates the table of figures
+% including Sections
+\include{./1_Introduction/1_Introduction}
+\include{./2_Simulation/2_Simulation}
+\include{./3_KalmanFilter/3_KalmanFilter}
+\include{./4_Estimation/4_Estimation}
+\appendix               	% at this point the appendix starts
+\section{Examples} 
+\subsection{Kalman Filtering of Linear System} \label{ExampleKF} 
+\includepdf[pages=-]{./appendix/linear_model.pdf}
+\include{literature}    % includes title literature.tex
+\end{document}
