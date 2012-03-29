@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.2.21)  28 MAR 2012 18:15
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.2.21)  29 MAR 2012 15:49
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -16,29 +16,117 @@ telugu, indonesian, interlingua, irish, italian, kurmanji, lao, latin, latvian,
  lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, polish, portuguese, roma
 nian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turkish,
  turkmen, ukrainian, uppersorbian, welsh, loaded.
-(/usr/local/texlive/2010/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2010/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/koma-script/scrreprt.cls
+Document Class: scrreprt 2010/06/17 v3.06 KOMA-Script document class (report)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2010/06/17 v3.06 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2010/06/17 v3.06 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
 )
-\c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
+(/usr/local/texlive/2010/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2009/03/25 v3.03 KOMA-Script package (loading files)
+
+Package scrlfile, 2009/03/25 v3.03 KOMA-Script package (loading files)
+                  Copyright (C) Markus Kohm
+
+))) (/usr/local/texlive/2010/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2010/06/09 v3.06 KOMA-Script package (handling toc-files)
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 117.
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 118.
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 119.
+Package scrreprt Info: You've used obsolete option `11pt'.
+(scrreprt)             \KOMAExecuteOptions{fontsize=11pt} will be
+(scrreprt)             used instead.
+(scrreprt)             You may simply replace `11pt'
+(scrreprt)             by `fontsize=11pt'.
+Class scrreprt Info: You've used standard option `oneside'.
+(scrreprt)           This is correct!
+(scrreprt)           Internally I'm using `twoside=false'.
+(scrreprt)           If you'd like to set the option with \KOMAoptions,
+(scrreprt)           you'd have to use `twoside=false' there
+(scrreprt)           instead of `oneside', too.
+Class scrreprt Info: File `scrsize11pt.clo' used to setup font sizes on input l
+ine 1309.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2010/06/17 v3.06 KOMA-Script font size class option (11pt
+)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2010/06/17 v3.06 KOMA-Script package (type area)
+
+Package typearea, 2010/06/17 v3.06 KOMA-Script package (type area)
+                  Copyright (C) Frank Neukam, 1992-1994
+                  Copyright (C) Markus Kohm, 1994-
+
+\ta@bcor=\skip41
+\ta@div=\count79
+Package typearea Info: You've used standard option `oneside'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `twoside=false'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `twoside=false' there
+(typearea)             instead of `oneside', too.
+Package typearea Info: You've used standard option `a4paper'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `paper=a4'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `paper=a4' there
+(typearea)             instead of `a4paper', too.
+\ta@hblk=\skip42
+\ta@vblk=\skip43
+\ta@temp=\skip44
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 418.25555pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 17.3562pt
+(typearea)              \oddsidemargin  = 17.3562pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 595.80026pt
+(typearea)              \topmargin      = -25.16531pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.60002pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 1133.
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\abovecaptionskip=\skip45
+\belowcaptionskip=\skip46
+\c@pti@nb@sid@b@x=\box26
+\c@figure=\count87
+\c@table=\count88
 \bibindent=\dimen102
-)
-(/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2009/06/22 v3.00
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
-\@emptytoks=\toks14
+\@emptytoks=\toks15
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
@@ -57,31 +145,30 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
-\Gread@gobject=\count87
+\Gread@gobject=\count89
 ))
 (/usr/local/texlive/2010/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
-\c@tracingmulticols=\count88
-\mult@box=\box26
+\c@tracingmulticols=\count90
+\mult@box=\box27
 \multicol@leftmargin=\dimen103
-\c@unbalance=\count89
-\c@collectmore=\count90
-\doublecol@number=\count91
-\multicoltolerance=\count92
-\multicolpretolerance=\count93
+\c@unbalance=\count91
+\c@collectmore=\count92
+\doublecol@number=\count93
+\multicoltolerance=\count94
+\multicolpretolerance=\count95
 \full@width=\dimen104
 \page@free=\dimen105
 \premulticols=\dimen106
 \postmulticols=\dimen107
-\multicolsep=\skip43
-\multicolbaselineskip=\skip44
-\partial@page=\box27
-\last@line=\box28
-\mult@rightbox=\box29
-\mult@grightbox=\box30
-\mult@gfirstbox=\box31
-\mult@firstbox=\box32
-\@tempa=\box33
+\multicolsep=\skip47
+\multicolbaselineskip=\skip48
+\partial@page=\box28
+\last@line=\box29
+\mult@rightbox=\box30
+\mult@grightbox=\box31
+\mult@gfirstbox=\box32
+\mult@firstbox=\box33
 \@tempa=\box34
 \@tempa=\box35
 \@tempa=\box36
@@ -98,24 +185,20 @@ Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
 \@tempa=\box47
 \@tempa=\box48
 \@tempa=\box49
-\c@columnbadness=\count94
-\c@finalcolumnbadness=\count95
+\@tempa=\box50
+\c@columnbadness=\count96
+\c@finalcolumnbadness=\count97
 \last@try=\dimen108
 \multicolovershoot=\dimen109
 \multicolundershoot=\dimen110
-\mult@nat@firstbox=\box50
-\colbreak@box=\box51
+\mult@nat@firstbox=\box51
+\colbreak@box=\box52
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks15
-)
 \Gin@req@height=\dimen111
 \Gin@req@width=\dimen112
 )
@@ -132,7 +215,7 @@ Language: germanb 2008/06/01 v2.6m German support from the babel system
 
 (/usr/local/texlive/2010/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2008/07/06 v3.8l Babel common definitions
-\babel@savecnt=\count96
+\babel@savecnt=\count98
 \U@D=\dimen115
 )
 \l@austrian = a dialect from \language\l@german 
@@ -146,7 +229,7 @@ Language: english 2005/03/30 v3.3o English support from the babel system
 ))
 (/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
-\@mathmargin=\skip45
+\@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -164,30 +247,30 @@ Package: amsbsy 1999/11/29 v1.2d
 (/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count97
+\inf@bad=\count99
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count98
-\leftroot@=\count99
+\uproot@=\count100
+\leftroot@=\count101
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count100
-\DOTSCASE@=\count101
+\classnum@=\count102
+\DOTSCASE@=\count103
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
-\Mathstrutbox@=\box52
-\strutbox@=\box53
+\Mathstrutbox@=\box53
+\strutbox@=\box54
 \big@size=\dimen118
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count102
-\c@MaxMatrixCols=\count103
+\macc@depth=\count104
+\c@MaxMatrixCols=\count105
 \dotsspace@=\muskip10
-\c@parentequation=\count104
-\dspbrk@lvl=\count105
+\c@parentequation=\count106
+\dspbrk@lvl=\count107
 \tag@help=\toks17
-\row@=\count106
-\column@=\count107
-\maxfields@=\count108
+\row@=\count108
+\column@=\count109
+\maxfields@=\count110
 \andhelp@=\toks18
 \eqnshift@=\dimen119
 \alignsep@=\dimen120
@@ -196,8 +279,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \totwidth@=\dimen123
 \lineht@=\dimen124
 \@envbody=\toks19
-\multlinegap=\skip46
-\multlinetaggap=\skip47
+\multlinegap=\skip50
+\multlinetaggap=\skip51
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
@@ -210,10 +293,11 @@ Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box54
+\@eurobox=\box55
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/koma-script/scrpage2.sty
 Package: scrpage2 2010/04/22 v2.5 LaTeX2e KOMA-Script package
+LaTeX Info: Redefining \pagemark on input line 176.
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2010/01/12 v0.4j Insert pages of external PDF documents (AM)
@@ -223,16 +307,16 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count109
-\calc@Bcount=\count110
+\calc@Acount=\count111
+\calc@Bcount=\count112
 \calc@Adimen=\dimen125
 \calc@Bdimen=\dimen126
-\calc@Askip=\skip48
-\calc@Bskip=\skip49
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count111
-\calc@Cskip=\skip50
+\calc@Ccount=\count113
+\calc@Cskip=\skip54
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2010/06/08 v2.0b eso-pic (RN)
@@ -270,41 +354,41 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 (/usr/local/texlive/2010/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2010/01/12 v0.4j Pdfpages driver for pdfTeX (AM)
 )
-\AM@pagebox=\box55
+\AM@pagebox=\box56
 \AM@toc@title=\toks23
-\c@AM@survey=\count112
-\AM@templatesizebox=\box56
+\c@AM@survey=\count114
+\AM@templatesizebox=\box57
 )
 (./main.aux (./titlepage.aux) (./abstract.aux)
 (./1_Introduction/1_Introduction.aux) (./2_Simulation/2_Simulation.aux)
 (./3_KalmanFilter/3_KalmanFilter.aux) (./4_Estimation/4_Estimation.aux)
-(./literature.aux))
+(./Appendix/Appendix.aux) (./literature.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 (/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count113
+\scratchcounter=\count115
 \scratchdimen=\dimen127
-\scratchbox=\box57
-\nofMPsegments=\count114
-\nofMParguments=\count115
+\scratchbox=\box58
+\nofMPsegments=\count116
+\nofMParguments=\count117
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count116
+\MPscratchCnt=\count118
 \MPscratchDim=\dimen128
-\MPnumerator=\count117
+\MPnumerator=\count119
 \everyMPtoPDFconversion=\toks25
 ) (/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2010/04/01 v0.9 Utility functions of pdfTeX for LuaTeX (HO)
@@ -346,16 +430,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-
-Package scrpage2 Warning: seems you are using a constant headheight.
-(scrpage2)                If you get overfull \vbox warnings at almost every
-(scrpage2)                page, you should increase headheight e.g. writing
-(scrpage2)                 \setlength{\headheight}{1.1\baselineskip}
-(scrpage2)                into the preamble of your document.
-(scrpage2)                A better solution would be to use typearea package.
-
-\AtBeginShipoutBox=\box58
+\AtBeginShipoutBox=\box59
 \openout2 = `titlepage.aux'.
+
 
 (./titlepage.tex
 Package epstopdf Info: Source file: <./Pictures/ethz_logo.eps>
@@ -392,13 +469,15 @@ File: ./Pictures/ifalogo_color-eps-converted-to.pdf Graphic file (type pdf)
 <use ./Pictures/ifalogo_color-eps-converted-to.pdf> [1
 
 
+
+
 {/usr/local/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Pictu
 res/ethz_logo-eps-converted-to.pdf> <./Pictures/ifalogo_color-eps-converted-to.
 pdf>])
 \openout2 = `abstract.aux'.
 
  (./abstract.tex)
-[1
+[2
 
 
 ] (./main.toc
@@ -413,29 +492,39 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [2
+ [3
+
 
 ]
 (./main.lof)
 \tf@lof=\write4
 \openout4 = `main.lof'.
 
- [3]
+ [4
+
+]
 \openout2 = `./1_Introduction/1_Introduction.aux'.
 
- (./1_Introduction/1_Introduction.tex) [4
+ (./1_Introduction/1_Introduction.tex
+Chapter 1.
+) [5
+
 
 ]
 \openout2 = `./2_Simulation/2_Simulation.aux'.
 
+ (./2_Simulation/2_Simulation.tex
+Chapter 2.
+) [6
 
-(./2_Simulation/2_Simulation.tex) [5
 
 
 ]
 \openout2 = `./3_KalmanFilter/3_KalmanFilter.aux'.
 
  (./3_KalmanFilter/3_KalmanFilter.tex
+Chapter 3.
+
 Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
@@ -458,21 +547,31 @@ Package epstopdf Info: Output file is already uptodate.
 
 <./3_KalmanFilter/KFchart-eps-converted-to.pdf, id=34, 410.53375pt x 309.155pt>
 File: ./3_KalmanFilter/KFchart-eps-converted-to.pdf Graphic file (type pdf)
-<use ./3_KalmanFilter/KFchart-eps-converted-to.pdf>) [6
+<use ./3_KalmanFilter/KFchart-eps-converted-to.pdf> [7
 
 
- <./3_KalmanFilter/circuit_diagram.jpg>] [7 <./3_KalmanFilter/KFchart-eps-conve
-rted-to.pdf>]
+
+ <./3_KalmanFilter/circuit_diagram.jpg>]) [8 <./3_KalmanFilter/KFchart-eps-conv
+erted-to.pdf>]
 \openout2 = `./4_Estimation/4_Estimation.aux'.
 
 
-(./4_Estimation/4_Estimation.tex) [8
+(./4_Estimation/4_Estimation.tex
+Chapter 4.
+) [9
 
 
-] [9
 
 ]
-<./appendix/linear_model.pdf, id=61, page=1, 597.50829pt x 845.0471pt>
+\openout2 = `./Appendix/Appendix.aux'.
+
+ (./Appendix/Appendix.tex
+Appendix A.
+[10
+
+
+
+] <./appendix/linear_model.pdf, id=61, page=1, 597.50829pt x 845.0471pt>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/linear_model.pdf, page 1>
@@ -487,7 +586,7 @@ File: ./appendix/linear_model.pdf Graphic file (type pdf)
 <use ./appendix/linear_model.pdf, page 1>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/linear_model.pdf, page 1> [10 <./appendix/linear_model.pdf>]
+<use ./appendix/linear_model.pdf, page 1> [11 <./appendix/linear_model.pdf>]
 <./appendix/linear_model.pdf, id=208, page=2, 597.50829pt x 845.0471pt>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
@@ -497,39 +596,42 @@ File: ./appendix/linear_model.pdf Graphic file (type pdf)
 <use ./appendix/linear_model.pdf, page 2>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/linear_model.pdf, page 2> [11 <./appendix/linear_model.pdf>]
+<use ./appendix/linear_model.pdf, page 2> [12 <./appendix/linear_model.pdf>])
 \openout2 = `literature.aux'.
 
 
-(./literature.tex) [12
+(./literature.tex) [13
+
+
 
 ] (./main.aux (./titlepage.aux) (./abstract.aux)
 (./1_Introduction/1_Introduction.aux) (./2_Simulation/2_Simulation.aux)
 (./3_KalmanFilter/3_KalmanFilter.aux) (./4_Estimation/4_Estimation.aux)
-(./literature.aux)) ) 
+(./Appendix/Appendix.aux) (./literature.aux)) ) 
 Here is how much of TeX's memory you used:
- 4390 strings out of 493747
- 60247 string characters out of 3143546
- 134720 words of memory out of 3000000
- 7521 multiletter control sequences out of 15000+200000
- 10765 words of font info for 40 fonts, out of 3000000 for 9000
+ 5565 strings out of 493747
+ 80746 string characters out of 3143546
+ 178032 words of memory out of 3000000
+ 8672 multiletter control sequences out of 15000+200000
+ 12238 words of font info for 45 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 40i,18n,46p,602b,398s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2010/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmex10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi7.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr5.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
-.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
-b></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb
-></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
-usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (13 pages, 315702 bytes).
+ 45i,18n,48p,603b,399s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2010/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2010/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2010/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2010/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2010/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2010/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (13 pages, 310295 bytes).
 PDF statistics:
  254 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams

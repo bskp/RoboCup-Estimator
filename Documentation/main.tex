@@ -1,4 +1,4 @@
-\documentclass[11pt, oneside, a4paper]{article}
+\documentclass[11pt, oneside, a4paper]{scrreprt}
 \pagestyle{headings}
 
 \usepackage{amssymb}
@@ -15,20 +15,31 @@
 \usepackage{pdfpages}
 
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
+%.FARBIGE_UEBERSCHRIFTEN (Analysis Zsf., David Lehnen)
+	%\definecolor{bluen}{cmyk}{0.86,0.78,0,0.06}
+	\definecolor{bluen}{rgb}{0.129,0.208,0.937} % Farbe Logo IfA
+		\addtokomafont{part}{\normalfont\Huge\bfseries\sffamily\color{bluen}}
+		\addtokomafont{partnumber}{\normalfont\Huge\bfseries\sffamily\color{bluen}}
+		\addtokomafont{chapter}{\normalfont\Huge\bfseries\sffamily\color{bluen}}%\hspace*{-1.7cm}}
+		\addtokomafont{section}{\normalfont\Large\bfseries\sffamily\color{bluen}}%\hspace*{-.5cm}}
+		\addtokomafont{subsection}{\normalfont\large\sffamily\bfseries\color{bluen}}%\hspace*{-.5cm}}
+		\addtokomafont{subsubsection}{\normalfont\sffamily\bfseries\color{bluen}}%\hspace*{-.5cm}}
+		\addtokomafont{paragraph}{\normalfont\small\bfseries\sffamily\color{bluen}}
+		\addtokomafont{subparagraph}{\normalfont\small\itshape\sffamily\color{bluen}}
+
+
+% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \begin{document}
-\include{titlepage}   	% includes title page.tex
-\include{abstract}      % includes abstract.tex
-\tableofcontents        	% generates the table of content
-\newpage
-\listoffigures		% generates the table of figures
-% including Sections
-\include{./1_Introduction/1_Introduction}
-\include{./2_Simulation/2_Simulation}
-\include{./3_KalmanFilter/3_KalmanFilter}
-\include{./4_Estimation/4_Estimation}
-\appendix               	% at this point the appendix starts
-\section{Examples} 
-\subsection{Kalman Filtering of Linear System} \label{ExampleKF} 
-\includepdf[pages=-]{./appendix/linear_model.pdf}
-\include{literature}    % includes title literature.tex
+	\include{titlepage}   	% includes title page.tex
+	\include{abstract}      % includes abstract.tex
+	\tableofcontents        	% generates the table of content
+	\newpage
+	\listoffigures		% generates the table of figures
+	% including Sections
+	\include{./1_Introduction/1_Introduction}
+	\include{./2_Simulation/2_Simulation}
+	\include{./3_KalmanFilter/3_KalmanFilter}
+	\include{./4_Estimation/4_Estimation}
+	\include{./Appendix/Appendix}
+	\include{literature}    % includes title literature.tex
 \end{document}
