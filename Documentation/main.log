@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.2.21)  29 MAR 2012 15:49
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.2.21)  1 APR 2012 17:27
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -359,24 +359,24 @@ File: pppdftex.def 2010/01/12 v0.4j Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count114
 \AM@templatesizebox=\box57
 )
-(./main.aux (./titlepage.aux) (./abstract.aux)
+(./robocup.sty) (./main.aux (./titlepage.aux) (./abstract.aux)
 (./1_Introduction/1_Introduction.aux) (./2_Simulation/2_Simulation.aux)
 (./3_KalmanFilter/3_KalmanFilter.aux) (./4_Estimation/4_Estimation.aux)
 (./Appendix/Appendix.aux) (./literature.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 (/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -609,10 +609,10 @@ File: ./appendix/linear_model.pdf Graphic file (type pdf)
 (./3_KalmanFilter/3_KalmanFilter.aux) (./4_Estimation/4_Estimation.aux)
 (./Appendix/Appendix.aux) (./literature.aux)) ) 
 Here is how much of TeX's memory you used:
- 5565 strings out of 493747
- 80746 string characters out of 3143546
- 178032 words of memory out of 3000000
- 8672 multiletter control sequences out of 15000+200000
+ 5575 strings out of 493747
+ 80900 string characters out of 3143546
+ 178058 words of memory out of 3000000
+ 8679 multiletter control sequences out of 15000+200000
  12238 words of font info for 45 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  45i,18n,48p,603b,399s stack positions out of 5000i,500n,10000p,200000b,50000s
