@@ -1,0 +1,706 @@
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=latex 2009.9.18)  2 APR 2012 20:28
+entering extended mode
+ %&-line parsing enabled.
+**DocGroupWork.tex
+(./DocGroupWork.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, german-x-2008-06-18, ngerman-x-2008-06-18, ancientgreek, ibycus, ar
+abic, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutc
+h, esperanto, estonian, farsi, finnish, french, galician, german, ngerman, mono
+greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, la
+tin, lithuanian, mongolian, mongolian2a, bokmal, nynorsk, polish, portuguese, r
+omanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turki
+sh, ukenglish, ukrainian, uppersorbian, welsh, loaded.
+(/usr/local/texlive/2008/texmf-dist/tex/latex/koma-script/scrreprt.cls
+Document Class: scrreprt 2009/01/24 v3.02b KOMA-Script document class (report)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2009/01/24 v3.02b KOMA-Script package (KOMA-Script-dependent 
+basics and keyval usage)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2009/01/24 v3.02b KOMA-Script package (KOMA-Script-independent
+ basics and keyval usage)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2008/07/09 v3.00 KOMA-Script package (loading files)
+
+Package scrlfile, 2008/07/09 v3.00 KOMA-Script package (loading files)
+                  Copyright (C) Markus Kohm
+
+))) (/usr/local/texlive/2008/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2009/01/20 v3.02a(package)
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 114.
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 115.
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 116.
+Package scrreprt Info: You've used obsolete option `11pt'.
+(scrreprt)             \KOMAExecuteOptions{fontsize=11pt} will be
+(scrreprt)             used instead.
+(scrreprt)             You may simply replace `11pt'
+(scrreprt)             by `fontsize=11pt'.
+Class scrreprt Info: You've used standard option `oneside'.
+(scrreprt)           This is correct!
+(scrreprt)           Internaly I'm using `twoside=false'.
+(scrreprt)           If you'd like to set the option with \KOMAoptions,
+(scrreprt)           you'd have to use `twoside=false' there
+(scrreprt)           instead of `oneside', too.
+Class scrreprt Info: File `scrsize11pt.clo' used to setup font sizes on input l
+ine 1260.
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2009/01/24 v3.02b KOMA-Script font size class option (11p
+t)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2009/01/24 v3.02b KOMA-Script package (type area)
+
+Package typearea, 2009/01/24 v3.02b KOMA-Script package (type area)
+                  Copyright (C) Frank Neukam, 1992-1994
+                  Copyright (C) Markus Kohm, 1994-
+
+\ta@bcor=\skip41
+\ta@div=\count79
+Package typearea Info: You've used standard option `oneside'.
+(typearea)             This is correct!
+(typearea)             Internaly I'm using `twoside=false'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `twoside=false' there
+(typearea)             instead of `oneside', too.
+Package typearea Info: You've used standard option `a4paper'.
+(typearea)             This is correct!
+(typearea)             Internaly I'm using `paper=a4'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `paper=a4' there
+(typearea)             instead of `a4paper', too.
+\ta@hblk=\skip42
+\ta@vblk=\skip43
+\ta@temp=\skip44
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 418.25555pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 17.3562pt
+(typearea)              \oddsidemargin  = 17.3562pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 595.80026pt
+(typearea)              \topmargin      = -25.16531pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.60002pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 1042.
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\abovecaptionskip=\skip45
+\belowcaptionskip=\skip46
+\c@pti@nb@sid@b@x=\box26
+\c@figure=\count87
+\c@table=\count88
+\bibindent=\dimen102
+) (/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+))
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2008/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 90.
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+(/usr/local/texlive/2008/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2006/05/18 v1.6g multicolumn formatting (FMi)
+\c@tracingmulticols=\count89
+\mult@box=\box27
+\multicol@leftmargin=\dimen103
+\c@unbalance=\count90
+\c@collectmore=\count91
+\doublecol@number=\count92
+\multicoltolerance=\count93
+\multicolpretolerance=\count94
+\full@width=\dimen104
+\page@free=\dimen105
+\premulticols=\dimen106
+\postmulticols=\dimen107
+\multicolsep=\skip47
+\multicolbaselineskip=\skip48
+\partial@page=\box28
+\last@line=\box29
+\mult@rightbox=\box30
+\mult@grightbox=\box31
+\mult@gfirstbox=\box32
+\mult@firstbox=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\c@columnbadness=\count95
+\c@finalcolumnbadness=\count96
+\last@try=\dimen108
+\multicolovershoot=\dimen109
+\multicolundershoot=\dimen110
+\mult@nat@firstbox=\box51
+\colbreak@box=\box52
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen113
+\epsfysize=\dimen114
+)
+(/usr/local/texlive/2008/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2008/07/06 v3.8l The Babel package
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/babel/germanb.ldf
+Language: germanb 2008/06/01 v2.6m German support from the babel system
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2008/07/06 v3.8l Babel common definitions
+\babel@savecnt=\count97
+\U@D=\dimen115
+)
+\l@austrian = a dialect from \language\l@german 
+Package babel Info: Making " an active character on input line 102.
+)
+(/usr/local/texlive/2008/texmf-dist/tex/generic/babel/english.ldf
+Language: english 2005/03/30 v3.3o English support from the babel system
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen116
+))
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen117
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count98
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count99
+\leftroot@=\count100
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count101
+\DOTSCASE@=\count102
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+\big@size=\dimen118
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count103
+\c@MaxMatrixCols=\count104
+\dotsspace@=\muskip10
+\c@parentequation=\count105
+\dspbrk@lvl=\count106
+\tag@help=\toks17
+\row@=\count107
+\column@=\count108
+\maxfields@=\count109
+\andhelp@=\toks18
+\eqnshift@=\dimen119
+\alignsep@=\dimen120
+\tagshift@=\dimen121
+\tagwidth@=\dimen122
+\totwidth@=\dimen123
+\lineht@=\dimen124
+\@envbody=\toks19
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks21
+\verbatim@line=\toks22
+\verbatim@in@stream=\read1
+)
+(/Users/david/Library/texmf/tex/latex/packages/pst-all.sty
+Package: pst-all 2008/01/01 the main pstricks tools
+
+(/Users/david/Library/texmf/tex/latex/packages/pstricks.sty
+Package: pstricks 2008/11/26 v0.40 LaTeX wrapper for `PSTricks' (RN,HV)
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/pstricks/pstricks.tex
+`PSTricks' v1.27  <2009/01/25> (tvz)
+\pst@dima=\dimen125
+\pst@dimb=\dimen126
+\pst@dimc=\dimen127
+\pst@dimd=\dimen128
+\pst@dimg=\dimen129
+\pst@dimh=\dimen130
+\pst@hbox=\box55
+\pst@boxg=\box56
+\pst@cnta=\count110
+\pst@cntb=\count111
+\pst@cntc=\count112
+\pst@cntd=\count113
+\pst@cntg=\count114
+\pst@cnth=\count115
+\pst@toks=\toks23
+(/usr/local/texlive/2008/texmf-dist/tex/generic/pstricks/pstricks.con)
+\psunit=\dimen131
+\psxunit=\dimen132
+\psyunit=\dimen133
+\pslinewidth=\dimen134
+\pst@customdefs=\toks24
+\pslinearc=\dimen135
+\everypsbox=\toks25
+\psframesep=\dimen136
+\pslabelsep=\dimen137
+\pst@shift=\dimen138
+\theoverlaybox=\box57
+)
+File: pstricks.tex 2009/01/25 v1.27 `PSTricks' (tvz,hv)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2008/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pstricks/pst-node.sty
+Package: pst-node 2006/01/01 package wrapper for pst-node.tex
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/pstricks/pst-node.tex
+ v1.01, 2008/11/26
+\psrow=\count116
+\pscol=\count117
+\psmatrixcnt=\count118
+\psrowsep=\skip52
+\pscolsep=\skip53
+)
+File: pst-node.tex 2008/11/26 1.01 `pst-node' (tvz)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pst-tree/pst-tree.sty
+Package: pst-tree 2009/01/25 package wrapper for pst-tree.tex
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/pst-tree/pst-tree.tex
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks26
+\XKV@tempa@toks=\toks27
+\XKV@depth=\count119
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+)))
+ v1.10, 2008/12/12
+\pstree@rootbox=\box58
+\pstree@box=\box59
+\psnodecnt=\count120
+\pstreelevel=\count121
+\pstreecnt=\count122
+\pstree@cnt=\count123
+\pstree@stop=\count124
+)
+File: pst-tree.tex 2008/12/12 1.10 `pst-tree' (tvz,hv)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pstricks/pst-plot.sty
+Package: pst-plot 2004/07/15 package wrapper for pst-plot.tex
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/pstricks/pst-plot.tex
+(/usr/local/texlive/2008/texmf-dist/tex/generic/multido/multido.tex
+ v1.41, 2004/05/18 <tvz>
+\multido@count=\count125
+\multidocount=\count126
+\multido@stuff=\toks28
+)  v1.03, 2008/11/24)
+File: pst-plot.tex 2008/11/24 1.03 `pst-plot' (tvz)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pst-grad/pst-grad.sty
+Package: pst-grad 2004/07/15 package wrapper for pst-grad.tex (hv)
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/pst-grad/pst-grad.tex
+`pst-grad' v1.06, 2006/11/27 (tvz,dg,hv))
+File: pst-grad.tex 2006/11/27 1.06 `pst-grad' (tvz)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pst-coil/pst-coil.sty
+Package: pst-coil 2006/08/11 package wrapper for pst-coil.tex (hv)
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/pst-coil/pst-coil.tex
+ v1.06, 2006/11/27)
+File: pst-coil.tex 2006/11/05 v1.00 `pst-coil' (tvz)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pst-text/pst-text.sty
+Package: pst-text 2006/01/01 package wrapper for pst-text.tex (hv)
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/pst-text/pst-text.tex
+ v1.00, 2006/11/05(tvz,hv))
+File: pst-text.tex 2006/11/05 1.00 `pst-text' (tvz)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pst-3d/pst-3d.sty
+Package: pst-3d 2005/09/02 package wrapper for pst-3d.tex (hv)
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/pst-3d/pst-3d.tex
+`PST-3d' v1.00, 2005/09/03 (tvz))
+File: pst-3d.tex 2005/09/03 v1.00 `PST-3d' (tvz)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pst-eps/pst-eps.sty
+Package: pst-eps 2005/05/20 package wrapper for pst-eps.tex (hv)
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/pst-eps/pst-eps.tex
+ v1.00, 2006/11/04
+\pst@epsout=\write3
+\pst@tempout=\write4
+)
+File: pst-eps.tex 2006/11/04 1.00 `pst-eps' (tvz)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pst-fill/pst-fill.sty
+Package: pst-fill 2005/09/13 package wrapper for pst-fill.tex (hv)
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/pst-fill/pst-fill.tex
+`PST-Fill' v1.01, 2007/03/10 (tvz,dg,hv)
+\pst@fillbox=\box60
+)
+File: pst-fill.tex 2007/03/10 v1.01 `PST-fill' (tvz,dg)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pstricks-add/pstricks-add.sty
+Package: pstricks-add 2007/09/03 v. 0.11 package wrapper for pstricks-add.tex (
+hv)
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/pstricks-add/pstricks-add.tex
+`pstricks-add' v3.18, 2009/03/03 (dr,hv)
+\pst@dimm=\dimen139
+\pst@dimn=\dimen140
+\pst@dimo=\dimen141
+\pst@dimp=\dimen142
+\pst@cntm=\count127
+\pst@cntn=\count128
+\pst@cnto=\count129
+\pst@cntp=\count130
+\@zero=\count131
+\pstRadUnit=\dimen143
+\pstRadUnitInv=\dimen144
+\pshooklength=\dimen145
+\pshookwidth=\dimen146
+\@digitcounter=\count132
+\psk@subticksize=\dimen147
+\pst@xticksizeA=\dimen148
+\pst@xticksizeB=\dimen149
+\pst@xticksizeC=\dimen150
+\pst@yticksizeA=\dimen151
+\pst@yticksizeB=\dimen152
+\pst@yticksizeC=\dimen153
+\psk@llx=\dimen154
+\psk@lly=\dimen155
+\psk@urx=\dimen156
+\psk@ury=\dimen157
+\pst@xunit=\dimen158
+\pst@yunit=\dimen159
+\linecnt=\count133
+\chart@ColorIndex=\dimen160
+\chart@ColorStep=\dimen161
+\pst@chartHeight=\dimen162
+\pst@chartStackDepth=\dimen163
+\pst@chartStackWidth=\dimen164
+\chart@Toggle=\count134
+)
+File: pstricks-add.tex 2009/03/03 v3.18 `PSTricks-add' (hv)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/multido/multido.sty
+Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
+
+))
+(./pst-circ.sty
+Package: pst-circ 2003/06/22 Package wrapper for pst-circ.tex
+ (./pst-circ.tex
+`pst-circ' v2003/06/22,(Original idea: A.Premoli I.Maio,Design: M.Luque,Code: C
+.Jorssen) (/usr/local/texlive/2008/texmf-dist/tex/generic/pstricks/pst-node.tex
+ v1.01, 2008/11/26)
+(/usr/local/texlive/2008/texmf-dist/tex/generic/pstricks/pst-key.tex
+keyval: 1998/07/23 v1.11 key=value parser (DPC)
+)
+\Pst@circ@position=\dimen165
+\pst@circ@count@i=\count135
+\pst@circ@count@ii=\count136
+\pst@circ@count@iii=\count137
+))
+(/usr/local/texlive/2008/texmf-dist/tex/latex/eurosym/eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box61
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/koma-script/scrpage2.sty
+Package: scrpage2 2008/12/08 v2.3 LaTeX2e KOMA-Script package
+LaTeX Info: Redefining \pagemark on input line 173.
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2009/02/07 v0.4g Insert pages of external PDF documents (AM)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2005/08/06 v4.2 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count138
+\calc@Bcount=\count139
+\calc@Adimen=\dimen166
+\calc@Bdimen=\dimen167
+\calc@Askip=\skip54
+\calc@Bskip=\skip55
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
+\calc@Ccount=\count140
+\calc@Cskip=\skip56
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2006/07/14 v1.1d eso-pic (RN)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2009/02/07 v0.4g Pdfpages driver for pdfTeX (AM)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pdfpages/ppnull.def
+File: ppnull.def 2009/02/07 v0.4g Pdfpages dummy driver (AM)
+
+
+Package pdfpages Warning: I will use a dummy \includepdf command
+(pdfpages)                which will NOT insert any pages, because
+(pdfpages)                you are producing DVI output.
+
+))
+\AM@pagebox=\box62
+\AM@toc@title=\toks29
+\c@AM@survey=\count141
+\AM@templatesizebox=\box63
+) (./robocup.sty) (./DocGroupWork.aux (./titlepage.aux) (./abstract.aux)
+(./1_Introduction/1_Introduction.aux) (./2_Simulation/2_Simulation.aux)
+(./3_KalmanFilter/3_KalmanFilter.aux) (./4_Estimation/4_Estimation.aux)
+(./Appendix/Appendix.aux) (./literature.aux))
+\openout1 = `DocGroupWork.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+
+ABD: EveryShipout initializing macros
+\openout2 = `titlepage.aux'.
+
+ (./titlepage.tex
+File: ./Pictures/ethz_logo.eps Graphic file (type eps)
+
+<./Pictures/ethz_logo.eps>
+File: ./Pictures/ifalogo_color.eps Graphic file (type eps)
+ <./Pictures/ifalogo_color.eps> [1
+
+
+
+
+])
+\openout2 = `abstract.aux'.
+
+ (./abstract.tex) [2
+
+
+] (./DocGroupWork.toc
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 2.
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 3.
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+)
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 6.
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 9.
+Class scrreprt Info: You've told me to use the font selection of the element
+(scrreprt)           `sectioning' that is an alias of element `disposition'
+(scrreprt)            on input line 12.
+)
+\tf@toc=\write5
+\openout5 = `DocGroupWork.toc'.
+
+ [3
+
+
+]
+(./DocGroupWork.lof)
+\tf@lof=\write6
+\openout6 = `DocGroupWork.lof'.
+
+ [4
+
+]
+\openout2 = `./1_Introduction/1_Introduction.aux'.
+
+ (./1_Introduction/1_Introduction.tex
+Chapter 1.
+) [5
+
+
+]
+\openout2 = `./2_Simulation/2_Simulation.aux'.
+
+ (./2_Simulation/2_Simulation.tex
+Chapter 2.
+) [6
+
+
+
+]
+\openout2 = `./3_KalmanFilter/3_KalmanFilter.aux'.
+
+ (./3_KalmanFilter/3_KalmanFilter.tex
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+File: ./3_KalmanFilter/KFchart.eps Graphic file (type eps)
+<./3_KalmanFilter/KFchart.eps>) [7
+
+
+
+] [8]
+\openout2 = `./4_Estimation/4_Estimation.aux'.
+
+ (./4_Estimation/4_Estimation.tex
+Chapter 4.
+) [9
+
+
+
+]
+\openout2 = `./Appendix/Appendix.aux'.
+
+ (./Appendix/Appendix.tex
+Appendix A.
+
+Package pdfpages Warning: I cannot determine the number of pages of the
+(pdfpages)                included document, while being in DVI mode. You
+(pdfpages)                can use the option `lastpage' to give me a hint.
+
+[10
+
+
+
+] [11])
+\openout2 = `literature.aux'.
+
+ (./literature.tex) [12
+
+
+
+] (./DocGroupWork.aux (./titlepage.aux)
+(./abstract.aux) (./1_Introduction/1_Introduction.aux)
+(./2_Simulation/2_Simulation.aux) (./3_KalmanFilter/3_KalmanFilter.aux)
+(./4_Estimation/4_Estimation.aux) (./Appendix/Appendix.aux) (./literature.aux))
+ ) 
+Here is how much of TeX's memory you used:
+ 7903 strings out of 493877
+ 117553 string characters out of 1150591
+ 342960 words of memory out of 3000000
+ 10930 multiletter control sequences out of 10000+50000
+ 12247 words of font info for 45 fonts, out of 3000000 for 5000
+ 714 hyphenation exceptions out of 8191
+ 41i,8n,54p,611b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on DocGroupWork.dvi (12 pages, 90844 bytes).
