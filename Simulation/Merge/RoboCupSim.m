@@ -30,7 +30,7 @@ global Noise;
     Noise.process.dir = 1e-4 * 2*pi *dt; %[rad/step]
     
     Noise.measure.pos = 1e-1; %[m]
-    Noise.measure.dir = 1e-1 * 2*pi *dt; %[rad]
+    Noise.measure.dir = 1e-1 * 2*pi; %[rad]
 
 %% - - - - - Initalization - - - - - %
 figure('units','normalized','position',[0.1,0,0.4,0.9]);
