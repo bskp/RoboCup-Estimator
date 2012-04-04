@@ -74,5 +74,5 @@ for s = 1:steps
     end
     [m_values e_values] = history(m_values, e_values, Robot_m, Robot_estimate);
     
-    pause(0.001);
+    pause(0.005);
 end
