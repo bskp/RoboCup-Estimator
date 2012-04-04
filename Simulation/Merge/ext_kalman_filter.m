@@ -1,40 +1,30 @@
-function [RobotStep PStep] = ext_kalman_filter(RobotFilt,RobotMeas,P)
+function [robot_step P_step] = ext_kalman_filter(robot,P)
 %EXT_KALMAN_FILTER
     global Noise;
-    global RobotParam;
     
 %init
-    R = [Noise.process.pos*eye(2), [0;0]; [0 0 Noise.process.dir] ];
-    Q = [Noise.measure.pos*eye(2), [0;0]; [0 0 Noise.measure.dir] ];
-    H = eye(3);
-    V = eye(3);
-    W = eye(3);
+    W = [Noise.process.pos*eye(2), [0;0]; [0 0 Noise.process.dir] ];
+    Q = eye(2)*Noise.measure.pos;
+    H = ;
+    V = ;
+    W = ;
 
 % Algorithm taken from kalman_intro.pdf
 % Time update (predict)
     for i=1:8
-       A = [1 0 -RobotParam.velocity*sin(RobotFilt(i).dir);
-            0 1 RobotParam.velocity*cos(RobotFilt(i).dir);
+       A = [1 0 -RobotParam.velocity*sin(robot.dir);
+            0 1 RobotParam.velocity*cos(robot.dir);
             0 0 1];
 
-       P_apriori{i} = A*P{i}*A'+ W*Q*W';
-       x = zeros(3,1);
-       x(1) = RobotParam.velocity * cos(RobotFilt(i).dir) + RobotFilt(i).x;
-       x(2) = RobotParam.velocity * sin(RobotFilt(i).dir) + RobotFilt(i).y;
-       x(3) = RobotFilt(i).dir;
+       P_apriori = 
+       x_apriori = 
 
 % Measurement update (correct)
-       K = (P_apriori{i}*H')/(H*P_apriori{i}*H' + V*R*V');
-       x_meas = zeros(3,1);
-       x_meas(1) = RobotMeas(i).x;
-       x_meas(2) = RobotMeas(i).y;
-       x_meas(3) = RobotMeas(i).dir;
-       x = x + K*(x_meas - H*x);
-       RobotStep(i).color = RobotFilt(i).color;
-       RobotStep(i).x = x(1);
-       RobotStep(i).y = x(2);
-       RobotStep(i).dir = x(3);
-       PStep{i} = (eye(3) - K*H)*P_apriori{i};
+       K =  ;
+       robot_step(i).x =
+       robot_step(i).y =
+       robot_step(i).dir =
+       P_step(i) = 
     end
 end
 

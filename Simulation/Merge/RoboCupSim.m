@@ -30,7 +30,6 @@ global Noise;
     Noise.process.dir = 1e-2 * 2*pi *dt; %[rad/step]
     
     Noise.measure.pos = 1e-1; %[m]
-    Noise.measure.dir = 1e-1 * 2*pi; %[rad]
 
 %% - - - - - Initalization - - - - - %
 figure('units','normalized','position',[0.1,0,0.4,0.9]);
@@ -44,7 +43,7 @@ global Score;
     
     Robot = dummy_init();
     Robot_estimate = Robot;
-    P = {eye(3) eye(3) eye(3) eye(3) eye(3) eye(3) eye(3) eye(3)};
+    %P = 0;
     Ball = ball_init();
 
 %% - - - - - Loop - - - - - %
@@ -52,7 +51,7 @@ for s = 1:steps
     Robot = dummy_step(Robot);
     Ball = ball_step(Ball,Robot);
     Robot_m = dummy_measure(Robot);
-    [Robot_estimate P] = ext_kalman_filter(Robot_estimate, Robot_m, P);
+    %[Robot_estimate P] = ext_kalman_filter(Robot_estimate, P);
     
     clf
     subplot(2,1,1)
@@ -63,7 +62,7 @@ for s = 1:steps
     
     subplot(2,1,2)
     plot_env(Ball);
-    plot_robot(Robot_estimate, '0-t');
+    %plot_robot(Robot_estimate, '0-t');
     plot_robot(Robot_m, '+w');
     
     pause(0.001);
