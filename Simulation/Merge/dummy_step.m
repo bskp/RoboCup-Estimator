@@ -1,4 +1,4 @@
-function RobotStep = dummy_step(Robot)
+function [RobotStep d_omega] = dummy_step(Robot)
 %DUMMY_STEP
 
     global RobotParam;

@@ -26,8 +26,8 @@ global Field;
     
     
 global Noise;
-    Noise.process.pos = 1e-2 *dt; % [m/step]
-    Noise.process.dir = 1e-2 * 2*pi *dt; %[rad/step]
+    Noise.process.pos = 1e-4 *dt; % [m/step]
+    Noise.process.dir = 1e-4 * 2*pi *dt; %[rad/step]
     
     Noise.measure.pos = 1e-1; %[m]
 
@@ -43,15 +43,19 @@ global Score;
     
     Robot = dummy_init();
     Robot_estimate = Robot;
-    %P = 0;
+    for i = 1:8
+        P(:,:,i) = eye(3);
+    end
     Ball = ball_init();
+    m_values = 0;
+    e_values = 0;
 
 %% - - - - - Loop - - - - - %
 for s = 1:steps
-    Robot = dummy_step(Robot);
+    [Robot d_omega] = dummy_step(Robot);
     Ball = ball_step(Ball,Robot);
     Robot_m = dummy_measure(Robot);
-    %[Robot_estimate P] = ext_kalman_filter(Robot_estimate, P);
+    [Robot_estimate P] = ext_kalman_filter(Robot_m, Robot_estimate, m_values, e_values, d_omega, P);
     
     clf
     subplot(2,1,1)
@@ -62,8 +66,13 @@ for s = 1:steps
     
     subplot(2,1,2)
     plot_env(Ball);
-    %plot_robot(Robot_estimate, '0-t');
-    plot_robot(Robot_m, '+w');
+    plot_robot(Robot, '@-t');    
+    plot_robot(Robot_estimate, '0-k');
+    
+    if(s==1)
+        [m_values e_values] = history_init(Robot_m, Robot_estimate);
+    end
+    [m_values e_values] = history(m_values, e_values, Robot_m, Robot_estimate);
     
     pause(0.001);
 end
