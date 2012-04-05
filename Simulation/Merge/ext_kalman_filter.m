@@ -18,7 +18,7 @@ function [robot_step P_step] = ext_kalman_filter(robot_m,robot_e,m_values,e_valu
 %     if(s(2)>29)
 %         [d_R, d_theta] = i_measurement(m_values, e_values);
 %     end
-     d_theta = zeros(1,8);
+%     d_theta = zeros(1,8);
     
 % Algorithm taken from kalman_intro.pdf
     for i=1:8
@@ -28,7 +28,7 @@ function [robot_step P_step] = ext_kalman_filter(robot_m,robot_e,m_values,e_valu
            0 0 1]; 
        x_apriori(1) = robot_e(i).x+cos(robot_e(i).dir)*RobotParam.velocity;
        x_apriori(2) = robot_e(i).y+sin(robot_e(i).dir)*RobotParam.velocity;
-       x_apriori(3) = robot_e(i).dir+d_omega(i)+d_theta(i);
+       x_apriori(3) = robot_e(i).dir+d_omega(i);
        P_step(:,:,i) = A*P(:,:,i)*A'+W*Q*W';
        
 

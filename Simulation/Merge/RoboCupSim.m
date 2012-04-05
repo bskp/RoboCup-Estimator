@@ -26,13 +26,13 @@ global Field;
     
     
 global Noise;
-    Noise.process.pos = 1e-4 *dt; % [m/step]
+    Noise.process.pos = 1e-4 *dt; %[m/step]
     Noise.process.dir = 1e-4 * 2*pi *dt; %[rad/step]
     
     Noise.measure.pos = 1e-1; %[m]
     Noise.measure.dir = 1e-1 * 2*pi; %[rad]
     
-    Noise.measure.prob = 0;
+    Noise.measure.prob = 0.2;
 
 %% - - - - - Initalization - - - - - %
 figure('units','normalized','position',[0.1,0,0.4,0.9]);
