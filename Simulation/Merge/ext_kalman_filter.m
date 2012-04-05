@@ -3,45 +3,47 @@ function [robot_step P_step] = ext_kalman_filter(robot_m,robot_e,m_values,e_valu
     global Noise RobotParam;
     
 %init
-    W = eye(3);
-    Q = [Noise.process.pos*eye(2), [0;0]; [0 0 Noise.process.dir] ];
-    H = [1,0,0;0,1,0;0,0,1];
+    Q = [Noise.process.pos*eye(2), [0;0]; [0 0 Noise.process.dir]];
+    R = [Noise.measure.pos*eye(2), [0;0]; [0 0 Noise.measure.dir]];
+    H = eye(3);
     V = eye(3);
+    W = eye(3);
     x_apriori = [0;0;0];
-    %A = eye(3);
     K = zeros(3,3,8);
     P_step = zeros(3,3,8);
     
-   
-    s = size(m_values);
-    d_R = ones(1,8);
-    
-    if(s(2)>29)
-        [d_R, d_theta] = i_measurement(m_values, e_values);
-    end
-   d_theta = zeros(1,8);
+%     s = size(m_values);
+%     d_R = ones(1,8);
+%     
+%     if(s(2)>29)
+%         [d_R, d_theta] = i_measurement(m_values, e_values);
+%     end
+     d_theta = zeros(1,8);
     
 % Algorithm taken from kalman_intro.pdf
-% Time update (predict)
     for i=1:8
+       % Time update (predict)
        A = [1 0 -RobotParam.velocity*sin(robot_e(i).dir);
            0 1 RobotParam.velocity*cos(robot_e(i).dir);
            0 0 1]; 
-       R = [[eye(2)*Noise.measure.pos [0;0]];[0 0 Noise.measure.dir]]*d_R(i);
        x_apriori(1) = robot_e(i).x+cos(robot_e(i).dir)*RobotParam.velocity;
        x_apriori(2) = robot_e(i).y+sin(robot_e(i).dir)*RobotParam.velocity;
        x_apriori(3) = robot_e(i).dir+d_omega(i)+d_theta(i);
        P_step(:,:,i) = A*P(:,:,i)*A'+W*Q*W';
        
 
-% Measurement update (correct)
-       K(:,:,i) =  (P_step(:,:,i)*H')/(H*P_step(:,:,i)*H'+V*R*V');
-       estimates = x_apriori+K(:,:,i)*([robot_m(i).x; robot_m(i).y; robot_m(i).dir]-[x_apriori(1); x_apriori(2); x_apriori(3)]);
+       % Measurement update (correct)
+       if isnan(robot_m(i).x * robot_m(i).y * robot_m(i).dir)
+           estimates = x_apriori;
+       else
+           K(:,:,i) =  (P_step(:,:,i)*H')/(H*P_step(:,:,i)*H'+V*R*V');
+           estimates = x_apriori+K(:,:,i)*([robot_m(i).x; robot_m(i).y; robot_m(i).dir] - x_apriori);
+           P_step(:,:,i) = (eye(3)-K(:,:,i)*H)*P_step(:,:,i);
+       end
        robot_step(i).color = robot_e(i).color;
        robot_step(i).x = estimates(1);
        robot_step(i).y = estimates(2);
        robot_step(i).dir = estimates(3);
-       P_step(:,:,i) = (eye(3)-K(:,:,i)*H)*P_step(:,:,i);
     end
     
     
@@ -77,7 +79,6 @@ function [robot_step P_step] = ext_kalman_filter(robot_m,robot_e,m_values,e_valu
 %             robot_step(i).y = RobotParam.velocity * sin(robot_step(i).dir) + robot_e(i).y;
 %         end
 %     end
-    
-    
+     
 end
 

@@ -31,6 +31,8 @@ global Noise;
     
     Noise.measure.pos = 1e-1; %[m]
     Noise.measure.dir = 1e-1 * 2*pi; %[rad]
+    
+    Noise.measure.prob = 0;
 
 %% - - - - - Initalization - - - - - %
 figure('units','normalized','position',[0.1,0,0.4,0.9]);
@@ -63,7 +65,7 @@ for s = 1:steps
     plot_env(Ball);
 
     plot_robot(Robot, '0-t'); % circles, direction, team color
-    plot_robot(Robot_m, '+w'); % crosses, black
+    plot_robot(Robot_m, '+w'); % crosses, white
     
     subplot(2,1,2)
     plot_env(Ball);
@@ -75,5 +77,5 @@ for s = 1:steps
     end
     [m_values e_values] = history(m_values, e_values, Robot_m, Robot_estimate);
     
-    pause(0.005);
+    pause(0.001);
 end
