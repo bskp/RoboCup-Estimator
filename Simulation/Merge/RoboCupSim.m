@@ -55,10 +55,10 @@ global Score;
 
 %% - - - - - Loop - - - - - %
 for s = 1:steps
-    [Robot d_omega] = dummy_step(Robot);
+    [Robot d_omega v] = dummy_step(Robot);
     Ball = ball_step(Ball,Robot);
     Robot_m = dummy_measure(Robot);
-    [Robot_estimate P] = ext_kalman_filter(Robot_m, Robot_estimate, m_values, e_values, d_omega, P);
+    [Robot_estimate P] = ext_kalman_filter(Robot_m, Robot_estimate, m_values, e_values, d_omega, v, P);
     
     clf
     subplot(2,1,1)

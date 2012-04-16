@@ -1,4 +1,4 @@
-function [robot_step P_step] = ext_kalman_filter(robot_m,robot_e,m_values,e_values,d_omega,P)
+function [robot_step P_step] = ext_kalman_filter(robot_m,robot_e,m_values,e_values,d_omega,v,P)
 %EXT_KALMAN_FILTER
     global Noise RobotParam;
     
@@ -23,11 +23,9 @@ function [robot_step P_step] = ext_kalman_filter(robot_m,robot_e,m_values,e_valu
 % Algorithm taken from kalman_intro.pdf
     for i=1:8
        % Time update (predict)
-       A = [1 0 -RobotParam.velocity*sin(robot_e(i).dir);
-           0 1 RobotParam.velocity*cos(robot_e(i).dir);
-           0 0 1]; 
-       x_apriori(1) = robot_e(i).x+cos(robot_e(i).dir)*RobotParam.velocity;
-       x_apriori(2) = robot_e(i).y+sin(robot_e(i).dir)*RobotParam.velocity;
+       A = [1 0 -v(i)*sin(robot_e(i).dir);0 1 v(i)*cos(robot_e(i).dir);0 0 1]; 
+       x_apriori(1) = robot_e(i).x+cos(robot_e(i).dir)*v(i);
+       x_apriori(2) = robot_e(i).y+sin(robot_e(i).dir)*v(i);
        x_apriori(3) = robot_e(i).dir+d_omega(i);
        P_step(:,:,i) = A*P(:,:,i)*A'+W*Q*W';
        

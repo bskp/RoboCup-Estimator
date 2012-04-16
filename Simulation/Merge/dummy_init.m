@@ -3,7 +3,6 @@ function Robot = dummy_init()
 
     global RobotParam dt;
     RobotParam.radius = 0.15; %[m]
-    RobotParam.velocity = 0.1 *dt; %[m/s]
     RobotParam.changeOfDir = 0.1 * 2*pi *dt; %[rad/s], exp. value
 
     Robot(1) = struct('color', 'blue', 'x', -1, 'y', -1, 'dir', 0);
