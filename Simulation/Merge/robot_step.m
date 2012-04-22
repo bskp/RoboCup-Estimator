@@ -1,14 +1,15 @@
-function [RobotStep d_omega] = robot_step(Robot)
+function [RobotStep d_omega velocity] = robot_step(Robot)
 %DUMMY_STEP
 
-    global RobotParam;
+    global RobotParam dt;
     
     d_omega = randn(8,1) * RobotParam.changeOfDir;
+    velocity = ones(8,1) * 0.1 * dt; %[m/s]
     
     for i=1:8
         RobotStep(i).color = Robot(i).color;
-        RobotStep(i).x = RobotParam.velocity * cos(Robot(i).dir) + Robot(i).x;
-        RobotStep(i).y = RobotParam.velocity * sin(Robot(i).dir) + Robot(i).y;
+        RobotStep(i).x = velocity(i) * cos(Robot(i).dir) + Robot(i).x;
+        RobotStep(i).y = velocity(i) * sin(Robot(i).dir) + Robot(i).y;
         RobotStep(i).dir = d_omega(i) + Robot(i).dir;
     end
     
@@ -35,24 +36,24 @@ function [RobotStep d_omega] = robot_step(Robot)
                 RobotStep(j).dir = d;
                 
                 % Step towards new direction
-                RobotStep(i).x = RobotParam.velocity * 2 * cos(RobotStep(i).dir) + RobotStep(i).x;
-                RobotStep(i).y = RobotParam.velocity * 2 * sin(RobotStep(i).dir) + RobotStep(i).y;
-                RobotStep(j).x = RobotParam.velocity * 2 * cos(RobotStep(j).dir) + RobotStep(j).x;
-                RobotStep(j).y = RobotParam.velocity * 2 * sin(RobotStep(j).dir) + RobotStep(j).y;
+                RobotStep(i).x = velocity(i) * 2 * cos(RobotStep(i).dir) + RobotStep(i).x;
+                RobotStep(i).y = velocity(i) * 2 * sin(RobotStep(i).dir) + RobotStep(i).y;
+                RobotStep(j).x = velocity(i) * 2 * cos(RobotStep(j).dir) + RobotStep(j).x;
+                RobotStep(j).y = velocity(i) * 2 * sin(RobotStep(j).dir) + RobotStep(j).y;
             end
         end
         
         % Boundaries collision
         if abs(RobotStep(i).x) > 3 - RobotParam.radius
             RobotStep(i).dir = pi - Robot(i).dir;
-            RobotStep(i).x = RobotParam.velocity * cos(RobotStep(i).dir) + Robot(i).x;
-            RobotStep(i).y = RobotParam.velocity * sin(RobotStep(i).dir) + Robot(i).y;
+            RobotStep(i).x = velocity(i) * cos(RobotStep(i).dir) + Robot(i).x;
+            RobotStep(i).y = velocity(i) * sin(RobotStep(i).dir) + Robot(i).y;
         end
         
         if abs(RobotStep(i).y) > 2 - RobotParam.radius
             RobotStep(i).dir = -Robot(i).dir;
-            RobotStep(i).x = RobotParam.velocity * cos(RobotStep(i).dir) + Robot(i).x;
-            RobotStep(i).y = RobotParam.velocity * sin(RobotStep(i).dir) + Robot(i).y;
+            RobotStep(i).x = velocity(i) * cos(RobotStep(i).dir) + Robot(i).x;
+            RobotStep(i).y = velocity(i) * sin(RobotStep(i).dir) + Robot(i).y;
         end
     end
     

@@ -44,7 +44,7 @@ global Score;
     Score.blue = 0;
     Score.pink = 0;
     
-    Robot = dummy_init();
+    Robot = robot_init();
     Robot_estimate = Robot;
     for i = 1:8
         P(:,:,i) = eye(3);
@@ -55,9 +55,9 @@ global Score;
 
 %% - - - - - Loop - - - - - %
 for s = 1:steps
-    [Robot d_omega v] = dummy_step(Robot);
+    [Robot d_omega v] = robot_step(Robot);
     Ball = ball_step(Ball,Robot);
-    Robot_m = dummy_measure(Robot);
+    Robot_m = robot_measure(Robot);
     [Robot_estimate P] = ext_kalman_filter(Robot_m, Robot_estimate, m_values, e_values, d_omega, v, P);
     
     clf
