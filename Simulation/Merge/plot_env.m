@@ -1,4 +1,13 @@
 function plot_env(Ball)
+%PLOT_ENV Plot function for the RoboCup-simulation.
+%
+%   PLOT_ENV(BALL) plots the field according to the dimensions which are
+%   used in a RoboCup soccer match. The parameter BALL defines the ball's
+%   position such that the ball too can be drawn into the environment.
+
+
+%----------- Defining the dimensions and subfunctions  -----------%
+
     axis([-3.7 3.7 -2.7 2.7]);
     axis equal;
     plot_field();
@@ -6,31 +15,45 @@ function plot_env(Ball)
     plot_score();
 end
 
+
+%----------- Plot of the field  -----------%
+
 function plot_field()
-%PLOT_FIELD
+
     global Field;
     rectangle('position', [-Field.width./2 -Field.height./2 Field.width Field.height],'facecolor','green');
     hold on;
+    
     % CenterCircle
     draw_circle(0,0,Field.centerCircleRadius,'k',0);
+    
     % Points
     draw_circle(0,0,Field.pointRadius,'k',0);
     draw_circle(-Field.width./2 + Field.penaltyPointLocation, 0, Field.pointRadius,'k',0);
-    draw_circle(Field.width./2 - Field.penaltyPointLocation, 0, Field.pointRadius,'k',0);
+    draw_circle(Field.width./2 - Field.penaltyPointLocation, 0, Field.pointRadius,'k',0); 
+   
     %Penalty Area
     rectangle('position', [ -Field.width./2 -Field.penaltyAreaHeight./2 Field.penaltyAreaWidth Field.penaltyAreaHeight]);
     rectangle('position', [ Field.width./2-Field.penaltyAreaWidth -Field.penaltyAreaHeight./2 Field.penaltyAreaWidth Field.penaltyAreaHeight]);
+    
     %Goal
     rectangle('position', [ -Field.width./2-0.01 -Field.goalHeight./2 Field.goalWidth Field.goalHeight], 'facecolor', 'r');
     rectangle('position', [ Field.width./2-0.01 -Field.goalHeight./2 Field.goalWidth Field.goalHeight], 'facecolor', 'r');
+    
     %Center line
     line([0, 0],[-Field.height./2, Field.height./2],'Color','k');
 end
+
+
+%----------- Plot of the ball  -----------%
 
 function plot_ball(Ball)
     global BallParam;    
     draw_circle(Ball.x, Ball.y, BallParam.radius, 'r', 1);
 end
+
+
+%----------- Plot of the scorecounter  -----------%
 
 function plot_score()
     global Score;

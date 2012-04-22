@@ -1,36 +1,41 @@
 function plot_robot(Robot, style)
-% PLOT_ROBOT
-% Enables multiple styles to plot robot-swarms.
-% The 'style'-String may contain:
+% PLOT_ROBOT Plot function for the robots.
 %
-% Shapes
-% 0  Draws circles in true Size (given in global RobotParam.radius)
-% @  Same as above, but filled. Changes the color for all the following 
-%    stuff to black (otherwise, one couldn't see it)
-% -  Includes the direction indicator (given in Robot.dir)
-% +  Draws crosses
-% #  Enumerate Robots
+%   PLOT_ROBOT(ROBOT,STYLE) plots the robots on the field with properties
+%   defined in the flag STYLE. The string STYLE may contain:
 %
-% Colors
-% t  team-specific
+%   Shapes
+%   0  Draws circles in true size (given in global RobotParam.radius)
+%   @  Same as above, but filled. Changes the color for all the following 
+%      stuff to black (otherwise, one couldn't see it)
+%   -  Includes the direction indicator (given in Robot.dir)
+%   +  Draws crosses
+%   #  Enumerate Robots
 %
-% from colorcode.m:
-% r  red
-% b  blue
-% g  green
-% y  yellow
-% m  magenta
-% k  black
+%   Colors
+%   t  team-specific
 %
-% Example usage: plot_robots(Robot_measured, "ob-")
+%   from colorcode.m:
+%   r  red
+%   b  blue
+%   g  green
+%   y  yellow
+%   m  magenta
+%   k  black
+%
+%   Example usage: plot_robots(Robot_measured, "ob-")
 
     global RobotParam;
   
-    colorcode;
     
+%----------- Set default color  -----------%
+    
+    colorcode;  
     color = [0 0 0]; % default color: black  
+
     
-    % 
+%----------- Reading flag  -----------%
+    
     fn = fieldnames(c);
     for l = style
         hit = strfind(c.letters, l);
@@ -38,24 +43,31 @@ function plot_robot(Robot, style)
             color = c.(fn{hit});
         end
     end
+
+    
+%----------- Check for team-specific colors  -----------%
     
     bunt = false;
     if (strfind(style, 't'))
         bunt = true;
     end
+ 
+    
+%----------- Check for filled circles  -----------%
     
     if (strfind(style, '@'))
         for i=1:8
             if (bunt)
                 color = Robot(i).color;
             end
-
             draw_circle(Robot(i).x, Robot(i).y, RobotParam.radius, color, 1);
-        end
-        
+        end        
         color = [0 0 0]; % for all the following eye-candy
         bunt = false;
     end
+
+    
+%----------- Check for bordered circles  -----------%
     
     if (strfind(style, '0'))
         for i=1:8
@@ -65,16 +77,21 @@ function plot_robot(Robot, style)
             draw_circle(Robot(i).x, Robot(i).y, RobotParam.radius, color, 0);
         end
     end
+
+    
+%----------- Check for numbered players  -----------%
     
     if (strfind(style, '#'))
         for i=1:8
             if (bunt)
                 color = Robot(i).color;
             end
-
             text(Robot(i).x, Robot(i).y,num2str(mod(i,4)+1), 'Color', color);
         end
     end
+
+    
+%----------- Check for crosses  -----------%    
     
     if (strfind(style, '+'))
         for i=1:8
@@ -84,6 +101,9 @@ function plot_robot(Robot, style)
             plot(Robot(i).x, Robot(i).y,'+', 'Color', color);
         end
     end
+
+    
+%----------- Check for direction indication  -----------%    
     
     if (strfind(style, '-'))
         for i=1:8
@@ -97,6 +117,5 @@ function plot_robot(Robot, style)
                 line([Robot(i).x xdir],[Robot(i).y ydir],'Color',color);
             end
         end
-    end
-    
+    end   
 end

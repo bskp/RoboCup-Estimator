@@ -1,11 +1,21 @@
 function RobotMeasure = robot_measure(Robot)
-%ROBOT_MEASURE
+%ROBOT_MEASURE Addition of measurement noise to the robots.
+%
+%   ROBOTMEASURE = ROBOT_MEASURE(ROBOT) takes the parameter ROBOT and adds
+%   measurement noise to the position and the direction of the robots. New
+%   robots are created with the noisy measurements. Measurements for the
+%   robots are only available from robots of the blue team and only if
+%   other robots are in their field of vision.
+
 
     global Noise;
     global RobotParam;
+
     
-    for i = 1:4
-       for j = 1:8
+%----------- Check available measurements -----------%    
+    
+    for i = 1:4         % Only blue robots recieve measurement signals
+       for j = 1:8      % But all robots are measured if possible
             RobotAllMeasure(j).x(i) = NaN;
             RobotAllMeasure(j).y(i) = NaN;
             RobotAllMeasure(j).dir(i) = NaN;
@@ -14,17 +24,17 @@ function RobotMeasure = robot_measure(Robot)
        if position_is_valid(Robot(i))
             for j = 1:8
                 if i == j
-                   RobotAllMeasure(j).x(i) = Robot(i).x + rand*Noise.measure.pos;
-                   RobotAllMeasure(j).y(i) = Robot(i).y + rand*Noise.measure.pos;
-                   RobotAllMeasure(j).dir(i) = Robot(i).dir + rand*Noise.measure.dir;
+                   RobotAllMeasure(j).x(i) = Robot(i).x + randn*Noise.measure.pos;
+                   RobotAllMeasure(j).y(i) = Robot(i).y + randn*Noise.measure.pos;
+                   RobotAllMeasure(j).dir(i) = Robot(i).dir + randn*Noise.measure.dir;
                 else
                     if sqrt((Robot(i).x-Robot(j).x).^2 + (Robot(i).y-Robot(j).y).^2 ) < RobotParam.sightDistance
                         dirOtherRobot = atan((Robot(i).y-Robot(j).y)./(Robot(i).x-Robot(j).x));
                         
                         if dirOtherRobot > Robot(i).dir - RobotParam.sightAngle && dirOtherRobot > Robot(i).dir + RobotParam.sightAngle
-                            RobotAllMeasure(j).x(i) = Robot(i).x + rand*Noise.measure.pos;
-                            RobotAllMeasure(j).y(i) = Robot(i).y + rand*Noise.measure.pos;
-                            RobotAllMeasure(j).dir(i) = Robot(i).dir + rand*Noise.measure.dir;
+                            RobotAllMeasure(j).x(i) = Robot(i).x + randn*Noise.measure.pos;
+                            RobotAllMeasure(j).y(i) = Robot(i).y + randn*Noise.measure.pos;
+                            RobotAllMeasure(j).dir(i) = Robot(i).dir + randn*Noise.measure.dir;
                         end
                         
                     end
@@ -42,8 +52,10 @@ function RobotMeasure = robot_measure(Robot)
     RobotMeasure = measurement_fusion(RobotAllMeasure);
 end
 
+
+%------- Check whether robot is able to determine its own position -------%
+
 function pos = position_is_valid(robot)
-%POSITION_IS_VALID
 
     global Field;
     global RobotParam;
@@ -55,8 +67,8 @@ function pos = position_is_valid(robot)
     CharPoint(2) = struct('x', -Field.width./2, 'y', Field.height./2);
     CharPoint(3) = struct('x', Field.width./2, 'y', -Field.height./2);
     CharPoint(4) = struct('x', -Field.width./2, 'y', -Field.height./2);
-    CharPiont(5) = struct('x', 0, 'y', Field.height./2);
-    CharPiont(6) = struct('x', 0, 'y', -Field.height./2);
+    CharPoint(5) = struct('x', 0, 'y', Field.height./2);
+    CharPoint(6) = struct('x', 0, 'y', -Field.height./2);
     CharPoint(7) = struct('x', 0, 'y', 0);
     
     %Is a characetistic point in Sight of View ?
@@ -71,24 +83,28 @@ function pos = position_is_valid(robot)
         
 end
 
+
+%----------- Fusion of multiple measurements of one robot -----------%
+
 function RobotMeasure = measurement_fusion(RobotAllMeasure)
-%MEASUREMENT_FUSION
 
     for i = 1:8
         RobotMeasure(i).color = RobotAllMeasure.color;
         
-        k = 0;
+        k = 0;      % Number of measurements
         x = 0;
         y = 0;
         dir = 0;
         for j = 1:4
-            if ~isnan(RobotAllMeasure(i).x(j))
+            if ~isnan(RobotAllMeasure(i).x(j))      % Check for measurement
                 x = x + RobotAllMeasure(i).x(j);
                 y = y + RobotAllMeasure(i).y(j);
                 dir = dir + RobotAllMeasure(i).dir(j);
                 k = k + 1;
             end
         end
+        
+        % Compute the mean of all measurements
         RobotMeasure(i).x = x./k;
         RobotMeasure(i).y = y./k;
         RobotMeasure(i).dir = dir./k;

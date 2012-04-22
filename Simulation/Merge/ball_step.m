@@ -1,15 +1,24 @@
 function BallStep = ball_step(Ball,Robot)
-%BALL_STEP
+%BALL_STEP Simulates the movement of the ball for one timestep.
+%
+%   BALLSTEP = BALL_STEP(BALL,ROBOT) takes the parameters BALL and ROBOT
+%   and calculates, according to the position of the ball and the robots on
+%   the field, the next position of the ball and its velocity. A new
+%   ball-object with these parameters is created as output.
 
     global BallParam;
     global RobotParam;
+    
+%----------- Ball dynamics -----------%
 
     BallStep.x = BallParam.velocity * Ball.velocity * cos(Ball.dir) + Ball.x;
     BallStep.y = BallParam.velocity * Ball.velocity * sin(Ball.dir) + Ball.y;
     BallStep.dir = Ball.dir;
     BallStep.velocity = Ball.velocity * BallParam.friction;
     
-    % Boundaries collision
+    
+%----------- Checking collision with field boundaries -----------%
+
     if abs(BallStep.x) > 3 - BallParam.radius
          BallStep.dir = pi - Ball.dir;
          BallStep.x = BallParam.velocity * Ball.velocity * cos(BallStep.dir) + Ball.x;
@@ -22,7 +31,9 @@ function BallStep = ball_step(Ball,Robot)
          BallStep.y = BallParam.velocity * Ball.velocity * sin(BallStep.dir) + Ball.y;
     end
     
-    % Robot collison
+    
+%----------- Checking collision with robots -----------%
+
     for i=1:8
         dX = Ball.x - Robot(i).x;
         dY = Ball.y - Robot(i).y;
@@ -32,5 +43,5 @@ function BallStep = ball_step(Ball,Robot)
             BallStep.x = BallParam.velocity * Ball.velocity * cos(BallStep.dir) + Ball.x;
             BallStep.y = BallParam.velocity * Ball.velocity * sin(BallStep.dir) + Ball.y;
         end
+    end
 end
-

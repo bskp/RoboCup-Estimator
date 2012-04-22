@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.21)  20 APR 2012 19:44
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.21)  22 APR 2012 15:42
 entering extended mode
 **G:/Studium*ETH/RoboCup/RoboCup-Estimator/Documentation/DocGroupWork.tex
 ("G:/Studium ETH/RoboCup/RoboCup-Estimator/Documentation/DocGroupWork.tex"
@@ -467,4 +467,273 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.2346 \resetOptions
-               
+                    
+? 
+)
+File: pstricks-add.tex 2011/02/02 v3.51 `PSTricks-add' (hv)
+) (G:\Programme\LaTex\tex\latex\multido\multido.sty
+Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
+
+))
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\pst-circ.sty"
+Package: pst-circ 2003/06/22 Package wrapper for pst-circ.tex
+
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\pst-circ.tex"
+`pst-circ' v2003/06/22,(Original idea: A.Premoli I.Maio,Design: M.Luque,Code: C
+.Jorssen) (G:\Programme\LaTex\tex\generic\pstricks\pst-node.tex
+ v1.01, 2008/11/26) (G:\Programme\LaTex\tex\generic\pstricks\pst-key.tex
+keyval: 1998/07/23 v1.11 key=value parser (DPC)
+)
+\Pst@circ@position=\dimen146
+\pst@circ@count@i=\count131
+\pst@circ@count@ii=\count132
+\pst@circ@count@iii=\count133
+))
+(G:\Programme\LaTex\tex\latex\eurosym\eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box61
+)
+(G:\Programme\LaTex\tex\latex\koma-script\scrpage2.sty
+Package: scrpage2 2010/04/22 v2.5 LaTeX2e KOMA-Script package
+LaTeX Info: Redefining \pagemark on input line 176.
+)
+(G:\Programme\LaTex\tex\latex\pdfpages\pdfpages.sty
+Package: pdfpages 2012/04/03 v0.4s Insert pages of external PDF documents (AM)
+
+(G:\Programme\LaTex\tex\latex\base\ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(G:\Programme\LaTex\tex\latex\tools\calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count134
+\calc@Bcount=\count135
+\calc@Adimen=\dimen147
+\calc@Bdimen=\dimen148
+\calc@Askip=\skip54
+\calc@Bskip=\skip55
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count136
+\calc@Cskip=\skip56
+)
+(G:\Programme\LaTex\tex\latex\eso-pic\eso-pic.sty
+Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
+
+(G:\Programme\LaTex\tex\generic\oberdiek\atbegshi.sty
+Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
+
+(G:\Programme\LaTex\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)
+(G:\Programme\LaTex\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
+)))
+(G:\Programme\LaTex\tex\latex\pdfpages\pppdftex.def
+File: pppdftex.def 2012/04/03 v0.4s Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box62
+\AM@toc@title=\toks29
+\c@AM@survey=\count137
+\AM@templatesizebox=\box63
+)
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\robocup.sty")
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\DocGroupWork.aux"
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\titlepage.aux")
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\abstract.aux")
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\1_Introduction\1_Intro
+duction.aux")
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\2_Simulation\2_Simulat
+ion.aux")
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\3_KalmanFilter\3_Kalma
+nFilter.aux")
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\4_Estimation\4_Estimat
+ion.aux")
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\Appendix\Appendix.aux"
+) ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\literature.aux"))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+
+(G:\Programme\LaTex\tex\context\base\supp-pdf.tex
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count138
+\scratchdimen=\dimen149
+\scratchbox=\box64
+\nofMPsegments=\count139
+\nofMParguments=\count140
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count141
+\MPscratchDim=\dimen150
+\MPnumerator=\count142
+\everyMPtoPDFconversion=\toks31
+)
+\AtBeginShipoutBox=\box65
+ [1
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map}]
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\titlepage.tex"
+
+! LaTeX Error: File `./Pictures/ethz_logo' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ...ics[height=12mm]{./Pictures/ifalogo_color}}
+                                                  
+? 
+
+! LaTeX Error: File `./Pictures/ifalogo_color' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ...ics[height=12mm]{./Pictures/ifalogo_color}}
+                                                  
+? 
+[2
+
+
+
+]) ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\abstract.tex")
+[3
+
+
+] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\DocGroupWork.toc"
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+
+(G:\Programme\LaTex\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+
+(G:\Programme\LaTex\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+))
+\tf@toc=\write5
+ [4
+
+
+]
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\DocGroupWork.lof")
+\tf@lof=\write6
+
+[5
+
+]
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\1_Introduction\1_Intro
+duction.tex"
+Chapter 1.
+) [6
+
+
+]
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\2_Simulation\2_Simulat
+ion.tex"
+Chapter 2.
+) [7
+
+
+
+]
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\3_KalmanFilter\3_Kalma
+nFilter.tex"
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
+ []
+
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Emergency stop.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 8317 strings out of 495285
+ 121020 string characters out of 3181170
+ 276746 words of memory out of 3000000
+ 11266 multiletter control sequences out of 15000+200000
+ 12238 words of font info for 45 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 44i,8n,62p,347b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

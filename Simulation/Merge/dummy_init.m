@@ -1,9 +1,20 @@
 function Robot = dummy_init()
-%DUMMY_INIT
+%DUMMY_INIT Initializes eight robots.
+%
+%   ROBOT = DUMMY_INIT() initializes eight structs which define robots on
+%   the field. Every struct contains the position, the direction and the
+%   color of the robot. Moreover the relative radius of a robot and their
+%   maximum change of direction are defined as global variables.
+
+
+%----------- Init of global variables -----------%
 
     global RobotParam dt;
     RobotParam.radius = 0.15; %[m]
-    RobotParam.changeOfDir = 0.1 * 2*pi *dt; %[rad/s], exp. value
+    RobotParam.changeOfDir = 0.1 * 2*pi *dt; %[rad/s], expected value
+    
+    
+%----------- Init of robot parameters -----------%
 
     Robot(1) = struct('color', 'blue', 'x', -1, 'y', -1, 'dir', 0);
     Robot(2) = struct('color', 'blue', 'x', -1, 'y', 0, 'dir', 0);

@@ -1,11 +1,24 @@
 function [RobotStep d_omega velocity] = robot_step(Robot)
-%DUMMY_STEP
+%ROBOT_STEP Simulates the movement of all robots for one timestep.
+%
+%   [ROBOTSTEP,D_OMEGA,VELOCITY] = ROBOT_STEP(ROBOT) takes all robot
+%   structs as parameters and computes the next position of the robots on
+%   the field, i.e. generates new structs. The function also outputs the
+%   input values D_OMEGA, the change of the angular direction, and
+%   VELOCITY, the velocity of a robot, for every robot. These inputs will
+%   be of further use with the extended Kalman filter.
 
     global RobotParam dt;
+
     
+%----------- Inputs  -----------%
+
     d_omega = randn(8,1) * RobotParam.changeOfDir;
     velocity = ones(8,1) * 0.1 * dt; %[m/s]
+
     
+%----------- Motion equations for robots  -----------%
+
     for i=1:8
         RobotStep(i).color = Robot(i).color;
         RobotStep(i).x = velocity(i) * cos(Robot(i).dir) + Robot(i).x;
@@ -13,7 +26,9 @@ function [RobotStep d_omega velocity] = robot_step(Robot)
         RobotStep(i).dir = d_omega(i) + Robot(i).dir;
     end
     
-    % make sum noiz
+    
+%----------- Adding process noise  -----------%
+
     global Noise;
     d = randn(8,3);
     
@@ -24,16 +39,18 @@ function [RobotStep d_omega velocity] = robot_step(Robot)
         RobotStep(i).dir =  RobotStep(i).dir + d(i,3) * Noise.process.dir;
     end
     
-    % COLLISION DETECTION
     
-    for i = 1:8        
+%----------- Collision detection  -----------%
+    
+    for i = 1:8  
+        
         % Robot collision
         for j = (i+1):8
             d = sqrt( (Robot(i).x-Robot(j).x)^2+(Robot(i).y-Robot(j).y)^2);
             if (d < 2*RobotParam.radius)
                 d = Robot(i).dir;
-                RobotStep(i).dir = Robot(j).dir;
-                RobotStep(j).dir = d;
+                RobotStep(i).dir = Robot(j).dir;    % Swapping the
+                RobotStep(j).dir = d;               % directions
                 
                 % Step towards new direction
                 RobotStep(i).x = velocity(i) * 2 * cos(RobotStep(i).dir) + RobotStep(i).x;
@@ -43,13 +60,14 @@ function [RobotStep d_omega velocity] = robot_step(Robot)
             end
         end
         
-        % Boundaries collision
+        % Boundaries collision, floor and ceil
         if abs(RobotStep(i).x) > 3 - RobotParam.radius
             RobotStep(i).dir = pi - Robot(i).dir;
             RobotStep(i).x = velocity(i) * cos(RobotStep(i).dir) + Robot(i).x;
             RobotStep(i).y = velocity(i) * sin(RobotStep(i).dir) + Robot(i).y;
         end
         
+        % Boundaries collision, sides
         if abs(RobotStep(i).y) > 2 - RobotParam.radius
             RobotStep(i).dir = -Robot(i).dir;
             RobotStep(i).x = velocity(i) * cos(RobotStep(i).dir) + Robot(i).x;
@@ -57,6 +75,5 @@ function [RobotStep d_omega velocity] = robot_step(Robot)
         end
     end
     
-
 end
 
