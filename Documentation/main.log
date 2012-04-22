@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.21)  21 APR 2012 15:42
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.21)  22 APR 2012 15:27
 entering extended mode
 **G:/Studium*ETH/RoboCup/RoboCup-Estimator/Documentation/main.tex
 ("G:/Studium ETH/RoboCup/RoboCup-Estimator/Documentation/main.tex"
@@ -660,9 +660,37 @@ File: ./appendix/linear_model.pdf Graphic file (type pdf)
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/linear_model.pdf, page 2> [13 <G:/Studium ETH/RoboCup/RoboCup-E
-stimator/Documentation/appendix/linear_model.pdf>]) [14]
+stimator/Documentation/appendix/linear_model.pdf>] [14]
+<./appendix/nonlinear_model.pdf, id=209, page=1, 597.50829pt x 845.0471pt>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 1>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 1>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 1>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 1>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 1> [15 <G:/Studium ETH/RoboCup/RoboCu
+p-Estimator/Documentation/appendix/nonlinear_model.pdf>]
+<./appendix/nonlinear_model.pdf, id=330, page=2, 597.50829pt x 845.0471pt>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 2>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 2>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 2> [16 <G:/Studium ETH/RoboCup/RoboCu
+p-Estimator/Documentation/appendix/nonlinear_model.pdf>])
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\literature.tex")
-[15
+[17
 
 
 
@@ -680,10 +708,10 @@ ion.aux")
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\Appendix\Appendix.aux"
 ) ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\literature.aux")) ) 
 Here is how much of TeX's memory you used:
- 5251 strings out of 495285
- 76556 string characters out of 3181170
+ 5260 strings out of 495285
+ 76848 string characters out of 3181170
  174669 words of memory out of 3000000
- 8284 multiletter control sequences out of 15000+200000
+ 8291 multiletter control sequences out of 15000+200000
  12238 words of font info for 45 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  43i,18n,51p,725b,402s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -691,17 +719,18 @@ Here is how much of TeX's memory you used:
 G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><G:/Programme/LaTe
 x/fonts/type1/public/amsfonts/cm/cmex10.pfb><G:/Programme/LaTex/fonts/type1/pub
 lic/amsfonts/cm/cmmi10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/c
-mmi7.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><G:/Progr
-amme/LaTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><G:/Programme/LaTex/fonts/t
-ype1/public/amsfonts/cm/cmr5.pfb><G:/Programme/LaTex/fonts/type1/public/amsfont
-s/cm/cmr7.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><G:/P
-rogramme/LaTex/fonts/type1/public/amsfonts/cm/cmsl10.pfb><G:/Programme/LaTex/fo
-nts/type1/public/amsfonts/cm/cmssbx10.pfb><G:/Programme/LaTex/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cms
-y7.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (15 pages, 251677 bytes).
+mmi5.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><G:/Progr
+amme/LaTex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><G:/Programme/LaTex/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfon
+ts/cm/cmr5.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><G:/
+Programme/LaTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><G:/Programme/LaTex/fon
+ts/type1/public/amsfonts/cm/cmsl10.pfb><G:/Programme/LaTex/fonts/type1/public/a
+msfonts/cm/cmssbx10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><G:/Program
+me/LaTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (17 pages, 359337 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
+ 380 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

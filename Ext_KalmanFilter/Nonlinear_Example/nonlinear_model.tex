@@ -23,11 +23,11 @@
 Consider the following mechanical system
 
 \begin{center}
-%\includegraphics[width=14cm]{circuit_diagram}
+\includegraphics[width=14cm]{mechanical_system}
 \end{center}
 
 
-We assume now that the wheel doesn't have a mass and that mass \(m_1\) has a moment of inertia of \(J_1 = c_1 m_1\) and mass \(m_2\) has \(J_2 = c_2 m_2\) with respect to the wheel's hub. Furthermore we are assuming that the force of the damper is given by \(F_b = b \cdot \Delta z\). Using Newton's laws we obtain the equations
+We assume now that the wheel doesn't have a mass, that \(m_1\) has a moment of inertia of \(J_1 = c_1 m_1\) and that \(m_2\) has \(J_2 = c_2 m_2\) with respect to the wheel's hub. Both masses are modelled as dots with distance \(d\) to the hub. Furthermore we are assuming that the force of the damper is given by \(F_b = b \cdot \Delta z\). Using Newton's laws we obtain the equations
 
 \[
 \begin{aligned}
@@ -43,7 +43,12 @@ By definig the states \(x_1 = z\), \(x_2 = \dot{z}\), \(x_3 = \varphi\) and \(x_
 \dot{x}_1\quad &=\quad x_2\\\\
 \dot{x}_2\quad &=\quad g + \frac{k}{m_3} (x_3 R - x_1) + \frac{b}{m_3} (x_4 R - x_2)\\\\
 \dot{x}_3\quad &=\quad x_4\\\\
-\dot{x}_4\quad &=\quad \frac{1}{c_1 m_1 + c_2 m_2} \left( u + gd\cos(x_3)(m_2 - m_1) + k(x_1 - x_3 R) + b(x_2 - x_4R) \right) \\\\
+\dot{x}_4\quad &=\quad \frac{1}{c_1 m_1 + c_2 m_2} \left( u + gd\cos(x_3)(m_2 - m_1) + k(x_1 - x_3 R) + b(x_2 - x_4R) \right)
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
 y\quad &=\quad x_4
 \end{aligned}
 \]
@@ -59,10 +64,44 @@ where \(T\) is the sampling period. The discrete system's equations now look as 
 x_{1,k+1}\quad &=\quad x_{1,k} + T\cdot  x_{2,k} \\\\
 x_{2,k+1}\quad &=\quad x_{2,k} + T\cdot \left( g + \frac{k}{m_3} (x_{3,k} R - x_{1,k}) + \frac{b}{m_3} (x_{4,k} R - x_{2,k}) \right) \\\\
 x_{3,k+1}\quad &=\quad x_{3,k} + T\cdot x_{4,k} \\\\
-x_{4,k+1}\quad &=\quad x_{4,k} + T\cdot \left( \frac{1}{c_1 m_1 + c_2 m_2} \left( \tau + gd\cos(x_{3,k})(m_2 - m_1) + k(x_{1,k} - x_{3,k} R) + b(x_{2,k} - x_{4,k}R) \right) \right) \\\\
+x_{4,k+1}\quad &=\quad x_{4,k} + T\cdot \left( \frac{1}{c_1 m_1 + c_2 m_2} \left( u_k + gd\cos(x_{3,k})(m_2 - m_1) + k(x_{1,k} - x_{3,k} R) + b(x_{2,k} - x_{4,k}R) \right) \right) \\\\
 y_k\quad &=\quad x_{4,k}
 \end{aligned}
 \]
+
+Since we are dealing with nonideal effects, caused by model uncertainties or measurement errors, we add process noise \(w_k\) and measurement noise \(v_k\) to our model. We will get equations of the form
+
+\[
+\begin{aligned}
+x_{k+1}\quad &=\quad f(x_k,u_k,w_k) \\\\
+y_k \quad&=\quad h(x_k,v_k)
+\end{aligned}
+\]
+
+Note that \(x_{k+1}\) as well as \(w_k\) and \(v_k\) are column vectors. In our nonlinear model, \(w_k\) and \(v_k\) are realizations of white Gaussian noise processes
+
+\[
+\begin{aligned}
+E[w_k w_n]\quad &=\quad W_kQ_kW_k^T \delta[k-n] \\\\
+E[v_k v_n]\quad &=\quad V_kR_kV_k^T \delta[k-n] \\\\
+\end{aligned}
+\]
+
+where \(W_k = \frac{\partial f}{\partial w_k}(x_{k-1},u_{k-1},0)\) and \(V_k = \frac{\partial h}{\partial v_k}(x_k,0)\). Note that \(Q_k\) and \(R_k\) could change every timestep \(k\). Possible values for them are
+
+\[Q_k = \left[
+\begin{array}{c c c c}
+10^{-6} & 0 & 0 & 0 \\
+0 & 10^{-6} & 0 & 0 \\
+0 & 0 & 10^{-6} & 0 \\
+0 & 0 & 0 & 10^{-6} \\
+\end{array}
+\right], \qquad\qquad R_k = 10^{-2}
+\]
+
+We have a full description of our nonlinear system and are now able to implement an extended Kalman filter by choosing reasonable values for the system's parameters.
+
+
 
 
 
