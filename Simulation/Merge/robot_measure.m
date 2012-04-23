@@ -1,7 +1,7 @@
 function RobotMeasure = robot_measure(Robot)
 %ROBOT_MEASURE Addition of measurement noise to the robots.
 %
-%   ROBOTMEASURE = ROBOT_MEASURE(ROBOT) takes the parameter ROBOT and adds
+%   ROBOT_MEASURE = ROBOT_MEASURE(ROBOT) takes the parameter ROBOT and adds
 %   measurement noise to the position and the direction of the robots. New
 %   robots are created with the noisy measurements. Measurements for the
 %   robots are only available from robots of the blue team and only if
@@ -21,20 +21,33 @@ function RobotMeasure = robot_measure(Robot)
             RobotAllMeasure(j).dir(i) = NaN;
        end
        
-       if position_is_valid(Robot(i))
+       if (position_is_valid(Robot(i)))
             for j = 1:8
-                if i == j
+                if (i == j)
                    RobotAllMeasure(j).x(i) = Robot(i).x + randn*Noise.measure.pos;
                    RobotAllMeasure(j).y(i) = Robot(i).y + randn*Noise.measure.pos;
                    RobotAllMeasure(j).dir(i) = Robot(i).dir + randn*Noise.measure.dir;
+                   
                 else
-                    if sqrt((Robot(i).x-Robot(j).x).^2 + (Robot(i).y-Robot(j).y).^2 ) < RobotParam.sightDistance
-                        dirOtherRobot = atan((Robot(i).y-Robot(j).y)./(Robot(i).x-Robot(j).x));
+                    if (sqrt((Robot(i).x-Robot(j).x).^2 + (Robot(i).y-Robot(j).y).^2) <= RobotParam.sightDistance)
+                        dirOtherRobot = atan((Robot(j).y-Robot(i).y)./(Robot(j).x-Robot(i).x));
                         
-                        if dirOtherRobot > Robot(i).dir - RobotParam.sightAngle && dirOtherRobot > Robot(i).dir + RobotParam.sightAngle
-                            RobotAllMeasure(j).x(i) = Robot(i).x + randn*Noise.measure.pos;
-                            RobotAllMeasure(j).y(i) = Robot(i).y + randn*Noise.measure.pos;
-                            RobotAllMeasure(j).dir(i) = Robot(i).dir + randn*Noise.measure.dir;
+                        % Compute absolute angle in relation to the x-axis.
+                        if (Robot(j).x < Robot(i).x)
+                            dirOtherRobot = dirOtherRobot + pi;
+                        end
+                        
+                        % Compute the relative angle of the robots position
+                        % in relation to the looking direction of the blue
+                        % robot.
+                        posAngle = mod(abs(dirOtherRobot-Robot(i).dir),2*pi);
+                        negAngle = posAngle-2*pi;
+                        relAngle = min([abs(posAngle),abs(negAngle)]);
+                        
+                        if(relAngle < RobotParam.sightAngle) 
+                            RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.measure.pos;
+                            RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.measure.pos;
+                            RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.measure.dir;
                         end
                         
                     end
@@ -62,21 +75,37 @@ function pos = position_is_valid(robot)
     
     pos = false;
     
-    %Characteristic points
+    %Characteristic points (Corners, half-wayline corners, goals and center)
     CharPoint(1) = struct('x', Field.width./2, 'y', Field.height./2);
     CharPoint(2) = struct('x', -Field.width./2, 'y', Field.height./2);
     CharPoint(3) = struct('x', Field.width./2, 'y', -Field.height./2);
     CharPoint(4) = struct('x', -Field.width./2, 'y', -Field.height./2);
     CharPoint(5) = struct('x', 0, 'y', Field.height./2);
     CharPoint(6) = struct('x', 0, 'y', -Field.height./2);
-    CharPoint(7) = struct('x', 0, 'y', 0);
+    CharPoint(7) = struct('x', Field.width./2, 'y', 0);
+    CharPoint(8) = struct('x', -Field.width./2, 'y', 0);     
+    CharPoint(9) = struct('x', 0, 'y', 0);
     
     %Is a characetistic point in Sight of View ?
     for i = 1:length(CharPoint)
-        if sqrt((CharPoint(i).x-robot.x).^2 + (CharPoint(i).y-robot.y).^2 ) < RobotParam.sightDistance
+        if (sqrt((CharPoint(i).x-robot.x).^2 + (CharPoint(i).y-robot.y).^2 ) <= RobotParam.sightDistance)
             dirCharPoint = atan((CharPoint(i).y-robot.y)./(CharPoint(i).x-robot.x));
-            if dirCharPoint > robot.dir - RobotParam.sightAngle && dirCharPoint > robot.dir + RobotParam.sightAngle
+            
+            % Compute absolute angle in relation to the x-axis.
+            if (CharPoint(i).x < robot.x)
+                dirCharPoint = dirCharPoint + pi;
+            end
+            
+            % Compute the relative angle of the robots position
+            % in relation to the looking direction of the blue
+            % robot.
+            posAngle = mod(abs(dirCharPoint-robot.dir),2*pi);
+            negAngle = posAngle-2*pi;
+            relAngle = min([abs(posAngle),abs(negAngle)]);
+            
+            if(relAngle < RobotParam.sightAngle)
                 pos = true;
+                return;
             end
         end
     end
@@ -96,7 +125,7 @@ function RobotMeasure = measurement_fusion(RobotAllMeasure)
         y = 0;
         dir = 0;
         for j = 1:4
-            if ~isnan(RobotAllMeasure(i).x(j))      % Check for measurement
+            if (~isnan(RobotAllMeasure(i).x(j)))     % Check for measurement
                 x = x + RobotAllMeasure(i).x(j);
                 y = y + RobotAllMeasure(i).y(j);
                 dir = dir + RobotAllMeasure(i).dir(j);
