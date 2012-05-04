@@ -1,15 +1,17 @@
 \select@language {english}
 \contentsline {chapter}{\numberline {1}Introduction}{5}
 \contentsline {chapter}{\numberline {2}Simulation}{6}
-\contentsline {section}{\numberline {2.1}Playing Field, Robots and Ball}{6}
-\contentsline {section}{\numberline {2.2}Random Simulation}{6}
-\contentsline {chapter}{\numberline {3}Kalman Filtering}{7}
-\contentsline {section}{\numberline {3.1}Linear Kalman Filter}{7}
-\contentsline {section}{\numberline {3.2}Extended Kalman Filter (EKF)}{8}
-\contentsline {chapter}{\numberline {4}Estimation}{10}
-\contentsline {section}{\numberline {4.1}Estimate of the Ball}{10}
-\contentsline {section}{\numberline {4.2}Estimate of the Robots}{10}
-\contentsline {chapter}{\numberline {A}Examples}{11}
-\contentsline {section}{\numberline {A.1}Kalman Filtering of Linear System}{11}
-\contentsline {section}{\numberline {A.2}Kalman Filtering of Nonlinear System}{14}
-\contentsline {section}{Literatur}{17}
+\contentsline {section}{\numberline {2.1}The Playing Field}{6}
+\contentsline {section}{\numberline {2.2}The Robots}{7}
+\contentsline {section}{\numberline {2.3}The Ball}{7}
+\contentsline {section}{\numberline {2.4}A Random Simulation}{7}
+\contentsline {chapter}{\numberline {3}Kalman Filtering}{8}
+\contentsline {section}{\numberline {3.1}Linear Kalman Filter}{8}
+\contentsline {section}{\numberline {3.2}Extended Kalman Filter (EKF)}{9}
+\contentsline {chapter}{\numberline {4}Estimation}{11}
+\contentsline {section}{\numberline {4.1}Estimate of the Ball}{11}
+\contentsline {section}{\numberline {4.2}Estimate of the Robots}{11}
+\contentsline {chapter}{\numberline {A}Examples}{12}
+\contentsline {section}{\numberline {A.1}Kalman Filtering of Linear System}{12}
+\contentsline {section}{\numberline {A.2}Kalman Filtering of Nonlinear System}{15}
+\contentsline {section}{Literatur}{18}

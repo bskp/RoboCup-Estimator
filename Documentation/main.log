@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.21)  22 APR 2012 15:27
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.21)  4 MAY 2012 14:59
 entering extended mode
 **G:/Studium*ETH/RoboCup/RoboCup-Estimator/Documentation/main.tex
 ("G:/Studium ETH/RoboCup/RoboCup-Estimator/Documentation/main.tex"
@@ -351,6 +351,103 @@ File: pppdftex.def 2012/04/03 v0.4s Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count114
 \AM@templatesizebox=\box57
 )
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\mcode.sty"
+-- Package: `mcode' 2.0 <2011/03/15> --
+Package: mcode 2011/03/15 2.0
+ - settings optimized for display (colour formating)
+ - framed listings
+(G:\Programme\LaTex\tex\latex\listings\listings.sty
+\lst@mode=\count115
+\lst@gtempboxa=\box58
+\lst@token=\toks24
+\lst@length=\count116
+\lst@currlwidth=\dimen127
+\lst@column=\count117
+\lst@pos=\count118
+\lst@lostspace=\dimen128
+\lst@width=\dimen129
+\lst@newlines=\count119
+\lst@lineno=\count120
+\lst@maxwidth=\dimen130
+
+(G:\Programme\LaTex\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count121
+\lst@skipnumbers=\count122
+\lst@framebox=\box59
+)
+(G:\Programme\LaTex\tex\latex\listings\listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(G:\Programme\LaTex\tex\latex\base\textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(G:\Programme\LaTex\tex\latex\base\ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 311.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 312.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 313.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 314.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 315.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 316.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 317.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 318.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 319.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 320.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 321.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 322.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
+))
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\robocup.sty")
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\main.aux"
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\titlepage.aux")
@@ -360,38 +457,50 @@ duction.aux")
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\2_Simulation\2_Simulat
 ion.aux")
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\3_KalmanFilter\3_Kalma
-nFilter.aux")
+nFilter.aux"
+
+LaTeX Warning: Label `KFchart' multiply defined.
+
+)
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\4_Estimation\4_Estimat
 ion.aux")
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\Appendix\Appendix.aux"
 ) ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\literature.aux"))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 22.
+
+(G:\Programme\LaTex\tex\latex\base\ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 22.
 
 (G:\Programme\LaTex\tex\context\base\supp-pdf.tex
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count115
-\scratchdimen=\dimen127
-\scratchbox=\box58
-\nofMPsegments=\count116
-\nofMParguments=\count117
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count118
-\MPscratchDim=\dimen128
-\MPnumerator=\count119
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count123
+\scratchdimen=\dimen131
+\scratchbox=\box60
+\nofMPsegments=\count124
+\nofMParguments=\count125
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count126
+\MPscratchDim=\dimen132
+\MPnumerator=\count127
+\everyMPtoPDFconversion=\toks26
 )
-\AtBeginShipoutBox=\box59
+\AtBeginShipoutBox=\box61
+\c@lstlisting=\count128
  ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\titlepage.tex"
 
 ! LaTeX Error: File `./Pictures/ethz_logo' not found.
@@ -447,6 +556,13 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\1_Introduction\1_Intro
 duction.tex"
 Chapter 1.
+
+Class scrreprt Warning: \float@addtolists detected!
+(scrreprt)              You should use the features of package `tocbasic'
+(scrreprt)              instead of \float@addtolists.
+(scrreprt)              Support for \float@addtolists may be removed from
+(scrreprt)              `scrreprt' soon .
+
 ) [5
 
 
@@ -454,11 +570,32 @@ Chapter 1.
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\2_Simulation\2_Simulat
 ion.tex"
 Chapter 2.
-) [6
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 10.
+(G:\Programme\LaTex\tex\latex\psnfss\ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\plot_env.m"
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 28.
+
+(G:\Programme\LaTex\tex\latex\psnfss\ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+))
+
+! LaTeX Error: File `./2_Simulation/playing_field' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 ...[width=12cm]{./2_Simulation/playing_field}
+                                                  
+? 
+[6
 
 
 
-]
+] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\dummy_step.m")) [
+7]
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\3_KalmanFilter\3_Kalma
 nFilter.tex"
 Chapter 3.
@@ -584,7 +721,7 @@ Type  H <return>  for immediate help.
 l.59 ...hics[width=12cm]{./3_KalmanFilter/KFchart}
                                                   
 ? 
-[7
+[8
 
 
 
@@ -598,6 +735,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--88
 
  []
 
+[9]
 
 ! LaTeX Error: Something's wrong--perhaps a missing \item.
 
@@ -618,22 +756,22 @@ Type  H <return>  for immediate help.
 l.103 ...cs[width=12cm]{./3_KalmanFilter/EKFchart}
                                                   
 ? 
-[8]) [9]
+) [10]
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\4_Estimation\4_Estimat
 ion.tex"
 Chapter 4.
-) [10
+) [11
 
 
 
 ]
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\Appendix\Appendix.tex"
 Appendix A.
-[11
+[12
 
 
 
-] <./appendix/linear_model.pdf, id=47, page=1, 597.50829pt x 845.0471pt>
+] <./appendix/linear_model.pdf, id=52, page=1, 597.50829pt x 845.0471pt>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/linear_model.pdf, page 1>
@@ -648,9 +786,9 @@ File: ./appendix/linear_model.pdf Graphic file (type pdf)
 <use ./appendix/linear_model.pdf, page 1>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/linear_model.pdf, page 1> [12 <G:/Studium ETH/RoboCup/RoboCup-E
+<use ./appendix/linear_model.pdf, page 1> [13 <G:/Studium ETH/RoboCup/RoboCup-E
 stimator/Documentation/appendix/linear_model.pdf>]
-<./appendix/linear_model.pdf, id=194, page=2, 597.50829pt x 845.0471pt>
+<./appendix/linear_model.pdf, id=200, page=2, 597.50829pt x 845.0471pt>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/linear_model.pdf, page 2>
@@ -659,9 +797,9 @@ File: ./appendix/linear_model.pdf Graphic file (type pdf)
 <use ./appendix/linear_model.pdf, page 2>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/linear_model.pdf, page 2> [13 <G:/Studium ETH/RoboCup/RoboCup-E
-stimator/Documentation/appendix/linear_model.pdf>] [14]
-<./appendix/nonlinear_model.pdf, id=209, page=1, 597.50829pt x 845.0471pt>
+<use ./appendix/linear_model.pdf, page 2> [14 <G:/Studium ETH/RoboCup/RoboCup-E
+stimator/Documentation/appendix/linear_model.pdf>] [15]
+<./appendix/nonlinear_model.pdf, id=214, page=1, 597.50829pt x 845.0471pt>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/nonlinear_model.pdf, page 1>
@@ -676,9 +814,9 @@ File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 <use ./appendix/nonlinear_model.pdf, page 1>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/nonlinear_model.pdf, page 1> [15 <G:/Studium ETH/RoboCup/RoboCu
+<use ./appendix/nonlinear_model.pdf, page 1> [16 <G:/Studium ETH/RoboCup/RoboCu
 p-Estimator/Documentation/appendix/nonlinear_model.pdf>]
-<./appendix/nonlinear_model.pdf, id=330, page=2, 597.50829pt x 845.0471pt>
+<./appendix/nonlinear_model.pdf, id=335, page=2, 597.50829pt x 845.0471pt>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/nonlinear_model.pdf, page 2>
@@ -687,10 +825,10 @@ File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 <use ./appendix/nonlinear_model.pdf, page 2>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/nonlinear_model.pdf, page 2> [16 <G:/Studium ETH/RoboCup/RoboCu
+<use ./appendix/nonlinear_model.pdf, page 2> [17 <G:/Studium ETH/RoboCup/RoboCu
 p-Estimator/Documentation/appendix/nonlinear_model.pdf>])
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\literature.tex")
-[17
+[18
 
 
 
@@ -706,31 +844,36 @@ nFilter.aux")
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\4_Estimation\4_Estimat
 ion.aux")
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\Appendix\Appendix.aux"
-) ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\literature.aux")) ) 
+) ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\literature.aux"))
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5260 strings out of 495285
- 76848 string characters out of 3181170
- 174669 words of memory out of 3000000
- 8291 multiletter control sequences out of 15000+200000
- 12238 words of font info for 45 fonts, out of 3000000 for 9000
+ 7094 strings out of 495285
+ 104391 string characters out of 3181170
+ 205868 words of memory out of 3000000
+ 10074 multiletter control sequences out of 15000+200000
+ 15751 words of font info for 59 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 43i,18n,51p,725b,402s stack positions out of 5000i,500n,10000p,200000b,50000s
-<
-G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><G:/Programme/LaTe
-x/fonts/type1/public/amsfonts/cm/cmex10.pfb><G:/Programme/LaTex/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/c
-mmi5.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><G:/Progr
-amme/LaTex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><G:/Programme/LaTex/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfon
-ts/cm/cmr5.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><G:/
-Programme/LaTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><G:/Programme/LaTex/fon
-ts/type1/public/amsfonts/cm/cmsl10.pfb><G:/Programme/LaTex/fonts/type1/public/a
-msfonts/cm/cmssbx10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><G:/Program
-me/LaTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (17 pages, 359337 bytes).
+ 43i,18n,51p,1608b,1207s stack positions out of 5000i,500n,10000p,200000b,50000s
+{G:/Programme/LaTex/fonts/enc/dvips/fontname/8r.enc}<G:/Programme/LaTex/fonts
+/type1/public/amsfonts/cm/cmbx12.pfb><G:/Programme/LaTex/fonts/type1/public/ams
+fonts/cm/cmex10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><G:/Programme/L
+aTex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><G:/Programme/LaTex/fonts/type1/p
+ublic/amsfonts/cm/cmmi8.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/
+cmr10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmr5.pfb><G:/Progr
+amme/LaTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><G:/Programme/LaTex/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts
+/cm/cmsl10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
+<G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><G:/Programme/LaT
+ex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><G:/Programme/LaTex/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cm
+sy9.pfb><G:/Programme/LaTex/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on main.pdf (18 pages, 387277 bytes).
 PDF statistics:
- 380 PDF objects out of 1000 (max. 8388607)
+ 392 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
