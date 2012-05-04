@@ -1,4 +1,4 @@
-function [robot_step P_step] = ext_kalman_filter(robot_m,robot_e,m_values,e_values,d_omega,v,P)
+function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_omega,v,P)
 %EXT_KALMAN_FILTER Position-estimation for robots.
 %
 %   [ROBOT_STEP,P_STEP] =

@@ -8,6 +8,7 @@ function BallStep = ball_step(Ball,Robot)
 
     global BallParam;
     global RobotParam;
+    global Noise;
     
 %----------- Ball dynamics -----------%
 
@@ -16,6 +17,10 @@ function BallStep = ball_step(Ball,Robot)
     BallStep.dir = Ball.dir;
     BallStep.velocity = Ball.velocity * BallParam.friction;
     
+    % Process noise, same as for robots
+    BallStep.x = BallStep.x + randn*Noise.process.pos;
+    BallStep.y = BallStep.y + randn*Noise.process.pos;
+    BallStep.dir = BallStep.dir + randn*Noise.process.dir;
     
 %----------- Checking collision with field boundaries -----------%
 
