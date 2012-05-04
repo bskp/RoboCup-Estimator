@@ -44,21 +44,27 @@ global Score;
     Score.blue = 0;
     Score.pink = 0;
     
-    Robot = robot_init();
-    Robot_estimate = Robot;
-    for i = 1:8
-        P(:,:,i) = eye(3);
-    end
-    Ball = ball_init();
-    m_values = 0;
-    e_values = 0;
+Robot = robot_init();
+Robot_e = Robot;
+for i = 1:8
+    P(:,:,i) = eye(3);
+end
+P_ball = eye(4);
+Ball = ball_init();
+Ball_e = Ball;
+m_values = 0;
+e_values = 0;
 
 %% - - - - - Loop - - - - - %
 for s = 1:steps
     [Robot d_omega v] = robot_step(Robot);
     Ball = ball_step(Ball,Robot);
     Robot_m = robot_measure(Robot);
-    [Robot_estimate P] = ext_kalman_filter(Robot_m, Robot_estimate, m_values, e_values, d_omega, v, P);
+    Ball_m = ball_measure(Ball);
+    [Robot_e P] = robot_ekf(Robot_m, Robot_e, m_values, e_values, d_omega, v, P);
+    
+    [Ball_e P_ball] = ball_kf( Ball_e, Ball_m, P_ball );
+    %Ball_e = Ball_m;
     
     clf
     subplot(2,1,1)
@@ -68,14 +74,14 @@ for s = 1:steps
     plot_robot(Robot_m, '+w'); % crosses, white
     
     subplot(2,1,2)
-    plot_env(Ball);
+    plot_env(Ball_e);
     plot_robot(Robot, '@-t');    
-    plot_robot(Robot_estimate, '0-k');
+    plot_robot(Robot_e, '0-k');
     
     if(s==1)
-        [m_values e_values] = history_init(Robot_m, Robot_estimate);
+        [m_values e_values] = history_init(Robot_m, Robot_e);
     end
-    [m_values e_values] = history(m_values, e_values, Robot_m, Robot_estimate);
+    [m_values e_values] = history(m_values, e_values, Robot_m, Robot_e);
     
     pause(0.001);
 end
