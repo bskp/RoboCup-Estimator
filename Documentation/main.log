@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.21)  4 MAY 2012 14:59
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.21)  4 MAY 2012 18:15
 entering extended mode
 **G:/Studium*ETH/RoboCup/RoboCup-Estimator/Documentation/main.tex
 ("G:/Studium ETH/RoboCup/RoboCup-Estimator/Documentation/main.tex"
@@ -457,11 +457,7 @@ duction.aux")
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\2_Simulation\2_Simulat
 ion.aux")
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\3_KalmanFilter\3_Kalma
-nFilter.aux"
-
-LaTeX Warning: Label `KFchart' multiply defined.
-
-)
+nFilter.aux")
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\4_Estimation\4_Estimat
 ion.aux")
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\Appendix\Appendix.aux"
@@ -581,6 +577,9 @@ LaTeX Font Info:    Try loading font information for TS1+pcr on input line 28.
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ))
 
+LaTeX Warning: Reference `Playing_filed' on page 6 undefined on input line 15.
+
+
 ! LaTeX Error: File `./2_Simulation/playing_field' not found.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -594,8 +593,42 @@ l.20 ...[width=12cm]{./2_Simulation/playing_field}
 
 
 
-] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\dummy_step.m")) [
-7]
+] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\dummy_step.m")
+Overfull \hbox (31.69398pt too wide) in paragraph at lines 33--37
+\OT1/pcr/m/n/10.95 robot[]measure(Robot).m \OT1/cmr/m/n/10.95 are im-ple-mented
+ for that pur-pose. \OT1/pcr/m/n/10.95 dummy[]measure(Robot).m
+ []
+
+[7]
+
+! LaTeX Error: File `./2_Simulation/plot_robots' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 ...cs[width=12cm]{./2_Simulation/plot_robots}
+                                                  
+? 
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\ball_step.m"
+LaTeX Font Info:    Try loading font information for OML+pcr on input line 45.
+
+(G:\Programme\LaTex\tex\latex\psnfss\omlpcr.fd
+File: omlpcr.fd 
+)
+LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <9> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 45.
+
+Overfull \hbox (62.34933pt too wide) in paragraph at lines 48--49
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (62.34933pt too wide) in paragraph at lines 49--50
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [8]) [9]
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\3_KalmanFilter\3_Kalma
 nFilter.tex"
 Chapter 3.
@@ -721,7 +754,7 @@ Type  H <return>  for immediate help.
 l.59 ...hics[width=12cm]{./3_KalmanFilter/KFchart}
                                                   
 ? 
-[8
+[10
 
 
 
@@ -735,7 +768,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--88
 
  []
 
-[9]
+[11]
 
 ! LaTeX Error: Something's wrong--perhaps a missing \item.
 
@@ -756,22 +789,22 @@ Type  H <return>  for immediate help.
 l.103 ...cs[width=12cm]{./3_KalmanFilter/EKFchart}
                                                   
 ? 
-) [10]
+) [12]
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\4_Estimation\4_Estimat
 ion.tex"
 Chapter 4.
-) [11
+) [13
 
 
 
 ]
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\Appendix\Appendix.tex"
 Appendix A.
-[12
+[14
 
 
 
-] <./appendix/linear_model.pdf, id=52, page=1, 597.50829pt x 845.0471pt>
+] <./appendix/linear_model.pdf, id=61, page=1, 597.50829pt x 845.0471pt>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/linear_model.pdf, page 1>
@@ -786,9 +819,9 @@ File: ./appendix/linear_model.pdf Graphic file (type pdf)
 <use ./appendix/linear_model.pdf, page 1>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/linear_model.pdf, page 1> [13 <G:/Studium ETH/RoboCup/RoboCup-E
+<use ./appendix/linear_model.pdf, page 1> [15 <G:/Studium ETH/RoboCup/RoboCup-E
 stimator/Documentation/appendix/linear_model.pdf>]
-<./appendix/linear_model.pdf, id=200, page=2, 597.50829pt x 845.0471pt>
+<./appendix/linear_model.pdf, id=208, page=2, 597.50829pt x 845.0471pt>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/linear_model.pdf, page 2>
@@ -797,9 +830,9 @@ File: ./appendix/linear_model.pdf Graphic file (type pdf)
 <use ./appendix/linear_model.pdf, page 2>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/linear_model.pdf, page 2> [14 <G:/Studium ETH/RoboCup/RoboCup-E
-stimator/Documentation/appendix/linear_model.pdf>] [15]
-<./appendix/nonlinear_model.pdf, id=214, page=1, 597.50829pt x 845.0471pt>
+<use ./appendix/linear_model.pdf, page 2> [16 <G:/Studium ETH/RoboCup/RoboCup-E
+stimator/Documentation/appendix/linear_model.pdf>] [17]
+<./appendix/nonlinear_model.pdf, id=222, page=1, 597.50829pt x 845.0471pt>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/nonlinear_model.pdf, page 1>
@@ -814,9 +847,9 @@ File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 <use ./appendix/nonlinear_model.pdf, page 1>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/nonlinear_model.pdf, page 1> [16 <G:/Studium ETH/RoboCup/RoboCu
+<use ./appendix/nonlinear_model.pdf, page 1> [18 <G:/Studium ETH/RoboCup/RoboCu
 p-Estimator/Documentation/appendix/nonlinear_model.pdf>]
-<./appendix/nonlinear_model.pdf, id=335, page=2, 597.50829pt x 845.0471pt>
+<./appendix/nonlinear_model.pdf, id=343, page=2, 597.50829pt x 845.0471pt>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/nonlinear_model.pdf, page 2>
@@ -825,10 +858,10 @@ File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 <use ./appendix/nonlinear_model.pdf, page 2>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/nonlinear_model.pdf, page 2> [17 <G:/Studium ETH/RoboCup/RoboCu
+<use ./appendix/nonlinear_model.pdf, page 2> [19 <G:/Studium ETH/RoboCup/RoboCu
 p-Estimator/Documentation/appendix/nonlinear_model.pdf>])
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\literature.tex")
-[18
+[20
 
 
 
@@ -846,34 +879,36 @@ ion.aux")
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\Appendix\Appendix.aux"
 ) ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\literature.aux"))
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7094 strings out of 495285
- 104391 string characters out of 3181170
- 205868 words of memory out of 3000000
- 10074 multiletter control sequences out of 15000+200000
- 15751 words of font info for 59 fonts, out of 3000000 for 9000
+ 7144 strings out of 495285
+ 105291 string characters out of 3181170
+ 210861 words of memory out of 3000000
+ 10116 multiletter control sequences out of 15000+200000
+ 16059 words of font info for 60 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 43i,18n,51p,1608b,1207s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,18n,51p,1867b,1207s stack positions out of 5000i,500n,10000p,200000b,50000s
 {G:/Programme/LaTex/fonts/enc/dvips/fontname/8r.enc}<G:/Programme/LaTex/fonts
-/type1/public/amsfonts/cm/cmbx12.pfb><G:/Programme/LaTex/fonts/type1/public/ams
-fonts/cm/cmex10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><G:/Programme/L
-aTex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><G:/Programme/LaTex/fonts/type1/p
-ublic/amsfonts/cm/cmmi8.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/
-cmr10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmr5.pfb><G:/Progr
-amme/LaTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><G:/Programme/LaTex/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts
-/cm/cmsl10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-<G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><G:/Programme/LaT
-ex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><G:/Programme/LaTex/fonts/type1/pub
-lic/amsfonts/cm/cmsy8.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cm
-sy9.pfb><G:/Programme/LaTex/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on main.pdf (18 pages, 387277 bytes).
+/type1/public/amsfonts/cm/cmbx10.pfb><G:/Programme/LaTex/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmex10.p
+fb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><G:/Programme/
+LaTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><G:/Programme/LaTex/fonts/type1/
+public/amsfonts/cm/cmmi7.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmmi9.pfb><G:/Pro
+gramme/LaTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><G:/Programme/LaTex/fonts
+/type1/public/amsfonts/cm/cmr5.pfb><G:/Programme/LaTex/fonts/type1/public/amsfo
+nts/cm/cmr7.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><G:
+/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmsl10.pfb><G:/Programme/LaTex/
+fonts/type1/public/amsfonts/cm/cmssbx10.pfb><G:/Programme/LaTex/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/c
+msy7.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><G:/Progr
+amme/LaTex/fonts/type1/public/amsfonts/cm/cmsy9.pfb><G:/Programme/LaTex/fonts/t
+ype1/urw/courier/ucrr8a.pfb>
+Output written on main.pdf (20 pages, 410371 bytes).
 PDF statistics:
- 392 PDF objects out of 1000 (max. 8388607)
+ 407 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

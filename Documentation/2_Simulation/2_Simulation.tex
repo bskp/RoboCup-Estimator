@@ -12,14 +12,14 @@ All graphical features concerning the playing field are implemented by the funct
 \lstinputlisting[firstline=27, lastline=28]{../Simulation/Merge/plot_env.m}
 \parskip 20pt
 
-where {\fontfamily{pcr}\selectfont draw\_circle(x,y,r,color,filled)} is a custom-build function to draw marker circles of the field, but also circles representing the robots and the ball. All functions are designed for fast calculations since we want as many frames as possible if the simulation is running. Figure \ref{KFchart} shows the playing field after the execution of {\fontfamily{pcr}\selectfont plot\_env(ball).m} with suitable parameters for {\fontfamily{pcr}\selectfont ball}
+where {\fontfamily{pcr}\selectfont draw\_circle(x,y,r,color,filled)} is a custom-build function to draw marker circles of the field, but also circles representing the robots and the ball. All functions are designed for fast calculations since we want as many frames as possible if the simulation is running. Figure \ref{Playing_filed} shows the playing field after the execution of {\fontfamily{pcr}\selectfont plot\_env(ball).m} with suitable parameters for {\fontfamily{pcr}\selectfont ball}
 \parskip 10pt
 
 \begin{figure}[htbp]
 	\centering
     	\includegraphics[width=12cm]{./2_Simulation/playing_field}
   	\caption{Playing field after initialization.}
-  	\label{KFchart}
+  	\label{Playing_field}
 \end{figure}
 
 
@@ -30,14 +30,32 @@ Maybe the most important part of the simulation is the adequate depiction and be
 \lstinputlisting[firstline=20, lastline=27]{../Simulation/Merge/dummy_step.m}
 \parskip 20pt
 
-Later on this non-linearity of these equations will make it necessary that we use an extended Kalman filter instead of a simple linear one. The addition of process noise and the collision detection of robots also happen in these functions. Up to this point we computed the behaviour of an ideal robot. Since our goal is to filter out the uncertainty of motion of the robot parameters, we artifically have to add some measurement noise which we can filter later on. The functions {\fontfamily{pcr}\selectfont dummy\_measure(Robot).m} and {\fontfamily{pcr}\selectfont robot\_measure(Robot).m} are implemented for that purpose. {\fontfamily{pcr}\selectfont dummy\_measure(Robot).m} simply adds white Gaussian noise to the position and the direction of every robot. Additionally with a certain possibillity there is no measurement at all, so the corresponding parameter is dropped. What we are assuming with this model is, that there is some global eye available which measures the position and direction of every robot with some given resolution. Since this scenario is not realistic in a RoboCup soccer match, because only the robots themselves can gain visual information, we developed the function {\fontfamily{pcr}\selectfont robot\_measure(Robot).m} to solve this problem.
-
-
-
+Later on the non-linearity of these equations will make it necessary that we use an extended Kalman filter instead of a simple linear one. The addition of process noise and the collision detection of robots also happen in these functions. Up to this point we computed the behaviour of an ideal robot. Since our goal is to filter out the uncertainty of motion of the robot parameters, we artifically have to add some measurement noise which we can filter later on. The functions {\fontfamily{pcr}\selectfont dummy\_measure(Robot).m} and {\fontfamily{pcr}\selectfont robot\_measure(Robot).m} are implemented for that purpose. {\fontfamily{pcr}\selectfont dummy\_measure(Robot).m} simply adds white Gaussian noise to the position and the direction of every robot. Additionally with a certain possibillity there is no measurement at all, so the corresponding parameter is dropped. What we are assuming with this model is, that there is some global eye available which measures the position and direction of every robot with some given resolution. Since this scenario is not realistic in a RoboCup soccer match, because only the robots themselves can gain visual information, we developed the function {\fontfamily{pcr}\selectfont robot\_measure(Robot).m} to solve this problem. According to this philosophy, a measurement of a robot is only available if it stands in front of a characteristic point on the field or if it is within the distance of sight of another robot. Note that a robot only locates other robots if it is aware of its own position and that we get information from only one team, which will be the case for official RoboCup matches. If more than one measurement is available for a robot, the mean of all measurements is computed.
 \parskip 10pt
+After this computational part, the robots are added to the graphical environment by using the function
+{\fontfamily{pcr}\selectfont plot\_robot(Robot,style).m}. It provides several features such as the coloration, the shape and the label of the robots on the field. A sample output on the graphical interface after several timesteps is shown in figure \ref{Plot_robots} below
+
+\begin{figure}[htbp]
+	\centering
+    	\includegraphics[width=12cm]{./2_Simulation/plot_robots}
+  	\caption{Capture of a regular simulation frame.}
+  	\label{Plot_robots}
+\end{figure}
+
+Note that measurements (white crosses) are not available for most robots (blue and magenta circles).
+
 
 \section{The Ball}
 
+The treatment of the ball is quite similar to that of the robots. The ball object is also represented by a struct containing its horizontal and vertical position, its direction and the velocity. These parameters are set by executing {\fontfamily{pcr}\selectfont ball\_init().m}. This function also defines the ball's radius, its initial velocity and the friction towards the ground. The function {\fontfamily{pcr}\selectfont ball\_step(Ball,Robot).m} does, like the equivalent function for the robots, the computations of the ball's next position and direction on the field. These parameters however do not only depend on the ball's dynamics but also whether it collides with one of the robots. The following MATLAB code shows the algorithm for this collision detection
+
+\lstinputlisting[firstline=40, lastline=52]{../Simulation/Merge/ball_step.m}
+\parskip 20pt
+
+In our simple model we assume that if the ball collides with one of the robots, it regains its initial velocity and bounces away, perpendicular to the robot's position. Since the ball too is a subject of measurement, we also needed a measurement function for this object. {\fontfamily{pcr}\selectfont ball\_measure(Ball).m} adds measurement noise or, as the case may be, drops the measurement completely. This procedure is repeated with every timestep.
+
+
+\parskip 10pt
 
 
 \section{A Random Simulation}

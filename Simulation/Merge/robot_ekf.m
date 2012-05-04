@@ -1,8 +1,8 @@
 function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_omega,v,P)
-%EXT_KALMAN_FILTER Position-estimation for robots.
+%ROBOT_EKF Position-estimation for robots.
 %
 %   [ROBOT_STEP,P_STEP] =
-%   EXT_KALMAN_FILTER(ROBOT_M,ROBOT_E,M_VALUES,E_VALUES,D_OMEGA,V,P)
+%   ROBOT_EKF(ROBOT_M,ROBOT_E,M_VALUES,E_VALUES,D_OMEGA,V,P)
 %   implements the extended Kalman filter cycle for the given motion model
 %   after which the robots behave. The structs ROBOT_M and ROBOT_E refer to
 %   the measured robot parameters and the previously estimated robot
