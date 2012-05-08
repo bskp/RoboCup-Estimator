@@ -57,7 +57,7 @@ e_values = 0;
 
 %% - - - - - Loop - - - - - %
 for s = 1:steps
-    [Robot d_omega v] = robot_step(Robot);
+    [Robot d_omega v] = robot_step(Robot, Ball);
     Ball = ball_step(Ball,Robot);
     Robot_m = robot_measure(Robot);
     Ball_m = ball_measure(Ball);
