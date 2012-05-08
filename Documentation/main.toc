@@ -2,16 +2,20 @@
 \contentsline {chapter}{\numberline {1}Introduction}{5}
 \contentsline {chapter}{\numberline {2}Simulation}{6}
 \contentsline {section}{\numberline {2.1}The Playing Field}{6}
-\contentsline {section}{\numberline {2.2}The Robots}{7}
+\contentsline {section}{\numberline {2.2}The Robots}{6}
 \contentsline {section}{\numberline {2.3}The Ball}{8}
 \contentsline {section}{\numberline {2.4}A Random Simulation}{9}
 \contentsline {chapter}{\numberline {3}Kalman Filtering}{10}
 \contentsline {section}{\numberline {3.1}Linear Kalman Filter}{10}
 \contentsline {section}{\numberline {3.2}Extended Kalman Filter (EKF)}{11}
-\contentsline {chapter}{\numberline {4}Estimation}{13}
-\contentsline {section}{\numberline {4.1}Estimate of the Ball}{13}
-\contentsline {section}{\numberline {4.2}Estimate of the Robots}{13}
-\contentsline {chapter}{\numberline {A}Examples}{14}
-\contentsline {section}{\numberline {A.1}Kalman Filtering of Linear System}{14}
-\contentsline {section}{\numberline {A.2}Kalman Filtering of Nonlinear System}{17}
-\contentsline {section}{Literatur}{20}
+\contentsline {chapter}{\numberline {4}Estimation}{14}
+\contentsline {section}{\numberline {4.1}Estimate of the Ball}{14}
+\contentsline {section}{\numberline {4.2}Estimate of the Robots}{14}
+\contentsline {chapter}{\numberline {5}Sensor Fusion}{15}
+\contentsline {section}{\numberline {5.1}Sensors of the Robots}{15}
+\contentsline {section}{\numberline {5.2}Principles of Sensor Fusion}{15}
+\contentsline {section}{\numberline {5.3}Dempster-Shafer}{15}
+\contentsline {chapter}{\numberline {A}Examples}{16}
+\contentsline {section}{\numberline {A.1}Kalman Filtering of Linear System}{16}
+\contentsline {section}{\numberline {A.2}Kalman Filtering of Nonlinear System}{19}
+\contentsline {section}{Literatur}{22}

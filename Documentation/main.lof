@@ -1,11 +1,12 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Playing field after initialization.}}{6}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Capture of a regular simulation frame.}}{8}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Playing field after initialization.}}{7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Capture of a regular simulation frame.}}{9}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Example: Linear electrical circuit.}}{10}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Example: Input signal, output signal, noisy output, and filtered output.}}{11}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Example: Input signal, output signal, noisy output, and filtered output.}}{12}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Example: Input signal, output signal, noisy output, and filtered output.}}{13}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
