@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.2.21)  8 MAY 2012 16:23
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.2.21)  9 MAY 2012 12:32
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -619,9 +619,6 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              Support for \float@addtolists may be removed from
 (scrreprt)              `scrreprt' soon .
 
-
-LaTeX Warning: Citation `wwwRoboCup' on page 5 undefined on input line 4.
-
 ) [5
 
 
@@ -655,7 +652,7 @@ d-eps-converted-to.pdf ./2_Simulation/playing_field.eps>
 (epstopdf)             \includegraphics on input line 20.
 Package epstopdf Info: Output file is already uptodate.
 
-<./2_Simulation/playing_field-eps-converted-to.pdf, id=31, 963.6pt x 696.6025pt
+<./2_Simulation/playing_field-eps-converted-to.pdf, id=30, 963.6pt x 696.6025pt
 >
 File: ./2_Simulation/playing_field-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -907,7 +904,46 @@ Appendix A.
 
 
 
-] <./appendix/linear_model.pdf, id=102, page=1, 597.50829pt x 845.0471pt>
+] <./appendix/Group_Project.pdf, id=102, page=1, 597.432pt x 844.95674pt>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 1>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 1>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 1>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 1>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 1> [17 <./appendix/Group_Project.pdf>]
+<./appendix/Group_Project.pdf, id=136, page=2, 597.432pt x 844.95674pt>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 2>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 2>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 2> [18 <./appendix/Group_Project.pdf>]
+<./appendix/Group_Project.pdf, id=140, page=3, 597.432pt x 844.95674pt>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 3>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 3>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 3> [19 <./appendix/Group_Project.pdf>]
+Appendix B.
+[20
+
+] <./appendix/linear_model.pdf, id=150, page=1, 597.50829pt x 845.0471pt>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/linear_model.pdf, page 1>
@@ -922,8 +958,8 @@ File: ./appendix/linear_model.pdf Graphic file (type pdf)
 <use ./appendix/linear_model.pdf, page 1>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/linear_model.pdf, page 1> [17 <./appendix/linear_model.pdf>]
-<./appendix/linear_model.pdf, id=249, page=2, 597.50829pt x 845.0471pt>
+<use ./appendix/linear_model.pdf, page 1> [21 <./appendix/linear_model.pdf>]
+<./appendix/linear_model.pdf, id=298, page=2, 597.50829pt x 845.0471pt>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/linear_model.pdf, page 2>
@@ -932,9 +968,9 @@ File: ./appendix/linear_model.pdf Graphic file (type pdf)
 <use ./appendix/linear_model.pdf, page 2>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/linear_model.pdf, page 2> [18 <./appendix/linear_model.pdf>]
-[19]
-<./appendix/nonlinear_model.pdf, id=265, page=1, 597.50829pt x 845.0471pt>
+<use ./appendix/linear_model.pdf, page 2> [22 <./appendix/linear_model.pdf>]
+[23]
+<./appendix/nonlinear_model.pdf, id=312, page=1, 597.50829pt x 845.0471pt>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/nonlinear_model.pdf, page 1>
@@ -949,8 +985,8 @@ File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 <use ./appendix/nonlinear_model.pdf, page 1>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/nonlinear_model.pdf, page 1> [20 <./appendix/nonlinear_model.pd
-f>] <./appendix/nonlinear_model.pdf, id=386, page=2, 597.50829pt x 845.0471pt>
+<use ./appendix/nonlinear_model.pdf, page 1> [24 <./appendix/nonlinear_model.pd
+f>] <./appendix/nonlinear_model.pdf, id=433, page=2, 597.50829pt x 845.0471pt>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/nonlinear_model.pdf, page 2>
@@ -959,11 +995,11 @@ File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 <use ./appendix/nonlinear_model.pdf, page 2>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/nonlinear_model.pdf, page 2> [21 <./appendix/nonlinear_model.pd
+<use ./appendix/nonlinear_model.pdf, page 2> [25 <./appendix/nonlinear_model.pd
 f>])
 \openout2 = `literature.aux'.
 
- (./literature.tex) [22
+ (./literature.tex) [26
 
 
 
@@ -975,15 +1011,12 @@ f>])
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 7497 strings out of 493747
- 110524 string characters out of 3143546
- 216208 words of memory out of 3000000
- 10532 multiletter control sequences out of 15000+200000
+ 7510 strings out of 493747
+ 110920 string characters out of 3143546
+ 216223 words of memory out of 3000000
+ 10543 multiletter control sequences out of 15000+200000
  16227 words of font info for 61 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  45i,18n,48p,1812b,1509s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1008,10 +1041,10 @@ ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2010/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2010/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2010/texmf-dist/fonts/ty
 pe1/urw/courier/ucrr8a.pfb>
-Output written on main.pdf (22 pages, 452059 bytes).
+Output written on main.pdf (26 pages, 526672 bytes).
 PDF statistics:
- 455 PDF objects out of 1000 (max. 8388607)
- 209 compressed objects within 3 object streams
+ 503 PDF objects out of 1000 (max. 8388607)
+ 241 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
