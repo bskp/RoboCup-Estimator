@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.2.21)  9 MAY 2012 12:32
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.2.21)  10 MAY 2012 16:29
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -455,45 +455,254 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
-)) (./robocup.sty) (./main.aux (./titlepage.aux) (./abstract.aux)
+))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pstricks/pst-all.sty
+Package: pst-all 2008/01/01 the main pstricks tools
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pstricks/pstricks.sty
+Package: pstricks 2010/06/17 v0.45 LaTeX wrapper for `PSTricks' (RN,HV)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pstricks/pstricks.tex
+(/usr/local/texlive/2010/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks25
+\XKV@tempa@toks=\toks26
+\XKV@depth=\count123
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+)))
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pstricks/pst-fp.tex
+`pst-fp' v0.06, 2010/05/14 (hv)
+\pstFP@xs=\count124
+\pstFP@xia=\count125
+\pstFP@xib=\count126
+\pstFP@xfa=\count127
+\pstFP@xfb=\count128
+\pstFP@rega=\count129
+\pstFP@regb=\count130
+\pstFP@regs=\count131
+\pstFP@times=\count132
+)
+\psLoopIndex=\count133
+
+`PSTricks' v2.08  <2010/06/06> (tvz)
+\pst@dima=\dimen131
+\pst@dimb=\dimen132
+\pst@dimc=\dimen133
+\pst@dimd=\dimen134
+\pst@dimg=\dimen135
+\pst@dimh=\dimen136
+\pst@dimm=\dimen137
+\pst@dimn=\dimen138
+\pst@dimo=\dimen139
+\pst@dimp=\dimen140
+\pst@hbox=\box60
+\pst@boxg=\box61
+\pst@cnta=\count134
+\pst@cntb=\count135
+\pst@cntc=\count136
+\pst@cntd=\count137
+\pst@cntg=\count138
+\pst@cnth=\count139
+\pst@cntm=\count140
+\pst@cntn=\count141
+\pst@cnto=\count142
+\pst@cntp=\count143
+\@zero=\count144
+\pst@toks=\toks27
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pstricks/pstricks.con)
+\psunit=\dimen141
+\psxunit=\dimen142
+\psyunit=\dimen143
+\pslinewidth=\dimen144
+\pst@customdefs=\toks28
+\pslinearc=\dimen145
+\pst@symbolStep=\dimen146
+\pst@symbolWidth=\dimen147
+\everypsbox=\toks29
+\psframesep=\dimen148
+\pslabelsep=\dimen149
+\pst@shift=\dimen150
+\theoverlaybox=\box62
+)
+File: pstricks.tex 2010/06/06 v2.08 `PSTricks' (tvz,hv)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pstricks/pst-fp.tex)
+File: pst-fp.tex 2010/06/06 v2.08 `PST-fp' (hv)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pst-plot/pst-plot.sty
+Package: pst-plot 2010/01/22 package wrapper for pst-plot.tex
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pst-plot/pst-plot.tex
+(/usr/local/texlive/2010/texmf-dist/tex/generic/multido/multido.tex
+ v1.42, 2010/05/14 <tvz>
+\multido@count=\count145
+\multidocount=\count146
+\multido@stuff=\toks30
+)  v1.17, 2010/06/22 (tvz,hv)
+\pstRadUnit=\dimen151
+\pstRadUnitInv=\dimen152
+\pst@linecnt=\count147
+\psk@subticksize=\dimen153
+\pst@xticksizeA=\dimen154
+\pst@xticksizeB=\dimen155
+\pst@xticksizeC=\dimen156
+\pst@yticksizeA=\dimen157
+\pst@yticksizeB=\dimen158
+\pst@yticksizeC=\dimen159
+\@digitcounter=\count148
+\psk@llx=\dimen160
+\psk@lly=\dimen161
+\psk@urx=\dimen162
+\psk@ury=\dimen163
+\pst@xunit=\dimen164
+\pst@yunit=\dimen165
+)
+File: pst-plot.tex 2010/06/22 1.17 `pst-plot' (tvz,hv)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pst-node/pst-node.sty
+Package: pst-node 2010/04/22 package wrapper for pst-node.tex
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pst-node/pst-node.tex
+ v1.13, 2010/06/06
+\psrow=\count149
+\pscol=\count150
+\psmatrixcnt=\count151
+\psrowsep=\skip55
+\pscolsep=\skip56
+\pst@args=\count152
+\num@pts=\count153
+\pst@argcnt=\count154
+)
+File: pst-node.tex 2010/06/06 1.13 `pst-node' (tvz)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pst-tree/pst-tree.sty
+Package: pst-tree 2009/01/25 package wrapper for pst-tree.tex
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pst-tree/pst-tree.tex
+ v1.11, 2009/09/17(tvz,dg,hv)
+\pstree@rootbox=\box63
+\pstree@box=\box64
+\psnodecnt=\count155
+\pstreelevel=\count156
+\pstreecnt=\count157
+\pstree@cnt=\count158
+\pstree@stop=\count159
+)
+File: pst-tree.tex 2009/09/17 1.11 `pst-tree' (tvz,hv)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pst-grad/pst-grad.sty
+Package: pst-grad 2004/07/15 package wrapper for pst-grad.tex (hv)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pst-grad/pst-grad.tex
+`pst-grad' v1.06, 2006/11/27 (tvz,dg,hv))
+File: pst-grad.tex 2006/11/27 1.06 `pst-grad' (tvz)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pst-coil/pst-coil.sty
+Package: pst-coil 2010/02/01 package wrapper for pst-coil.tex (hv)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pst-coil/pst-coil.tex
+ v1.06, 2006/11/27)
+File: pst-coil.tex 2010/02/01 v1.03 `PST-coil' (tvz,hv)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pst-text/pst-text.sty
+Package: pst-text 2006/01/01 package wrapper for pst-text.tex (hv)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pst-text/pst-text.tex
+ v1.00, 2006/11/05(tvz,hv))
+File: pst-text.tex 2006/11/05 1.00 `pst-text' (tvz)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pst-3d/pst-3d.sty
+Package: pst-3d 2009/07/28 package wrapper for pst-3d.tex (hv)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pst-3d/pst-3d.tex
+`PST-3d' v1.11, 2010/02/14 (tvz))
+File: pst-3d.tex 2010/02/14 v1.11 `PST-3d' (hv)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pst-eps/pst-eps.sty
+Package: pst-eps 2005/05/20 package wrapper for pst-eps.tex (hv)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pst-eps/pst-eps.tex
+ v1.00, 2006/11/04
+\pst@epsout=\write3
+\pst@tempout=\write4
+)
+File: pst-eps.tex 2006/11/04 1.00 `pst-eps' (tvz)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pst-fill/pst-fill.sty
+Package: pst-fill 2005/09/13 package wrapper for pst-fill.tex (hv)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pst-fill/pst-fill.tex
+`PST-Fill' v1.01, 2007/03/10 (tvz,dg,hv)
+\pst@fillbox=\box65
+)
+File: pst-fill.tex 2007/03/10 v1.01 `PST-fill' (tvz,dg)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pstricks-add/pstricks-add.sty
+Package: pstricks-add 2010/02/11 v. 0.14 package wrapper for pstricks-add.tex (
+hv)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pstricks-add/pstricks-add.tex
+(/usr/local/texlive/2010/texmf-dist/tex/generic/pst-math/pst-math.tex
+`pst-math' v0.23 , (CJ,hv)) `pstricks-add' v3.41, 2010/06/16 (dr,hv)
+\pshooklength=\dimen166
+\pshookwidth=\dimen167
+\chart@ColorIndex=\dimen168
+\chart@ColorStep=\dimen169
+\pst@chartHeight=\dimen170
+\pst@chartStackDepth=\dimen171
+\pst@chartStackWidth=\dimen172
+\chart@Toggle=\count160
+)
+File: pstricks-add.tex 2010/06/16 v3.41 `PSTricks-add' (hv)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/multido/multido.sty
+Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
+
+))
+(./robocup.sty) (./main.aux (./titlepage.aux) (./abstract.aux)
 (./1_Introduction/1_Introduction.aux) (./2_Simulation/2_Simulation.aux)
 (./3_KalmanFilter/3_KalmanFilter.aux) (./4_Estimation/4_Estimation.aux)
 (./5_SensorFusion/5_SensorFusion.aux) (./Appendix/Appendix.aux)
 (./literature.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 23.
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    ... okay on input line 23.
 
 (/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count123
-\scratchdimen=\dimen131
-\scratchbox=\box60
-\nofMPsegments=\count124
-\nofMParguments=\count125
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count126
-\MPscratchDim=\dimen132
-\MPnumerator=\count127
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count161
+\scratchdimen=\dimen173
+\scratchbox=\box66
+\nofMPsegments=\count162
+\nofMParguments=\count163
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count164
+\MPscratchDim=\dimen174
+\MPnumerator=\count165
+\everyMPtoPDFconversion=\toks32
 ) (/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2010/04/01 v0.9 Utility functions of pdfTeX for LuaTeX (HO)
 
@@ -534,8 +743,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box61
-\c@lstlisting=\count128
+\AtBeginShipoutBox=\box67
+\c@lstlisting=\count166
 \openout2 = `titlepage.aux'.
 
 
@@ -572,7 +781,21 @@ Package epstopdf Info: Output file is already uptodate.
 File: ./Pictures/ifalogo_color-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Pictures/ifalogo_color-eps-converted-to.pdf> [1
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
 
+
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
 
 
 
@@ -581,29 +804,30 @@ res/ethz_logo-eps-converted-to.pdf> <./Pictures/ifalogo_color-eps-converted-to.
 pdf>])
 \openout2 = `abstract.aux'.
 
- (./abstract.tex)
-[2
+ (./abstract.tex) [2
 
 
 ] (./main.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 4.
- (/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+
 (/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ))
-\tf@toc=\write3
-\openout3 = `main.toc'.
+\tf@toc=\write5
+\openout5 = `main.toc'.
 
  [3
 
 
 ]
 (./main.lof)
-\tf@lof=\write4
-\openout4 = `main.lof'.
+\tf@lof=\write6
+\openout6 = `main.lof'.
 
  [4
 
@@ -713,53 +937,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-
-./3_KalmanFilter/3_KalmanFilter.tex:30: LaTeX Error: Environment pspicture unde
-fined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.30 	\begin{pspicture}
-                       (-3,-1)(9,5)
-? 
-./3_KalmanFilter/3_KalmanFilter.tex:32: Undefined control sequence.
-l.32 			\pnode
-              (-2,4){A}		\pnode(-2,0){B}		\pnode(8,4){C0}		\pnode(8,0){D}
-? 
-./3_KalmanFilter/3_KalmanFilter.tex:32: Undefined control sequence.
-l.32 			\pnode(-2,4){A}		\pnode
-                               (-2,0){B}		\pnode(8,4){C0}		\pnode(8,0){D}
-? 
-./3_KalmanFilter/3_KalmanFilter.tex:32: Undefined control sequence.
-l.32 			\pnode(-2,4){A}		\pnode(-2,0){B}		\pnode
-                                                (8,4){C0}		\pnode(8,0){D}
-? 
-./3_KalmanFilter/3_KalmanFilter.tex:32: Undefined control sequence.
-l.32 ...		\pnode(-2,0){B}		\pnode(8,4){C0}		\pnode
-                                                  (8,0){D}
-? 
-./3_KalmanFilter/3_KalmanFilter.tex:33: Undefined control sequence.
-l.33 			\pnode
-              (3,4){A2}		\pnode(3,2){M}		\pnode(3,0){B2}	\pnode(6,4){C2}
-? 
-./3_KalmanFilter/3_KalmanFilter.tex:33: Undefined control sequence.
-l.33 			\pnode(3,4){A2}		\pnode
-                               (3,2){M}		\pnode(3,0){B2}	\pnode(6,4){C2}
-? 
-./3_KalmanFilter/3_KalmanFilter.tex:33: Undefined control sequence.
-l.33 			\pnode(3,4){A2}		\pnode(3,2){M}		\pnode
-                                               (3,0){B2}	\pnode(6,4){C2}
-? 
-./3_KalmanFilter/3_KalmanFilter.tex:33: Undefined control sequence.
-l.33 ...2}		\pnode(3,2){M}		\pnode(3,0){B2}	\pnode
-                                                  (6,4){C2}
-? 
-./3_KalmanFilter/3_KalmanFilter.tex:34: Undefined control sequence.
-l.34 			\pnode
-              (6,0){D2}
-? 
 ./3_KalmanFilter/3_KalmanFilter.tex:36: Undefined control sequence.
 l.36 			\coil
              [intensitylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
@@ -768,60 +945,331 @@ l.36 			\coil
 l.37 			\capacitor
                   [tensionlabel=$U_1$,tensionlabeloffset=-1.2,tensionoffset=...
 
-? 
+? r
+OK, entering \nonstopmode...
 ./3_KalmanFilter/3_KalmanFilter.tex:39: Undefined control sequence.
 l.39 			\resistor
                  [tensionlabel=$U_R$,tensionoffset=0.8,labeloffset=-0.5](B2)...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ./3_KalmanFilter/3_KalmanFilter.tex:40: Undefined control sequence.
 l.40 			\capacitor
                   [tensionlabel=$U_2$,tensionlabeloffset=-1.2,tensionoffset=...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-? 
 ./3_KalmanFilter/3_KalmanFilter.tex:43: Undefined control sequence.
 l.43 			\wire
              (B)(D)		\wire(A2)(C0)
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ./3_KalmanFilter/3_KalmanFilter.tex:43: Undefined control sequence.
 l.43 			\wire(B)(D)		\wire
                           (A2)(C0)
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ./3_KalmanFilter/3_KalmanFilter.tex:44: Undefined control sequence.
-l.44 			\pscircle
-                 [fillstyle=solid](A){0.075}
-? 
+<recently read> \c@lor@to@ps 
+                             
+l.44 			\pscircle[fillstyle=solid](A){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:44: Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.44 			\pscircle[fillstyle=solid](A){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:44: Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.44 			\pscircle[fillstyle=solid](A){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:44: Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.44 			\pscircle[fillstyle=solid](A){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:44: Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.44 			\pscircle[fillstyle=solid](A){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:44: Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.44 			\pscircle[fillstyle=solid](A){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ./3_KalmanFilter/3_KalmanFilter.tex:45: Undefined control sequence.
-l.45 			\pscircle
-                 [fillstyle=solid](B){0.075}
-? 
+<recently read> \c@lor@to@ps 
+                             
+l.45 			\pscircle[fillstyle=solid](B){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:45: Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.45 			\pscircle[fillstyle=solid](B){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:45: Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.45 			\pscircle[fillstyle=solid](B){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:45: Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.45 			\pscircle[fillstyle=solid](B){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:45: Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.45 			\pscircle[fillstyle=solid](B){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:45: Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.45 			\pscircle[fillstyle=solid](B){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ./3_KalmanFilter/3_KalmanFilter.tex:46: Undefined control sequence.
-l.46 			\pscircle
-                 [fillstyle=solid](C0){0.075}
-? 
+<recently read> \c@lor@to@ps 
+                             
+l.46 			\pscircle[fillstyle=solid](C0){0.075}
+                                             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:46: Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.46 			\pscircle[fillstyle=solid](C0){0.075}
+                                             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:46: Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.46 			\pscircle[fillstyle=solid](C0){0.075}
+                                             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:46: Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.46 			\pscircle[fillstyle=solid](C0){0.075}
+                                             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:46: Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.46 			\pscircle[fillstyle=solid](C0){0.075}
+                                             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:46: Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.46 			\pscircle[fillstyle=solid](C0){0.075}
+                                             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ./3_KalmanFilter/3_KalmanFilter.tex:47: Undefined control sequence.
-l.47 			\pscircle
-                 [fillstyle=solid](D){0.075}
-? 
+<recently read> \c@lor@to@ps 
+                             
+l.47 			\pscircle[fillstyle=solid](D){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:47: Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.47 			\pscircle[fillstyle=solid](D){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:47: Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.47 			\pscircle[fillstyle=solid](D){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:47: Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.47 			\pscircle[fillstyle=solid](D){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:47: Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.47 			\pscircle[fillstyle=solid](D){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./3_KalmanFilter/3_KalmanFilter.tex:47: Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.47 			\pscircle[fillstyle=solid](D){0.075}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ./3_KalmanFilter/3_KalmanFilter.tex:49: Undefined control sequence.
 l.49 			\tension
                 (A)(B){$U_{in}$}
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ./3_KalmanFilter/3_KalmanFilter.tex:50: Undefined control sequence.
 l.50 			\tension
                 (C0)(D){$U_{out}$}
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-./3_KalmanFilter/3_KalmanFilter.tex:51: LaTeX Error: \begin{figure} on input li
-ne 28 ended by \end{pspicture}.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.51 	\end{pspicture}
-                     
-? 
+Overfull \hbox (1758.64897pt too wide) in paragraph at lines 51--53
+ [][] 
+ []
+
 Package epstopdf Info: Source file: <./3_KalmanFilter/KFchart.eps>
 (epstopdf)                    date: 2012-04-19 11:40:08
 (epstopdf)                    size: 33446 bytes
@@ -836,16 +1284,29 @@ Package epstopdf Info: Output file is already uptodate.
 
 <./3_KalmanFilter/KFchart-eps-converted-to.pdf, id=61, 410.53375pt x 309.155pt>
 File: ./3_KalmanFilter/KFchart-eps-converted-to.pdf Graphic file (type pdf)
-<use ./3_KalmanFilter/KFchart-eps-converted-to.pdf> [10
-
-
-
-]
+<use ./3_KalmanFilter/KFchart-eps-converted-to.pdf>
 Underfull \hbox (badness 10000) in paragraph at lines 66--68
 
  []
 
-[11 <./3_KalmanFilter/KFchart-eps-converted-to.pdf>]
+[10
+
+
+
+] [11
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <./3_KalmanFilter/KFchart-eps-converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 86--88
 
  []
@@ -860,7 +1321,9 @@ Type  H <return>  for immediate help.
                                                   
 l.97 \end{enumerate}
                     
-? 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 Package epstopdf Info: Source file: <./3_KalmanFilter/EKFchart.eps>
 (epstopdf)                    date: 2012-04-23 17:26:02
 (epstopdf)                    size: 130962 bytes
@@ -895,16 +1358,16 @@ Chapter 5.
 
 
 
-]
+] [16]
 \openout2 = `./Appendix/Appendix.aux'.
 
  (./Appendix/Appendix.tex
 Appendix A.
-[16
+[17
 
 
 
-] <./appendix/Group_Project.pdf, id=102, page=1, 597.432pt x 844.95674pt>
+] <./appendix/Group_Project.pdf, id=106, page=1, 597.432pt x 844.95674pt>
 File: ./appendix/Group_Project.pdf Graphic file (type pdf)
 
 <use ./appendix/Group_Project.pdf, page 1>
@@ -919,8 +1382,8 @@ File: ./appendix/Group_Project.pdf Graphic file (type pdf)
 <use ./appendix/Group_Project.pdf, page 1>
 File: ./appendix/Group_Project.pdf Graphic file (type pdf)
 
-<use ./appendix/Group_Project.pdf, page 1> [17 <./appendix/Group_Project.pdf>]
-<./appendix/Group_Project.pdf, id=136, page=2, 597.432pt x 844.95674pt>
+<use ./appendix/Group_Project.pdf, page 1> [18 <./appendix/Group_Project.pdf>]
+<./appendix/Group_Project.pdf, id=140, page=2, 597.432pt x 844.95674pt>
 File: ./appendix/Group_Project.pdf Graphic file (type pdf)
 
 <use ./appendix/Group_Project.pdf, page 2>
@@ -929,8 +1392,8 @@ File: ./appendix/Group_Project.pdf Graphic file (type pdf)
 <use ./appendix/Group_Project.pdf, page 2>
 File: ./appendix/Group_Project.pdf Graphic file (type pdf)
 
-<use ./appendix/Group_Project.pdf, page 2> [18 <./appendix/Group_Project.pdf>]
-<./appendix/Group_Project.pdf, id=140, page=3, 597.432pt x 844.95674pt>
+<use ./appendix/Group_Project.pdf, page 2> [19 <./appendix/Group_Project.pdf>]
+<./appendix/Group_Project.pdf, id=145, page=3, 597.432pt x 844.95674pt>
 File: ./appendix/Group_Project.pdf Graphic file (type pdf)
 
 <use ./appendix/Group_Project.pdf, page 3>
@@ -939,11 +1402,11 @@ File: ./appendix/Group_Project.pdf Graphic file (type pdf)
 <use ./appendix/Group_Project.pdf, page 3>
 File: ./appendix/Group_Project.pdf Graphic file (type pdf)
 
-<use ./appendix/Group_Project.pdf, page 3> [19 <./appendix/Group_Project.pdf>]
+<use ./appendix/Group_Project.pdf, page 3> [20 <./appendix/Group_Project.pdf>]
 Appendix B.
-[20
+[21
 
-] <./appendix/linear_model.pdf, id=150, page=1, 597.50829pt x 845.0471pt>
+] <./appendix/linear_model.pdf, id=154, page=1, 597.50829pt x 845.0471pt>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/linear_model.pdf, page 1>
@@ -958,8 +1421,8 @@ File: ./appendix/linear_model.pdf Graphic file (type pdf)
 <use ./appendix/linear_model.pdf, page 1>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/linear_model.pdf, page 1> [21 <./appendix/linear_model.pdf>]
-<./appendix/linear_model.pdf, id=298, page=2, 597.50829pt x 845.0471pt>
+<use ./appendix/linear_model.pdf, page 1> [22 <./appendix/linear_model.pdf>]
+<./appendix/linear_model.pdf, id=302, page=2, 597.50829pt x 845.0471pt>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/linear_model.pdf, page 2>
@@ -968,9 +1431,9 @@ File: ./appendix/linear_model.pdf Graphic file (type pdf)
 <use ./appendix/linear_model.pdf, page 2>
 File: ./appendix/linear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/linear_model.pdf, page 2> [22 <./appendix/linear_model.pdf>]
-[23]
-<./appendix/nonlinear_model.pdf, id=312, page=1, 597.50829pt x 845.0471pt>
+<use ./appendix/linear_model.pdf, page 2> [23 <./appendix/linear_model.pdf>]
+[24]
+<./appendix/nonlinear_model.pdf, id=316, page=1, 597.50829pt x 845.0471pt>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/nonlinear_model.pdf, page 1>
@@ -985,8 +1448,8 @@ File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 <use ./appendix/nonlinear_model.pdf, page 1>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/nonlinear_model.pdf, page 1> [24 <./appendix/nonlinear_model.pd
-f>] <./appendix/nonlinear_model.pdf, id=433, page=2, 597.50829pt x 845.0471pt>
+<use ./appendix/nonlinear_model.pdf, page 1> [25 <./appendix/nonlinear_model.pd
+f>] <./appendix/nonlinear_model.pdf, id=438, page=2, 597.50829pt x 845.0471pt>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
 <use ./appendix/nonlinear_model.pdf, page 2>
@@ -995,11 +1458,14 @@ File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 <use ./appendix/nonlinear_model.pdf, page 2>
 File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
 
-<use ./appendix/nonlinear_model.pdf, page 2> [25 <./appendix/nonlinear_model.pd
+<use ./appendix/nonlinear_model.pdf, page 2> [26 <./appendix/nonlinear_model.pd
 f>])
 \openout2 = `literature.aux'.
 
- (./literature.tex) [26
+ (./literature.tex
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+) [27
 
 
 
@@ -1011,40 +1477,45 @@ f>])
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 7510 strings out of 493747
- 110920 string characters out of 3143546
- 216223 words of memory out of 3000000
- 10543 multiletter control sequences out of 15000+200000
- 16227 words of font info for 61 fonts, out of 3000000 for 9000
+ 11068 strings out of 493747
+ 168241 string characters out of 3143546
+ 338342 words of memory out of 3000000
+ 13988 multiletter control sequences out of 15000+200000
+ 16568 words of font info for 62 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 45i,18n,48p,1812b,1509s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
-xlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/tex
-live/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
-ive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
-ve/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive
-/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2
-010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/201
-0/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2010/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2010/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2010/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2010/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2010/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2010/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2010/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2010/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2010/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2010/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2010/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2010/texmf-dist/fonts/ty
-pe1/urw/courier/ucrr8a.pfb>
-Output written on main.pdf (26 pages, 526672 bytes).
+ 47i,18n,54p,1812b,1559s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/te
+xlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/tex
+live/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texl
+ive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texli
+ve/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texliv
+e/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/
+2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/20
+10/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2010
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2010/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2010/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2010/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2010/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2010/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2010/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2010/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2010/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2010/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2010/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2010/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2010/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1
+/urw/courier/ucrr8a.pfb>
+Output written on main.pdf (27 pages, 535903 bytes).
 PDF statistics:
- 503 PDF objects out of 1000 (max. 8388607)
- 241 compressed objects within 3 object streams
+ 511 PDF objects out of 1000 (max. 8388607)
+ 247 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
