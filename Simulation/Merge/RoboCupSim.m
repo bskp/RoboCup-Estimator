@@ -57,11 +57,11 @@ e_values = 0;
 
 %% - - - - - Loop - - - - - %
 for s = 1:steps
-    [Robot d_omega v] = robot_step(Robot, Ball);
+    [Robot d_angle v] = robot_step(Robot, Ball);
     Ball = ball_step(Ball,Robot);
     Robot_m = robot_measure(Robot);
     Ball_m = ball_measure(Ball);
-    [Robot_e P] = robot_ekf(Robot_m, Robot_e, m_values, e_values, d_omega, v, P);
+    [Robot_e P] = robot_ekf(Robot_m, Robot_e, m_values, e_values, d_angle, v, P);
     
     [Ball_e P_ball] = ball_kf( Ball_e, Ball_m, P_ball );
     %Ball_e = Ball_m;
