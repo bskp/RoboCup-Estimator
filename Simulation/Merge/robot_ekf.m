@@ -50,7 +50,7 @@ function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_ome
        x_apriori(2) = robot_e(i).y+sin(robot_e(i).dir)*v(i);
        x_apriori(3) = robot_e(i).dir+d_omega(i);
        P_step(:,:,i) = A*P(:,:,i)*A'+W*Q*W';
-
+       
        % Measurement update (correct)
        if isnan(robot_m(i).x * robot_m(i).y * robot_m(i).dir)
            estimates = x_apriori;   % Measurement drop

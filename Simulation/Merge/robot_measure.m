@@ -1,7 +1,7 @@
 function RobotMeasure = robot_measure(Robot)
 %ROBOT_MEASURE Addition of measurement noise to the robots.
 %
-%   ROBOT_MEASURE = ROBOT_MEASURE(ROBOT) takes the parameter ROBOT and adds
+%   ROBOTMEASURE = ROBOT_MEASURE(ROBOT) takes the parameter ROBOT and adds
 %   measurement noise to the position and the direction of the robots. New
 %   robots are created with the noisy measurements. Measurements for the
 %   robots are only available from robots of the blue team and only if

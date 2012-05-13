@@ -1,9 +1,9 @@
-function plot_env(Ball)
+function plot_env
 %PLOT_ENV Plot function for the RoboCup-simulation.
 %
-%   PLOT_ENV(BALL) plots the field according to the dimensions which are
-%   used in a RoboCup soccer match. The parameter BALL defines the ball's
-%   position such that the ball too can be drawn into the environment.
+%   PLOT_ENV plots the field according to the dimensions which are
+%   used in a RoboCup soccer match. Furthermore a scorecounter will be
+%   displayed above the playing field.
 
 
 %----------- Defining the dimensions and subfunctions  -----------%
@@ -11,7 +11,6 @@ function plot_env(Ball)
     axis([-3.7 3.7 -2.7 2.7]);
     axis equal;
     plot_field();
-    plot_ball(Ball);
     plot_score();
 end
 
@@ -42,14 +41,6 @@ function plot_field()
     
     %Center line
     line([0, 0],[-Field.height./2, Field.height./2],'Color','k');
-end
-
-
-%----------- Plot of the ball  -----------%
-
-function plot_ball(Ball)
-    global BallParam;    
-    draw_circle(Ball.x, Ball.y, BallParam.radius, 'r', 1);
 end
 
 

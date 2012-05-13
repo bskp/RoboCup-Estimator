@@ -4,21 +4,24 @@ function [RobotStep d_angle velocity] = robot_step(Robot, Ball)
 %   [ROBOTSTEP,D_OMEGA,VELOCITY] = ROBOT_STEP(ROBOT) takes all robot
 %   structs as parameters and computes the next position of the robots on
 %   the field, i.e. generates new structs. The function also outputs the
-%   input values D_OMEGA, the change of the angular direction, and
+%   input values D_ANGLE, the change of the angular direction, and
 %   VELOCITY, the velocity of a robot, for every robot. These inputs will
-%   be of further use with the extended Kalman filter.
+%   be of further use with the extended Kalman filter. The function also
+%   handles the collision avoidance with other robots and boundary
+%   conditions.
 
-    global RobotParam dt;
-
+    global RobotParam Field;
     
 %----------- Inputs  -----------%
 
     d_omega = randn(8,1) * RobotParam.changeOfDir;
-    velocity = ones(8,1) * 0.1 * dt; %[m/s]
+    velocity = ones(8,1) * RobotParam.velocity; %[m/s]
 
+    
 %----------- Behavior of Robots  -----------%
     % Only robots within the radius of r_a affect an other robot
-    r_a = 1; % [m]
+    r_a = 0.75; % [m]
+    r_f = 2*RobotParam.radius; % [m]
     
     for i=1:8
         % Initialize the resulting vector
@@ -40,6 +43,18 @@ function [RobotStep d_angle velocity] = robot_step(Robot, Ball)
             end
         end
         
+        % Compute repulsion if robot is near to one of the side lines.
+        if(Field.width/2-abs(Robot(i).x) < r_f)
+            r = Field.width/2-abs(Robot(i).x);
+            x_v = x_v - sign(Robot(i).x)/r.^2.*r_f.^2;
+        end
+        
+        % Compute repulsion if robot is near to the top or the bottom line.
+        if(Field.height/2-abs(Robot(i).y) < r_f)
+            r = Field.height/2-abs(Robot(i).y);
+            y_v = y_v - sign(Robot(i).y)/r.^2.*r_f.^2;
+        end
+             
         % Potential function to compute attraction to the ball. In order to
         % avoid collisions between robots, the ball is less attractive than
         % the robots are repulsive.
@@ -66,7 +81,7 @@ function [RobotStep d_angle velocity] = robot_step(Robot, Ball)
             RobotStep(i).dir = pi+RobotStep(i).dir;
         end
         
-        % Relative changement of direction
+        % Relative change of direction
         d_angle(i) = RobotStep(i).dir-Robot(i).dir;
         
     end

@@ -1,8 +1,8 @@
-function plot_robot(Robot, style)
-% PLOT_ROBOT Plot function for the robots.
+function plot_objects(Robot, Ball, style)
+%PLOT_OBJECTS Plot function for the robots and the ball.
 %
-%   PLOT_ROBOT(ROBOT,STYLE) plots the robots on the field with properties
-%   defined in the flag STYLE. The string STYLE may contain:
+%   PLOT_OBJECTS(ROBOT,BALL,STYLE) plots the robots on the field with 
+%   properties defined in the flag STYLE. The string STYLE may contain:
 %
 %   Shapes
 %   0  Draws circles in true size (given in global RobotParam.radius)
@@ -26,7 +26,7 @@ function plot_robot(Robot, style)
 %   Example usage: plot_robots(Robot_measured, "ob-")
 
     global RobotParam;
-  
+    global BallParam;
     
 %----------- Set default color  -----------%
     
@@ -56,12 +56,18 @@ function plot_robot(Robot, style)
 %----------- Check for filled circles  -----------%
     
     if (strfind(style, '@'))
+        if (bunt)
+            color = 'r';
+        end
+        draw_circle(Ball.x, Ball.y, BallParam.radius, color, 1);
+        
         for i=1:8
             if (bunt)
                 color = Robot(i).color;
             end
             draw_circle(Robot(i).x, Robot(i).y, RobotParam.radius, color, 1);
-        end        
+        end
+        
         color = [0 0 0]; % for all the following eye-candy
         bunt = false;
     end
@@ -70,6 +76,11 @@ function plot_robot(Robot, style)
 %----------- Check for bordered circles  -----------%
     
     if (strfind(style, '0'))
+        if (bunt)
+            color = 'r';
+        end
+        draw_circle(Ball.x, Ball.y, BallParam.radius, color, 0);
+        
         for i=1:8
             if (bunt)
                 color = Robot(i).color;
@@ -94,11 +105,16 @@ function plot_robot(Robot, style)
 %----------- Check for crosses  -----------%    
     
     if (strfind(style, '+'))
+        if (bunt)
+            color = 'r';
+        end
+        plot(Ball.x, Ball.y, '+', 'Color', color);
+        
         for i=1:8
             if (bunt)
                 color = Robot(i).color;
             end
-            plot(Robot(i).x, Robot(i).y,'+', 'Color', color);
+            plot(Robot(i).x, Robot(i).y, '+', 'Color', color);
         end
     end
 
@@ -106,6 +122,15 @@ function plot_robot(Robot, style)
 %----------- Check for direction indication  -----------%    
     
     if (strfind(style, '-'))
+        if (bunt)
+            color = 'r';
+        end
+        if ( ~isnan(Ball.dir) )
+            xdir = Ball.x + BallParam.radius * cos(Ball.dir);
+            ydir = Ball.y + BallParam.radius * sin(Ball.dir);
+            line([Ball.x xdir],[Ball.y ydir],'Color',color);
+        end  
+        
         for i=1:8
             if (bunt)
                 color = Robot(i).color;

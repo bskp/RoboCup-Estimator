@@ -60,23 +60,24 @@ for s = 1:steps
     [Robot d_angle v] = robot_step(Robot, Ball);
     Ball = ball_step(Ball,Robot);
     Robot_m = robot_measure(Robot);
-    Ball_m = ball_measure(Ball);
+    Ball_m = ball_measure(Robot, Ball);
+    
+    [Ball_e P_ball] = ball_kf(Ball_e, Ball_m, P_ball);
     [Robot_e P] = robot_ekf(Robot_m, Robot_e, m_values, e_values, d_angle, v, P);
     
-    [Ball_e P_ball] = ball_kf( Ball_e, Ball_m, P_ball );
     %Ball_e = Ball_m;
     
     clf
     subplot(2,1,1)
-    plot_env(Ball);
+    plot_env;
 
-    plot_robot(Robot, '0-t'); % circles, direction, team color
-    plot_robot(Robot_m, '+w'); % crosses, white
+    plot_objects(Robot, Ball, '0-t'); % circles, direction, team color
+    plot_objects(Robot_m, Ball_m, '+w'); % crosses, white
     
     subplot(2,1,2)
-    plot_env(Ball_e);
-    plot_robot(Robot, '@-t');    
-    plot_robot(Robot_e, '0-k');
+    plot_env;
+    plot_objects(Robot, Ball, '@-t');    
+    plot_objects(Robot_e, Ball_e, '0-w');
     
     if(s==1)
         [m_values e_values] = history_init(Robot_m, Robot_e);
