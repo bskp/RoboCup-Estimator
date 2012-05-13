@@ -1,0 +1,23 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{6}
+\contentsline {chapter}{\numberline {2}Simulation}{7}
+\contentsline {section}{\numberline {2.1}The Playing Field}{7}
+\contentsline {section}{\numberline {2.2}The Robots}{7}
+\contentsline {section}{\numberline {2.3}The Ball}{10}
+\contentsline {section}{\numberline {2.4}A Random Simulation}{10}
+\contentsline {chapter}{\numberline {3}Kalman Filtering: Theoretical Basics}{12}
+\contentsline {section}{\numberline {3.1}Linear Kalman Filter}{12}
+\contentsline {section}{\numberline {3.2}Extended Kalman Filter (EKF)}{13}
+\contentsline {chapter}{\numberline {4}Kalman Filtering: Implementation in the MATLAB Environment}{15}
+\contentsline {section}{\numberline {4.1}Estimation of the Robots}{15}
+\contentsline {section}{\numberline {4.2}Estimation of the Ball}{16}
+\contentsline {chapter}{\numberline {5}Sensor Fusion}{17}
+\contentsline {section}{\numberline {5.1}Sensors of the Robots}{17}
+\contentsline {section}{\numberline {5.2}Principles of Sensor Fusion}{18}
+\contentsline {section}{\numberline {5.3}Dempster-Shafer}{18}
+\contentsline {chapter}{\numberline {A}Organisation}{19}
+\contentsline {section}{\numberline {A.1}Project description}{19}
+\contentsline {chapter}{\numberline {B}Examples}{23}
+\contentsline {section}{\numberline {B.1}Kalman Filtering of Linear System}{23}
+\contentsline {section}{\numberline {B.2}Kalman Filtering of Nonlinear System}{26}
+\contentsline {section}{Literatur}{29}

@@ -55,8 +55,9 @@ function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_ome
        if isnan(robot_m(i).x * robot_m(i).y * robot_m(i).dir)
            estimates = x_apriori;   % Measurement drop
        else
+           z = [robot_m(i).x; robot_m(i).y; robot_m(i).dir];
            K(:,:,i) =  (P_step(:,:,i)*H')/(H*P_step(:,:,i)*H'+V*R*V');
-           estimates = x_apriori+K(:,:,i)*([robot_m(i).x; robot_m(i).y; robot_m(i).dir] - x_apriori);
+           estimates = x_apriori+K(:,:,i)*(z - x_apriori);
            P_step(:,:,i) = (eye(3)-K(:,:,i)*H)*P_step(:,:,i);
        end
        
@@ -67,39 +68,5 @@ function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_ome
        robot_step(i).dir = estimates(3);
     end
     
-    
-%----------- Collision detection  -----------%
-%     
-%     for i = 1:8        
-%         % Robot collision
-%         for j = (i+1):8
-%             d = sqrt( (robot_e(i).x-robot_e(j).x)^2+(robot_e(i).y-robot_e(j).y)^2);
-%             if (d < 2*RobotParam.radius)
-%                 d = robot_e(i).dir;
-%                 robot_step(i).dir = robot_e(j).dir;
-%                 robot_step(j).dir = d;
-%                 
-%                 % Step towards new direction
-%                 robot_step(i).x = RobotParam.velocity * 2 * cos(robot_step(i).dir) + robot_step(i).x;
-%                 robot_step(i).y = RobotParam.velocity * 2 * sin(robot_step(i).dir) + robot_step(i).y;
-%                 robot_step(j).x = RobotParam.velocity * 2 * cos(robot_step(j).dir) + robot_step(j).x;
-%                 robot_step(j).y = RobotParam.velocity * 2 * sin(robot_step(j).dir) + robot_step(j).y;
-%             end
-%         end
-%         
-%         % Boundaries collision
-%         if abs(robot_step(i).x) > 3 - RobotParam.radius
-%             robot_step(i).dir = pi - robot_e(i).dir;
-%             robot_step(i).x = RobotParam.velocity * cos(robot_step(i).dir) + robot_e(i).x;
-%             robot_step(i).y = RobotParam.velocity * sin(robot_step(i).dir) + robot_e(i).y;
-%         end
-%         
-%         if abs(robot_step(i).y) > 2 - RobotParam.radius
-%             robot_step(i).dir = -robot_e(i).dir;
-%             robot_step(i).x = RobotParam.velocity * cos(robot_step(i).dir) + robot_e(i).x;
-%             robot_step(i).y = RobotParam.velocity * sin(robot_step(i).dir) + robot_e(i).y;
-%         end
-%     end
-     
 end
 

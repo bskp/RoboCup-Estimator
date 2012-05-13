@@ -1,0 +1,19 @@
+
+%-----Chapter 4: Estimation-------%
+\chapter{Kalman Filtering: Implementation in the MATLAB Environment}
+
+\section{Estimation of the Robots}
+
+As we have seen before, the motion equations of the robots are nonlinear, which makes it necessary to use an extended Kalman filter for the estimation of the robots. The function {\fontfamily{pcr}\selectfont robot\_ekf(robot\_m,robot\_e,m\_values,e\_values,d\_omega,v,P).m} is dedicated for this task. As stated in the theory above, we will need the old estimates and the measurements in order to compute new estimates. Most matrices like the covariance matrices or the Jacobian matrices are the same for all eight robots and hence have to be defined only once. The error covariance \(P\) and the estimator \(K\) on the other side have to be stored for every robot individually, therefore we will use cell arrays for this task. The initialization in MATLAB of these parameters is shown below
+
+\lstinputlisting[firstline=18, lastline=27]{../Simulation/Merge/robot_ekf.m}
+\parskip 20pt
+
+In a next step we calculate the Kalman estimate for every robot. In a former version of the function, the two cell arrays {\fontfamily{pcr}\selectfont m\_values} and {\fontfamily{pcr}\selectfont e\_values} contained a history of the last measurements and estimates of the robots. They were used to improve the performance of the extended Kalman filter. The collision detection of former versions of the simulation made it necessary for the filter algorithm to be responsive to large changes of the direction of the robots. Since the Kalman filter itself couldn't handle these rapid changes, we needed a function that indicates that the measurements are much more reliable if there is a huge difference between them and the estimates over a certain space of time. The essential functionality was  to reduce the matrix \(R\), which caused the extended Kalman filter to heaviliy trust the incoming measurements. For this task a history of former measurements and estimates was necessary. But since these problems disappeared with the introduction of collision avoidance, the used methods are obsolete. Therefore we could implement the time update and measurement update equations just as they were stated in the theory. The MATLAB-code below forms the core of the extended Kalman filter for the robots
+
+\lstinputlisting[firstline=48, lastline=62]{../Simulation/Merge/robot_ekf.m}
+\parskip 20pt
+
+The prediction of the robot's position and direction can be done for every time step, but the correction is only possible if all measurements are available. This is not the case for example if robots don't get visual information of other robots. With the if-statement we accomodate this fact. So the typical Kalman cycle is only executed if we have measurement on the positions and the direction. Otherwise we drop the measurement update, i.e. our new estimate is simply a simulation of the robot's motion with the former estimates.
+
+\section{Estimation of the Ball}

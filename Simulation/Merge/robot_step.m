@@ -21,6 +21,8 @@ function [RobotStep d_angle velocity] = robot_step(Robot, Ball)
 %----------- Behavior of Robots  -----------%
     % Only robots within the radius of r_a affect an other robot
     r_a = 0.75; % [m]
+    
+    % A robot with a distance less than r_f to the border gets repulsed.
     r_f = 2*RobotParam.radius; % [m]
     
     for i=1:8
@@ -31,16 +33,16 @@ function [RobotStep d_angle velocity] = robot_step(Robot, Ball)
         weight = 10;
         % Other robots
         for j=1:8
-            % Length of the vector
-            r = sqrt((Robot(j).x-Robot(i).x).^2+(Robot(j).y-Robot(i).y).^2);
+           % Length of the vector
+           r = sqrt((Robot(j).x-Robot(i).x).^2+(Robot(j).y-Robot(i).y).^2);
             
-            % Potential function to compute repulsion between robots. If
-            % the distance between two robots is r_a, we have unit repuls-
-            % ion.
-            if (i~=j && (r<=r_a))
-                x_v = x_v + (Robot(i).x-Robot(j).x)./r.^3.*r_a.^2;
-                y_v = y_v + (Robot(i).y-Robot(j).y)./r.^3.*r_a.^2;
-            end
+           % Potential function to compute repulsion between robots. If
+           % the distance between two robots is r_a, we have unit repuls-
+           % ion.
+           if (i~=j && (r<=r_a))
+               x_v = x_v + (Robot(i).x-Robot(j).x)./r.^3.*r_a.^2;
+               y_v = y_v + (Robot(i).y-Robot(j).y)./r.^3.*r_a.^2;
+           end
         end
         
         % Compute repulsion if robot is near to one of the side lines.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.21)  22 APR 2012 15:42
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.21)  13 MAY 2012 22:08
 entering extended mode
 **G:/Studium*ETH/RoboCup/RoboCup-Estimator/Documentation/DocGroupWork.tex
 ("G:/Studium ETH/RoboCup/RoboCup-Estimator/Documentation/DocGroupWork.tex"
@@ -537,6 +537,109 @@ File: pppdftex.def 2012/04/03 v0.4s Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count137
 \AM@templatesizebox=\box63
 )
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\mcode.sty"
+-- Package: `mcode' 2.0 <2011/03/15> --
+Package: mcode 2011/03/15 2.0
+ - settings optimized for display (colour formating)
+ - framed listings
+(G:\Programme\LaTex\tex\latex\listings\listings.sty
+
+LaTeX Warning: You have requested, on input line 376, version
+               `1997/11/10' of package keyval,
+               but only version
+               `'
+               is available.
+
+\lst@mode=\count138
+\lst@gtempboxa=\box64
+\lst@token=\toks30
+\lst@length=\count139
+\lst@currlwidth=\dimen149
+\lst@column=\count140
+\lst@pos=\count141
+\lst@lostspace=\dimen150
+\lst@width=\dimen151
+\lst@newlines=\count142
+\lst@lineno=\count143
+\lst@maxwidth=\dimen152
+(G:\Programme\LaTex\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count144
+\lst@skipnumbers=\count145
+\lst@framebox=\box65
+)
+(G:\Programme\LaTex\tex\latex\listings\listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(G:\Programme\LaTex\tex\latex\base\textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(G:\Programme\LaTex\tex\latex\base\ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 311.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 312.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 313.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 314.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 315.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 316.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 317.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 318.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 319.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 320.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 321.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 322.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
+))
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\robocup.sty")
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\DocGroupWork.aux"
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\titlepage.aux")
@@ -545,39 +648,42 @@ File: pppdftex.def 2012/04/03 v0.4s Pdfpages driver for pdfTeX (AM)
 duction.aux")
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\2_Simulation\2_Simulat
 ion.aux")
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\3_KalmanFilter\3_Kalma
-nFilter.aux")
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\4_Estimation\4_Estimat
-ion.aux")
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\Appendix\Appendix.aux"
-) ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\literature.aux"))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+No file ./3_KalmanFilter/3_KalmanFilter.aux.
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 23.
+ (G:\Programme\LaTex\tex\latex\base\ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 23.
 
 (G:\Programme\LaTex\tex\context\base\supp-pdf.tex
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count138
-\scratchdimen=\dimen149
-\scratchbox=\box64
-\nofMPsegments=\count139
-\nofMParguments=\count140
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count141
-\MPscratchDim=\dimen150
-\MPnumerator=\count142
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count146
+\scratchdimen=\dimen153
+\scratchbox=\box66
+\nofMPsegments=\count147
+\nofMParguments=\count148
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count149
+\MPscratchDim=\dimen154
+\MPnumerator=\count150
+\everyMPtoPDFconversion=\toks32
 )
-\AtBeginShipoutBox=\box65
+\AtBeginShipoutBox=\box67
+\c@lstlisting=\count151
  [1
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -621,31 +727,32 @@ l.9 ...ics[height=12mm]{./Pictures/ifalogo_color}}
 [3
 
 
-] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\DocGroupWork.toc"
-LaTeX Font Info:    Try loading font information for U+msa on input line 4.
-
-(G:\Programme\LaTex\tex\latex\amsfonts\umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 4.
-
-(G:\Programme\LaTex\tex\latex\amsfonts\umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-))
+] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\DocGroupWork.toc")
 \tf@toc=\write5
- [4
+[4
 
 
-]
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\DocGroupWork.lof")
+] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\DocGroupWork.lof")
 \tf@lof=\write6
-
 [5
 
 ]
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\1_Introduction\1_Intro
 duction.tex"
 Chapter 1.
+
+Class scrreprt Warning: \float@addtolists detected!
+(scrreprt)              You should use the features of package `tocbasic'
+(scrreprt)              instead of \float@addtolists.
+(scrreprt)              Support for \float@addtolists may be removed from
+(scrreprt)              `scrreprt' soon .
+
+
+LaTeX Warning: Citation `wwwRoboCup' on page 6 undefined on input line 4.
+
+
+LaTeX Warning: Reference `PrjDescription' on page 6 undefined on input line 5.
+
 ) [6
 
 
@@ -653,87 +760,1731 @@ Chapter 1.
 ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\2_Simulation\2_Simulat
 ion.tex"
 Chapter 2.
-) [7
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 10.
+(G:\Programme\LaTex\tex\latex\psnfss\ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\plot_env.m"
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 27.
+
+(G:\Programme\LaTex\tex\latex\psnfss\ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+))
+
+LaTeX Warning: Reference `Playing_filed' on page 7 undefined on input line 15.
+
+
+! LaTeX Error: File `./2_Simulation/playing_field' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 ...[width=12cm]{./2_Simulation/playing_field}
+                                                  
+? 
+[7
 
 
 
-]
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\3_KalmanFilter\3_Kalma
-nFilter.tex"
+] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\dummy_step.m"
+LaTeX Font Info:    Try loading font information for U+msa on input line 20.
+
+(G:\Programme\LaTex\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 20.
+
+(G:\Programme\LaTex\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+))
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\dummy_step.m")
+Overfull \hbox (54.06277pt too wide) in paragraph at lines 37--38
+\OT1/cmr/m/n/10.95 states, which can-not be han-dled by our Kalman fil-ter. The
+ func-tion \OT1/pcr/m/n/10.95 robot[]step(Robot,Ball).m
+ []
+
+[8] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\robot_step.m"
+LaTeX Font Info:    Try loading font information for OML+pcr on input line 42.
+
+(G:\Programme\LaTex\tex\latex\psnfss\omlpcr.fd
+File: omlpcr.fd 
+)
+LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <9> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 42.
+)
+
+! LaTeX Error: File `./2_Simulation/plot_robots' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 ...cs[width=12cm]{./2_Simulation/plot_robots}
+                                                  
+? 
+[9] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\ball_step.m"
+Overfull \hbox (62.34933pt too wide) in paragraph at lines 48--49
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (62.34933pt too wide) in paragraph at lines 49--50
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+)
+Overfull \hbox (0.36954pt too wide) in paragraph at lines 69--70
+\OT1/cmr/m/n/10.95 All func-tions men-tioned above build the core of a sim-ple 
+ran-dom sim-u-la-tion of a RoboCup
+ []
+
+[10]) [11]
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\3_KalmanFilterTheory\3
+_KalmanFilterTheory.tex"
 Chapter 3.
+
+LaTeX Warning: Citation `IntroKF' on page 12 undefined on input line 6.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Emergency stop.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-End of file on the terminal!
 
- 
+LaTeX Warning: Reference `ExampleKF' on page 12 undefined on input line 26.
+
+
+LaTeX Warning: Reference `KFcircuit' on page 12 undefined on input line 27.
+
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.43 			\wire(B)(D)
+                   		\wire(A2)(C0)
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.43 			\wire(B)(D)
+                   		\wire(A2)(C0)
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.43 			\wire(B)(D)
+                   		\wire(A2)(C0)
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.43 			\wire(B)(D)
+                   		\wire(A2)(C0)
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.43 			\wire(B)(D)		\wire(A2)(C0)
+                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.43 			\wire(B)(D)		\wire(A2)(C0)
+                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.43 			\wire(B)(D)		\wire(A2)(C0)
+                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.43 			\wire(B)(D)		\wire(A2)(C0)
+                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.44 			\pscircle[fillstyle=solid](A){0.075}
+                                            
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.44 			\pscircle[fillstyle=solid](A){0.075}
+                                            
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.44 			\pscircle[fillstyle=solid](A){0.075}
+                                            
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.44 			\pscircle[fillstyle=solid](A){0.075}
+                                            
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.44 			\pscircle[fillstyle=solid](A){0.075}
+                                            
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.44 			\pscircle[fillstyle=solid](A){0.075}
+                                            
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.45 			\pscircle[fillstyle=solid](B){0.075}
+                                            
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.45 			\pscircle[fillstyle=solid](B){0.075}
+                                            
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.45 			\pscircle[fillstyle=solid](B){0.075}
+                                            
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.45 			\pscircle[fillstyle=solid](B){0.075}
+                                            
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.45 			\pscircle[fillstyle=solid](B){0.075}
+                                            
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.45 			\pscircle[fillstyle=solid](B){0.075}
+                                            
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.46 			\pscircle[fillstyle=solid](C0){0.075}
+                                             
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.46 			\pscircle[fillstyle=solid](C0){0.075}
+                                             
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.46 			\pscircle[fillstyle=solid](C0){0.075}
+                                             
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.46 			\pscircle[fillstyle=solid](C0){0.075}
+                                             
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.46 			\pscircle[fillstyle=solid](C0){0.075}
+                                             
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.46 			\pscircle[fillstyle=solid](C0){0.075}
+                                             
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.47 			\pscircle[fillstyle=solid](D){0.075}
+                                            
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.47 			\pscircle[fillstyle=solid](D){0.075}
+                                            
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.47 			\pscircle[fillstyle=solid](D){0.075}
+                                            
+? 
+! Undefined control sequence.
+\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
+                                                  \else \expandafter \expand...
+l.47 			\pscircle[fillstyle=solid](D){0.075}
+                                            
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.47 			\pscircle[fillstyle=solid](D){0.075}
+                                            
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.47 			\pscircle[fillstyle=solid](D){0.075}
+                                            
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.49 			\tension(A)(B){$U_{in}$}
+                                
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.49 			\tension(A)(B){$U_{in}$}
+                                
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.49 			\tension(A)(B){$U_{in}$}
+                                
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.49 			\tension(A)(B){$U_{in}$}
+                                
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.49 			\tension(A)(B){$U_{in}$}
+                                
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.49 			\tension(A)(B){$U_{in}$}
+                                
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.49 			\tension(A)(B){$U_{in}$}
+                                
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.49 			\tension(A)(B){$U_{in}$}
+                                
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.50 			\tension(C0)(D){$U_{out}$}
+                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.50 			\tension(C0)(D){$U_{out}$}
+                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.50 			\tension(C0)(D){$U_{out}$}
+                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.50 			\tension(C0)(D){$U_{out}$}
+                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.50 			\tension(C0)(D){$U_{out}$}
+                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.50 			\tension(C0)(D){$U_{out}$}
+                                  
+? 
+! Undefined control sequence.
+<recently read> \c@lor@to@ps 
+                             
+l.50 			\tension(C0)(D){$U_{out}$}
+                                  
+? 
+! Undefined control sequence.
+\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
+                                                  \fi \space 
+l.50 			\tension(C0)(D){$U_{out}$}
+                                  
+? 
+
+LaTeX Warning: Reference `TupEq' on page 12 undefined on input line 56.
+
+
+LaTeX Warning: Reference `KFchart' on page 12 undefined on input line 56.
+
+
+! LaTeX Error: File `./3_KalmanFilter/KFchart' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...hics[width=12cm]{./3_KalmanFilter/KFchart}
+                                                  
+? 
+
+LaTeX Warning: Citation `IntroKF' on page 12 undefined on input line 66.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--68
+
+ []
+
+[12
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 86--88
+
+ []
+
+[13
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!]
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.97 \end{enumerate}
+                    
+? 
+
+LaTeX Warning: Reference `ExampleEKF' on page 14 undefined on input line 99.
+
+
+LaTeX Warning: Reference `EKFchart' on page 14 undefined on input line 99.
+
+
+! LaTeX Error: File `./3_KalmanFilter/EKFchart' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103 ...cs[width=12cm]{./3_KalmanFilter/EKFchart}
+                                                  
+? 
+) [14]
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\4_KalmanFilterEstimati
+on\4_KalmanFilterEstimation.tex"
+Chapter 4.
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\robot_ekf.m")
+[15
+
+
+
+] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\robot_ekf.m")) [1
+6]
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\5_SensorFusion\5_Senso
+rFusion.tex"
+Chapter 5.
+
+LaTeX Warning: Citation `IntroSF' on page 17 undefined on input line 6.
+
+
+LaTeX Warning: Citation `IntroSF' on page 17 undefined on input line 8.
+
+
+LaTeX Warning: Citation `IntroSF' on page 17 undefined on input line 12.
+
+[17
+
+
+
+]) [18]
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\Appendix\Appendix.tex"
+Appendix A.
+[19
+
+
+
+] <./appendix/Group_Project.pdf, id=78, page=1, 597.432pt x 844.95674pt>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 1>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 1>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 1>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 1>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 1> [20 <G:/Studium ETH/RoboCup/RoboCup-
+Estimator/Documentation/appendix/Group_Project.pdf>]
+<./appendix/Group_Project.pdf, id=112, page=2, 597.432pt x 844.95674pt>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 2>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 2>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 2> [21 <G:/Studium ETH/RoboCup/RoboCup-
+Estimator/Documentation/appendix/Group_Project.pdf>]
+<./appendix/Group_Project.pdf, id=116, page=3, 597.432pt x 844.95674pt>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 3>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 3>
+File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+
+<use ./appendix/Group_Project.pdf, page 3> [22 <G:/Studium ETH/RoboCup/RoboCup-
+Estimator/Documentation/appendix/Group_Project.pdf>]
+Appendix B.
+[23
+
+] <./appendix/linear_model.pdf, id=125, page=1, 597.50829pt x 845.0471pt>
+File: ./appendix/linear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/linear_model.pdf, page 1>
+File: ./appendix/linear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/linear_model.pdf, page 1>
+File: ./appendix/linear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/linear_model.pdf, page 1>
+File: ./appendix/linear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/linear_model.pdf, page 1>
+File: ./appendix/linear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/linear_model.pdf, page 1> [24 <G:/Studium ETH/RoboCup/RoboCup-E
+stimator/Documentation/appendix/linear_model.pdf>]
+<./appendix/linear_model.pdf, id=272, page=2, 597.50829pt x 845.0471pt>
+File: ./appendix/linear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/linear_model.pdf, page 2>
+File: ./appendix/linear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/linear_model.pdf, page 2>
+File: ./appendix/linear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/linear_model.pdf, page 2> [25 <G:/Studium ETH/RoboCup/RoboCup-E
+stimator/Documentation/appendix/linear_model.pdf>] [26]
+<./appendix/nonlinear_model.pdf, id=287, page=1, 597.50829pt x 845.0471pt>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 1>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 1>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 1>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 1>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 1> [27 <G:/Studium ETH/RoboCup/RoboCu
+p-Estimator/Documentation/appendix/nonlinear_model.pdf>]
+<./appendix/nonlinear_model.pdf, id=408, page=2, 597.50829pt x 845.0471pt>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 2>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 2>
+File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
+
+<use ./appendix/nonlinear_model.pdf, page 2> [28 <G:/Studium ETH/RoboCup/RoboCu
+p-Estimator/Documentation/appendix/nonlinear_model.pdf>])
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\literature.tex"
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+)
+[29
+
+
+
+] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\DocGroupWork.aux" ("
+G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\titlepage.aux")
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\abstract.aux")
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\1_Introduction\1_Intro
+duction.aux")
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\2_Simulation\2_Simulat
+ion.aux")
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\3_KalmanFilterTheory\3
+_KalmanFilterTheory.aux")
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\4_KalmanFilterEstimati
+on\4_KalmanFilterEstimation.aux")
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\5_SensorFusion\5_Senso
+rFusion.aux")
+("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\Appendix\Appendix.aux"
+) ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\literature.aux"))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 8317 strings out of 495285
- 121020 string characters out of 3181170
- 276746 words of memory out of 3000000
- 11266 multiletter control sequences out of 15000+200000
- 12238 words of font info for 45 fonts, out of 3000000 for 9000
+ 10322 strings out of 495285
+ 153983 string characters out of 3181170
+ 383692 words of memory out of 3000000
+ 13166 multiletter control sequences out of 15000+200000
+ 16568 words of font info for 62 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 44i,8n,62p,347b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 44i,18n,62p,1838b,1209s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Fabi\AppData\Local\MiKTeX\2.8\fonts\pk\ljfour\jknappen\ec\dpi600\t
+crm1095.pk>{G:/Programme/LaTex/fonts/enc/dvips/fontname/8r.enc}<G:/Programme/La
+Tex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><G:/Programme/LaTex/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm
+/cmex10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><G:/P
+rogramme/LaTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><G:/Programme/LaTex/fon
+ts/type1/public/amsfonts/cm/cmmi7.pfb><G:/Programme/LaTex/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmmi9.pf
+b><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><G:/Programme/La
+Tex/fonts/type1/public/amsfonts/cm/cmr5.pfb><G:/Programme/LaTex/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmr
+8.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmsl10.pfb><G:/Program
+me/LaTex/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><G:/Programme/LaTex/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><G:/Programme/LaTex/fonts/type1/public/amsf
+onts/cm/cmsy7.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+<G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmsy9.pfb><G:/Programme/LaTe
+x/fonts/type1/public/amsfonts/cm/cmtt10.pfb><G:/Programme/LaTex/fonts/type1/urw
+/courier/ucrr8a.pfb>
+Output written on DocGroupWork.pdf (29 pages, 518980 bytes).
+PDF statistics:
+ 479 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+
