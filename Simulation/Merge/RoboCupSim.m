@@ -83,4 +83,7 @@ for s = 1:steps
     [m_values e_values] = history(m_values, e_values, Robot_m, Robot_e);
     
     pause(0.001);
+    if(s<=2)
+        report(s, steps, Robot, Robot_e);
+    end
 end
