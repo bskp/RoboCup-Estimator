@@ -1,28 +1,32 @@
 \documentclass[11pt, oneside, a4paper]{scrreprt}
 \pagestyle{headings}
 
-\usepackage{amssymb}
-\usepackage{graphics}
-\usepackage{multicol}
-\usepackage{alltt}
-\usepackage{graphicx}
-\usepackage{epsfig}
-\usepackage[german, english]{babel}
-\usepackage{amsmath}
-\usepackage{verbatim}
-\usepackage{pst-all,pst-circ}
-\usepackage[official]{eurosym}
-\usepackage{scrpage2}
-\usepackage{pdfpages}
-\usepackage[framed]{mcode}
+\usepackage[german, english]{babel}	% 
+\usepackage{robocup} 				% Color ifablue for captions
+\usepackage{graphicx}				%  \includegraphics
+\usepackage[framed]{mcode}			% MATLAB-Code
+\usepackage{pst-all,pst-circ}			% PS-Tricks, Electrical circuits
+%\usepackage{amssymb}
+%\usepackage{graphics}
+%\usepackage{multicol}
+%\usepackage{alltt}
 
-\usepackage{robocup}
+%\usepackage{epsfig}
+%\usepackage{amsmath}
+%\usepackage{verbatim}
+
+%\usepackage[official]{eurosym}
+\usepackage{scrpage2}
+%\usepackage{pdfpages}		% Nicht Brauchbar mit PDF
+
+
+
 
 
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \begin{document}
-	\include{titlepage}   	% includes title page.tex
-	\include{abstract}      % includes abstract.tex
+	\include{./0_titlepage_abstract/titlepage}   		% includes title page.tex
+	\include{./0_titlepage_abstract/abstract}      		% includes abstract.tex
 	\tableofcontents        	% generates the table of content
 	\newpage
 	\listoffigures		% generates the table of figures
@@ -33,6 +37,6 @@
 	\include{./4_KalmanFilterEstimation/4_KalmanFilterEstimation}
 	\include{./5_SensorFusion/5_SensorFusion}
 	\include{./6_FlawsOutlook/6_FlawsOutlook}
-	\include{./Appendix/Appendix}
+%	\include{./Appendix/Appendix}
 	\include{literature}    % includes title literature.tex
 \end{document}

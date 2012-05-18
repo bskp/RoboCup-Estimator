@@ -7,20 +7,20 @@ There exists a recursive Kalman filter algorithm for discrete time systems.\cite
 \newline
 \begin{enumerate}
 	\item Time update equations
-	\begin{equation}\label{TupEq}
-		\begin{aligned}
+	\begin{eqnarray}\label{TupEq}
+		%\begin{aligned}
     			\hat{x}_{k}^{-} &= A\hat{x}_{k-1}+Bu_{k-1} \\
     			P_{k}^{-} &= AP_{k-1}A^{T}+Q
-  		\end{aligned}
-	\end{equation}
+  		%\end{aligned}
+	\end{eqnarray}
 	\item Measurement update equations
-	\begin{equation}\label{MupEq}
-		\begin{aligned}
+	\begin{eqnarray}\label{MupEq}
+		%\begin{aligned}
     			K_{k} &= P_{k}^{-}H^{T}(HP_{k}^{-}H^{T}+R)^{-1} \\
     			\hat{x}_{k} &= \hat{x}_{k-1}^{-}+K_{k}(z_{k}-H\hat{x}_{k}^{-}) \\
 			P_{k} &= (I-K_{k}H)P_{k}^{-}
-  		\end{aligned}
-	\end{equation}
+  		%\end{aligned}
+	\end{eqnarray}
 \end{enumerate}
 
 To test this algorithm and to learn something about applying the Kalman filter on linear systems we created an example. A detailed description of the following example can be found in appendix \ref{ExampleKF}. \newline 
@@ -56,7 +56,7 @@ We consider a linear, timeinvariant model, given by the following circuit diagra
 First we added process noise and measurement noise to the system output. The aim is to get an estimation of the noisy output. Therefore we applied the Kalman filter algorithm based on the equations \ref{TupEq}. In the figure \ref{KFchart}, above we can see the input signal and the ideal measurement of the output signal. That ideal measurement includes process noise, which can obviously not be filtered by the Kalman filtering algorithm. Below one can see the noisy measurement on the left side and the filtered output on the right side.
 \begin{figure}[htbp]
 	\centering
-    	\includegraphics[width=12cm]{./3_KalmanFilter/KFchart}
+    	\includegraphics[width=12cm]{./3_KalmanFilterTheory/KFchart.eps}
   	\caption{Example: Input signal, output signal, noisy output, and filtered output.}
   	\label{KFchart}
 \end{figure}
@@ -67,40 +67,38 @@ In the section above we discussed the usage of a Kalman filter on linear systems
 \newline
 \begin{enumerate}
 	\item Time update equations
-	\begin{equation}\label{TupEqEKF}
-		\begin{aligned}
-    			\hat{x}_{k}^- &= f(\hat{x}_{k-1},u_{k-1},0) \\
-    			P_{k}^{-} &= A_kP_{k-1}A_k^T+W_k Q_{k-1} W_k^T
-  		\end{aligned}
-	\end{equation}
+	\begin{eqnarray}\label{TupEqEKF}
+    			\hat{x}_{k}^- &=& f(\hat{x}_{k-1},u_{k-1},0) \\
+    			P_{k}^{-} &=& A_kP_{k-1}A_k^T+W_k Q_{k-1} W_k^T
+	\end{eqnarray}
 	\item Measurement update equations
-	\begin{equation}\label{MupEqEKF}
-		\begin{aligned}
-    			K_{k} &= P_{k}^- H_k^T(H_k P_k^- H_k^T+V_k R_k V_k^T)^{-1} \\
-    			\hat{x}_k &= \hat{x}_{k-1}^- + K_{k}(z_k - h(\hat{x}_k^-, 0)) \\
-			P_k &= (I-K_k H_k)P_k^-
-  		\end{aligned}
-	\end{equation}
+	\begin{eqnarray}\label{MupEqEKF}
+	%	\begin{aligned}
+    			K_{k} &=& P_{k}^- H_k^T(H_k P_k^- H_k^T+V_k R_k V_k^T)^{-1} \\
+    			\hat{x}_k &=& \hat{x}_{k-1}^- + K_{k}(z_k - h(\hat{x}_k^-, 0)) \\
+			P_k &=& (I-K_k H_k)P_k^-
+  	%	\end{aligned}
+	\end{eqnarray}
 \end{enumerate}
 
 The function \(f(\hat{x}_k,u_k,w_k)\) contains the system's nonlinear dynamics where \(w_k\) represents the current process noise and \(h(\hat{x}_k, v_k)\) denotes the nonlinear state-to-output relationship with the measurement noise \(v_k\). Furthermore the matrices \(A_k\), \(H_k\), \(W_k\) and \(V_k\) are linearizations, i.e. partial drivatives, of their respective functions at time step \(k\)
 \newline
-\begin{enumerate}
-	\begin{equation}\label{Linearizations}
-		\begin{aligned}
+%\begin{enumerate}
+	\begin{eqnarray}\label{Linearizations}
+	%	\begin{aligned}
     			A_{i,j}&= \frac{\partial f_i}{\partial x_j}(\hat{x}_{k-1},u_{k-1},0) \\
     			H_{i,j}&= \frac{\partial h_i}{\partial x_j}(\hat{x}_{k-1},u_{k-1},0) \\
 			W_{i,j}&= \frac{\partial f_i}{\partial w_j}(\tilde{x}_k,0) \\
 			V_{i,j}&= \frac{\partial h_i}{\partial v_j}(\tilde{x}_k,0)
-  		\end{aligned}
-	\end{equation}
-\end{enumerate}
+  	%	\end{aligned}
+	\end{eqnarray}
+%\end{enumerate}
 
 We dropped the fact that all matrices should have a subscript \(k\) and that they are allowed be different at each time step. Again, before applying the theory to our simulation, we created a generic example of a nonlinear system. Further details can be looked up in section \ref{ExampleEKF}. We did essentially the same as we did for the linear system: We simulated the ideal system, then added process and measurement noise and in the last step checked whether we could get rid of our artifically added measurement noise. The results for a sample run on MATLAB are shown in figure \ref{EKFchart} below
 
 \begin{figure}[htbp]
 	\centering
-    	\includegraphics[width=12cm]{./3_KalmanFilter/EKFchart}
+    	\includegraphics[width=12cm]{./3_KalmanFilterTheory/EKFchart.eps}
   	\caption{Example: Input signal, output signal, noisy output, and filtered output.}
   	\label{EKFchart}
 \end{figure}
