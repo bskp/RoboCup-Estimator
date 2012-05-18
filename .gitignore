@@ -1,2 +1,4 @@
 .DS_Store
 *.m~
+*.aux
+Documentation/main.tex

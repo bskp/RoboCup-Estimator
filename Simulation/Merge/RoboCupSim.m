@@ -9,7 +9,8 @@
 clear all;
 global dt;
 
-steps = 2e3;
+%steps = 2e3;
+steps = 20;
 dt = 0.1; %[s/step]
 
 % Field Parameter (Rules2011.pdf)
@@ -35,6 +36,7 @@ global Noise;
     Noise.measure.prob = 0.2;
 
 %% - - - - - Initalization - - - - - %
+close all;
 figure('units','normalized','position',[0.1,0,0.4,0.9]);
 colorcode;
 
@@ -83,4 +85,6 @@ for s = 1:steps
     [m_values e_values] = history(m_values, e_values, Robot_m, Robot_e);
     
     pause(0.001);
+
+    report(s, steps, Robot, Robot_e);
 end
