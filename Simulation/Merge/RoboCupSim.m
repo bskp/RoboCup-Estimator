@@ -10,7 +10,7 @@ clear all;
 global dt;
 
 %steps = 2e3;
-steps = 20;
+steps = 22;
 dt = 0.1; %[s/step]
 
 % Field Parameter (Rules2011.pdf)
@@ -85,6 +85,9 @@ for s = 1:steps
     [m_values e_values] = history(m_values, e_values, Robot_m, Robot_e);
     
     pause(0.001);
-
-    report(s, steps, Robot, Robot_e);
+    RobotStep(s,:,:) = Robot;
+	RobotStep_e(s,:,:) = Robot_e;
+    if (s == steps)
+        report(steps, RobotStep, RobotStep_e);
+    end
 end

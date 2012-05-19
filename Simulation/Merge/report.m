@@ -1,4 +1,4 @@
-function report(s, steps, Robot, Robot_e)
+function report(steps, RobotStep, RobotStep_e)
 %REPORT Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -11,13 +11,22 @@ function report(s, steps, Robot, Robot_e)
 
 % Create a mat-File with data from robots and ball
 
-    RobotStep(s,:,:) = Robot
-    RobotStep_e(s,:,:) = Robot_e
-    if (s == steps)
-        save('error', 'steps');
-        save('error', 'RobotStep', '-append');
-        save('error', 'RobotStep_e', '-append');
-    end
+    
+%     RobotStep{s} = Robot;
+%     RobotStep_e{s} = Robot_e;
+
+      save('error', 'steps');
+      save('error', 'RobotStep', '-append');
+      save('error', 'RobotStep_e', '-append');
+
+    
+%     RobotStep(s,:,:) = Robot;
+%     RobotStep_e(s,:,:) = Robot_e;
+%     if (s == steps)
+%         save('error', 'steps');
+%         save('error', 'RobotStep', '-append');
+%         save('error', 'RobotStep_e', '-append');
+%     end
     
     
 %     if (s==1)
