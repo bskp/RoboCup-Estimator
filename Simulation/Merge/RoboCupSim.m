@@ -9,8 +9,7 @@
 clear all;
 global dt;
 
-%steps = 2e3;
-steps = 22;
+steps = 100;
 dt = 0.1; %[s/step]
 
 % Field Parameter (Rules2011.pdf)
@@ -87,7 +86,9 @@ for s = 1:steps
     pause(0.001);
     RobotStep(s,:,:) = Robot;
 	RobotStep_e(s,:,:) = Robot_e;
+    BallStep(s) = Ball;
+    BallStep_e(s) = Ball_e;
     if (s == steps)
-        report(steps, RobotStep, RobotStep_e);
+        report(steps, RobotStep, RobotStep_e, BallStep, BallStep_e);
     end
 end
