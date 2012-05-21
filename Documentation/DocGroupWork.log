@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.5.14)  21 MAY 2012 07:14
+=======
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.5.14)  21 MAY 2012 08:43
+>>>>>>> Doc test -> pstricks ok
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **DocGroupWork.tex
 (./DocGroupWork.tex
@@ -268,12 +273,20 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
 ))
-(/Users/david/Library/texmf/tex/latex/packages/pst-all.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pstricks/pst-all.sty
 Package: pst-all 2008/01/01 the main pstricks tools
 
-(/Users/david/Library/texmf/tex/latex/packages/pstricks.sty
-Package: pstricks 2008/11/26 v0.40 LaTeX wrapper for `PSTricks' (RN,HV)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pstricks/pstricks.sty
+Package: pstricks 2011/04/23 v0.50 LaTeX wrapper for `PSTricks' (RN,HV)
 
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
 (/usr/local/texlive/2011/texmf-dist/tex/generic/pstricks/pstricks.tex
 (/usr/local/texlive/2011/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
 File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
@@ -347,6 +360,9 @@ File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 )
 File: pstricks.tex 2011/04/23 v2.20 `PSTricks' (tvz,hv)
 
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pstricks/pst-fp.tex)
+File: pst-fp.tex 2011/04/23 v2.20 `PST-fp' (hv)
+
 (/usr/local/texlive/2011/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
@@ -364,37 +380,6 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ))
-(/usr/local/texlive/2011/texmf-dist/tex/latex/pst-node/pst-node.sty
-Package: pst-node 2010/04/22 package wrapper for pst-node.tex
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-node/pst-node.tex
- v1.16, 2011/05/05
-\psrow=\count121
-\pscol=\count122
-\psmatrixcnt=\count123
-\psrowsep=\skip47
-\pscolsep=\skip48
-\pst@args=\count124
-\num@pts=\count125
-\pst@argcnt=\count126
-)
-File: pst-node.tex 2011/05/05 1.16 `pst-node' (tvz)
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/pst-tree/pst-tree.sty
-Package: pst-tree 2009/01/25 package wrapper for pst-tree.tex
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-tree/pst-tree.tex
- v1.12, 2011/02/28(tvz,dg,hv)
-\pstree@rootbox=\box33
-\pstree@box=\box34
-\psnodecnt=\count127
-\pstreelevel=\count128
-\pstreecnt=\count129
-\pstree@cnt=\count130
-\pstree@stop=\count131
-)
-File: pst-tree.tex 2011/02/28 1.12 `pst-tree' (tvz,hv)
-)
 (/usr/local/texlive/2011/texmf-dist/tex/latex/pst-plot/pst-plot.sty
 (/usr/local/texlive/2011/texmf-dist/tex/latex/xkeyval/pst-xkey.sty
 Package: pst-xkey 2005/11/25 v1.6 package wrapper for pst-xkey.tex (HA)
@@ -405,8 +390,8 @@ Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
 
 (/usr/local/texlive/2011/texmf-dist/tex/generic/multido/multido.tex
  v1.42, 2010/05/14 <tvz>
-\multido@count=\count132
-\multidocount=\count133
+\multido@count=\count121
+\multidocount=\count122
 \multido@stuff=\toks21
 )
 File: multido.tex 2010/05/14 v1.42 `multido' (tvz,hv)
@@ -417,7 +402,7 @@ Package: pst-plot 2011/04/13 package wrapper for pst-plot.tex (hv)
  v1.29, 2011/04/13 (tvz,hv)
 \pstRadUnit=\dimen132
 \pstRadUnitInv=\dimen133
-\pst@linecnt=\count134
+\pst@linecnt=\count123
 \psk@subticksize=\dimen134
 \pst@xticksizeA=\dimen135
 \pst@xticksizeB=\dimen136
@@ -425,7 +410,7 @@ Package: pst-plot 2011/04/13 package wrapper for pst-plot.tex (hv)
 \pst@yticksizeA=\dimen138
 \pst@yticksizeB=\dimen139
 \pst@yticksizeC=\dimen140
-\@digitcounter=\count135
+\@digitcounter=\count124
 \psk@llx=\dimen141
 \psk@lly=\dimen142
 \psk@urx=\dimen143
@@ -434,6 +419,37 @@ Package: pst-plot 2011/04/13 package wrapper for pst-plot.tex (hv)
 \pst@yunit=\dimen146
 )
 File: pst-plot.tex 2011/04/13 1.29 `pst-plot' (tvz,hv)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pst-node/pst-node.sty
+Package: pst-node 2010/04/22 package wrapper for pst-node.tex
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-node/pst-node.tex
+ v1.16, 2011/05/05
+\psrow=\count125
+\pscol=\count126
+\psmatrixcnt=\count127
+\psrowsep=\skip47
+\pscolsep=\skip48
+\pst@args=\count128
+\num@pts=\count129
+\pst@argcnt=\count130
+)
+File: pst-node.tex 2011/05/05 1.16 `pst-node' (tvz)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pst-tree/pst-tree.sty
+Package: pst-tree 2009/01/25 package wrapper for pst-tree.tex
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-tree/pst-tree.tex
+ v1.12, 2011/02/28(tvz,dg,hv)
+\pstree@rootbox=\box33
+\pstree@box=\box34
+\psnodecnt=\count131
+\pstreelevel=\count132
+\pstreecnt=\count133
+\pstree@cnt=\count134
+\pstree@stop=\count135
+)
+File: pst-tree.tex 2011/02/28 1.12 `pst-tree' (tvz,hv)
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/pst-grad/pst-grad.sty
 Package: pst-grad 2004/07/15 package wrapper for pst-grad.tex (hv)
@@ -521,7 +537,11 @@ File: pst-circ.tex 2011/05/11 v2.02 `PST-circ' (CJ,hv)
 Package: scrpage2 2010/04/22 v2.5 LaTeX2e KOMA-Script package
 LaTeX Info: Redefining \pagemark on input line 176.
 )
+<<<<<<< HEAD
 No file DocGroupWork.aux.
+=======
+(./DocGroupWork.aux)
+>>>>>>> Doc test -> pstricks ok
 \openout1 = `DocGroupWork.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -538,6 +558,10 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 27.
+<<<<<<< HEAD
+=======
+
+>>>>>>> Doc test -> pstricks ok
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
@@ -690,9 +714,15 @@ File: omlpcr.fd
 LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 42.
 )
+<<<<<<< HEAD
 
 LaTeX Warning: Reference `Plot_robots' on page 8 undefined on input line 44.
 
+=======
+
+LaTeX Warning: Reference `Plot_robots' on page 8 undefined on input line 44.
+
+>>>>>>> Doc test -> pstricks ok
 [8]
 File: ./2_Simulation/plot_robots.eps Graphic file (type eps)
  <./2_Simulation/plot_robots.eps>
@@ -897,10 +927,17 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  10842 strings out of 493634
  180075 string characters out of 3143400
  452657 words of memory out of 3000000
  13900 multiletter control sequences out of 15000+200000
+=======
+ 10890 strings out of 493634
+ 181145 string characters out of 3143400
+ 453136 words of memory out of 3000000
+ 13936 multiletter control sequences out of 15000+200000
+>>>>>>> Doc test -> pstricks ok
  12783 words of font info for 45 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,9n,62p,1783b,1549s stack positions out of 5000i,500n,10000p,200000b,50000s
