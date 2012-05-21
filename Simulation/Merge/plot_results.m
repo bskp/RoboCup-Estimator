@@ -57,27 +57,27 @@
             i = j-4;
         end
         subplot(4,2,2*i-1);
-        plot(x, e_x(i,:), 'r');
+        plot(x, e_x(j,:), 'r');
         hold on;
-        plot(x, e_y(i,:), 'g');
+        plot(x, e_y(j,:), 'g');
         grid on;
         titleString = ['Robot ' num2str(j)];
         title(titleString);
-        if ((j==2) || (j==6))
+        if ((j==1) || (j==5))
             xlabel('steps');
             ylabel('estimation error of directions [m]');
-            legend('direction x', 'direction y');
+            legend('direction x', 'direction y', 0);
         end
     
         subplot(4,2,2*i);
-        plot(x, e_dir(i,:), 'b');
+        plot(x, e_dir(j,:), 'b');
         grid on;
         titleString = ['Robot ' num2str(j)];
         title(titleString);
-        if ((j==2) || (j==6))
+        if ((j==1) || (j==5))
             xlabel('steps');
             ylabel('estimation error of angle [°]');
-            legend('Angle phi');
+            legend('Angle phi', 0);
         end
     end
     
