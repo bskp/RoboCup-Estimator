@@ -124,23 +124,31 @@ function RobotMeasure = measurement_fusion(RobotAllMeasure)
     for i = 1:8
         RobotMeasure(i).color = RobotAllMeasure.color;
         
-        k = 0;      % Number of measurements
+        RobotMeasure(i).x = NaN;
+        RobotMeasure(i).y = NaN;
+        RobotMeasure(i).dir = NaN;
+        RobotMeasure(i).sigma = NaN;
+        
         x = 0;
         y = 0;
         dir = 0;
+        k = 0;
         for j = 1:4
             if (~isnan(RobotAllMeasure(i).x(j)))     % Check for measurement
-                x = x + RobotAllMeasure(i).x(j);
-                y = y + RobotAllMeasure(i).y(j);
-                dir = dir + RobotAllMeasure(i).dir(j);
-                k = k + 1;
+                sigma2 = (RobotAllMeasure(i).sigma(j)).^2;
+                x = x + RobotAllMeasure(i).x(j)*1./sigma2;
+                y = y + RobotAllMeasure(i).y(j)*1./sigma2;
+                dir = dir + RobotAllMeasure(i).dir(j)*1./sigma2;
+                k = k + 1./sigma2;
             end
         end
+        if k ~= 0
+            % Compute the weighted mean of all measurements
+            RobotMeasure(i).x = x./k;
+            RobotMeasure(i).y = y./k;
+            RobotMeasure(i).dir = dir./k;
+            RobotMeasure(i).sigma = 1./sqrt(k);
+        end
         
-        % Compute the mean of all measurements
-        RobotMeasure(i).x = x./k;
-        RobotMeasure(i).y = y./k;
-        RobotMeasure(i).dir = dir./k;
     end
-    
 end
