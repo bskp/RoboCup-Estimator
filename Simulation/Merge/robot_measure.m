@@ -21,7 +21,7 @@ function RobotMeasure = robot_measure(Robot)
             RobotAllMeasure(j).dir(i) = NaN;
        end
        
-       if (position_is_valid(Robot(i)))
+       if (position_is_valid(Robot(i)) || true)
             for j = 1:8
                 if (i == j)
                    RobotAllMeasure(j).x(i) = Robot(i).x + randn*Noise.measure.pos;
@@ -29,7 +29,7 @@ function RobotMeasure = robot_measure(Robot)
                    RobotAllMeasure(j).dir(i) = Robot(i).dir + randn*Noise.measure.dir;
                    
                 else
-                    if (sqrt((Robot(i).x-Robot(j).x).^2 + (Robot(i).y-Robot(j).y).^2) <= RobotParam.sightDistance)
+                    if (sqrt((Robot(i).x-Robot(j).x).^2 + (Robot(i).y-Robot(j).y).^2) <= RobotParam.sightDistance || true)
                         dirOtherRobot = atan((Robot(j).y-Robot(i).y)./(Robot(j).x-Robot(i).x));
                         
                         % Compute absolute angle in relation to the x-axis.
@@ -44,7 +44,7 @@ function RobotMeasure = robot_measure(Robot)
                         negAngle = posAngle-2*pi;
                         relAngle = min([abs(posAngle),abs(negAngle)]);
                         
-                        if(relAngle < RobotParam.sightAngle) 
+                        if(relAngle < RobotParam.sightAngle || true) 
                             RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.measure.pos;
                             RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.measure.pos;
                             RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.measure.dir;
