@@ -15,47 +15,51 @@ function RobotMeasure = robot_measure(Robot)
 %----------- Check available measurements -----------%    
     
     for i = 1:4         % Only blue robots recieve measurement signals
+       positionIsValid(i) = position_is_valid(Robot(i));
        for j = 1:8      % But all robots are measured if possible
             RobotAllMeasure(j).x(i) = NaN;
             RobotAllMeasure(j).y(i) = NaN;
             RobotAllMeasure(j).dir(i) = NaN;
+            RobotAllMeasure(j).sigma(i) = NaN;
        end
-       
-       if (position_is_valid(Robot(i)) || true)
-            for j = 1:8
-                if (i == j)
+
+       for j = 1:8
+            if (i == j)
+                if (positionIsValid(i))
                    RobotAllMeasure(j).x(i) = Robot(i).x + randn*Noise.measure.pos;
                    RobotAllMeasure(j).y(i) = Robot(i).y + randn*Noise.measure.pos;
                    RobotAllMeasure(j).dir(i) = Robot(i).dir + randn*Noise.measure.dir;
-                   
-                else
-                    if (sqrt((Robot(i).x-Robot(j).x).^2 + (Robot(i).y-Robot(j).y).^2) <= RobotParam.sightDistance || true)
-                        dirOtherRobot = atan((Robot(j).y-Robot(i).y)./(Robot(j).x-Robot(i).x));
+                   RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma1;
+                end   
+            else
+                if (sqrt((Robot(i).x-Robot(j).x).^2 + (Robot(i).y-Robot(j).y).^2) <= RobotParam.sightDistance)
+                    dirOtherRobot = atan((Robot(j).y-Robot(i).y)./(Robot(j).x-Robot(i).x));
                         
-                        % Compute absolute angle in relation to the x-axis.
-                        if (Robot(j).x < Robot(i).x)
-                            dirOtherRobot = dirOtherRobot + pi;
-                        end
-                        
-                        % Compute the relative angle of the robots position
-                        % in relation to the looking direction of the blue
-                        % robot.
-                        posAngle = mod(abs(dirOtherRobot-Robot(i).dir),2*pi);
-                        negAngle = posAngle-2*pi;
-                        relAngle = min([abs(posAngle),abs(negAngle)]);
-                        
-                        if(relAngle < RobotParam.sightAngle || true) 
-                            RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.measure.pos;
-                            RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.measure.pos;
-                            RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.measure.dir;
-                        end
-                        
+                    % Compute absolute angle in relation to the x-axis.
+                    if (Robot(j).x < Robot(i).x)
+                        dirOtherRobot = dirOtherRobot + pi;
                     end
-                    
+                        
+                    % Compute the relative angle of the robots position
+                    % in relation to the looking direction of the blue
+                    % robot.
+                    posAngle = mod(abs(dirOtherRobot-Robot(i).dir),2*pi);
+                    negAngle = posAngle-2*pi;
+                    relAngle = min([abs(posAngle),abs(negAngle)]);
+                        
+                    if(relAngle < RobotParam.sightAngle) 
+                        RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.measure.pos;
+                        RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.measure.pos;
+                        RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.measure.dir;
+                        if positionIsValid(i)
+                            RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma2;
+                        else
+                            RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma1;
+                        end
+                    end
                 end
             end
        end
-       
     end
     
     for i=1:8
