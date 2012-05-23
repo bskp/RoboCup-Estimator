@@ -1,31 +1,47 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2009.12.21)  13 MAY 2012 22:08
+<<<<<<< HEAD
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.5.14)  21 MAY 2012 07:14
+=======
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.5.14)  21 MAY 2012 08:43
+>>>>>>> Doc test -> pstricks ok
 entering extended mode
-**G:/Studium*ETH/RoboCup/RoboCup-Estimator/Documentation/DocGroupWork.tex
-("G:/Studium ETH/RoboCup/RoboCup-Estimator/Documentation/DocGroupWork.tex"
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**DocGroupWork.tex
+(./DocGroupWork.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
-rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
-(G:\Programme\LaTex\tex\latex\koma-script\scrreprt.cls
+rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
+ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
+.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/koma-script/scrreprt.cls
 Document Class: scrreprt 2011/04/02 v3.09 KOMA-Script document class (report)
-(G:\Programme\LaTex\tex\latex\koma-script\scrkbase.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/koma-script/scrkbase.sty
 Package: scrkbase 2011/04/02 v3.09 KOMA-Script package (KOMA-Script-dependent b
 asics and keyval usage)
 
-(G:\Programme\LaTex\tex\latex\koma-script\scrbase.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/koma-script/scrbase.sty
 Package: scrbase 2011/04/02 v3.09 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
-(G:\Programme\LaTex\tex\latex\graphics\keyval.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(G:\Programme\LaTex\tex\latex\koma-script\scrlfile.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/koma-script/scrlfile.sty
 Package: scrlfile 2011/03/09 v3.09 KOMA-Script package (loading files)
 
 Package scrlfile, 2011/03/09 v3.09 KOMA-Script package (loading files)
                   Copyright (C) Markus Kohm
 
-))) (G:\Programme\LaTex\tex\latex\koma-script\tocbasic.sty
+))) (/usr/local/texlive/2011/texmf-dist/tex/latex/koma-script/tocbasic.sty
 Package: tocbasic 2011/03/23 v3.09 KOMA-Script package (handling toc-files)
 )
 Package tocbasic Info: omitting babel extension for `toc'
@@ -51,11 +67,11 @@ Class scrreprt Info: You've used standard option `oneside'.
 Class scrreprt Info: File `scrsize11pt.clo' used to setup font sizes on input l
 ine 1346.
 
-(G:\Programme\LaTex\tex\latex\koma-script\scrsize11pt.clo
+(/usr/local/texlive/2011/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
 File: scrsize11pt.clo 2011/04/02 v3.09 KOMA-Script font size class option (11pt
 )
 )
-(G:\Programme\LaTex\tex\latex\koma-script\typearea.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/koma-script/typearea.sty
 Package: typearea 2011/04/02 v3.09 KOMA-Script package (type area)
 
 Package typearea, 2011/04/02 v3.09 KOMA-Script package (type area)
@@ -110,470 +126,87 @@ Package typearea Info: These are the values describing the layout:
 \c@figure=\count87
 \c@table=\count88
 \bibindent=\dimen102
-) (G:\Programme\LaTex\tex\latex\amsfonts\amssymb.sty
-Package: amssymb 2009/06/22 v3.00
-
-(G:\Programme\LaTex\tex\latex\amsfonts\amsfonts.sty
-Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
-\@emptytoks=\toks15
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
-))
-(G:\Programme\LaTex\tex\latex\graphics\graphics.sty
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
-
-(G:\Programme\LaTex\tex\latex\graphics\trig.sty
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
-)
-(G:\Programme\LaTex\tex\latex\00miktex\graphics.cfg
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
-)
-Package graphics Info: Driver file: pdftex.def on input line 91.
-
-(G:\Programme\LaTex\tex\latex\pdftex-def\pdftex.def
-File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
-\Gread@gobject=\count89
-))
-(G:\Programme\LaTex\tex\latex\tools\multicol.sty
-Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
-\c@tracingmulticols=\count90
-\mult@box=\box27
-\multicol@leftmargin=\dimen103
-\c@unbalance=\count91
-\c@collectmore=\count92
-\doublecol@number=\count93
-\multicoltolerance=\count94
-\multicolpretolerance=\count95
-\full@width=\dimen104
-\page@free=\dimen105
-\premulticols=\dimen106
-\postmulticols=\dimen107
-\multicolsep=\skip47
-\multicolbaselineskip=\skip48
-\partial@page=\box28
-\last@line=\box29
-\mult@rightbox=\box30
-\mult@grightbox=\box31
-\mult@gfirstbox=\box32
-\mult@firstbox=\box33
-\@tempa=\box34
-\@tempa=\box35
-\@tempa=\box36
-\@tempa=\box37
-\@tempa=\box38
-\@tempa=\box39
-\@tempa=\box40
-\@tempa=\box41
-\@tempa=\box42
-\@tempa=\box43
-\@tempa=\box44
-\@tempa=\box45
-\@tempa=\box46
-\@tempa=\box47
-\@tempa=\box48
-\@tempa=\box49
-\@tempa=\box50
-\c@columnbadness=\count96
-\c@finalcolumnbadness=\count97
-\last@try=\dimen108
-\multicolovershoot=\dimen109
-\multicolundershoot=\dimen110
-\mult@nat@firstbox=\box51
-\colbreak@box=\box52
-)
-(G:\Programme\LaTex\tex\latex\base\alltt.sty
-Package: alltt 1997/06/16 v2.0g defines alltt environment
-)
-(G:\Programme\LaTex\tex\latex\graphics\graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
-\Gin@req@height=\dimen111
-\Gin@req@width=\dimen112
-)
-(G:\Programme\LaTex\tex\latex\graphics\epsfig.sty
-Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
-\epsfxsize=\dimen113
-\epsfysize=\dimen114
-)
-(G:\Programme\LaTex\tex\generic\babel\babel.sty
+) (/usr/local/texlive/2011/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2008/07/06 v3.8l The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-(G:\Programme\LaTex\tex\latex\00miktex\bblopts.cfg
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-(G:\Programme\LaTex\tex\generic\babel\germanb.ldf
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/germanb.ldf
 Language: germanb 2008/06/01 v2.6m German support from the babel system
 
-(G:\Programme\LaTex\tex\generic\babel\babel.def
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2008/07/06 v3.8l Babel common definitions
-\babel@savecnt=\count98
-\U@D=\dimen115
+\babel@savecnt=\count89
+\U@D=\dimen103
 )
 \l@austrian = a dialect from \language\l@german 
 Package babel Info: Making " an active character on input line 102.
 )
-(G:\Programme\LaTex\tex\generic\babel\english.ldf
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/english.ldf
 Language: english 2005/03/30 v3.3o English support from the babel system
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(G:\Programme\LaTex\tex\latex\ams\math\amsmath.sty
-Package: amsmath 2000/07/18 v2.13 AMS math features
-\@mathmargin=\skip49
-
-For additional information on amsmath, use the `?' option.
-(G:\Programme\LaTex\tex\latex\ams\math\amstext.sty
-Package: amstext 2000/06/29 v2.01
-
-(G:\Programme\LaTex\tex\latex\ams\math\amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks16
-\ex@=\dimen116
-))
-(G:\Programme\LaTex\tex\latex\ams\math\amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen117
-)
-(G:\Programme\LaTex\tex\latex\ams\math\amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
-)
-\inf@bad=\count99
-LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count100
-\leftroot@=\count101
-LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count102
-\DOTSCASE@=\count103
-LaTeX Info: Redefining \ldots on input line 379.
-LaTeX Info: Redefining \dots on input line 382.
-LaTeX Info: Redefining \cdots on input line 467.
-\Mathstrutbox@=\box53
-\strutbox@=\box54
-\big@size=\dimen118
-LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count104
-\c@MaxMatrixCols=\count105
-\dotsspace@=\muskip10
-\c@parentequation=\count106
-\dspbrk@lvl=\count107
-\tag@help=\toks17
-\row@=\count108
-\column@=\count109
-\maxfields@=\count110
-\andhelp@=\toks18
-\eqnshift@=\dimen119
-\alignsep@=\dimen120
-\tagshift@=\dimen121
-\tagwidth@=\dimen122
-\totwidth@=\dimen123
-\lineht@=\dimen124
-\@envbody=\toks19
-\multlinegap=\skip50
-\multlinetaggap=\skip51
-\mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2666.
-LaTeX Info: Redefining \] on input line 2667.
-)
-(G:\Programme\LaTex\tex\latex\tools\verbatim.sty
-Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks21
-\verbatim@line=\toks22
-\verbatim@in@stream=\read1
-)
-(G:\Programme\LaTex\tex\latex\pstricks\pst-all.sty
-Package: pst-all 2008/01/01 the main pstricks tools
-
-(G:\Programme\LaTex\tex\latex\pstricks\pstricks.sty
-Package: pstricks 2008/11/26 v0.40 LaTeX wrapper for `PSTricks' (RN,HV)
-
-(G:\Programme\LaTex\tex\generic\pstricks\pstricks.tex
-`PSTricks' v1.29  <2009/05/19> (tvz)
-\pst@dima=\dimen125
-\pst@dimb=\dimen126
-\pst@dimc=\dimen127
-\pst@dimd=\dimen128
-\pst@dimg=\dimen129
-\pst@dimh=\dimen130
-\pst@hbox=\box55
-\pst@boxg=\box56
-\pst@cnta=\count111
-\pst@cntb=\count112
-\pst@cntc=\count113
-\pst@cntd=\count114
-\pst@cntg=\count115
-\pst@cnth=\count116
-\pst@toks=\toks23
-(G:\Programme\LaTex\tex\generic\pstricks\pstricks.con)
-\psunit=\dimen131
-\psxunit=\dimen132
-\psyunit=\dimen133
-\pslinewidth=\dimen134
-\pst@customdefs=\toks24
-\pslinearc=\dimen135
-\everypsbox=\toks25
-\psframesep=\dimen136
-\pslabelsep=\dimen137
-\pst@shift=\dimen138
-\theoverlaybox=\box57
-)
-File: pstricks.tex 2009/05/19 v1.29 `PSTricks' (tvz,hv)
-
-(G:\Programme\LaTex\tex\latex\xcolor\xcolor.sty
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
-
-(G:\Programme\LaTex\tex\latex\00miktex\color.cfg
+(./robocup.sty (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-))
-(G:\Programme\LaTex\tex\latex\pstricks\pst-node.sty
-Package: pst-node 2006/01/01 package wrapper for pst-node.tex
+Package color Info: Driver file: dvips.def on input line 130.
 
-(G:\Programme\LaTex\tex\generic\pstricks\pst-node.tex  v1.01, 2008/11/26
-\psrow=\count117
-\pscol=\count118
-\psmatrixcnt=\count119
-\psrowsep=\skip52
-\pscolsep=\skip53
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 )
-File: pst-node.tex 2008/11/26 1.01 `pst-node' (tvz)
-)
-(G:\Programme\LaTex\tex\latex\pst-tree\pst-tree.sty
-Package: pst-tree 2009/01/25 package wrapper for pst-tree.tex
-
-(G:\Programme\LaTex\tex\generic\pst-tree\pst-tree.tex
-(G:\Programme\LaTex\tex\generic\xkeyval\pst-xkey.tex
-File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
-
-(G:\Programme\LaTex\tex\latex\xkeyval\xkeyval.sty
-Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
-
-(G:\Programme\LaTex\tex\generic\xkeyval\xkeyval.tex
-\XKV@toks=\toks26
-\XKV@tempa@toks=\toks27
-\XKV@depth=\count120
-File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 )))
- v1.12, 2011/02/28(tvz,dg,hv)
-\pstree@rootbox=\box58
-\pstree@box=\box59
-\psnodecnt=\count121
-\pstreelevel=\count122
-\pstreecnt=\count123
-\pstree@cnt=\count124
-\pstree@stop=\count125
-)
-File: pst-tree.tex 2011/02/28 1.12 `pst-tree' (tvz,hv)
-)
-(G:\Programme\LaTex\tex\latex\pstricks\pst-plot.sty
-Package: pst-plot 2004/07/15 package wrapper for pst-plot.tex
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(G:\Programme\LaTex\tex\generic\pstricks\pst-plot.tex
-(G:\Programme\LaTex\tex\generic\multido\multido.tex  v1.42, 2010/05/14 <tvz>
-\multido@count=\count126
-\multidocount=\count127
-\multido@stuff=\toks28
-)
- v1.04, 2009/06/08)
-File: pst-plot.tex 2009/06/08 1.04 `pst-plot' (tvz)
-) (G:\Programme\LaTex\tex\latex\pst-grad\pst-grad.sty
-Package: pst-grad 2004/07/15 package wrapper for pst-grad.tex (hv)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(G:\Programme\LaTex\tex\generic\pst-grad\pst-grad.tex
-`pst-grad' v1.06, 2006/11/27 (tvz,dg,hv))
-File: pst-grad.tex 2006/11/27 1.06 `pst-grad' (tvz)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(G:\Programme\LaTex\tex\latex\pst-coil\pst-coil.sty
-Package: pst-coil 2010/02/01 package wrapper for pst-coil.tex (hv)
-
-(G:\Programme\LaTex\tex\generic\pst-coil\pst-coil.tex  v1.06, 2006/11/27)
-File: pst-coil.tex 2010/02/01 v1.03 `PST-coil' (tvz,hv)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-(G:\Programme\LaTex\tex\latex\pst-text\pst-text.sty
-Package: pst-text 2006/01/01 package wrapper for pst-text.tex (hv)
-
-(G:\Programme\LaTex\tex\generic\pst-text\pst-text.tex
- v1.00, 2006/11/05(tvz,hv))
-File: pst-text.tex 2006/11/05 1.00 `pst-text' (tvz)
-) (G:\Programme\LaTex\tex\latex\pst-3d\pst-3d.sty
-Package: pst-3d 2009/07/28 package wrapper for pst-3d.tex (hv)
-
-(G:\Programme\LaTex\tex\generic\pst-3d\pst-3d.tex
-`PST-3d' v1.11, 2010/02/14 (tvz))
-File: pst-3d.tex 2010/02/14 v1.11 `PST-3d' (hv)
+Package graphics Info: Driver file: dvips.def on input line 91.
 )
-(G:\Programme\LaTex\tex\latex\pst-eps\pst-eps.sty
-Package: pst-eps 2005/05/20 package wrapper for pst-eps.tex (hv)
-
-(G:\Programme\LaTex\tex\generic\pst-eps\pst-eps.tex  v1.00, 2006/11/04
-\pst@epsout=\write3
-\pst@tempout=\write4
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
 )
-File: pst-eps.tex 2006/11/04 1.00 `pst-eps' (tvz)
-)
-(G:\Programme\LaTex\tex\latex\pst-fill\pst-fill.sty
-Package: pst-fill 2005/09/13 package wrapper for pst-fill.tex (hv)
-
-(G:\Programme\LaTex\tex\generic\pst-fill\pst-fill.tex
-`PST-Fill' v1.01, 2007/03/10 (tvz,dg,hv)
-\pst@fillbox=\box60
-)
-File: pst-fill.tex 2007/03/10 v1.01 `PST-fill' (tvz,dg)
-)
-(G:\Programme\LaTex\tex\latex\pstricks-add\pstricks-add.sty
-Package: pstricks-add 2010/02/11 v. 0.14 package wrapper for pstricks-add.tex (
-hv)
-
-(G:\Programme\LaTex\tex\generic\pstricks-add\pstricks-add.tex
-(G:\Programme\LaTex\tex\generic\pst-math\pst-math.tex
-`pst-math' v0.62 , (CJ,hv)) `pstricks-add' v3.51, 2011/02/02 (dr,hv)
-\pshooklength=\dimen139
-\pshookwidth=\dimen140
-\pst@cntC=\count128
-\chart@ColorIndex=\dimen141
-\chart@ColorStep=\dimen142
-\pst@chartHeight=\dimen143
-\pst@chartStackDepth=\dimen144
-\pst@chartStackWidth=\dimen145
-\chart@Toggle=\count129
-\psVectorCtr=\count130
-
-! Undefined control sequence.
-\resetOptions ...\pst@linetype {0}\pstScalePoints 
-                                                  (1,1){}{}\psset [pstricks-...
-l.2346 \resetOptions
-                    
-? 
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2346 \resetOptions
-                    
-? 
-)
-File: pstricks-add.tex 2011/02/02 v3.51 `PSTricks-add' (hv)
-) (G:\Programme\LaTex\tex\latex\multido\multido.sty
-Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
-
-))
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\pst-circ.sty"
-Package: pst-circ 2003/06/22 Package wrapper for pst-circ.tex
-
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\pst-circ.tex"
-`pst-circ' v2003/06/22,(Original idea: A.Premoli I.Maio,Design: M.Luque,Code: C
-.Jorssen) (G:\Programme\LaTex\tex\generic\pstricks\pst-node.tex
- v1.01, 2008/11/26) (G:\Programme\LaTex\tex\generic\pstricks\pst-key.tex
-keyval: 1998/07/23 v1.11 key=value parser (DPC)
-)
-\Pst@circ@position=\dimen146
-\pst@circ@count@i=\count131
-\pst@circ@count@ii=\count132
-\pst@circ@count@iii=\count133
-))
-(G:\Programme\LaTex\tex\latex\eurosym\eurosym.sty
-Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box61
-)
-(G:\Programme\LaTex\tex\latex\koma-script\scrpage2.sty
-Package: scrpage2 2010/04/22 v2.5 LaTeX2e KOMA-Script package
-LaTeX Info: Redefining \pagemark on input line 176.
-)
-(G:\Programme\LaTex\tex\latex\pdfpages\pdfpages.sty
-Package: pdfpages 2012/04/03 v0.4s Insert pages of external PDF documents (AM)
-
-(G:\Programme\LaTex\tex\latex\base\ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(G:\Programme\LaTex\tex\latex\tools\calc.sty
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count134
-\calc@Bcount=\count135
-\calc@Adimen=\dimen147
-\calc@Bdimen=\dimen148
-\calc@Askip=\skip54
-\calc@Bskip=\skip55
-LaTeX Info: Redefining \setlength on input line 76.
-LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count136
-\calc@Cskip=\skip56
-)
-(G:\Programme\LaTex\tex\latex\eso-pic\eso-pic.sty
-Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
-
-(G:\Programme\LaTex\tex\generic\oberdiek\atbegshi.sty
-Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
-
-(G:\Programme\LaTex\tex\generic\oberdiek\infwarerr.sty
-Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
-)
-(G:\Programme\LaTex\tex\generic\oberdiek\ifpdf.sty
-Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in pdf mode detected.
-)))
-(G:\Programme\LaTex\tex\latex\pdfpages\pppdftex.def
-File: pppdftex.def 2012/04/03 v0.4s Pdfpages driver for pdfTeX (AM)
-)
-\AM@pagebox=\box62
-\AM@toc@title=\toks29
-\c@AM@survey=\count137
-\AM@templatesizebox=\box63
-)
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\mcode.sty"
+(./mcode.sty
 -- Package: `mcode' 2.0 <2011/03/15> --
 Package: mcode 2011/03/15 2.0
  - settings optimized for display (colour formating)
  - framed listings
-(G:\Programme\LaTex\tex\latex\listings\listings.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count90
+\lst@gtempboxa=\box27
+\lst@token=\toks15
+\lst@length=\count91
+\lst@currlwidth=\dimen106
+\lst@column=\count92
+\lst@pos=\count93
+\lst@lostspace=\dimen107
+\lst@width=\dimen108
+\lst@newlines=\count94
+\lst@lineno=\count95
+\lst@maxwidth=\dimen109
 
-LaTeX Warning: You have requested, on input line 376, version
-               `1997/11/10' of package keyval,
-               but only version
-               `'
-               is available.
-
-\lst@mode=\count138
-\lst@gtempboxa=\box64
-\lst@token=\toks30
-\lst@length=\count139
-\lst@currlwidth=\dimen149
-\lst@column=\count140
-\lst@pos=\count141
-\lst@lostspace=\dimen150
-\lst@width=\dimen151
-\lst@newlines=\count142
-\lst@lineno=\count143
-\lst@maxwidth=\dimen152
-(G:\Programme\LaTex\tex\latex\listings\lstmisc.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count144
-\lst@skipnumbers=\count145
-\lst@framebox=\box65
+\c@lstnumber=\count96
+\lst@skipnumbers=\count97
+\lst@framebox=\box28
 )
-(G:\Programme\LaTex\tex\latex\listings\listings.cfg
+(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-(G:\Programme\LaTex\tex\latex\base\textcomp.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -588,7 +221,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
 
-(G:\Programme\LaTex\tex\latex\base\ts1enc.def
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 266.
@@ -640,105 +273,361 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
 ))
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\robocup.sty")
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\DocGroupWork.aux"
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\titlepage.aux")
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\abstract.aux")
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\1_Introduction\1_Intro
-duction.aux")
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\2_Simulation\2_Simulat
-ion.aux")
-No file ./3_KalmanFilter/3_KalmanFilter.aux.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pstricks/pst-all.sty
+Package: pst-all 2008/01/01 the main pstricks tools
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pstricks/pstricks.sty
+Package: pstricks 2011/04/23 v0.50 LaTeX wrapper for `PSTricks' (RN,HV)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 23.
- (G:\Programme\LaTex\tex\latex\base\ts1cmr.fd
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pstricks/pstricks.tex
+(/usr/local/texlive/2011/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks16
+\XKV@tempa@toks=\toks17
+\XKV@depth=\count98
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+)))
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pstricks/pst-fp.tex
+`pst-fp' v0.05, 2010/01/17 (hv)
+\pstFP@xs=\count99
+\pstFP@xia=\count100
+\pstFP@xib=\count101
+\pstFP@xfa=\count102
+\pstFP@xfb=\count103
+\pstFP@rega=\count104
+\pstFP@regb=\count105
+\pstFP@regs=\count106
+\pstFP@times=\count107
+)
+\psLoopIndex=\count108
+
+`PSTricks' v2.20  <2011/04/23> (tvz)
+\pst@dima=\dimen110
+\pst@dimb=\dimen111
+\pst@dimc=\dimen112
+\pst@dimd=\dimen113
+\pst@dimg=\dimen114
+\pst@dimh=\dimen115
+\pst@dimm=\dimen116
+\pst@dimn=\dimen117
+\pst@dimo=\dimen118
+\pst@dimp=\dimen119
+\pst@hbox=\box29
+\pst@ibox=\box30
+\pst@boxg=\box31
+\pst@cnta=\count109
+\pst@cntb=\count110
+\pst@cntc=\count111
+\pst@cntd=\count112
+\pst@cntg=\count113
+\pst@cnth=\count114
+\pst@cntm=\count115
+\pst@cntn=\count116
+\pst@cnto=\count117
+\pst@cntp=\count118
+\@zero=\count119
+\pst@toks=\toks18
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pstricks/pstricks.con)
+\psunit=\dimen120
+\psxunit=\dimen121
+\psyunit=\dimen122
+\pst@C@@rType=\count120
+\pslinewidth=\dimen123
+\psk@startLW=\dimen124
+\psk@endLW=\dimen125
+\pst@customdefs=\toks19
+\pslinearc=\dimen126
+\pst@symbolStep=\dimen127
+\pst@symbolWidth=\dimen128
+\everypsbox=\toks20
+\psframesep=\dimen129
+\pslabelsep=\dimen130
+\pst@shift=\dimen131
+\theoverlaybox=\box32
+)
+File: pstricks.tex 2011/04/23 v2.20 `PSTricks' (tvz,hv)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pstricks/pst-fp.tex)
+File: pst-fp.tex 2011/04/23 v2.20 `PST-fp' (hv)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pst-plot/pst-plot.sty
+(/usr/local/texlive/2011/texmf-dist/tex/latex/xkeyval/pst-xkey.sty
+Package: pst-xkey 2005/11/25 v1.6 package wrapper for pst-xkey.tex (HA)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/multido/multido.sty
+Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
+
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/multido/multido.tex
+ v1.42, 2010/05/14 <tvz>
+\multido@count=\count121
+\multidocount=\count122
+\multido@stuff=\toks21
+)
+File: multido.tex 2010/05/14 v1.42 `multido' (tvz,hv)
+)
+Package: pst-plot 2011/04/13 package wrapper for pst-plot.tex (hv)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-plot/pst-plot.tex
+ v1.29, 2011/04/13 (tvz,hv)
+\pstRadUnit=\dimen132
+\pstRadUnitInv=\dimen133
+\pst@linecnt=\count123
+\psk@subticksize=\dimen134
+\pst@xticksizeA=\dimen135
+\pst@xticksizeB=\dimen136
+\pst@xticksizeC=\dimen137
+\pst@yticksizeA=\dimen138
+\pst@yticksizeB=\dimen139
+\pst@yticksizeC=\dimen140
+\@digitcounter=\count124
+\psk@llx=\dimen141
+\psk@lly=\dimen142
+\psk@urx=\dimen143
+\psk@ury=\dimen144
+\pst@xunit=\dimen145
+\pst@yunit=\dimen146
+)
+File: pst-plot.tex 2011/04/13 1.29 `pst-plot' (tvz,hv)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pst-node/pst-node.sty
+Package: pst-node 2010/04/22 package wrapper for pst-node.tex
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-node/pst-node.tex
+ v1.16, 2011/05/05
+\psrow=\count125
+\pscol=\count126
+\psmatrixcnt=\count127
+\psrowsep=\skip47
+\pscolsep=\skip48
+\pst@args=\count128
+\num@pts=\count129
+\pst@argcnt=\count130
+)
+File: pst-node.tex 2011/05/05 1.16 `pst-node' (tvz)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pst-tree/pst-tree.sty
+Package: pst-tree 2009/01/25 package wrapper for pst-tree.tex
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-tree/pst-tree.tex
+ v1.12, 2011/02/28(tvz,dg,hv)
+\pstree@rootbox=\box33
+\pstree@box=\box34
+\psnodecnt=\count131
+\pstreelevel=\count132
+\pstreecnt=\count133
+\pstree@cnt=\count134
+\pstree@stop=\count135
+)
+File: pst-tree.tex 2011/02/28 1.12 `pst-tree' (tvz,hv)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pst-grad/pst-grad.sty
+Package: pst-grad 2004/07/15 package wrapper for pst-grad.tex (hv)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-grad/pst-grad.tex
+`pst-grad' v1.06, 2006/11/27 (tvz,dg,hv))
+File: pst-grad.tex 2006/11/27 1.06 `pst-grad' (tvz)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pst-coil/pst-coil.sty
+Package: pst-coil 2010/02/01 package wrapper for pst-coil.tex (hv)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-coil/pst-coil.tex
+ v1.06, 2006/11/27)
+File: pst-coil.tex 2010/02/01 v1.03 `PST-coil' (tvz,hv)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pst-text/pst-text.sty
+Package: pst-text 2006/01/01 package wrapper for pst-text.tex (hv)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-text/pst-text.tex
+ v1.00, 2006/11/05(tvz,hv))
+File: pst-text.tex 2006/11/05 1.00 `pst-text' (tvz)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pst-3d/pst-3d.sty
+Package: pst-3d 2009/07/28 package wrapper for pst-3d.tex (hv)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-3d/pst-3d.tex
+`PST-3d' v1.11, 2010/02/14 (tvz))
+File: pst-3d.tex 2010/02/14 v1.11 `PST-3d' (hv)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pst-eps/pst-eps.sty
+Package: pst-eps 2005/05/20 package wrapper for pst-eps.tex (hv)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-eps/pst-eps.tex
+ v1.00, 2006/11/04
+\pst@epsout=\write3
+\pst@tempout=\write4
+)
+File: pst-eps.tex 2006/11/04 1.00 `pst-eps' (tvz)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pst-fill/pst-fill.sty
+Package: pst-fill 2005/09/13 package wrapper for pst-fill.tex (hv)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-fill/pst-fill.tex
+`PST-Fill' v1.01, 2007/03/10 (tvz,dg,hv)
+\pst@fillbox=\box35
+)
+File: pst-fill.tex 2007/03/10 v1.01 `PST-fill' (tvz,dg)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pstricks-add/pstricks-add.sty
+Package: pstricks-add 2010/02/11 v. 0.14 package wrapper for pstricks-add.tex (
+hv)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pstricks-add/pstricks-add.tex
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-math/pst-math.tex
+`pst-math' v0.62 , (CJ,hv)) `pstricks-add' v3.51, 2011/02/02 (dr,hv)
+\pshooklength=\dimen147
+\pshookwidth=\dimen148
+\pst@cntC=\count136
+\chart@ColorIndex=\dimen149
+\chart@ColorStep=\dimen150
+\pst@chartHeight=\dimen151
+\pst@chartStackDepth=\dimen152
+\pst@chartStackWidth=\dimen153
+\chart@Toggle=\count137
+\psVectorCtr=\count138
+)
+File: pstricks-add.tex 2011/02/02 v3.51 `PSTricks-add' (hv)
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pst-circ/pst-circ.sty
+Package: pst-circ 2007/12/23 package wrapper for pst-circ.tex (hv)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-circ/pst-circ.tex
+(/usr/local/texlive/2011/texmf-dist/tex/generic/pst-node/pst-node.tex)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/multido/multido.tex
+ v1.42, 2010/05/14 <tvz>) `pst-circ' v2.02(hv)
+\Pst@position=\dimen154
+\pst@count@i=\count139
+\pst@count@ii=\count140
+\pst@count@iii=\count141
+\Pst@basesep=\dimen155
+)
+File: pst-circ.tex 2011/05/11 v2.02 `PST-circ' (CJ,hv)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/koma-script/scrpage2.sty
+Package: scrpage2 2010/04/22 v2.5 LaTeX2e KOMA-Script package
+LaTeX Info: Redefining \pagemark on input line 176.
+)
+<<<<<<< HEAD
+No file DocGroupWork.aux.
+=======
+(./DocGroupWork.aux)
+>>>>>>> Doc test -> pstricks ok
+\openout1 = `DocGroupWork.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 27.
+<<<<<<< HEAD
+=======
+
+>>>>>>> Doc test -> pstricks ok
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    ... okay on input line 27.
+\c@lstlisting=\count142
+\openout2 = `./0_titlepage_abstract/titlepage.aux'.
 
-(G:\Programme\LaTex\tex\context\base\supp-pdf.tex
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count146
-\scratchdimen=\dimen153
-\scratchbox=\box66
-\nofMPsegments=\count147
-\nofMParguments=\count148
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count149
-\MPscratchDim=\dimen154
-\MPnumerator=\count150
-\everyMPtoPDFconversion=\toks32
-)
-\AtBeginShipoutBox=\box67
-\c@lstlisting=\count151
- [1
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
 
-{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map}]
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\titlepage.tex"
+(./0_titlepage_abstract/titlepage.tex
+File: ./Pictures/ethz_logo.eps Graphic file (type eps)
+ <./Pictures/ethz_logo.eps>
+File: ./Pictures/ifalogo_color.eps Graphic file (type eps)
 
-! LaTeX Error: File `./Pictures/ethz_logo' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 ...ics[height=12mm]{./Pictures/ifalogo_color}}
-                                                  
-? 
-
-! LaTeX Error: File `./Pictures/ifalogo_color' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 ...ics[height=12mm]{./Pictures/ifalogo_color}}
-                                                  
-? 
-[2
+<./Pictures/ifalogo_color.eps> [1
 
 
 
-]) ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\abstract.tex")
-[3
 
+])
+\openout2 = `./0_titlepage_abstract/abstract.aux'.
 
-] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\DocGroupWork.toc")
-\tf@toc=\write5
-[4
+ (./0_titlepage_abstract/abstract.tex
 
+Package xcolor Warning: Incompatible color definition on input line 2.
 
-] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\DocGroupWork.lof")
-\tf@lof=\write6
-[5
+) [2
+
 
 ]
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\1_Introduction\1_Intro
-duction.tex"
+
+Package xcolor Warning: Incompatible color definition on input line 30.
+
+
+Package xcolor Warning: Incompatible color definition on input line 30.
+
+(./DocGroupWork.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 4.
+)
+\tf@toc=\write5
+\openout5 = `DocGroupWork.toc'.
+
+ [3
+
+
+]
+
+Package xcolor Warning: Incompatible color definition on input line 32.
+
+
+Package xcolor Warning: Incompatible color definition on input line 32.
+
+(./DocGroupWork.lof)
+\tf@lof=\write6
+\openout6 = `DocGroupWork.lof'.
+
+ [4
+
+]
+\openout2 = `./1_Introduction/1_Introduction.aux'.
+
+ (./1_Introduction/1_Introduction.tex
 Chapter 1.
 
 Class scrreprt Warning: \float@addtolists detected!
@@ -748,82 +637,99 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              `scrreprt' soon .
 
 
-LaTeX Warning: Citation `wwwRoboCup' on page 6 undefined on input line 4.
+Package xcolor Warning: Incompatible color definition on input line 3.
 
 
-LaTeX Warning: Reference `PrjDescription' on page 6 undefined on input line 5.
+Package xcolor Warning: Incompatible color definition on input line 3.
 
-) [6
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+LaTeX Warning: Citation `wwwRoboCup' on page 5 undefined on input line 4.
+
+
+LaTeX Warning: Reference `PrjDescription' on page 5 undefined on input line 5.
+
+) [5
 
 
 ]
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\2_Simulation\2_Simulat
-ion.tex"
+\openout2 = `./2_Simulation/2_Simulation.aux'.
+
+ (./2_Simulation/2_Simulation.tex
 Chapter 2.
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 8.
+
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 10.
-(G:\Programme\LaTex\tex\latex\psnfss\ot1pcr.fd
+(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\plot_env.m"
+(../Simulation/Merge/plot_env.m
 LaTeX Font Info:    Try loading font information for TS1+pcr on input line 27.
 
-(G:\Programme\LaTex\tex\latex\psnfss\ts1pcr.fd
+(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ))
 
-LaTeX Warning: Reference `Playing_filed' on page 7 undefined on input line 15.
+LaTeX Warning: Reference `Playing_filed' on page 6 undefined on input line 15.
 
+File: ./2_Simulation/playing_field.eps Graphic file (type eps)
+<./2_Simulation/playing_field.eps>
 
-! LaTeX Error: File `./2_Simulation/playing_field' not found.
+Package xcolor Warning: Incompatible color definition on input line 26.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 ...[width=12cm]{./2_Simulation/playing_field}
-                                                  
-? 
-[7
+[6
 
 
 
-] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\dummy_step.m"
-LaTeX Font Info:    Try loading font information for U+msa on input line 20.
-
-(G:\Programme\LaTex\tex\latex\amsfonts\umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 20.
-
-(G:\Programme\LaTex\tex\latex\amsfonts\umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-))
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\dummy_step.m")
+] (../Simulation/Merge/dummy_step.m
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 20.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 20.
+) (../Simulation/Merge/dummy_step.m
+[7])
 Overfull \hbox (54.06277pt too wide) in paragraph at lines 37--38
 \OT1/cmr/m/n/10.95 states, which can-not be han-dled by our Kalman fil-ter. The
  func-tion \OT1/pcr/m/n/10.95 robot[]step(Robot,Ball).m
  []
 
-[8] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\robot_step.m"
+(../Simulation/Merge/robot_step.m
 LaTeX Font Info:    Try loading font information for OML+pcr on input line 42.
 
-(G:\Programme\LaTex\tex\latex\psnfss\omlpcr.fd
+(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/omlpcr.fd
 File: omlpcr.fd 
 )
 LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 42.
 )
+<<<<<<< HEAD
 
-! LaTeX Error: File `./2_Simulation/plot_robots' not found.
+LaTeX Warning: Reference `Plot_robots' on page 8 undefined on input line 44.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.48 ...cs[width=12cm]{./2_Simulation/plot_robots}
-                                                  
-? 
-[9] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\ball_step.m"
+=======
+
+LaTeX Warning: Reference `Plot_robots' on page 8 undefined on input line 44.
+
+>>>>>>> Doc test -> pstricks ok
+[8]
+File: ./2_Simulation/plot_robots.eps Graphic file (type eps)
+ <./2_Simulation/plot_robots.eps>
+
+Package xcolor Warning: Incompatible color definition on input line 56.
+
+[9] (../Simulation/Merge/ball_step.m
 Overfull \hbox (62.34933pt too wide) in paragraph at lines 48--49
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -834,17 +740,34 @@ Overfull \hbox (62.34933pt too wide) in paragraph at lines 49--50
  []
 
 )
+
+Package xcolor Warning: Incompatible color definition on input line 67.
+
+
 Overfull \hbox (0.36954pt too wide) in paragraph at lines 69--70
 \OT1/cmr/m/n/10.95 All func-tions men-tioned above build the core of a sim-ple 
 ran-dom sim-u-la-tion of a RoboCup
  []
 
-[10]) [11]
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\3_KalmanFilterTheory\3
-_KalmanFilterTheory.tex"
+) [10]
+\openout2 = `./3_KalmanFilterTheory/3_KalmanFilterTheory.aux'.
+
+ (./3_KalmanFilterTheory/3_KalmanFilterTheory.tex
 Chapter 3.
 
-LaTeX Warning: Citation `IntroKF' on page 12 undefined on input line 6.
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+
+LaTeX Warning: Citation `IntroKF' on page 11 undefined on input line 6.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--8
@@ -852,1462 +775,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
  []
 
 
-LaTeX Warning: Reference `ExampleKF' on page 12 undefined on input line 26.
+LaTeX Warning: Reference `ExampleKF' on page 11 undefined on input line 26.
 
 
-LaTeX Warning: Reference `KFcircuit' on page 12 undefined on input line 27.
-
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.36 ...ylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.38 ...,dipoleconvention=generator](A2)(M){$C_1$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.39 ...onoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.41 ...dipoleconvention=generator](C2)(D2){$C_2$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.43 			\wire(B)(D)
-                   		\wire(A2)(C0)
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.43 			\wire(B)(D)
-                   		\wire(A2)(C0)
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.43 			\wire(B)(D)
-                   		\wire(A2)(C0)
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.43 			\wire(B)(D)
-                   		\wire(A2)(C0)
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.43 			\wire(B)(D)		\wire(A2)(C0)
-                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.43 			\wire(B)(D)		\wire(A2)(C0)
-                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.43 			\wire(B)(D)		\wire(A2)(C0)
-                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.43 			\wire(B)(D)		\wire(A2)(C0)
-                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.44 			\pscircle[fillstyle=solid](A){0.075}
-                                            
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.44 			\pscircle[fillstyle=solid](A){0.075}
-                                            
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.44 			\pscircle[fillstyle=solid](A){0.075}
-                                            
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.44 			\pscircle[fillstyle=solid](A){0.075}
-                                            
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.44 			\pscircle[fillstyle=solid](A){0.075}
-                                            
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.44 			\pscircle[fillstyle=solid](A){0.075}
-                                            
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.45 			\pscircle[fillstyle=solid](B){0.075}
-                                            
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.45 			\pscircle[fillstyle=solid](B){0.075}
-                                            
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.45 			\pscircle[fillstyle=solid](B){0.075}
-                                            
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.45 			\pscircle[fillstyle=solid](B){0.075}
-                                            
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.45 			\pscircle[fillstyle=solid](B){0.075}
-                                            
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.45 			\pscircle[fillstyle=solid](B){0.075}
-                                            
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.46 			\pscircle[fillstyle=solid](C0){0.075}
-                                             
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.46 			\pscircle[fillstyle=solid](C0){0.075}
-                                             
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.46 			\pscircle[fillstyle=solid](C0){0.075}
-                                             
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.46 			\pscircle[fillstyle=solid](C0){0.075}
-                                             
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.46 			\pscircle[fillstyle=solid](C0){0.075}
-                                             
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.46 			\pscircle[fillstyle=solid](C0){0.075}
-                                             
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.47 			\pscircle[fillstyle=solid](D){0.075}
-                                            
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.47 			\pscircle[fillstyle=solid](D){0.075}
-                                            
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.47 			\pscircle[fillstyle=solid](D){0.075}
-                                            
-? 
-! Undefined control sequence.
-\XC@usec@lor ...\expandafter \c@lor@to@ps #1#2\@@ 
-                                                  \else \expandafter \expand...
-l.47 			\pscircle[fillstyle=solid](D){0.075}
-                                            
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.47 			\pscircle[fillstyle=solid](D){0.075}
-                                            
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.47 			\pscircle[fillstyle=solid](D){0.075}
-                                            
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.49 			\tension(A)(B){$U_{in}$}
-                                
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.49 			\tension(A)(B){$U_{in}$}
-                                
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.49 			\tension(A)(B){$U_{in}$}
-                                
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.49 			\tension(A)(B){$U_{in}$}
-                                
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.49 			\tension(A)(B){$U_{in}$}
-                                
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.49 			\tension(A)(B){$U_{in}$}
-                                
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.49 			\tension(A)(B){$U_{in}$}
-                                
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.49 			\tension(A)(B){$U_{in}$}
-                                
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.50 			\tension(C0)(D){$U_{out}$}
-                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.50 			\tension(C0)(D){$U_{out}$}
-                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.50 			\tension(C0)(D){$U_{out}$}
-                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.50 			\tension(C0)(D){$U_{out}$}
-                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.50 			\tension(C0)(D){$U_{out}$}
-                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.50 			\tension(C0)(D){$U_{out}$}
-                                  
-? 
-! Undefined control sequence.
-<recently read> \c@lor@to@ps 
-                             
-l.50 			\tension(C0)(D){$U_{out}$}
-                                  
-? 
-! Undefined control sequence.
-\XC@usec@lor ...string \color@ #1#2\endcsname \@@ 
-                                                  \fi \space 
-l.50 			\tension(C0)(D){$U_{out}$}
-                                  
-? 
-
-LaTeX Warning: Reference `TupEq' on page 12 undefined on input line 56.
+LaTeX Warning: Reference `KFcircuit' on page 11 undefined on input line 27.
 
 
-LaTeX Warning: Reference `KFchart' on page 12 undefined on input line 56.
+LaTeX Warning: Reference `TupEq' on page 11 undefined on input line 56.
 
 
-! LaTeX Error: File `./3_KalmanFilter/KFchart' not found.
+LaTeX Warning: Reference `KFchart' on page 11 undefined on input line 56.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 ...hics[width=12cm]{./3_KalmanFilter/KFchart}
-                                                  
-? 
+File: ./3_KalmanFilterTheory/KFchart.eps Graphic file (type eps)
+<./3_KalmanFilterTheory/KFchart.eps>
 
-LaTeX Warning: Citation `IntroKF' on page 12 undefined on input line 66.
+Package xcolor Warning: Incompatible color definition on input line 64.
+
+
+LaTeX Warning: Citation `IntroKF' on page 11 undefined on input line 66.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 66--68
 
  []
 
-[12
+[11
 
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 86--88
+] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 84--87
 
  []
 
-[13
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!]
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.97 \end{enumerate}
-                    
-? 
-
-LaTeX Warning: Reference `ExampleEKF' on page 14 undefined on input line 99.
+LaTeX Warning: Reference `ExampleEKF' on page 13 undefined on input line 97.
 
 
-LaTeX Warning: Reference `EKFchart' on page 14 undefined on input line 99.
+LaTeX Warning: Reference `EKFchart' on page 13 undefined on input line 97.
+
+File: ./3_KalmanFilterTheory/EKFchart.eps Graphic file (type eps)
+<./3_KalmanFilterTheory/EKFchart.eps>) [13] [14]
+\openout2 = `./4_KalmanFilterEstimation/4_KalmanFilterEstimation.aux'.
 
 
-! LaTeX Error: File `./3_KalmanFilter/EKFchart' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 ...cs[width=12cm]{./3_KalmanFilter/EKFchart}
-                                                  
-? 
-) [14]
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\4_KalmanFilterEstimati
-on\4_KalmanFilterEstimation.tex"
+(./4_KalmanFilterEstimation/4_KalmanFilterEstimation.tex
 Chapter 4.
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\robot_ekf.m")
-[15
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5.
+
+(../Simulation/Merge/robot_ekf.m) [15
 
 
 
-] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Simulation\Merge\robot_ekf.m")) [1
-6]
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\5_SensorFusion\5_Senso
-rFusion.tex"
+] (../Simulation/Merge/robot_ekf.m)
+
+Package xcolor Warning: Incompatible color definition on input line 19.
+
+) [16]
+\openout2 = `./5_SensorFusion/5_SensorFusion.aux'.
+
+ (./5_SensorFusion/5_SensorFusion.tex
 Chapter 5.
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
 
 LaTeX Warning: Citation `IntroSF' on page 17 undefined on input line 6.
 
@@ -2315,140 +862,63 @@ LaTeX Warning: Citation `IntroSF' on page 17 undefined on input line 6.
 LaTeX Warning: Citation `IntroSF' on page 17 undefined on input line 8.
 
 
+Package xcolor Warning: Incompatible color definition on input line 10.
+
+
 LaTeX Warning: Citation `IntroSF' on page 17 undefined on input line 12.
+
+
+Package xcolor Warning: Incompatible color definition on input line 20.
 
 [17
 
 
 
-]) [18]
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\Appendix\Appendix.tex"
-Appendix A.
-[19
+]
+
+Package xcolor Warning: Incompatible color definition on input line 24.
+
+) [18]
+\openout2 = `./6_FlawsOutlook/6_FlawsOutlook.aux'.
+
+ (./6_FlawsOutlook/6_FlawsOutlook.tex
+Chapter 6.
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3.
+
+) [19
 
 
 
-] <./appendix/Group_Project.pdf, id=78, page=1, 597.432pt x 844.95674pt>
-File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+]
+\openout2 = `literature.aux'.
 
-<use ./appendix/Group_Project.pdf, page 1>
-File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+ (./literature.tex
 
-<use ./appendix/Group_Project.pdf, page 1>
-File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+Package xcolor Warning: Incompatible color definition on input line 5.
 
-<use ./appendix/Group_Project.pdf, page 1>
-File: ./appendix/Group_Project.pdf Graphic file (type pdf)
 
-<use ./appendix/Group_Project.pdf, page 1>
-File: ./appendix/Group_Project.pdf Graphic file (type pdf)
+Package xcolor Warning: Incompatible color definition on input line 5.
 
-<use ./appendix/Group_Project.pdf, page 1> [20 <G:/Studium ETH/RoboCup/RoboCup-
-Estimator/Documentation/appendix/Group_Project.pdf>]
-<./appendix/Group_Project.pdf, id=112, page=2, 597.432pt x 844.95674pt>
-File: ./appendix/Group_Project.pdf Graphic file (type pdf)
-
-<use ./appendix/Group_Project.pdf, page 2>
-File: ./appendix/Group_Project.pdf Graphic file (type pdf)
-
-<use ./appendix/Group_Project.pdf, page 2>
-File: ./appendix/Group_Project.pdf Graphic file (type pdf)
-
-<use ./appendix/Group_Project.pdf, page 2> [21 <G:/Studium ETH/RoboCup/RoboCup-
-Estimator/Documentation/appendix/Group_Project.pdf>]
-<./appendix/Group_Project.pdf, id=116, page=3, 597.432pt x 844.95674pt>
-File: ./appendix/Group_Project.pdf Graphic file (type pdf)
-
-<use ./appendix/Group_Project.pdf, page 3>
-File: ./appendix/Group_Project.pdf Graphic file (type pdf)
-
-<use ./appendix/Group_Project.pdf, page 3>
-File: ./appendix/Group_Project.pdf Graphic file (type pdf)
-
-<use ./appendix/Group_Project.pdf, page 3> [22 <G:/Studium ETH/RoboCup/RoboCup-
-Estimator/Documentation/appendix/Group_Project.pdf>]
-Appendix B.
-[23
-
-] <./appendix/linear_model.pdf, id=125, page=1, 597.50829pt x 845.0471pt>
-File: ./appendix/linear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/linear_model.pdf, page 1>
-File: ./appendix/linear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/linear_model.pdf, page 1>
-File: ./appendix/linear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/linear_model.pdf, page 1>
-File: ./appendix/linear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/linear_model.pdf, page 1>
-File: ./appendix/linear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/linear_model.pdf, page 1> [24 <G:/Studium ETH/RoboCup/RoboCup-E
-stimator/Documentation/appendix/linear_model.pdf>]
-<./appendix/linear_model.pdf, id=272, page=2, 597.50829pt x 845.0471pt>
-File: ./appendix/linear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/linear_model.pdf, page 2>
-File: ./appendix/linear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/linear_model.pdf, page 2>
-File: ./appendix/linear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/linear_model.pdf, page 2> [25 <G:/Studium ETH/RoboCup/RoboCup-E
-stimator/Documentation/appendix/linear_model.pdf>] [26]
-<./appendix/nonlinear_model.pdf, id=287, page=1, 597.50829pt x 845.0471pt>
-File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/nonlinear_model.pdf, page 1>
-File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/nonlinear_model.pdf, page 1>
-File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/nonlinear_model.pdf, page 1>
-File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/nonlinear_model.pdf, page 1>
-File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/nonlinear_model.pdf, page 1> [27 <G:/Studium ETH/RoboCup/RoboCu
-p-Estimator/Documentation/appendix/nonlinear_model.pdf>]
-<./appendix/nonlinear_model.pdf, id=408, page=2, 597.50829pt x 845.0471pt>
-File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/nonlinear_model.pdf, page 2>
-File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/nonlinear_model.pdf, page 2>
-File: ./appendix/nonlinear_model.pdf Graphic file (type pdf)
-
-<use ./appendix/nonlinear_model.pdf, page 2> [28 <G:/Studium ETH/RoboCup/RoboCu
-p-Estimator/Documentation/appendix/nonlinear_model.pdf>])
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\literature.tex"
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¼ in font cmr10!
-)
-[29
+) [20
 
 
 
-] ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\DocGroupWork.aux" ("
-G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\titlepage.aux")
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\abstract.aux")
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\1_Introduction\1_Intro
-duction.aux")
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\2_Simulation\2_Simulat
-ion.aux")
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\3_KalmanFilterTheory\3
-_KalmanFilterTheory.aux")
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\4_KalmanFilterEstimati
-on\4_KalmanFilterEstimation.aux")
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\5_SensorFusion\5_Senso
-rFusion.aux")
-("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\Appendix\Appendix.aux"
-) ("G:\Studium ETH\RoboCup\RoboCup-Estimator\Documentation\literature.aux"))
+] (./DocGroupWork.aux (./0_titlepage_abstract/titlepage.aux)
+(./0_titlepage_abstract/abstract.aux) (./1_Introduction/1_Introduction.aux)
+(./2_Simulation/2_Simulation.aux)
+(./3_KalmanFilterTheory/3_KalmanFilterTheory.aux)
+(./4_KalmanFilterEstimation/4_KalmanFilterEstimation.aux)
+(./5_SensorFusion/5_SensorFusion.aux) (./6_FlawsOutlook/6_FlawsOutlook.aux)
+(./literature.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -2457,34 +927,19 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 10322 strings out of 495285
- 153983 string characters out of 3181170
- 383692 words of memory out of 3000000
- 13166 multiletter control sequences out of 15000+200000
- 16568 words of font info for 62 fonts, out of 3000000 for 9000
- 14 hyphenation exceptions out of 8191
- 44i,18n,62p,1838b,1209s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Fabi\AppData\Local\MiKTeX\2.8\fonts\pk\ljfour\jknappen\ec\dpi600\t
-crm1095.pk>{G:/Programme/LaTex/fonts/enc/dvips/fontname/8r.enc}<G:/Programme/La
-Tex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><G:/Programme/LaTex/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm
-/cmex10.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><G:/P
-rogramme/LaTex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><G:/Programme/LaTex/fon
-ts/type1/public/amsfonts/cm/cmmi7.pfb><G:/Programme/LaTex/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmmi9.pf
-b><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><G:/Programme/La
-Tex/fonts/type1/public/amsfonts/cm/cmr5.pfb><G:/Programme/LaTex/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmr
-8.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmsl10.pfb><G:/Program
-me/LaTex/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><G:/Programme/LaTex/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><G:/Programme/LaTex/fonts/type1/public/amsf
-onts/cm/cmsy7.pfb><G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-<G:/Programme/LaTex/fonts/type1/public/amsfonts/cm/cmsy9.pfb><G:/Programme/LaTe
-x/fonts/type1/public/amsfonts/cm/cmtt10.pfb><G:/Programme/LaTex/fonts/type1/urw
-/courier/ucrr8a.pfb>
-Output written on DocGroupWork.pdf (29 pages, 518980 bytes).
-PDF statistics:
- 479 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+<<<<<<< HEAD
+ 10842 strings out of 493634
+ 180075 string characters out of 3143400
+ 452657 words of memory out of 3000000
+ 13900 multiletter control sequences out of 15000+200000
+=======
+ 10890 strings out of 493634
+ 181145 string characters out of 3143400
+ 453136 words of memory out of 3000000
+ 13936 multiletter control sequences out of 15000+200000
+>>>>>>> Doc test -> pstricks ok
+ 12783 words of font info for 45 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 49i,9n,62p,1783b,1549s stack positions out of 5000i,500n,10000p,200000b,50000s
 
+Output written on DocGroupWork.dvi (20 pages, 153268 bytes).

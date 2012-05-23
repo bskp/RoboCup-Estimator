@@ -9,7 +9,7 @@
 clear all;
 global dt;
 
-steps = 2e3;
+steps = 100;
 dt = 0.1; %[s/step]
 
 % Field Parameter (Rules2011.pdf)
@@ -31,10 +31,14 @@ global Noise;
     
     Noise.measure.pos = 1e-1; %[m]
     Noise.measure.dir = 1e-1 * 2*pi; %[rad]
+    Noise.measure.sigma1 = 1;
+    Noise.measure.sigma2 = 2;
+    Noise.measure.sigma3 = 3;
     
     Noise.measure.prob = 0.2;
 
 %% - - - - - Initalization - - - - - %
+close all;
 figure('units','normalized','position',[0.1,0,0.4,0.9]);
 colorcode;
 
@@ -83,4 +87,11 @@ for s = 1:steps
     [m_values e_values] = history(m_values, e_values, Robot_m, Robot_e);
     
     pause(0.001);
+    RobotStep(s,:,:) = Robot;
+	RobotStep_e(s,:,:) = Robot_e;
+    BallStep(s) = Ball;
+    BallStep_e(s) = Ball_e;
+    if (s == steps)
+        report(steps, RobotStep, RobotStep_e, BallStep, BallStep_e);
+    end
 end
