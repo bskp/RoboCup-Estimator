@@ -14,8 +14,8 @@ function Robot = robot_init()
     RobotParam.radius = 0.15; %[m]
     RobotParam.velocity = 0.1 *dt; %[m/s]
     RobotParam.changeOfDir = 0.1 * 2*pi *dt; %[rad/s], exp. value
-    RobotParam.sightDistance = 2; %[m]
-    RobotParam.sightAngle = pi./8; %[rad]
+    RobotParam.sightDistance = 2.5; %[m]
+    RobotParam.sightAngle = pi./6; %[rad]
 
     
 %----------- Init of robot parameters -----------%

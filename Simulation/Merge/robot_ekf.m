@@ -18,7 +18,6 @@ function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_ome
 %--------- Init of covariance matrices and linearized matrices  ---------%
 
     Q = [Noise.process.pos*eye(2), [0;0]; [0 0 Noise.process.dir]];
-    R = [Noise.measure.pos*eye(2), [0;0]; [0 0 2*Noise.measure.dir]];
     H = eye(3);
     V = eye(3);
     W = eye(3);
@@ -41,6 +40,7 @@ function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_ome
 %----------- Kalman cycle  -----------%
 
     for i=1:8
+       R = [robot_m(i).sigma*eye(2), [0;0]; [0 0 2*robot_m(i).sigma*pi]];
        
        % Linearization of system dynamics
        A = [1 0 -v(i)*sin(robot_e(i).dir);0 1 v(i)*cos(robot_e(i).dir);0 0 1]; 
