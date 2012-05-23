@@ -9,7 +9,7 @@
 clear all;
 global dt;
 
-steps = 100;
+steps = 2000;
 dt = 0.1; %[s/step]
 
 % Field Parameter (Rules2011.pdf)

@@ -18,7 +18,7 @@ function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_ome
 %--------- Init of covariance matrices and linearized matrices  ---------%
 
     Q = [Noise.process.pos*eye(2), [0;0]; [0 0 Noise.process.dir]];
-    R = [Noise.measure.pos*eye(2), [0;0]; [0 0 Noise.measure.dir]];
+    R = [Noise.measure.pos*eye(2), [0;0]; [0 0 2*Noise.measure.dir]];
     H = eye(3);
     V = eye(3);
     W = eye(3);
@@ -45,6 +45,16 @@ function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_ome
        % Linearization of system dynamics
        A = [1 0 -v(i)*sin(robot_e(i).dir);0 1 v(i)*cos(robot_e(i).dir);0 0 1]; 
        
+       s = size(m_values);
+       
+       if(i>4 && s(2)>=2)
+           d_omega(i) = robot_m(i).dir - m_values(3,1,i);
+       end
+       
+       if(isnan(robot_m(i).x*robot_m(i).y*robot_m(i).dir))
+           d_omega(i) = 0;
+       end
+       
        % Time update (predict)   
        x_apriori(1) = robot_e(i).x+cos(robot_e(i).dir)*v(i);
        x_apriori(2) = robot_e(i).y+sin(robot_e(i).dir)*v(i);
@@ -69,4 +79,3 @@ function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_ome
     end
     
 end
-

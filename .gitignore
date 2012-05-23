@@ -23,3 +23,5 @@
 *.mtc1
 *.out
 *.synctex.gz
+*.asv
+*error.mat

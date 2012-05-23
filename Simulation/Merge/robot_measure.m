@@ -22,7 +22,7 @@ function RobotMeasure = robot_measure(Robot)
             RobotAllMeasure(j).dir(i) = NaN;
             RobotAllMeasure(j).sigma(i) = NaN;
        end
-       
+
        for j = 1:8
             if (i == j)
                 if (positionIsValid(i))

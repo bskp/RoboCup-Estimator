@@ -23,8 +23,10 @@ function [m_values e_values] = history(m_old,e_old, Robot_m, Robot_e)
         e_values = zeros(3,num_of_measurements+1,8);
     
         for i = 1:8
+            if(~isnan(Robot_m(i).x*Robot_m(i).y*Robot_m(i).dir))
            m_values(:,:,i) = [[Robot_m(i).x; Robot_m(i).y; Robot_m(i).dir], m_old(:,:,i)];
-           e_values(:,:,i) = [[Robot_e(i).x; Robot_e(i).y; Robot_e(i).dir], e_old(:,:,i)]; 
+           e_values(:,:,i) = [[Robot_e(i).x; Robot_e(i).y; Robot_e(i).dir], e_old(:,:,i)];
+            end
         end 
     
 % History has already buffer_size elements
@@ -33,8 +35,10 @@ function [m_values e_values] = history(m_old,e_old, Robot_m, Robot_e)
         e_values = zeros(3,buffer_size,8);
     
         for i = 1:8
+            if(~isnan(Robot_m(i).x*Robot_m(i).y*Robot_m(i).dir))
            m_values(:,:,i) = [[Robot_m(i).x; Robot_m(i).y; Robot_m(i).dir], m_old(:,1:end-1,i)];
-           e_values(:,:,i) = [[Robot_e(i).x; Robot_e(i).y; Robot_e(i).dir], e_old(:,1:end-1,i)]; 
+           e_values(:,:,i) = [[Robot_e(i).x; Robot_e(i).y; Robot_e(i).dir], e_old(:,1:end-1,i)];
+            end
         end 
     end
 end
