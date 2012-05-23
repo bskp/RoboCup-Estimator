@@ -35,10 +35,10 @@ We consider a linear, timeinvariant model, given by the following circuit diagra
 		%elements
 			\coil[intensitylabel=$i_L$,labeloffset=-0.2](A)(A2){$L$}
 			\capacitor[tensionlabel=$U_1$,tensionlabeloffset=-1.2,tensionoffset=-0.8,%
-					intensitylabel=$i_1$,dipoleconvention=generator](A2)(M){$C_1$}
-			\resistor[tensionlabel=$U_R$,tensionoffset=0.8,labeloffset=-0.5](B2)(M){$R$}
+					intensitylabel=$i_1$](A2)(M){$C_1$}
+			\resistor[tensionlabel=$U_R$,tensionlabeloffset=-1.2,tensionoffset=-0.8](M)(B2){$R$}
 			\capacitor[tensionlabel=$U_2$,tensionlabeloffset=-1.2,tensionoffset=-0.8,%
-					intensitylabel=$i_2$,dipoleconvention=generator](C2)(D2){$C_2$}
+					intensitylabel=$i_2$](C2)(D2){$C_2$}
 		%wires
 			\wire(B)(D)		\wire(A2)(C0)
 			\pscircle[fillstyle=solid](A){0.075}

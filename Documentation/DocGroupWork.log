@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.5.14)  21 MAY 2012 07:14
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2012.5.14)  21 MAY 2012 09:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -521,7 +521,13 @@ File: pst-circ.tex 2011/05/11 v2.02 `PST-circ' (CJ,hv)
 Package: scrpage2 2010/04/22 v2.5 LaTeX2e KOMA-Script package
 LaTeX Info: Redefining \pagemark on input line 176.
 )
-No file DocGroupWork.aux.
+(./DocGroupWork.aux (./0_titlepage_abstract/titlepage.aux)
+(./0_titlepage_abstract/abstract.aux) (./1_Introduction/1_Introduction.aux)
+(./2_Simulation/2_Simulation.aux)
+(./3_KalmanFilterTheory/3_KalmanFilterTheory.aux)
+(./4_KalmanFilterEstimation/4_KalmanFilterEstimation.aux)
+(./5_SensorFusion/5_SensorFusion.aux) (./6_FlawsOutlook/6_FlawsOutlook.aux)
+(./literature.aux))
 \openout1 = `DocGroupWork.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -538,6 +544,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 27.
+
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
@@ -622,9 +629,6 @@ Package xcolor Warning: Incompatible color definition on input line 3.
 Package xcolor Warning: Incompatible color definition on input line 3.
 
 
-LaTeX Warning: Citation `wwwRoboCup' on page 5 undefined on input line 4.
-
-
 LaTeX Warning: Reference `PrjDescription' on page 5 undefined on input line 5.
 
 ) [5
@@ -689,13 +693,10 @@ File: omlpcr.fd
 )
 LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 42.
-)
-
-LaTeX Warning: Reference `Plot_robots' on page 8 undefined on input line 44.
-
-[8]
+) [8]
 File: ./2_Simulation/plot_robots.eps Graphic file (type eps)
- <./2_Simulation/plot_robots.eps>
+
+<./2_Simulation/plot_robots.eps>
 
 Package xcolor Warning: Incompatible color definition on input line 56.
 
@@ -737,9 +738,6 @@ Package xcolor Warning: Incompatible color definition on input line 3.
 Package xcolor Warning: Incompatible color definition on input line 5.
 
 
-LaTeX Warning: Citation `IntroKF' on page 11 undefined on input line 6.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
@@ -747,22 +745,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
 LaTeX Warning: Reference `ExampleKF' on page 11 undefined on input line 26.
 
-
-LaTeX Warning: Reference `KFcircuit' on page 11 undefined on input line 27.
-
-
-LaTeX Warning: Reference `TupEq' on page 11 undefined on input line 56.
-
-
-LaTeX Warning: Reference `KFchart' on page 11 undefined on input line 56.
-
 File: ./3_KalmanFilterTheory/KFchart.eps Graphic file (type eps)
 <./3_KalmanFilterTheory/KFchart.eps>
 
 Package xcolor Warning: Incompatible color definition on input line 64.
-
-
-LaTeX Warning: Citation `IntroKF' on page 11 undefined on input line 66.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 66--68
@@ -780,9 +766,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--87
 
 
 LaTeX Warning: Reference `ExampleEKF' on page 13 undefined on input line 97.
-
-
-LaTeX Warning: Reference `EKFchart' on page 13 undefined on input line 97.
 
 File: ./3_KalmanFilterTheory/EKFchart.eps Graphic file (type eps)
 <./3_KalmanFilterTheory/EKFchart.eps>) [13] [14]
@@ -826,16 +809,7 @@ Package xcolor Warning: Incompatible color definition on input line 3.
 Package xcolor Warning: Incompatible color definition on input line 3.
 
 
-LaTeX Warning: Citation `IntroSF' on page 17 undefined on input line 6.
-
-
-LaTeX Warning: Citation `IntroSF' on page 17 undefined on input line 8.
-
-
 Package xcolor Warning: Incompatible color definition on input line 10.
-
-
-LaTeX Warning: Citation `IntroSF' on page 17 undefined on input line 12.
 
 
 Package xcolor Warning: Incompatible color definition on input line 20.
@@ -892,17 +866,14 @@ Missing character: There is no ¼ in font cmr10!
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 10842 strings out of 493634
- 180075 string characters out of 3143400
- 452657 words of memory out of 3000000
- 13900 multiletter control sequences out of 15000+200000
+ 10871 strings out of 493634
+ 181071 string characters out of 3143400
+ 455264 words of memory out of 3000000
+ 13909 multiletter control sequences out of 15000+200000
  12783 words of font info for 45 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  49i,9n,62p,1783b,1549s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on DocGroupWork.dvi (20 pages, 153268 bytes).
+Output written on DocGroupWork.dvi (20 pages, 153216 bytes).
