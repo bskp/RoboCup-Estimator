@@ -1,8 +1,8 @@
-function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_omega,v,P)
-%ROBOT_EKF Position-estimation for robots.
+function [robot_step P_step v_pink_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_omega,v,v_pink,P)
+%ROBOT_EKF Position-estimation for the robots.
 %
-%   [ROBOT_STEP,P_STEP] =
-%   ROBOT_EKF(ROBOT_M,ROBOT_E,M_VALUES,E_VALUES,D_OMEGA,V,P)
+%   [ROBOT_STEP,P_STEP, V_PINK_STEP] =
+%   ROBOT_EKF(ROBOT_M,ROBOT_E,M_VALUES,E_VALUES,D_OMEGA,V,V_PINK,P)
 %   implements the extended Kalman filter cycle for the given motion model
 %   after which the robots behave. The structs ROBOT_M and ROBOT_E refer to
 %   the measured robot parameters and the previously estimated robot
@@ -26,6 +26,11 @@ function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_ome
     P_step = zeros(3,3,8);
     
     
+%--------- Approximation of the enemy's input  ---------%
+
+    [d_omega_pink,v_pink_step] = input_approximation(robot_m,m_values,v_pink);
+
+    
 %-------- Enable usage of adaptive measurement covariance matrix  --------%    
 
 %     s = size(m_values);
@@ -45,16 +50,11 @@ function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_ome
        % Linearization of system dynamics
        A = [1 0 -v(i)*sin(robot_e(i).dir);0 1 v(i)*cos(robot_e(i).dir);0 0 1]; 
        
-       s = size(m_values);
-       
-       if(i>4 && s(2)>=2)
-           d_omega(i) = robot_m(i).dir - m_values(3,1,i);
+       if(i>4)
+           v(i) = v_pink_step(i-4);
+           d_omega(i) = d_omega_pink(i-4);
        end
-       
-       if(isnan(robot_m(i).x*robot_m(i).y*robot_m(i).dir))
-           d_omega(i) = 0;
-       end
-       
+
        % Time update (predict)   
        x_apriori(1) = robot_e(i).x+cos(robot_e(i).dir)*v(i);
        x_apriori(2) = robot_e(i).y+sin(robot_e(i).dir)*v(i);

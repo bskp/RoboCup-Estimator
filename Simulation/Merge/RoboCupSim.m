@@ -58,6 +58,7 @@ Ball = ball_init();
 Ball_e = Ball;
 m_values = 0;
 e_values = 0;
+v_pink = ones(1,4)*RobotParam.velocity;
 
 %% - - - - - Loop - - - - - %
 for s = 1:steps
@@ -67,7 +68,7 @@ for s = 1:steps
     Ball_m = ball_measure(Robot, Ball);
     
     [Ball_e P_ball] = ball_kf(Ball_e, Ball_m, P_ball);
-    [Robot_e P] = robot_ekf(Robot_m, Robot_e, m_values, e_values, d_angle, v, P);
+    [Robot_e P v_pink] = robot_ekf(Robot_m, Robot_e, m_values, e_values, d_angle, v, v_pink, P);
     
     clf
     subplot(2,1,1)
