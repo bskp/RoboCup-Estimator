@@ -1,4 +1,4 @@
-function [d_R d_theta] = i_measurement(m_values,e_values)
+function [prob] = i_measurement(robot_m,m_values,e_values)
 %I_MEASUREMENT Dynamic adaption of covariance matrix and angular direction.
 %
 %   [D_R,D_THETA] = I_MEASUREMENT(M_VALUES,EVALUES) uses the former
@@ -15,30 +15,30 @@ function [d_R d_theta] = i_measurement(m_values,e_values)
 
     s = size(m_values);
     num_of_measurements = s(2);
-    d_theta = zeros(8,1);
+    prob_x = zeros(1,8);
+    prob_y = zeros(1,8);
+    prob_dir = zeros(1,8);
 
 
 %----------- Initialization of history for every robot  -----------%
 
     for i = 1:8
     
-% Correction of the angular value    
-        A = [e_values(1,:,i)',ones(num_of_measurements,1)];
-        b = e_values(2,:,i)';
-        m = A\b;                % Computing the robot's direction by using
-        theta = atan(m(1));     % the least squares method.
-    
-        if(e_values(1,1,i) < e_values(1,2,i))   % Calculating correct angle
-        theta = theta + pi;
-        end
-        d_angle = mod(theta - e_values(3,1,i),2*pi);
-    
-        d_theta(i) = d_angle.*exp(abs(d_angle)/pi-3);   % Trust function
-        if(abs(d_angle) < pi/9)         % Disable correction mechanism for
-            d_theta(i) = 0;             % small pertubations (<20°)
-        end
-
 % Correction of the position
+        
+        % Probabilities that the absolute difference of position and 
+        % direction between estimates and measurements is bigger than the
+        % actual differences.
+        prob_x(i) = erfc(abs(e_values(1,1,i)-m_values(1,1,i))/(sqrt(robot_m(i).sigma)));
+        prob_y(i) = erfc(abs(e_values(2,1,i)-m_values(2,1,i))/(sqrt(robot_m(i).sigma)));
+        prob_dir(i) = erfc(abs(e_values(3,1,i)-m_values(3,1,i))/(sqrt(robot_m(i).sigma*2*pi)));
+        
+        
+        
+        
+        
+        
+        
         delta = abs(m_values(1:2,:,i)-e_values(1:2,:,i));   % Mean of the position
         mean = sum(sum(delta))/(2*num_of_measurements*0.47693627*Noise.measure.pos*2);
         % We use the fact, that E[delta] = 0.47693627
@@ -48,5 +48,6 @@ function [d_R d_theta] = i_measurement(m_values,e_values)
             d_R(i) = 1;                 % small pertubations
         end
     end
+    prob = [prob_x; prob_y; prob_dir]; 
 end
 

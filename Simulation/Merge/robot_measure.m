@@ -54,7 +54,7 @@ function RobotMeasure = robot_measure(Robot)
                         if positionIsValid(i)
                             RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma2;
                         else
-                            RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma1;
+                            RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma3;
                         end
                     end
                 end
@@ -135,7 +135,7 @@ function RobotMeasure = measurement_fusion(RobotAllMeasure)
         k = 0;
         for j = 1:4
             if (~isnan(RobotAllMeasure(i).x(j)))     % Check for measurement
-                sigma2 = (RobotAllMeasure(i).sigma(j)).^2;
+                sigma2 = (RobotAllMeasure(i).sigma(j));
                 x = x + RobotAllMeasure(i).x(j)*1./sigma2;
                 y = y + RobotAllMeasure(i).y(j)*1./sigma2;
                 dir = dir + RobotAllMeasure(i).dir(j)*1./sigma2;
@@ -147,7 +147,7 @@ function RobotMeasure = measurement_fusion(RobotAllMeasure)
             RobotMeasure(i).x = x./k;
             RobotMeasure(i).y = y./k;
             RobotMeasure(i).dir = dir./k;
-            RobotMeasure(i).sigma = 1./sqrt(k);
+            RobotMeasure(i).sigma = 1./k;
         end
         
     end

@@ -27,9 +27,9 @@ function Ball_m = ball_measure(Robot, Ball)
 %----------- Check available measurements -----------%
 
 for i=1:4           % Only the first 4 robots (the blue ones) get signals.
-    if (position_is_valid(Robot(i)) || true)
+    if (position_is_valid(Robot(i)))
 
-        if (sqrt((Robot(i).x-Ball.x).^2 + (Robot(i).y-Ball.y).^2) <= RobotParam.sightDistance || true)
+        if (sqrt((Robot(i).x-Ball.x).^2 + (Robot(i).y-Ball.y).^2) <= RobotParam.sightDistance)
             dirBall = atan((Ball.y-Robot(i).y)./(Ball.x-Robot(i).x));
 
             % Compute absolute angle in relation to the x-axis.
@@ -44,7 +44,7 @@ for i=1:4           % Only the first 4 robots (the blue ones) get signals.
              relAngle = min([abs(posAngle),abs(negAngle)]);
              
              % If measurement is available, add it
-             if(relAngle < RobotParam.sightAngle || true) 
+             if(relAngle < RobotParam.sightAngle) 
                 at_least_one = true;
                 num_measurements = num_measurements + 1;
                 sum_x = sum_x + Ball.x + randn*Noise.measure.pos;

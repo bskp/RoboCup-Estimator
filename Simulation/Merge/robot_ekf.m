@@ -33,19 +33,26 @@ function [robot_step P_step v_pink_step] = robot_ekf(robot_m,robot_e,m_values,e_
     
 %-------- Enable usage of adaptive measurement covariance matrix  --------%    
 
-%     s = size(m_values);
-%     d_R = ones(1,8);
-%     
-%     if(s(2)>29)
-%         [d_R, d_theta] = i_measurement(m_values, e_values);
-%     end
-%     d_theta = zeros(1,8);
-    
+     s = size(m_values);
+     d_R = ones(1,8);
+     prob = ones(3,8);
+     if(s(2)>2)
+         [prob] = i_measurement(robot_m,m_values, e_values);
+     end
 
 %----------- Kalman cycle  -----------%
 
     for i=1:8
-       R = [robot_m(i).sigma*eye(2), [0;0]; [0 0 2*robot_m(i).sigma*pi]];
+        
+       if(isnan(prob(1,i)))
+           prob(:,i) = ones(3,1);
+       end
+       
+       R = zeros(3,3);
+       R(1,1) = robot_m(i).sigma*prob(1,i);
+       R(2,2) = robot_m(i).sigma*prob(2,i);
+       R(3,3) = robot_m(i).sigma*pi*prob(3,i);
+       %R = [robot_m(i).sigma*eye(2), [0;0]; [0 0 robot_m(i).sigma*pi]]*d_R(i);
        
        % Linearization of system dynamics
        A = [1 0 -v(i)*sin(robot_e(i).dir);0 1 v(i)*cos(robot_e(i).dir);0 0 1]; 
