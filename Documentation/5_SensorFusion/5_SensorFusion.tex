@@ -21,7 +21,7 @@ In the RoboCup case all the types can occur. The sensor configuration is complem
 
 \section{Mathematical model for Sensor Fusion}
 
-We have chosen a situation-based statistical model for our purposes. The covarinace of a measurement depends on the situation at which a robot gains the positon and the angle of another robot. Differently said: There are several scenarios under which a robot can get visual information and each scenario is characterized by the quality of a measurement, implying the value of the covariance. In our case, the measurement of the \(i\)-th robot looks as follows
+We have chosen a situation-based statistical model for our purposes. The covariance of a measurement depends on the situation at which a robot gains the positon and the angle of another robot. Differently said: There are several scenarios under which a robot can get visual information and each scenario is characterized by the quality of a measurement, implying the value of the covariance. In our case, the measurement of the \(i\)-th robot looks as follows
 
 \begin{enumerate}
 	\begin{eqnarray}\label{measurement}
@@ -65,7 +65,7 @@ The generic approach is now to solve equation (\ref{main_condition}) with \(\nab
 
 \begin{enumerate}
 	\begin{eqnarray}\label{lagrange_multipliers}
-    			 \nabla F(a_1,\ldots,a_n) = \lambda \nabla G(a_1,\ldots,a_n) \qquad && \qquad G(a_1,\ldots,a_n) = 0
+    			 \nabla F(a_1,\ldots,a_n) = \lambda \nabla G(a_1,\ldots,a_n), \qquad && \qquad G(a_1,\ldots,a_n) = 0
 	\end{eqnarray}
 \end{enumerate}
 
@@ -85,7 +85,7 @@ In a final step, we are interested in the statistical properties of our fused me
 	\end{eqnarray}
 \end{enumerate}
 
-A short analysis reveals, that \(\sigma_Y^2 < \sigma_i^2, \; \forall i\); the covariance of the fused measurement is smaller than the covariance of every single measurement. Or in other words: The fused measurement is, from a statistical point of view, always more precise than the measurement of only one robot.
+A short analysis reveals, that \(\sigma_Y^2 < \sigma_i^2, \; \forall i\); the covariance of the fused measurement is smaller than the covariance of every single measurement. Or in other words: The fused measurement is, from a statistical point of view, always more precise than the measurement of only one robot, even if we fuse a very good and a very bad measurement.
 
 
 \section{The implementation in MATLAB}

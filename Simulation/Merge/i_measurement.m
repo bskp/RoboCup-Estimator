@@ -1,7 +1,7 @@
 function [prob] = i_measurement(robot_m,m_values,e_values)
 %I_MEASUREMENT Dynamic adaption of covariance matrix and angular direction.
 %
-%   [D_R,D_THETA] = I_MEASUREMENT(M_VALUES,EVALUES) uses the former
+%   [D_R,D_THETA] = I_MEASUREMENT(M_VALUES,E_VALUES) uses the former
 %   measurements from the robots M_VALUES and the former estimation from
 %   the robots E_VALUES in order to compute correction parameters for the
 %   covariance matrix R, used in the extended Kalman filtering algorithm,
