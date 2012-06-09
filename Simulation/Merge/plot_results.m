@@ -76,7 +76,7 @@
         title(titleString);
         if ((j==1) || (j==5))
             xlabel('steps');
-            ylabel('estimation error of angle [°]');
+            ylabel('estimation error of angle [rad]');
             legend('Angle phi', 0);
         end
     end
@@ -101,6 +101,6 @@
     grid on;
     title('Ball');
     xlabel('steps');
-    ylabel('estimation error of angle [°]');
+    ylabel('estimation error of angle [rad]');
     legend('Angle phi');
     

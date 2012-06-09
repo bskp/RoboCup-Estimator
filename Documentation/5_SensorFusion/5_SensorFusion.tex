@@ -29,7 +29,7 @@ We have chosen a situation-based statistical model for our purposes. The covaria
 	\end{eqnarray}
 \end{enumerate}
 
-\(X\) is the deterministic variable we want to know (i.e. position or direction) and \(w_i\) is white Gaussian noise with a certain covariance \(\sigma_i^2\), depending on the condition under which a robot got the information, so \(w_i \tilde \mathcal{N}(0,\sigma_i^2)\). A fusion of \(n\) measurements now looks as follows
+\(X\) is the deterministic variable we want to know (i.e. position or direction) and \(w_i\) is white Gaussian noise with a certain covariance \(\sigma_i^2\), depending on the condition under which a robot got the information, so \(w_i \sim \mathcal{N}(0,\sigma_i^2)\). A fusion of \(n\) measurements now looks as follows
 
 \begin{enumerate}
 	\begin{eqnarray}\label{fusion}

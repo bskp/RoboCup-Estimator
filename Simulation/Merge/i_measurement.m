@@ -29,9 +29,12 @@ function [prob] = i_measurement(robot_m,m_values,e_values)
         % Probabilities that the absolute difference of position and 
         % direction between estimates and measurements is bigger than the
         % actual differences.
-        prob_x(i) = erfc(abs(e_values(1,1,i)-m_values(1,1,i))/(sqrt(robot_m(i).sigma)));
-        prob_y(i) = erfc(abs(e_values(2,1,i)-m_values(2,1,i))/(sqrt(robot_m(i).sigma)));
-        prob_dir(i) = erfc(abs(e_values(3,1,i)-m_values(3,1,i))/(sqrt(robot_m(i).sigma*2*pi)));
+        x_abs = abs(e_values(1,1,i)-m_values(1,1,i));
+        y_abs = abs(e_values(2,1,i)-m_values(2,1,i));
+        dir_abs = abs(e_values(3,1,i)-m_values(3,1,i));
+        prob_x(i) = erfc(x_abs/(sqrt(robot_m(i).sigma)));
+        prob_y(i) = erfc(y_abs/(sqrt(robot_m(i).sigma)));
+        prob_dir(i) = erfc(dir_abs/(sqrt(robot_m(i).sigma*2*pi)));
         
         
         
