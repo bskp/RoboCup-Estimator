@@ -32,8 +32,8 @@ global Noise;
     Noise.measure.pos = 1e-1; %[m]
     Noise.measure.dir = 1e-1 * 2*pi; %[rad]
     Noise.measure.sigma1 = 1;
-    Noise.measure.sigma2 = 2;
-    Noise.measure.sigma3 = 3;
+    Noise.measure.sigma2 = 1.15;
+    Noise.measure.sigma3 = 1.3;
     
     Noise.measure.prob = 0.2;
 
@@ -94,5 +94,7 @@ for s = 1:steps
     BallStep_e(s) = Ball_e;
     if (s == steps)
         report(steps, RobotStep, RobotStep_e, BallStep, BallStep_e);
+        %plot_results
     end
+    
 end

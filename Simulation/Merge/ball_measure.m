@@ -18,52 +18,81 @@ function Ball_m = ball_measure(Robot, Ball)
     num_measurements = 0;   % Number of available measurements
     at_least_one = false;   % Flag to determine whether at least one robot
                             % gets a measurement.
-    sum_x = 0;
-    sum_y = 0;
-    sum_d = 0;
-    sum_v = 0;
+    pos_x = zeros(1,4)*NaN;
+    pos_y = zeros(1,4)*NaN;
+    dir = zeros(1,4)*NaN;
+    velocity = zeros(1,4)*NaN;
+    sigma = zeros(1,4)*NaN;
 
     
 %----------- Check available measurements -----------%
 
 for i=1:4           % Only the first 4 robots (the blue ones) get signals.
     if (position_is_valid(Robot(i)))
-
-        if (sqrt((Robot(i).x-Ball.x).^2 + (Robot(i).y-Ball.y).^2) <= RobotParam.sightDistance)
-            dirBall = atan((Ball.y-Robot(i).y)./(Ball.x-Robot(i).x));
-
-            % Compute absolute angle in relation to the x-axis.
-            if (Ball.x < Robot(i).x)
-                dirBall = dirBall + pi;
-            end
-                        
-             % Compute the relative angle of the ball in relation to the
-             % angle of the looking direction of a blue robot.
-             posAngle = mod(abs(dirBall-Robot(i).dir),2*pi);
-             negAngle = posAngle-2*pi;
-             relAngle = min([abs(posAngle),abs(negAngle)]);
-             
-             % If measurement is available, add it
-             if(relAngle < RobotParam.sightAngle) 
-                at_least_one = true;
-                num_measurements = num_measurements + 1;
-                sum_x = sum_x + Ball.x + randn*Noise.measure.pos;
-                sum_y = sum_y + Ball.y + randn*Noise.measure.pos;
-                sum_d = sum_d + Ball.dir + randn*Noise.measure.dir;
-                %sum_v = sum_v + Ball.velocity + randn*Noise.measure.pos;
-             end
-         end
-            
     end
+
+    if (sqrt((Robot(i).x-Ball.x).^2 + (Robot(i).y-Ball.y).^2) <= RobotParam.sightDistance)
+        dirBall = atan((Ball.y-Robot(i).y)./(Ball.x-Robot(i).x));
+
+        % Compute absolute angle in relation to the x-axis.
+        if (Ball.x < Robot(i).x)
+            dirBall = dirBall + pi;
+        end
+                        
+         % Compute the relative angle of the ball in relation to the
+         % angle of the looking direction of a blue robot.
+         posAngle = mod(abs(dirBall-Robot(i).dir),2*pi);
+         negAngle = posAngle-2*pi;
+         relAngle = min([abs(posAngle),abs(negAngle)]);
+             
+         % If measurement is available, add it and compute the covariance
+         % of the measurement, depending on the circumstances under which
+         % the measurement was gained.
+         if(relAngle < RobotParam.sightAngle) 
+            at_least_one = true;
+            num_measurements = num_measurements + 1;
+            
+            if (position_is_valid(Robot(i)))
+                pos_x(i) = Ball.x + randn*Noise.measure.pos*Noise.measure.sigma2;
+                pos_y(i) = Ball.y + randn*Noise.measure.pos*Noise.measure.sigma2;
+                dir(i) = Ball.dir + randn*Noise.measure.dir*Noise.measure.sigma2;
+                %velocity(i) = velocity(i) + Ball.velocity + randn*Noise.measure.pos*Noise.measure.sigma2;
+                sigma(i) = Noise.measure.pos*Noise.measure.sigma2;
+            else
+                pos_x(i) = Ball.x + randn*Noise.measure.pos*Noise.measure.sigma3;
+                pos_y(i) = Ball.y + randn*Noise.measure.pos*Noise.measure.sigma3;
+                dir(i) = Ball.dir + randn*Noise.measure.dir*Noise.measure.sigma3;
+                %velocity(i) = velocity(i) + Ball.velocity + randn*Noise.measure.pos*Noise.measure.sigma3;
+                sigma(i) = Noise.measure.pos*Noise.measure.sigma3;
+            end
+            
+         end
+     end     
 end
 
-% Take the mean value of all measurements
-if(at_least_one)
-    Ball_m.x = sum_x/num_measurements;
-    Ball_m.y = sum_y/num_measurements;
-    Ball_m.dir = sum_d/num_measurements;
-    Ball_m.velocity = sum_v/num_measurements;
-end
+
+
+% Take the weighted mean value of all measurements
+    if(at_least_one)
+        k=0;
+        Ball_m.x = 0;
+        Ball_m.y = 0;
+        Ball_m.dir = 0;
+        Ball_m.velocity = 0;
+        for i=1:4
+            if(~isnan(pos_x(i)))
+                Ball_m.x = Ball_m.x + pos_x(i)./sigma(i);
+                Ball_m.y = Ball_m.y + pos_y(i)./sigma(i);
+                Ball_m.dir = Ball_m.dir + dir(i)./sigma(i);
+                Ball_m.velocity = Ball_m.velocity + velocity(i)./sigma(i);
+                k = k + 1./sigma(i);
+            end
+        end
+        Ball_m.x = Ball_m.x./k;
+        Ball_m.y = Ball_m.y./k;
+        Ball_m.dir = Ball_m.dir./k;
+        Ball_m.velocity = Ball_m.velocity./k;
+    end
 
 end
 

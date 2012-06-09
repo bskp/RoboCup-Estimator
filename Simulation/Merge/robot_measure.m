@@ -26,9 +26,9 @@ function RobotMeasure = robot_measure(Robot)
        for j = 1:8
             if (i == j)
                 if (positionIsValid(i))
-                   RobotAllMeasure(j).x(i) = Robot(i).x + randn*Noise.measure.pos;
-                   RobotAllMeasure(j).y(i) = Robot(i).y + randn*Noise.measure.pos;
-                   RobotAllMeasure(j).dir(i) = Robot(i).dir + randn*Noise.measure.dir;
+                   RobotAllMeasure(j).x(i) = Robot(i).x + randn*Noise.measure.pos*Noise.measure.sigma1;
+                   RobotAllMeasure(j).y(i) = Robot(i).y + randn*Noise.measure.pos*Noise.measure.sigma1;
+                   RobotAllMeasure(j).dir(i) = Robot(i).dir + randn*Noise.measure.dir*Noise.measure.sigma1;
                    RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma1;
                 end   
             else
@@ -48,12 +48,15 @@ function RobotMeasure = robot_measure(Robot)
                     relAngle = min([abs(posAngle),abs(negAngle)]);
                         
                     if(relAngle < RobotParam.sightAngle) 
-                        RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.measure.pos;
-                        RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.measure.pos;
-                        RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.measure.dir;
                         if positionIsValid(i)
+                            RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.measure.pos*Noise.measure.sigma2;
+                            RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.measure.pos*Noise.measure.sigma2;
+                            RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.measure.dir*Noise.measure.sigma2;
                             RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma2;
                         else
+                            RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.measure.pos*Noise.measure.sigma3;
+                            RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.measure.pos*Noise.measure.sigma3;
+                            RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.measure.dir*Noise.measure.sigma3;
                             RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma3;
                         end
                     end
@@ -136,9 +139,9 @@ function RobotMeasure = measurement_fusion(RobotAllMeasure)
         for j = 1:4
             if (~isnan(RobotAllMeasure(i).x(j)))     % Check for measurement
                 sigma2 = (RobotAllMeasure(i).sigma(j));
-                x = x + RobotAllMeasure(i).x(j)*1./sigma2;
-                y = y + RobotAllMeasure(i).y(j)*1./sigma2;
-                dir = dir + RobotAllMeasure(i).dir(j)*1./sigma2;
+                x = x + RobotAllMeasure(i).x(j)./sigma2;
+                y = y + RobotAllMeasure(i).y(j)./sigma2;
+                dir = dir + RobotAllMeasure(i).dir(j)./sigma2;
                 k = k + 1./sigma2;
             end
         end
