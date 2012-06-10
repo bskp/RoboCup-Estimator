@@ -17,7 +17,7 @@ function [robot_step P_step v_pink_step] = robot_ekf(robot_m,robot_e,m_values,e_
     
 %--------- Init of covariance matrices and linearized matrices  ---------%
 
-    Q = [Noise.process.pos*eye(2), [0;0]; [0 0 Noise.process.dir]];
+    Q = [Noise.process.pos.^2*eye(2), [0;0]; [0 0 Noise.process.dir.^2]];
     H = eye(3);
     V = eye(3);
     W = eye(3);
@@ -49,10 +49,16 @@ function [robot_step P_step v_pink_step] = robot_ekf(robot_m,robot_e,m_values,e_
        end
        
        R = zeros(3,3);
-       R(1,1) = robot_m(i).sigma*prob(1,i);
-       R(2,2) = robot_m(i).sigma*prob(2,i);
-       R(3,3) = robot_m(i).sigma*pi*prob(3,i);
-       %R = [robot_m(i).sigma*eye(2), [0;0]; [0 0 robot_m(i).sigma*pi]]*d_R(i);
+       R(1,1) = robot_m(i).sigma.^2;
+       R(2,2) = robot_m(i).sigma.^2;
+       R(3,3) = robot_m(i).sigma.^2;
+       
+       % Enable adaptive R only for pink robots
+       if(i>4)
+           R(1,1) = R(1,1)*pi*prob(1,i);
+           R(2,2) = R(2,2)*pi*prob(2,i);
+           R(3,3) = R(3,3)*pi*prob(3,i);
+       end
        
        % Linearization of system dynamics
        A = [1 0 -v(i)*sin(robot_e(i).dir);0 1 v(i)*cos(robot_e(i).dir);0 0 1]; 

@@ -5,7 +5,8 @@ function Ball_m = ball_measure(Robot, Ball)
 %   measurable and adds process noise to it. With the struct ROBOT the
 %   function checks, whether there is at least one robot which gets visual
 %   information about the ball. If no robot sees the ball, the measurement
-%   is dropped.
+%   is dropped. If there is more than one measurement, measurement fusion
+%   is applied.
 
     global Noise; % Let's just assume the same noise values as for robots
     global RobotParam;
@@ -81,11 +82,11 @@ end
         Ball_m.velocity = 0;
         for i=1:4
             if(~isnan(pos_x(i)))
-                Ball_m.x = Ball_m.x + pos_x(i)./sigma(i);
-                Ball_m.y = Ball_m.y + pos_y(i)./sigma(i);
-                Ball_m.dir = Ball_m.dir + dir(i)./sigma(i);
-                Ball_m.velocity = Ball_m.velocity + velocity(i)./sigma(i);
-                k = k + 1./sigma(i);
+                Ball_m.x = Ball_m.x + pos_x(i)./(sigma(i).^2);
+                Ball_m.y = Ball_m.y + pos_y(i)./(sigma(i).^2);
+                Ball_m.dir = Ball_m.dir + dir(i)./(sigma(i).^2);
+                Ball_m.velocity = Ball_m.velocity + velocity(i)./(sigma(i).^2);
+                k = k + 1./(sigma(i).^2);
             end
         end
         Ball_m.x = Ball_m.x./k;

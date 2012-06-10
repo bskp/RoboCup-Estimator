@@ -5,7 +5,9 @@ function RobotMeasure = robot_measure(Robot)
 %   measurement noise to the position and the direction of the robots. New
 %   robots are created with the noisy measurements. Measurements for the
 %   robots are only available from robots of the blue team and only if
-%   other robots are in their field of vision.
+%   other robots are in their field of vision. Less than one measurement
+%   for one robot will result in a dropped measurement, more than one in
+%   measurement fusion.
 
 
     global Noise;
@@ -139,14 +141,15 @@ function RobotMeasure = measurement_fusion(RobotAllMeasure)
         for j = 1:4
             if (~isnan(RobotAllMeasure(i).x(j)))     % Check for measurement
                 sigma2 = (RobotAllMeasure(i).sigma(j));
-                x = x + RobotAllMeasure(i).x(j)./sigma2;
-                y = y + RobotAllMeasure(i).y(j)./sigma2;
-                dir = dir + RobotAllMeasure(i).dir(j)./sigma2;
-                k = k + 1./sigma2;
+                x = x + RobotAllMeasure(i).x(j)./(sigma2.^2);
+                y = y + RobotAllMeasure(i).y(j)./(sigma2.^2);
+                dir = dir + RobotAllMeasure(i).dir(j)./(sigma2.^2);
+                k = k + 1./(sigma2.^2);
             end
         end
-        if k ~= 0
-            % Compute the weighted mean of all measurements
+        
+        % Compute the weighted mean of all measurements
+        if k ~= 0   
             RobotMeasure(i).x = x./k;
             RobotMeasure(i).y = y./k;
             RobotMeasure(i).dir = dir./k;
