@@ -1,11 +1,11 @@
 \documentclass[11pt, oneside, a4paper]{scrreprt}
 \pagestyle{headings}
 
-\usepackage[german, english]{babel}	% 
-\usepackage{robocup} 				% Color ifablue for captions
-\usepackage{graphicx}				%  \includegraphics
-\usepackage[framed]{mcode}			% MATLAB-Code
-\usepackage{pst-all,pst-circ}			% PS-Tricks, Electrical circuits
+\usepackage[german, english]{babel}		% 
+\usepackage{robocup} 						% Color ifablue for captions
+\usepackage{graphicx}						%  \includegraphics
+\usepackage[framed]{mcode}				% MATLAB-Code
+\usepackage{pst-all,pst-circ}				% PS-Tricks, Electrical circuits
 %\usepackage{amssymb}
 %\usepackage{graphics}
 %\usepackage{multicol}
@@ -17,7 +17,7 @@
 
 %\usepackage[official]{eurosym}
 \usepackage{scrpage2}
-%\usepackage{pdfpages}		% Nicht Brauchbar mit PDF
+%\usepackage{pdfpages}					% Nicht Brauchbar mit PS-Tricks
 
 
 
@@ -25,11 +25,12 @@
 
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \begin{document}
-	\include{./0_titlepage_abstract/titlepage}   		% includes title page.tex
-	\include{./0_titlepage_abstract/abstract}      		% includes abstract.tex
-	\tableofcontents        	% generates the table of content
+	\include{./0_titlepage_abstract/titlepage}   						% includes title page.tex
+	\include{./0_titlepage_abstract/abstract}      					% includes abstract.tex
+	\tableofcontents        											% generates the table of content
 	\newpage
-	\listoffigures		% generates the table of figures
+	\listoffigures													% generates the table of figures
+	
 	% including Sections
 	\include{./1_Introduction/1_Introduction}
 	\include{./2_Simulation/2_Simulation}
@@ -38,5 +39,5 @@
 	\include{./5_SensorFusion/5_SensorFusion}
 	\include{./6_FlawsOutlook/6_FlawsOutlook}
 %	\include{./Appendix/Appendix}
-	\include{literature}    % includes title literature.tex
+	\include{literature}    											% includes title literature.tex
 \end{document}
