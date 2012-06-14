@@ -87,64 +87,6 @@ function [RobotStep d_angle velocity] = robot_step(Robot, Ball)
         d_angle(i) = RobotStep(i).dir-Robot(i).dir;
         
     end
-        
-%         for j=1:8
-%             % Length of the vectors
-%             r = sqrt((Robot(j).x-Robot(i).x).^2+(Robot(j).y-Robot(i).y).^2);
-%             if (i~=j && (r<=r_a))
-%                 if ((x_n==0) && (y_n==0))
-%                     x_n = (Robot(j).x-Robot(i).x)./r;
-%                     y_n = (Robot(j).y-Robot(i).y)./r;
-%                 else
-%                     x_n = x_n + (Robot(j).x-Robot(i).x)./r;
-%                     y_n = y_n + (Robot(j).y-Robot(i).y)./r;
-%                 end
-%             end
-%         end
-%         x_n = -x_n + Ball.x;
-%         y_n = -y_n + Ball.y;
-        
-        
-        
-%         if (x_n~=0)
-%             
-%             % I quadrant
-%             if (x_n>=0 && y_n>=0)
-%                 dir(i) = atan(y_n./x_n);
-%             end
-%             % II quadrant
-%             if (x_n<0 && y_n>=0)
-%                 dir(i) = pi - atan(y_n./x_n);
-%             end
-%             % III quadrant
-%             if (x_n<0 && y_n<0)
-%                 dir(i) = pi + atan(y_n./x_n);
-%             end
-%             % IV quadrant
-%             if (x_n>=0 && y_n<0)
-%                 dir(i) = 2*pi - atan(y_n./x_n);
-%             end     
-%             %dir(i)
-%             RobotStep(i).color = Robot(i).color;
-%             RobotStep(i).x = velocity(i) * cos(dir(i)) + Robot(i).x;
-%             RobotStep(i).y = velocity(i) * sin(dir(i)) + Robot(i).y;
-%             RobotStep(i).dir = dir(i);
-%         else
-%             RobotStep(i).color = Robot(i).color;
-%             RobotStep(i).x = velocity(i) * cos(Robot(i).dir) + Robot(i).x;
-%             RobotStep(i).y = velocity(i) * sin(Robot(i).dir) + Robot(i).y;
-%             RobotStep(i).dir = d_omega(i) + Robot(i).dir;           
-%         end
-%     end
-    
-%----------- Motion equations for robots  -----------%
-
-%     for i=1:8
-%         RobotStep(i).color = Robot(i).color;
-%         RobotStep(i).x = velocity(i) * cos(Robot(i).dir) + Robot(i).x;
-%         RobotStep(i).y = velocity(i) * sin(Robot(i).dir) + Robot(i).y;
-%         RobotStep(i).dir = d_omega(i) + Robot(i).dir;
-%     end
     
     
 %----------- Adding process noise  -----------%

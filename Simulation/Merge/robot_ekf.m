@@ -1,8 +1,8 @@
-function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_omega,v,P)
-%ROBOT_EKF Position-estimation for robots.
+function [robot_step P_step v_pink_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_omega,v,v_pink,P)
+%ROBOT_EKF Position-estimation for the robots.
 %
-%   [ROBOT_STEP,P_STEP] =
-%   ROBOT_EKF(ROBOT_M,ROBOT_E,M_VALUES,E_VALUES,D_OMEGA,V,P)
+%   [ROBOT_STEP,P_STEP, V_PINK_STEP] =
+%   ROBOT_EKF(ROBOT_M,ROBOT_E,M_VALUES,E_VALUES,D_OMEGA,V,V_PINK,P)
 %   implements the extended Kalman filter cycle for the given motion model
 %   after which the robots behave. The structs ROBOT_M and ROBOT_E refer to
 %   the measured robot parameters and the previously estimated robot
@@ -17,7 +17,7 @@ function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_ome
     
 %--------- Init of covariance matrices and linearized matrices  ---------%
 
-    Q = [Noise.process.pos*eye(2), [0;0]; [0 0 Noise.process.dir]];
+    Q = [Noise.process.pos.^2*eye(2), [0;0]; [0 0 Noise.process.dir.^2]];
     H = eye(3);
     V = eye(3);
     W = eye(3);
@@ -26,35 +26,48 @@ function [robot_step P_step] = robot_ekf(robot_m,robot_e,m_values,e_values,d_ome
     P_step = zeros(3,3,8);
     
     
+%--------- Approximation of the enemy's input  ---------%
+
+    [d_omega_pink,v_pink_step] = input_approximation(robot_m,m_values,v_pink);
+
+    
 %-------- Enable usage of adaptive measurement covariance matrix  --------%    
 
-%     s = size(m_values);
-%     d_R = ones(1,8);
-%     
-%     if(s(2)>29)
-%         [d_R, d_theta] = i_measurement(m_values, e_values);
-%     end
-%     d_theta = zeros(1,8);
-    
+     s = size(m_values);
+     d_R = ones(1,8);
+     prob = ones(3,8);
+     if(s(2)>2)
+         [prob] = i_measurement(robot_m,m_values, e_values);
+     end
 
 %----------- Kalman cycle  -----------%
 
     for i=1:8
-       R = [robot_m(i).sigma*eye(2), [0;0]; [0 0 2*robot_m(i).sigma*pi]];
+        
+       if(isnan(prob(1,i)))
+           prob(:,i) = ones(3,1);
+       end
+       
+       R = zeros(3,3);
+       R(1,1) = robot_m(i).sigma.^2;
+       R(2,2) = robot_m(i).sigma.^2;
+       R(3,3) = robot_m(i).sigma.^2;
+       
+       % Enable adaptive R only for pink robots
+       if(i>4)
+           R(1,1) = R(1,1)*pi*prob(1,i);
+           R(2,2) = R(2,2)*pi*prob(2,i);
+           R(3,3) = R(3,3)*pi*prob(3,i);
+       end
        
        % Linearization of system dynamics
        A = [1 0 -v(i)*sin(robot_e(i).dir);0 1 v(i)*cos(robot_e(i).dir);0 0 1]; 
        
-       s = size(m_values);
-       
-       if(i>4 && s(2)>=2)
-           d_omega(i) = robot_m(i).dir - m_values(3,1,i);
+       if(i>4)
+           v(i) = v_pink_step(i-4);
+           d_omega(i) = d_omega_pink(i-4);
        end
-       
-       if(isnan(robot_m(i).x*robot_m(i).y*robot_m(i).dir))
-           d_omega(i) = 0;
-       end
-       
+
        % Time update (predict)   
        x_apriori(1) = robot_e(i).x+cos(robot_e(i).dir)*v(i);
        x_apriori(2) = robot_e(i).y+sin(robot_e(i).dir)*v(i);

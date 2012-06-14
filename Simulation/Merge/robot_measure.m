@@ -5,7 +5,9 @@ function RobotMeasure = robot_measure(Robot)
 %   measurement noise to the position and the direction of the robots. New
 %   robots are created with the noisy measurements. Measurements for the
 %   robots are only available from robots of the blue team and only if
-%   other robots are in their field of vision.
+%   other robots are in their field of vision. Less than one measurement
+%   for one robot will result in a dropped measurement, more than one in
+%   measurement fusion.
 
 
     global Noise;
@@ -26,9 +28,9 @@ function RobotMeasure = robot_measure(Robot)
        for j = 1:8
             if (i == j)
                 if (positionIsValid(i))
-                   RobotAllMeasure(j).x(i) = Robot(i).x + randn*Noise.measure.pos;
-                   RobotAllMeasure(j).y(i) = Robot(i).y + randn*Noise.measure.pos;
-                   RobotAllMeasure(j).dir(i) = Robot(i).dir + randn*Noise.measure.dir;
+                   RobotAllMeasure(j).x(i) = Robot(i).x + randn*Noise.measure.pos*Noise.measure.sigma1;
+                   RobotAllMeasure(j).y(i) = Robot(i).y + randn*Noise.measure.pos*Noise.measure.sigma1;
+                   RobotAllMeasure(j).dir(i) = Robot(i).dir + randn*Noise.measure.dir*Noise.measure.sigma1;
                    RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma1;
                 end   
             else
@@ -48,13 +50,16 @@ function RobotMeasure = robot_measure(Robot)
                     relAngle = min([abs(posAngle),abs(negAngle)]);
                         
                     if(relAngle < RobotParam.sightAngle) 
-                        RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.measure.pos;
-                        RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.measure.pos;
-                        RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.measure.dir;
                         if positionIsValid(i)
+                            RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.measure.pos*Noise.measure.sigma2;
+                            RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.measure.pos*Noise.measure.sigma2;
+                            RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.measure.dir*Noise.measure.sigma2;
                             RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma2;
                         else
-                            RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma1;
+                            RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.measure.pos*Noise.measure.sigma3;
+                            RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.measure.pos*Noise.measure.sigma3;
+                            RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.measure.dir*Noise.measure.sigma3;
+                            RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma3;
                         end
                     end
                 end
@@ -135,19 +140,20 @@ function RobotMeasure = measurement_fusion(RobotAllMeasure)
         k = 0;
         for j = 1:4
             if (~isnan(RobotAllMeasure(i).x(j)))     % Check for measurement
-                sigma2 = (RobotAllMeasure(i).sigma(j)).^2;
-                x = x + RobotAllMeasure(i).x(j)*1./sigma2;
-                y = y + RobotAllMeasure(i).y(j)*1./sigma2;
-                dir = dir + RobotAllMeasure(i).dir(j)*1./sigma2;
-                k = k + 1./sigma2;
+                sigma2 = (RobotAllMeasure(i).sigma(j));
+                x = x + RobotAllMeasure(i).x(j)./(sigma2.^2);
+                y = y + RobotAllMeasure(i).y(j)./(sigma2.^2);
+                dir = dir + RobotAllMeasure(i).dir(j)./(sigma2.^2);
+                k = k + 1./(sigma2.^2);
             end
         end
-        if k ~= 0
-            % Compute the weighted mean of all measurements
+        
+        % Compute the weighted mean of all measurements
+        if k ~= 0   
             RobotMeasure(i).x = x./k;
             RobotMeasure(i).y = y./k;
             RobotMeasure(i).dir = dir./k;
-            RobotMeasure(i).sigma = 1./sqrt(k);
+            RobotMeasure(i).sigma = 1./k;
         end
         
     end
