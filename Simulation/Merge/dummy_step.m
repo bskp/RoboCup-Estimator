@@ -1,4 +1,4 @@
-function [RobotStep d_omega velocity] = dummy_step(Robot)
+function [RobotStep dOmega velocity] = dummy_step(Robot)
 %DUMMY_STEP Simulates the movement of all robots for one timestep.
 %
 %   [ROBOTSTEP,D_OMEGA,VELOCITY] = DUMMY_STEP(ROBOT) takes all robot
@@ -9,11 +9,12 @@ function [RobotStep d_omega velocity] = dummy_step(Robot)
 %   be of further use with the extended Kalman filter.
 
     global RobotParam dt;
+    global Field;
     
     
 %----------- Inputs  -----------%
 
-    d_omega = randn(8,1) * RobotParam.changeOfDir;
+    dOmega = randn(8,1) * RobotParam.changeOfDir;
     velocity = ones(8,1) * 0.1 * dt; %[m/s]
 
     
@@ -23,7 +24,7 @@ function [RobotStep d_omega velocity] = dummy_step(Robot)
         RobotStep(i).color = Robot(i).color;
         RobotStep(i).x = velocity(i) * cos(Robot(i).dir) + Robot(i).x;
         RobotStep(i).y = velocity(i) * sin(Robot(i).dir) + Robot(i).y;
-        RobotStep(i).dir = d_omega(i) + Robot(i).dir;
+        RobotStep(i).dir = dOmega(i) + Robot(i).dir;
     end
     
     
@@ -34,9 +35,9 @@ function [RobotStep d_omega velocity] = dummy_step(Robot)
     
     for i=1:8
         RobotStep(i).color = RobotStep(i).color;
-        RobotStep(i).x = RobotStep(i).x + d(i,1) * Noise.process.pos;
-        RobotStep(i).y = RobotStep(i).y + d(i,2) * Noise.process.pos;
-        RobotStep(i).dir =  RobotStep(i).dir + d(i,3) * Noise.process.dir;
+        RobotStep(i).x = RobotStep(i).x + d(i,1) * Noise.Process.pos;
+        RobotStep(i).y = RobotStep(i).y + d(i,2) * Noise.Process.pos;
+        RobotStep(i).dir =  RobotStep(i).dir + d(i,3) * Noise.Process.dir;
     end
     
     
@@ -46,32 +47,40 @@ function [RobotStep d_omega velocity] = dummy_step(Robot)
         
         % Robot collision
         for j = (i+1):8
-            d = sqrt( (Robot(i).x-Robot(j).x)^2+(Robot(i).y-Robot(j).y)^2);
-            if (d < 2*RobotParam.radius)
+            d = sqrt((Robot(i).x-Robot(j).x)^2+(Robot(i).y-Robot(j).y)^2);
+            if ( d < 2*RobotParam.radius )
                 d = Robot(i).dir;
                 RobotStep(i).dir = Robot(j).dir;    % Swapping the
                 RobotStep(j).dir = d;               % directions
                 
                 % Step towards new direction
-                RobotStep(i).x = velocity(i) * 2 * cos(RobotStep(i).dir) + RobotStep(i).x;
-                RobotStep(i).y = velocity(i) * 2 * sin(RobotStep(i).dir) + RobotStep(i).y;
-                RobotStep(j).x = velocity(j) * 2 * cos(RobotStep(j).dir) + RobotStep(j).x;
-                RobotStep(j).y = velocity(j) * 2 * sin(RobotStep(j).dir) + RobotStep(j).y;
+                RobotStep(i).x = 2*velocity(i)*cos(RobotStep(i).dir) + ...
+                    RobotStep(i).x;
+                RobotStep(i).y = 2*velocity(i)*sin(RobotStep(i).dir) + ...
+                    RobotStep(i).y;
+                RobotStep(j).x = 2*velocity(j)*cos(RobotStep(j).dir) + ...
+                    RobotStep(j).x;
+                RobotStep(j).y = 2*velocity(j)*sin(RobotStep(j).dir) + ...
+                    RobotStep(j).y;
             end
         end
         
         % Boundaries collision, floor and ceil
-        if abs(RobotStep(i).x) > 3 - RobotParam.radius
+        if ( abs(RobotStep(i).x) > Field.width - RobotParam.radius )
             RobotStep(i).dir = pi - Robot(i).dir;
-            RobotStep(i).x = velocity(i) * cos(RobotStep(i).dir) + Robot(i).x;
-            RobotStep(i).y = velocity(i) * sin(RobotStep(i).dir) + Robot(i).y;
+            RobotStep(i).x = velocity(i) * cos(RobotStep(i).dir) + ...
+                Robot(i).x;
+            RobotStep(i).y = velocity(i) * sin(RobotStep(i).dir) + ...
+                Robot(i).y;
         end
         
         % Boundaries collision, sides
-        if abs(RobotStep(i).y) > 2 - RobotParam.radius
+        if ( abs(RobotStep(i).y) > Field.height - RobotParam.radius )
             RobotStep(i).dir = -Robot(i).dir;
-            RobotStep(i).x = velocity(i) * cos(RobotStep(i).dir) + Robot(i).x;
-            RobotStep(i).y = velocity(i) * sin(RobotStep(i).dir) + Robot(i).y;
+            RobotStep(i).x = velocity(i) * cos(RobotStep(i).dir) + ...
+                Robot(i).x;
+            RobotStep(i).y = velocity(i) * sin(RobotStep(i).dir) + ...
+                Robot(i).y;
         end
     end
     

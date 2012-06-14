@@ -11,7 +11,7 @@ function Robot = dummy_init()
 
     global RobotParam dt;
     RobotParam.radius = 0.15; %[m]
-    RobotParam.changeOfDir = 0.1 * 2*pi *dt; %[rad/s], expected value
+    RobotParam.changeOfDir = 0.1 * 2*pi * dt; %[rad/step], expected value
     
     
 %----------- Init of robot parameters -----------%

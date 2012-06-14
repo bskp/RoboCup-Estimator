@@ -19,6 +19,7 @@ function [RobotStep d_angle velocity] = robot_step(Robot, Ball)
 
     
 %----------- Behavior of Robots  -----------%
+
     % Only robots within the radius of r_a affect an other robot
     r_a = 0.75; % [m]
     
@@ -33,7 +34,7 @@ function [RobotStep d_angle velocity] = robot_step(Robot, Ball)
         weight = 10;
         % Other robots
         for j=1:8
-           % Length of the vector
+           % Distance between robot i and j
            r = sqrt((Robot(j).x-Robot(i).x).^2+(Robot(j).y-Robot(i).y).^2);
             
            % Potential function to compute repulsion between robots. If

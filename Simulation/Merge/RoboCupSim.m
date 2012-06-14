@@ -5,14 +5,13 @@
 %                                  /_/    
 
 % SETTINGS
-
 clear all;
-global dt;
 
 steps = 2000;
+global dt;
 dt = 0.1; %[s/step]
 
-% Field Parameter (Rules2011.pdf)
+% Field Parameter (Rules2011.pdf)                        
 global Field;
     Field.width = 6; %[m]
     Field.height = 4; %[m]
@@ -26,16 +25,16 @@ global Field;
     
     
 global Noise;
-    Noise.process.pos = 1e-4 *dt; %[m/step]
-    Noise.process.dir = 1e-4 * 2*pi *dt; %[rad/step]
+    Noise.Process.pos = 1e-4 *dt; %[m/step]
+    Noise.Process.dir = 1e-4 * 2*pi *dt; %[rad/step]
     
-    Noise.measure.pos = 1e-1; %[m]
-    Noise.measure.dir = 1e-1 * 2*pi; %[rad]
-    Noise.measure.sigma1 = 1;
-    Noise.measure.sigma2 = 1.15;
-    Noise.measure.sigma3 = 1.3;
+    Noise.Measure.pos = 1e-1; %[m]
+    Noise.Measure.dir = 1e-1 * 2*pi; %[rad]
+    Noise.Measure.sigma1 = 1;
+    Noise.Measure.sigma2 = 1.15;
+    Noise.Measure.sigma3 = 1.3;
     
-    Noise.measure.prob = 0.2;
+    Noise.Measure.prob = 0.2;
 
 %% - - - - - Initalization - - - - - %
 close all;
@@ -73,7 +72,6 @@ for s = 1:steps
     clf
     subplot(2,1,1)
     plot_env;
-
     plot_objects(Robot, Ball, '0-t'); % circles, direction, team color
     plot_objects(Robot_m, Ball_m, '+w'); % crosses, white
     
