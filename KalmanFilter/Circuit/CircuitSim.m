@@ -61,3 +61,7 @@ plot(t,y_filtered)
 xlabel('Time [s]');
 ylabel('Amplitude [V]');
 title('Filtered output signal');
+
+[x_true_B,y_true] = true_model(sysd,t,u);
+
+norm(y_filtered-y_true)

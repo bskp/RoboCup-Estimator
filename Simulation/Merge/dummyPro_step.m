@@ -97,9 +97,9 @@ function [RobotStep d_angle velocity] = robot_step(Robot, Ball)
     
     for i=1:8
         RobotStep(i).color = RobotStep(i).color;
-        RobotStep(i).x = RobotStep(i).x + d(i,1) * Noise.process.pos;
-        RobotStep(i).y = RobotStep(i).y + d(i,2) * Noise.process.pos;
-        RobotStep(i).dir =  RobotStep(i).dir + d(i,3) * Noise.process.dir;
+        RobotStep(i).x = RobotStep(i).x + d(i,1) * Noise.Process.pos;
+        RobotStep(i).y = RobotStep(i).y + d(i,2) * Noise.Process.pos;
+        RobotStep(i).dir =  RobotStep(i).dir + d(i,3) * Noise.Process.dir;
     end
     
     

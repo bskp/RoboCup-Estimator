@@ -54,17 +54,17 @@ for i=1:4           % Only the first 4 robots (the blue ones) get signals.
             num_measurements = num_measurements + 1;
             
             if (position_is_valid(Robot(i)))
-                pos_x(i) = Ball.x + randn*Noise.measure.pos*Noise.measure.sigma2;
-                pos_y(i) = Ball.y + randn*Noise.measure.pos*Noise.measure.sigma2;
-                dir(i) = Ball.dir + randn*Noise.measure.dir*Noise.measure.sigma2;
-                %velocity(i) = velocity(i) + Ball.velocity + randn*Noise.measure.pos*Noise.measure.sigma2;
-                sigma(i) = Noise.measure.pos*Noise.measure.sigma2;
+                pos_x(i) = Ball.x + randn*Noise.Measure.pos*Noise.Measure.sigma2;
+                pos_y(i) = Ball.y + randn*Noise.Measure.pos*Noise.Measure.sigma2;
+                dir(i) = Ball.dir + randn*Noise.Measure.dir*Noise.Measure.sigma2;
+                %velocity(i) = velocity(i) + Ball.velocity + randn*Noise.Measure.pos*Noise.Measure.sigma2;
+                sigma(i) = Noise.Measure.pos*Noise.Measure.sigma2;
             else
-                pos_x(i) = Ball.x + randn*Noise.measure.pos*Noise.measure.sigma3;
-                pos_y(i) = Ball.y + randn*Noise.measure.pos*Noise.measure.sigma3;
-                dir(i) = Ball.dir + randn*Noise.measure.dir*Noise.measure.sigma3;
-                %velocity(i) = velocity(i) + Ball.velocity + randn*Noise.measure.pos*Noise.measure.sigma3;
-                sigma(i) = Noise.measure.pos*Noise.measure.sigma3;
+                pos_x(i) = Ball.x + randn*Noise.Measure.pos*Noise.Measure.sigma3;
+                pos_y(i) = Ball.y + randn*Noise.Measure.pos*Noise.Measure.sigma3;
+                dir(i) = Ball.dir + randn*Noise.Measure.dir*Noise.Measure.sigma3;
+                %velocity(i) = velocity(i) + Ball.velocity + randn*Noise.Measure.pos*Noise.Measure.sigma3;
+                sigma(i) = Noise.Measure.pos*Noise.Measure.sigma3;
             end
             
          end

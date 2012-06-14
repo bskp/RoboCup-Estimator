@@ -5,13 +5,21 @@
 %                                  /_/    
 
 % SETTINGS
+
 clear all;
 
 steps = 2000;
 global dt;
 dt = 0.1; %[s/step]
 
-% Field Parameter (Rules2011.pdf)                        
+% Robot Model to use
+mdl = 'dummyPro';
+robot_ekf = str2func( [mdl '_ekf'] );
+robot_init = str2func( [mdl '_init'] );
+robot_measure = str2func( [mdl '_measure'] );
+robot_step = str2func( [mdl '_step'] );
+
+% Field Parameter (Rules2011.pdf)
 global Field;
     Field.width = 6; %[m]
     Field.height = 4; %[m]
@@ -66,9 +74,9 @@ for s = 1:steps
     Robot_m = robot_measure(Robot);
     Ball_m = ball_measure(Robot, Ball);
     
-    [Ball_e P_ball] = ball_kf(Ball_e, Ball_m, P_ball);
     [Robot_e P v_pink] = robot_ekf(Robot_m, Robot_e, m_values, e_values, d_angle, v, v_pink, P);
-    
+    [Ball_e P_ball] = ball_kf(Ball_e, Ball_m, P_ball);
+      
     clf
     subplot(2,1,1)
     plot_env;

@@ -17,7 +17,7 @@ function [robot_step P_step v_pink_step] = robot_ekf(robot_m,robot_e,m_values,e_
     
 %--------- Init of covariance matrices and linearized matrices  ---------%
 
-    Q = [Noise.process.pos.^2*eye(2), [0;0]; [0 0 Noise.process.dir.^2]];
+    Q = [Noise.Process.pos.^2*eye(2), [0;0]; [0 0 Noise.Process.dir.^2]];
     H = eye(3);
     V = eye(3);
     W = eye(3);
