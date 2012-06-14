@@ -23,67 +23,51 @@ In the RoboCup case all the types can occur. The sensor configuration is complem
 
 We have chosen a situation-based statistical model for our purposes. The covariance of a measurement depends on the situation at which a robot gains the positon and the angle of another robot. Differently said: There are several scenarios under which a robot can get visual information and each scenario is characterized by the quality of a measurement, implying the value of the covariance. In our case, the measurement of the \(i\)-th robot looks as follows
 
-%\begin{enumerate}
-	\begin{eqnarray}\label{measurement}
-    			\hat{X}_{i} &=& X + w_i
-	\end{eqnarray}
-%\end{enumerate}
+	\[ %\label{measurement}
+    			\hat{X}_{i} = X + w_i
+	\]
 
 \(X\) is the deterministic variable we want to know (i.e. position or direction) and \(w_i\) is white Gaussian noise with a certain covariance \(\sigma_i^2\), depending on the condition under which a robot got the information, so \(w_i \sim \mathcal{N}(0,\sigma_i^2)\). A fusion of \(n\) measurements now looks as follows
 
-%\begin{enumerate}
 	\begin{eqnarray}\label{fusion}
     			 Y &=& a_1 \hat{X}_{1} + a_2 \hat{X}_{2} + \ldots + a_n \hat{X}_{n}
 	\end{eqnarray}
-%\end{enumerate}
 
 where \(n\) in our case can be at most 4. The main task of sensor fusion is to find the weights \(a_i\). To find them, we make two reasonable assumptions: The mean of the fused measurement has to be equal to \(X\). On the other side the mean of the squared error has to be minimal. Formally we want
 
-%\begin{enumerate}
 	\begin{eqnarray}\label{assumptions}
     			 E[Y] = X \qquad  &\mathrm{and}& \qquad E\left[ (Y-X)^2 \right] \rightarrow 						\mathrm{minimal} 
 	\end{eqnarray}
-%\end{enumerate}
 
 The first condition leads to the simple fact, that all weights have to sum up to \(1\)
 
-%\begin{enumerate}
 	\begin{eqnarray}\label{side_condition}
     			 a_1 + \ldots + a_n = 1 \qquad &\Longleftrightarrow& \qquad G(a_1, \ldots, a_n) = a_1 +   				\ldots a_n - 1
 	\end{eqnarray}
-%\end{enumerate}
 
 For the second condition, we are assuming that all \(w_i\) are mutually independent, so we have \(E[w_i w_j] = 0, \; i \neq j\). Taking (\ref{side_condition}) into account leads to the second condition
 
-%\begin{enumerate}
 	\begin{eqnarray}\label{main_condition}
     			 F(a_1,\ldots,a_n) = a_1^2\sigma_1^2 + \ldots + a_n^2 \sigma_n^2 &\rightarrow&  					\mathrm{minimal}
 	\end{eqnarray}
-%\end{enumerate}
 
 The generic approach is now to solve equation (\ref{main_condition}) with \(\nabla F(a_1,\ldots,a_n) = 0\). This attempt fails, because we also have to meet the side condition from equation (\ref{side_condition}). Therefore we use the method of Lagrange multipliers \cite{Blatter}. The equations we have to solve, are shown below
 
-%\begin{enumerate}
 	\begin{eqnarray}\label{lagrange_multipliers}
     			 \nabla F(a_1,\ldots,a_n) = \lambda \nabla G(a_1,\ldots,a_n), \qquad && \qquad G(a_1,\ldots,a_n) = 0
 	\end{eqnarray}
-%\end{enumerate}
 
 The system of equations above consists of \(n+1\) equations and \(n+1\) unknowns, so there is a unique solution which is shown below
 
-%\begin{enumerate}
 	\begin{eqnarray}\label{solution}
     			 a_i &=& \frac{\sigma_i^{-2}}{\sum_{j=1}^n \sigma_j^{-2}}
 	\end{eqnarray}
-%\end{enumerate}
 
 In a final step, we are interested in the statistical properties of our fused measurement. The mean is already given by condition (\ref{assumptions}). Since \(Y\) is a Gaussian random variable we only need the covariance \(\sigma_Y^2\) to fully describe \(Y\). We get
 
-%\begin{enumerate}
 	\begin{eqnarray}\label{solution}
     			 \sigma_Y^2 = E\left[ Y^2 \right] - E[Y]^2 &=& \frac{1}{\sum_{j=1}^n \sigma_j^{-2}}
 	\end{eqnarray}
-%\end{enumerate}
 
 A short analysis reveals, that \(\sigma_Y^2 < \sigma_i^2, \; \forall i\); the covariance of the fused measurement is smaller than the covariance of every single measurement. Or in other words: The fused measurement is, from a statistical point of view, always more precise than the measurement of only one robot, even if we fuse a very good and a very bad measurement.
 
@@ -92,12 +76,12 @@ A short analysis reveals, that \(\sigma_Y^2 < \sigma_i^2, \; \forall i\); the co
 
 The sensor fusing methods for our simulation are embedded in the measurement functions {\fontfamily{pcr}\selectfont robot\_measure(Robot).m} and {\fontfamily{pcr}\selectfont ball\_measure(Robot, Ball).m}. There are three scenarios under which visual information is obtained: In the first case a blue robot determines its own position by recognizing a characteristic point on the field. This kind of measurement has the lowest possible covariance in our model. In the other two scenarions, blue robots measure the position and direction of other robots or the ball, either with or without the knowledge of their own position. It is clear that the covariance of the former case must be smaller, so the worst measurement we can get is one we get from a blue robot which is not aware of its own position. All measurements and the covariances which are associated with them, are stored in an array of structs for the blue robots. After the measuring is done, every blue robot presents its records, if there are some, of a certain robot or the ball and adds it to the fused measurement. The code shows how this is done for the robots
 
-\lstinputlisting[firstline=139, lastline=147]{../Simulation/Merge/robot_measure.m}
+\lstinputlisting[firstline=139, lastline=147]{../Simulation/Merge/dummyPro_measure.m}
 \parskip 20pt
 
 Note that {\fontfamily{pcr}\selectfont sigma2} is the standard deviation and not the covariance. After this step all variables are simply divided by the sum of the inverse values of all covariances as stated in the theory above. 
 
-\lstinputlisting[firstline=150, lastline=155]{../Simulation/Merge/robot_measure.m}
+\lstinputlisting[firstline=150, lastline=155]{../Simulation/Merge/dummyPro_measure.m}
 
 For the ball we are essentially doing the same and we only distinct whether we get a measurement from a robot who knows its own position or not. The subsequent fusion of all records works after the same principle as the fusion for the robots.
 

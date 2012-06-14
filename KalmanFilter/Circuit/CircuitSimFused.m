@@ -12,7 +12,9 @@ t = [0:T:1e3*T];            % Timevector for simulation
 u = input(t);               % Inputvector
 
 Q_e = eye(3)*1e-4;          % Process noise covariance
-R_e = 1*1e-1;               % Measurement noise covariance
+R_e_A = 1*1e-1;               % Measurement A noise covariance
+R_e_B = 2*1e-1;               % Measurement B noise covariance
+
 
 %----------- Discrete time state space representation -----------%
 
@@ -42,7 +44,24 @@ xlabel('Time [s]');
 ylabel('Amplitude [V]');
 title('Input signal');
 
-[x_noise,y_measured] = noisy_model(sysd,R_e,Q_e,t,u);
+[x_noise_A,y_measured_A] = noisy_model(sysd,R_e_A,Q_e,t,u);
+[x_noise_B,y_measured_B] = noisy_model(sysd,R_e_B,Q_e,t,u);
+
+%----------- Pre-KF sensor fusion -----------%
+
+R_e = 1./sqrt(1./R_e_A + 1./R_e_B);
+
+% compute weighting
+wRA = inv(R_e_A^2);
+wRB = inv(R_e_B^2);
+
+x_noise = x_noise_A % only for the plot
+y_measured = wRA(1) .* y_measured_A + wRB(1) .* y_measured_B;
+
+y_measured = y_measured / (wRA(1) + wRB(1));
+
+%--- back to computation
+
 subplot(2,2,2)
 plot(t,sysd.c*x_noise+sysd.d*u)
 xlabel('Time [s]');

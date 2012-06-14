@@ -1,4 +1,4 @@
-function [RobotStep dOmega velocity] = dummy_step(Robot)
+function [RobotStep dOmega velocity] = rand_robot_step(Robot)
 %DUMMY_STEP Simulates the movement of all robots for one timestep.
 %
 %   [ROBOTSTEP,D_OMEGA,VELOCITY] = DUMMY_STEP(ROBOT) takes all robot
@@ -85,4 +85,3 @@ function [RobotStep dOmega velocity] = dummy_step(Robot)
     end
     
 end
-

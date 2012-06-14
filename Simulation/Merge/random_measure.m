@@ -1,4 +1,4 @@
-function RobotMeasure = dummy_measure(Robot)
+function RobotMeasure = random_measure(Robot)
 %DUMMY_MEASURE Addition of measurement noise to the robots.
 %
 %   ROBOTMEASURE = DUMMY_MEASURE(ROBOT) takes the parameter ROBOT and adds
@@ -11,8 +11,9 @@ function RobotMeasure = dummy_measure(Robot)
 %----------- Create normally distributed noise  -----------%
 
     global Noise;
+    Noise.Measure.prob = 0.2; % Probability for Measurementdrop
     d = randn(8,3); % Noise values
-    p = rand(8,3);  % Measurement-probability-deciders
+    p = rand(8,1);  % Measurement-probability-deciders
     
     
 %----------- Adding noise to the parameters -----------%
@@ -21,26 +22,21 @@ function RobotMeasure = dummy_measure(Robot)
         RobotMeasure(i).color = Robot(i).color;
         
         
-        if p(i,1) > Noise.Measure.prob
-            RobotMeasure(i).x = Robot(i).x + d(i,1) * Noise.Measure.pos;
+        if ( p(i) > Noise.Measure.prob )
+            
+            RobotMeasure(i).x = Robot(i).x + d(i,1)*Noise.Measure.pos;
+            RobotMeasure(i).y = Robot(i).y + d(i,2)*Noise.Measure.pos;
+            RobotMeasure(i).dir = Robot(i).dir + d(i,3)*Noise.Measure.dir;
+            RobotMeasure(i).sigma = 1;
+            
         else
+            
             RobotMeasure(i).x = NaN;    % Measurement drop
-        end
-        
-        
-        if p(i,2) > Noise.Measure.prob
-            RobotMeasure(i).y = Robot(i).y + d(i,2) * Noise.Measure.pos;
-        else
             RobotMeasure(i).y = NaN;
-        end
-        
-        
-        if p(i,3) > Noise.Measure.prob
-            RobotMeasure(i).dir = Robot(i).dir + d(i,3) * Noise.Measure.dir;
-        else
             RobotMeasure(i).dir = NaN;
+            RobotMeasure(i).sigma = NaN;
+            
         end
     end
     
 end
-

@@ -5,29 +5,24 @@
 %                                  /_/    
 
 % SETTINGS
-
 clear all;
 
-<<<<<<< HEAD
-steps = 200;
-=======
 steps = 2000;
 global dt;
->>>>>>> 60826f1cf87940f7322946f88e0846872a25981c
 dt = 0.1; %[s/step]
 
-% Choice of Models
-robotMdl = 'randpot_robot';  % Robot Model to use
-robot_init = str2func( [robotMdl '_init'] );
-robot_step = str2func( [robotMdl '_step'] );
-
-measureMdl = 'sight_of_view'; % Measurement Model to use
-robot_measure = str2func( [measureMdl '_measure'] );
-
-filterMdl = 'sight_of_view'; % Filter Model to use
-robot_ekf = str2func( [filterMdl '_filter'] );
+<<<<<<< HEAD
+% Field Parameter (Rules2011.pdf)                        
+=======
+% Robot Model to use
+mdl = 'dummyPro';
+robot_ekf = str2func( [mdl '_ekf'] );
+robot_init = str2func( [mdl '_init'] );
+robot_measure = str2func( [mdl '_measure'] );
+robot_step = str2func( [mdl '_step'] );
 
 % Field Parameter (Rules2011.pdf)
+>>>>>>> 35d2eb226a26b0585cdff3d5db88e5db760b7acc
 global Field;
     Field.width = 6; %[m]
     Field.height = 4; %[m]
@@ -102,7 +97,13 @@ for s = 1:steps
     [m_values e_values] = history(m_values, e_values, Robot_m, Robot_e);
     
     pause(0.001);
+    RobotStep(s,:,:) = Robot;
+	RobotStep_e(s,:,:) = Robot_e;
+    BallStep(s) = Ball;
+    BallStep_e(s) = Ball_e;
+    if (s == steps)
+        report(steps, RobotStep, RobotStep_e, BallStep, BallStep_e);
+        %plot_results
+    end
     
-    save_results; % Save the designated results of the simulation to a .mat file
-
 end

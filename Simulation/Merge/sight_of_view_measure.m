@@ -1,4 +1,4 @@
-function RobotMeasure = robot_measure(Robot)
+function RobotMeasure = sight_of_view_measure(Robot)
 %ROBOT_MEASURE Addition of measurement noise to the robots.
 %
 %   ROBOTMEASURE = ROBOT_MEASURE(ROBOT) takes the parameter ROBOT and adds
@@ -28,10 +28,10 @@ function RobotMeasure = robot_measure(Robot)
        for j = 1:8
             if (i == j)
                 if (positionIsValid(i))
-                   RobotAllMeasure(j).x(i) = Robot(i).x + randn*Noise.measure.pos*Noise.measure.sigma1;
-                   RobotAllMeasure(j).y(i) = Robot(i).y + randn*Noise.measure.pos*Noise.measure.sigma1;
-                   RobotAllMeasure(j).dir(i) = Robot(i).dir + randn*Noise.measure.dir*Noise.measure.sigma1;
-                   RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma1;
+                   RobotAllMeasure(j).x(i) = Robot(i).x + randn*Noise.Measure.pos*Noise.Measure.sigma1;
+                   RobotAllMeasure(j).y(i) = Robot(i).y + randn*Noise.Measure.pos*Noise.Measure.sigma1;
+                   RobotAllMeasure(j).dir(i) = Robot(i).dir + randn*Noise.Measure.dir*Noise.Measure.sigma1;
+                   RobotAllMeasure(j).sigma(i) = Noise.Measure.pos*Noise.Measure.sigma1;
                 end   
             else
                 if (sqrt((Robot(i).x-Robot(j).x).^2 + (Robot(i).y-Robot(j).y).^2) <= RobotParam.sightDistance)
@@ -51,15 +51,15 @@ function RobotMeasure = robot_measure(Robot)
                         
                     if(relAngle < RobotParam.sightAngle) 
                         if positionIsValid(i)
-                            RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.measure.pos*Noise.measure.sigma2;
-                            RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.measure.pos*Noise.measure.sigma2;
-                            RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.measure.dir*Noise.measure.sigma2;
-                            RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma2;
+                            RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.Measure.pos*Noise.Measure.sigma2;
+                            RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.Measure.pos*Noise.Measure.sigma2;
+                            RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.Measure.dir*Noise.Measure.sigma2;
+                            RobotAllMeasure(j).sigma(i) = Noise.Measure.pos*Noise.Measure.sigma2;
                         else
-                            RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.measure.pos*Noise.measure.sigma3;
-                            RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.measure.pos*Noise.measure.sigma3;
-                            RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.measure.dir*Noise.measure.sigma3;
-                            RobotAllMeasure(j).sigma(i) = Noise.measure.pos*Noise.measure.sigma3;
+                            RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.Measure.pos*Noise.Measure.sigma3;
+                            RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.Measure.pos*Noise.Measure.sigma3;
+                            RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.Measure.dir*Noise.Measure.sigma3;
+                            RobotAllMeasure(j).sigma(i) = Noise.Measure.pos*Noise.Measure.sigma3;
                         end
                     end
                 end
