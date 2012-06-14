@@ -9,7 +9,7 @@
 clear all;
 global dt;
 
-steps = 2000;
+steps = 200;
 dt = 0.1; %[s/step]
 
 % Field Parameter (Rules2011.pdf)
@@ -88,13 +88,15 @@ for s = 1:steps
     [m_values e_values] = history(m_values, e_values, Robot_m, Robot_e);
     
     pause(0.001);
-    RobotStep(s,:,:) = Robot;
-	RobotStep_e(s,:,:) = Robot_e;
-    BallStep(s) = Ball;
-    BallStep_e(s) = Ball_e;
-    if (s == steps)
-        report(steps, RobotStep, RobotStep_e, BallStep, BallStep_e);
-        %plot_results
-    end
+    
+    save_results;
+%     RobotStep(s,:,:) = Robot;
+% 	RobotStep_e(s,:,:) = Robot_e;
+%     BallStep(s) = Ball;
+%     BallStep_e(s) = Ball_e;
+%     if (s == steps)
+%         report(steps, RobotStep, RobotStep_e, BallStep, BallStep_e);
+%         %plot_results
+%     end
     
 end

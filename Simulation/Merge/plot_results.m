@@ -14,6 +14,7 @@
     load('error', 'BallStep');
     load('error', 'BallStep_e');
 
+    load('error', 'PStep');
 
 % Calculation of error for every Robot and the ball
 
@@ -36,7 +37,13 @@
     end
 
 
-
+% Calculation of norm of the matrix P
+    
+for s=1:steps
+    for i=1:8
+        %P_det(i,s) = norm(PStep(s,:,:,i));
+    end
+end
 
 
 % Plot of the estimation error of the robots
@@ -60,6 +67,7 @@
         plot(x, e_x(j,:), 'r');
         hold on;
         plot(x, e_y(j,:), 'g');
+        %plot(x, P_det(j,:), 'k');
         grid on;
         titleString = ['Robot ' num2str(j)];
         title(titleString);
