@@ -76,12 +76,12 @@ A short analysis reveals, that \(\sigma_Y^2 < \sigma_i^2, \; \forall i\); the co
 
 The sensor fusing methods for our simulation are embedded in the measurement functions {\fontfamily{pcr}\selectfont robot\_measure(Robot).m} and {\fontfamily{pcr}\selectfont ball\_measure(Robot, Ball).m}. There are three scenarios under which visual information is obtained: In the first case a blue robot determines its own position by recognizing a characteristic point on the field. This kind of measurement has the lowest possible covariance in our model. In the other two scenarions, blue robots measure the position and direction of other robots or the ball, either with or without the knowledge of their own position. It is clear that the covariance of the former case must be smaller, so the worst measurement we can get is one we get from a blue robot which is not aware of its own position. All measurements and the covariances which are associated with them, are stored in an array of structs for the blue robots. After the measuring is done, every blue robot presents its records, if there are some, of a certain robot or the ball and adds it to the fused measurement. The code shows how this is done for the robots
 
-\lstinputlisting[firstline=139, lastline=147]{../Simulation/Merge/robot_measure.m}
+\lstinputlisting[firstline=139, lastline=147]{../Simulation/Merge/dummyPro_measure.m}
 \parskip 20pt
 
 Note that {\fontfamily{pcr}\selectfont sigma2} is the standard deviation and not the covariance. After this step all variables are simply divided by the sum of the inverse values of all covariances as stated in the theory above. 
 
-\lstinputlisting[firstline=150, lastline=155]{../Simulation/Merge/robot_measure.m}
+\lstinputlisting[firstline=150, lastline=155]{../Simulation/Merge/dummyPro_measure.m}
 
 For the ball we are essentially doing the same and we only distinct whether we get a measurement from a robot who knows its own position or not. The subsequent fusion of all records works after the same principle as the fusion for the robots.
 
