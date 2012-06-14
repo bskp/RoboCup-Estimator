@@ -11,6 +11,8 @@ function plot_objects(Robot, Ball, style)
 %   -  Includes the direction indicator (given in Robot.dir)
 %   +  Draws crosses
 %   #  Enumerate Robots
+%   V  Sight of view blue team
+%   Va  Sigh of view all teams 
 %
 %   Colors
 %   t  team-specific
@@ -119,7 +121,7 @@ function plot_objects(Robot, Ball, style)
     end
 
     
-%----------- Check for direction indication  -----------%    
+%----------- Check for direction indication -----------%    
     
     if (strfind(style, '-'))
         if (bunt)
@@ -142,5 +144,29 @@ function plot_objects(Robot, Ball, style)
                 line([Robot(i).x xdir],[Robot(i).y ydir],'Color',color);
             end
         end
-    end   
+    end
+    
+%----------- Check for sight of view -----------%
+    
+    if (strfind(style, 'V'))
+        nSightOfView = 4;
+        if (strfind(style, 'a'))
+            nSightOfView = 8;
+        end
+        for i = 1:nSightOfView
+            xl = xlim;      % Store limits in order to avoid dynamic 
+            yl = ylim;      % alignment of the field.
+        
+            dAngle = RobotParam.sightAngle;
+            r = RobotParam.sightDistance;
+            
+            phi = linspace(Robot(i).dir-dAngle,Robot(i).dir+dAngle,48);
+            
+            x = [0 cos(phi) 0];
+            y = [0 sin(phi) 0];
+            plot(Robot(i).x + r*x,Robot(i).y + r*y,'k');
+
+            xlim(xl);
+            ylim(yl);
+    end
 end

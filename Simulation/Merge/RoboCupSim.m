@@ -11,12 +11,13 @@ clear all;
 steps = 2000;
 
 global dt;
-
 dt = 0.1; %[s/step]
 
 % Choice of Models
-robotMdl = 'randpot_robot';  % Robot Model to use
+robotInitMdl = 'robot';
 robot_init = str2func( [robotMdl '_init'] );
+
+robotMdl = 'randpot_robot';  % Robot Model to use
 robot_step = str2func( [robotMdl '_step'] );
 
 measureMdl = 'sight_of_view'; % Measurement Model to use
@@ -86,7 +87,7 @@ for s = 1:steps
     clf
     subplot(2,1,1)
     plot_env;
-    plot_objects(Robot, Ball, '0-t'); % circles, direction, team color
+    plot_objects(Robot, Ball, '0-tVa'); % circles, direction, team color
     plot_objects(Robot_m, Ball_m, '+w'); % crosses, white
     
     subplot(2,1,2)
