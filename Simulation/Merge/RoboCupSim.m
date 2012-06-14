@@ -12,6 +12,13 @@ global dt;
 steps = 2000;
 dt = 0.1; %[s/step]
 
+% Robot Model to use
+mdl = 'dummyPro';
+robot_ekf = str2func( [mdl '_ekf'] );
+robot_init = str2func( [mdl '_init'] );
+robot_measure = str2func( [mdl '_measure'] );
+robot_step = str2func( [mdl '_step'] );
+
 % Field Parameter (Rules2011.pdf)
 global Field;
     Field.width = 6; %[m]
@@ -26,16 +33,16 @@ global Field;
     
     
 global Noise;
-    Noise.process.pos = 1e-4 *dt; %[m/step]
-    Noise.process.dir = 1e-4 * 2*pi *dt; %[rad/step]
+    Noise.Process.pos = 1e-4 *dt; %[m/step]
+    Noise.Process.dir = 1e-4 * 2*pi *dt; %[rad/step]
     
-    Noise.measure.pos = 1e-1; %[m]
-    Noise.measure.dir = 1e-1 * 2*pi; %[rad]
-    Noise.measure.sigma1 = 1;
-    Noise.measure.sigma2 = 1.15;
-    Noise.measure.sigma3 = 1.3;
+    Noise.Measure.pos = 1e-1; %[m]
+    Noise.Measure.dir = 1e-1 * 2*pi; %[rad]
+    Noise.Measure.sigma1 = 1;
+    Noise.Measure.sigma2 = 1.15;
+    Noise.Measure.sigma3 = 1.3;
     
-    Noise.measure.prob = 0.2;
+    Noise.Measure.prob = 0.2;
 
 %% - - - - - Initalization - - - - - %
 close all;

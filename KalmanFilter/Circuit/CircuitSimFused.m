@@ -55,7 +55,7 @@ R_e = 1./sqrt(1./R_e_A + 1./R_e_B);
 wRA = inv(R_e_A^2);
 wRB = inv(R_e_B^2);
 
-x_noise = x_noise_A + x_noise_B;
+x_noise = x_noise_A % only for the plot
 y_measured = wRA(1) .* y_measured_A + wRB(1) .* y_measured_B;
 
 y_measured = y_measured / (wRA(1) + wRB(1));

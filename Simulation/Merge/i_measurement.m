@@ -39,7 +39,7 @@ function [prob] = i_measurement(robot_m,m_values,e_values)
         
         
         %delta = abs(m_values(1:2,:,i)-e_values(1:2,:,i));   % Mean of the position
-        %mean = sum(sum(delta))/(2*num_of_measurements*0.47693627*Noise.measure.pos*2);
+        %mean = sum(sum(delta))/(2*num_of_measurements*0.47693627*Noise.Measure.pos*2);
         % We use the fact, that E[delta] = 0.47693627
     
         %d_R(i) = 1/exp((mean-1)*30);    % Trust function

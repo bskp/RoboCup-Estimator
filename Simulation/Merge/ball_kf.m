@@ -30,8 +30,8 @@ function [Ball_e P_e] = ball_kf(Ball_oe, Ball_m, P_oe)
     
 %--------- Init of covariance matrices and linearized matrices  ---------%
    
-    Q = diag( [Noise.process.pos.^2, Noise.process.pos.^2, Noise.process.dir.^2, 0] );
-    R = diag( [Noise.measure.pos.^2, Noise.measure.pos.^2, Noise.measure.dir.^2] );
+    Q = diag( [Noise.Process.pos.^2, Noise.Process.pos.^2, Noise.Process.dir.^2, 0] );
+    R = diag( [Noise.Measure.pos.^2, Noise.Measure.pos.^2, Noise.Measure.dir.^2] );
     H = [1,0,0,0;0,1,0,0;0,0,1,0];  
     x_ = [0;0;0;0];      
 
