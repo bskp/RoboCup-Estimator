@@ -74,9 +74,9 @@ for s = 1:steps
     Robot_m = robot_measure(Robot);
     Ball_m = ball_measure(Robot, Ball);
     
-    [Ball_e P_ball] = ball_kf(Ball_e, Ball_m, P_ball);
     [Robot_e P v_pink] = robot_ekf(Robot_m, Robot_e, m_values, e_values, d_angle, v, v_pink, P);
-    
+    [Ball_e P_ball] = ball_kf(Ball_e, Ball_m, P_ball);
+      
     clf
     subplot(2,1,1)
     plot_env;
