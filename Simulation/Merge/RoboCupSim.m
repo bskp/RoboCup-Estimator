@@ -89,14 +89,6 @@ for s = 1:steps
     
     pause(0.001);
     
-    save_results;
-%     RobotStep(s,:,:) = Robot;
-% 	RobotStep_e(s,:,:) = Robot_e;
-%     BallStep(s) = Ball;
-%     BallStep_e(s) = Ball_e;
-%     if (s == steps)
-%         report(steps, RobotStep, RobotStep_e, BallStep, BallStep_e);
-%         %plot_results
-%     end
-    
+    save_results; % Save the designated results of the simulation to a .mat file
+
 end

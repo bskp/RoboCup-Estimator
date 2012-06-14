@@ -38,10 +38,19 @@
 
 
 % Calculation of norm of the matrix P
-    
+PStep(1,:,:,:)
+size(PStep)
+matr = zeros(3,3);
+matr = PStep(1,:,:,1)
+size(matr(1,:,:))
+matr(1,:,:)
+%   m
+%   n 
 for s=1:steps
     for i=1:8
         %P_det(i,s) = norm(PStep(s,:,:,i));
+        %PStep(s,:,:,i)
+        %i
     end
 end
 
