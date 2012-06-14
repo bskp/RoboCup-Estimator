@@ -11,11 +11,9 @@ input = @(x) exp(-w*x./20).*sin(w*x);     % Input function
 t = [0:T:1e3*T];            % Timevector for simulation
 u = input(t);               % Inputvector
 
-Q_e_A = eye(3)*1e-4;          % Process noise covariance
-R_e_A = 1*1e-1;               % Measurement noise covariance
-
-%Q_e_B = eye(3)*2e-4;          % Process noise covariance
-R_e_B = 2*1e-1;               % Measurement noise covariance
+Q_e = eye(3)*1e-4;          % Process noise covariance
+R_e_A = 1*1e-1;               % Measurement A noise covariance
+R_e_B = 2*1e-1;               % Measurement B noise covariance
 
 
 %----------- Discrete time state space representation -----------%
@@ -46,26 +44,20 @@ xlabel('Time [s]');
 ylabel('Amplitude [V]');
 title('Input signal');
 
-[x_noise_A,y_measured_A] = noisy_model(sysd,R_e_A,Q_e_A,t,u);
-[x_noise_B,y_measured_B] = noisy_model(sysd,R_e_B,Q_e_B,t,u);
+[x_noise_A,y_measured_A] = noisy_model(sysd,R_e_A,Q_e,t,u);
+[x_noise_B,y_measured_B] = noisy_model(sysd,R_e_B,Q_e,t,u);
 
 %----------- Pre-KF sensor fusion -----------%
 
-%Q_e = 1./sqrt(1./Q_e_A + 1./Q_e_B);
 R_e = 1./sqrt(1./R_e_A + 1./R_e_B);
 
 % compute weighting
-wQA = inv(Q_e_A^2);
-wQB = inv(Q_e_B^2);
-
 wRA = inv(R_e_A^2);
 wRB = inv(R_e_B^2);
 
-x_noise = wQA(1) .* x_noise_A + wQB(1) .* x_noise_B;
-% (1) is hackish, only possible because wQA is a scalar
+x_noise = x_noise_A + x_noise_B;
 y_measured = wRA(1) .* y_measured_A + wRB(1) .* y_measured_B;
 
-x_noise = x_noise / (wQA(1) + wQB(1));
 y_measured = y_measured / (wRA(1) + wRB(1));
 
 %--- back to computation
@@ -90,4 +82,5 @@ ylabel('Amplitude [V]');
 title('Filtered output signal');
 
 [x_true_B,y_true] = true_model(sysd,t,u);
+
 norm(y_filtered-y_true)
