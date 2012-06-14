@@ -8,12 +8,10 @@
 
 clear all;
 
-<<<<<<< HEAD
-steps = 200;
-=======
 steps = 2000;
+
 global dt;
->>>>>>> 60826f1cf87940f7322946f88e0846872a25981c
+
 dt = 0.1; %[s/step]
 
 % Choice of Models
