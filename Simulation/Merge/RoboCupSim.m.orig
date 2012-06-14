@@ -5,25 +5,24 @@
 %                                  /_/    
 
 % SETTINGS
-
 clear all;
 
 steps = 2000;
 global dt;
 dt = 0.1; %[s/step]
 
-% Choice of Models
-robotMdl = 'randpot_robot';  % Robot Model to use
-robot_init = str2func( [robotMdl '_init'] );
-robot_step = str2func( [robotMdl '_step'] );
-
-measureMdl = 'sight_of_view'; % Measurement Model to use
-robot_measure = str2func( [measureMdl '_measure'] );
-
-filterMdl = 'sight_of_view'; % Filter Model to use
-robot_ekf = str2func( [filterMdl '_filter'] );
+<<<<<<< HEAD
+% Field Parameter (Rules2011.pdf)                        
+=======
+% Robot Model to use
+mdl = 'dummyPro';
+robot_ekf = str2func( [mdl '_ekf'] );
+robot_init = str2func( [mdl '_init'] );
+robot_measure = str2func( [mdl '_measure'] );
+robot_step = str2func( [mdl '_step'] );
 
 % Field Parameter (Rules2011.pdf)
+>>>>>>> 35d2eb226a26b0585cdff3d5db88e5db760b7acc
 global Field;
     Field.width = 6; %[m]
     Field.height = 4; %[m]

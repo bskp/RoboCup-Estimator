@@ -1,4 +1,4 @@
-function RobotMeasure = dummyPro_measure(Robot)
+function RobotMeasure = sight_of_view_measure(Robot)
 %ROBOT_MEASURE Addition of measurement noise to the robots.
 %
 %   ROBOTMEASURE = ROBOT_MEASURE(ROBOT) takes the parameter ROBOT and adds

@@ -1,4 +1,4 @@
-function [RobotStep dAngle velocity] = robot_step(Robot, Ball)
+function [RobotStep dAngle velocity] = randpot_robot_step(Robot, Ball)
 %ROBOT_STEP Simulates the movement of all robots for one timestep.
 %
 %   [ROBOTSTEP,dOmega,VELOCITY] = ROBOT_STEP(ROBOT) takes all robot
