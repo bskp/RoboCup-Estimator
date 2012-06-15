@@ -9,7 +9,7 @@ function [d_omega_step,v_step] = input_approximation(robot_m,m_values,v)
 %   Furthermore the former computed velocity V is needed, to get the mean
 %   value of the velocity over several time steps. This improves
 %   performance and only works by assuming that large changes in velocity
-%   is not possible for robots.
+%   are not possible for robots.
 
     global dt RobotParam
     
@@ -26,7 +26,7 @@ function [d_omega_step,v_step] = input_approximation(robot_m,m_values,v)
 
     for i=5:8
         
-        if(s < 2 | isnan(robot_m(i).x*robot_m(i).y*robot_m(i).dir))
+        if(s < 2 | isnan(robot_m(i).x*robot_m(i).y*robot_m(i).dir) | isnan(m_values(1,1,i)*m_values(2,1,i)*m_values(3,1,i)))
             d_omega_step(i-4) = 0;
             v_step(i-4) = RobotParam.velocity;
         else

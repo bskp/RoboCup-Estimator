@@ -1,5 +1,5 @@
 function draw_circle(pos_x, pos_y, r, color, filled)
-%DRAW_CIRCLE Drawing function.
+%DRAW_CIRCLE Drawing function for circles.
 %
 %   DRAW_CIRCLE(POS_X,POS_Y,R,COLOR,FILLED) draws objects, like the ball or
 %   the robots, at the position (POS_X,POS_Y) on the playing field. The

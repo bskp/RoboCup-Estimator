@@ -1,7 +1,7 @@
-function [Ball_e P_e] = ball_kf(Ball_oe, Ball_m, P_oe)
-%BALL_KF Applies Kalman filtering to the ball's measurements.
+function [Ball_e P_e] = ball_ekf(Ball_oe, Ball_m, P_oe)
+%BALL_EKF Applies Extended Kalman filtering to the ball's measurements.
 %
-%   [BALL_E,P_E] = BALL_KF(BALL_OE,BALL_M,P_OE) is an extended Kalman
+%   [BALL_E,P_E] = BALL_EKF(BALL_OE,BALL_M,P_OE) is an extended Kalman
 %   filter for the ball object on the field. The function takes the
 %   parameters BALL_OE, the estimates of the previous Kalman cycle and
 %   BALL_M, the measurements and computes the new estimates BALL_E. P_EO

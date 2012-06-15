@@ -1,17 +1,17 @@
 function RobotMeasure = robot_random_measure(Robot)
-%DUMMY_MEASURE Addition of measurement noise to the robots.
+%ROBOT_RANDOM_MEASURE Addition of measurement noise to the robots.
 %
-%   ROBOTMEASURE = DUMMY_MEASURE(ROBOT) takes the parameter ROBOT and adds
-%   measurement noise to the position and the direction of the robots. New
-%   robots are created with the noisy measurements. Furthermore, with a
-%   certain probability, measurement of some parameters are dropped for
-%   each robot individually.
+%   ROBOTMEASURE = ROBOT_RANDOM_MEASURE(ROBOT) takes the parameter ROBOT
+%   and adds measurement noise to the position and the direction of the
+%   robots. New robots are created with the noisy measurements.
+%   Furthermore, with a certain probability, measurement of some parameters
+%   are dropped for each robot individually.
 
 
 %----------- Create normally distributed noise  -----------%
 
     global Noise;
-    Noise.Measure.prob = 0.2; % Probability for Measurementdrop
+    Noise.Measure.prob = 0.2; % Probability for Measurement drop
     d = randn(8,3); % Noise values
     p = rand(8,1);  % Measurement-probability-deciders
     
