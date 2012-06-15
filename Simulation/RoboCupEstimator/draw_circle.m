@@ -1,4 +1,4 @@
-function draw_circle(pos_x, pos_y, r, color, filled)
+function draw_circle(x, y, r, color, isFilled)
 %DRAW_CIRCLE Drawing function for circles.
 %
 %   DRAW_CIRCLE(POS_X,POS_Y,R,COLOR,FILLED) draws objects, like the ball or
@@ -14,16 +14,16 @@ yl = ylim;      % field.
 %----------- Define unitcircle -----------%
 
 phi=linspace(0,2*pi,48);
-x=cos(phi);
-y=sin(phi);
+dx = cos(phi);
+dy = sin(phi);
 
 
 %----------- Draw circle -----------%
 
-if filled == 1
-    fill(pos_x + r*x,pos_y + r*y,color);
+if isFilled == 1
+    fill(x + r*dx,y + r*dy,color);
 else
-    plot(pos_x + r*x,pos_y + r*y,'Color',color);
+    plot(x + r*dx,y + r*dy,'Color',color);
 end
     
 
