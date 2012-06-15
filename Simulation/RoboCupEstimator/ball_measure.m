@@ -2,11 +2,11 @@ function Ball_m = ball_measure(Robot, Ball)
 %BALL_MEASURE Addition of measurement noise to the ball.
 %
 %   BALL_M = BALL_MEASURE(ROBOT,BALL) determines whether BALL is
-%   measurable and adds process noise to it. With the struct ROBOT the
-%   function checks, whether there is at least one robot which gets visual
-%   information about the ball. If no robot sees the ball, the measurement
-%   is dropped. If there is more than one measurement, measurement fusion
-%   is applied.
+%   measurable and adds measurement noise to it. With the struct ROBOT the
+%   function checks, whether there is at least one blue robot which gets 
+%   visual information about the ball. If no robot sees the ball, the 
+%   measurement is dropped. If there is more than one measurement, 
+%   measurement fusion is applied.
 
     global Noise; % Let's just assume the same noise values as for robots
     global RobotParam;

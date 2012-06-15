@@ -1,11 +1,11 @@
 function Robot = robot_standard_init()
-%ROBOT_INIT Initializes eight sighted robots.
+%ROBOT_STANDARD_INIT Initializes eight sighted robots.
 %
-%   ROBOT = ROBOT_INIT() generates structs for eight robots, including
-%   information about their position, their direction and their team
-%   affiliation. Furthermore there are global variables which define for
-%   example their size on the field, their sight distance or their sight
-%   angle.
+%   ROBOT = ROBOT_STANDARD_INIT() generates structs for eight robots,
+%   including information about their position, their direction and their
+%   team affiliation. Furthermore there are global variables which define
+%   for example their size on the field, their sight distance or their
+%   sight angle.
 
 
 %----------- Init of global variables -----------%
@@ -13,7 +13,7 @@ function Robot = robot_standard_init()
     global RobotParam dt;
     RobotParam.radius = 0.15; %[m]
     RobotParam.velocity = 0.1 * dt; %[m/s]
-    RobotParam.changeOfDir = 0.1 * 2*pi *dt; %[rad/step], exp. value
+    RobotParam.changeOfDir = 0.1 * 2*pi *dt; %[rad/step], expected value
     RobotParam.sightDistance = 2.5; %[m]
     RobotParam.sightAngle = pi./6; %[rad]
 

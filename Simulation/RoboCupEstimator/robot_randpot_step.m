@@ -1,14 +1,15 @@
 function [RobotStep dAngle velocity] = robot_randpot_step(Robot, Ball)
-%ROBOT_STEP Simulates the movement of all robots for one timestep.
+%ROBOT_RANDPOT_STEP Simulates the movement of all robots for one timestep.
 %
-%   [ROBOTSTEP,dOmega,VELOCITY] = ROBOT_STEP(ROBOT) takes all robot
-%   structs as parameters and computes the next position of the robots on
-%   the field, i.e. generates new structs. The function also outputs the
-%   input values D_ANGLE, the change of the angular direction, and
-%   VELOCITY, the velocity of a robot, for every robot. These inputs will
-%   be of further use with the extended Kalman filter. The function also
-%   handles the collision avoidance with other robots and boundary
-%   conditions.
+%   [ROBOTSTEP,DANGLE,VELOCITY] = ROBOT_RANDPOT_STEP(ROBOT,BALL) takes all
+%   robot structs as parameters and computes the next position of the
+%   robots on the field, i.e. generates new structs. The function also 
+%   outputs the input values D_ANGLE, the change of the angular direction, 
+%   and VELOCITY, the velocity of a robot, for every robot. These inputs 
+%   will be of further use with the extended Kalman filter. The function 
+%   also handles collisions with other robots and the boundaries by using
+%   collision avoidance. In contrary to former versions, collisions are now
+%   not possible anymore.
 
     global RobotParam Field;
     

@@ -1,8 +1,8 @@
 function [robot_step P_step v_pink_step] = robot_extended_kalman_filter(robot_m,robot_e,m_values,e_values,d_omega,v,v_pink,P)
-%ROBOT_EKF Position-estimation for the robots.
+%ROBOT_EXTENDED_KALMAN_FILTER Position-estimation for the robots.
 %
 %   [ROBOT_STEP,P_STEP, V_PINK_STEP] =
-%   ROBOT_EKF(ROBOT_M,ROBOT_E,M_VALUES,E_VALUES,D_OMEGA,V,V_PINK,P)
+%   ROBOT_EXTENDED_KALMAN_FILTER(ROBOT_M,ROBOT_E,M_VALUES,E_VALUES,D_OMEGA,V,V_PINK,P)
 %   implements the extended Kalman filter cycle for the given motion model
 %   after which the robots behave. The structs ROBOT_M and ROBOT_E refer to
 %   the measured robot parameters and the previously estimated robot
@@ -10,7 +10,8 @@ function [robot_step P_step v_pink_step] = robot_extended_kalman_filter(robot_m,
 %   (velocity) are the inputs used to simulate the robot's motion and P is
 %   the error covariance from the previous Kalman cycle. The new estimated
 %   position of the robots and the new error covariance are the function's
-%   outputs.
+%   outputs. Additional functionality is implemented for pink robots in
+%   order to get their inputs and to track them properly.
 
     global Noise RobotParam;
     
@@ -34,20 +35,21 @@ function [robot_step P_step v_pink_step] = robot_extended_kalman_filter(robot_m,
 %-------- Enable usage of adaptive measurement covariance matrix  --------%    
 
      s = size(m_values);
-     d_R = ones(1,8);
      prob = ones(3,8);
      if(s(2)>2)
-         [prob] = i_measurement(robot_m,m_values, e_values);
+         [prob] = i_measurement(robot_m,m_values,e_values);
      end
 
 %----------- Kalman cycle  -----------%
 
     for i=1:8
         
+       % If no measurements are available, don't change R 
        if(isnan(prob(1,i)))
            prob(:,i) = ones(3,1);
        end
        
+       % Original R
        R = zeros(3,3);
        R(1,1) = robot_m(i).sigma.^2;
        R(2,2) = robot_m(i).sigma.^2;
