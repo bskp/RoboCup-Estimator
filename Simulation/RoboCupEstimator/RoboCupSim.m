@@ -14,17 +14,17 @@ global dt;
 dt = 0.1; %[s/step]
 
 % Choice of Models
-robotInitMdl = 'robot';
+robotInitMdl = 'robot_standard';
 robot_init = str2func( [robotInitMdl '_init'] );
 
-robotMdl = 'randpot_robot';  % Robot Model to use
+robotMdl = 'robot_randpot';  % Robot Model to use
 robot_step = str2func( [robotMdl '_step'] );
 
-measureMdl = 'sight_of_view'; % Measurement Model to use
+measureMdl = 'robot_sight_of_view'; % Measurement Model to use
 robot_measure = str2func( [measureMdl '_measure'] );
 
-filterMdl = 'sight_of_view'; % Filter Model to use
-robot_ekf = str2func( [filterMdl '_filter'] );
+filterMdl = 'robot_extended_kalman'; % Filter Model to use
+robot_filter = str2func( [filterMdl '_filter'] );
 
 % Field Parameter (Rules2011.pdf)
 global Field;
@@ -81,13 +81,13 @@ for s = 1:steps
     Robot_m = robot_measure(Robot);
     Ball_m = ball_measure(Robot, Ball);
     
-    [Robot_e P v_pink] = robot_ekf(Robot_m, Robot_e, m_values, e_values, d_angle, v, v_pink, P);
-    [Ball_e P_ball] = ball_kf(Ball_e, Ball_m, P_ball);
+    [Robot_e P v_pink] = robot_filter(Robot_m, Robot_e, m_values, e_values, d_angle, v, v_pink, P);
+    [Ball_e P_ball] = ball_ekf(Ball_e, Ball_m, P_ball);
       
     clf
     subplot(2,1,1)
     plot_env;
-    plot_objects(Robot, Ball, '0-tVa'); % circles, direction, team color
+    plot_objects(Robot, Ball, '0-tV'); % circles, direction, team color
     plot_objects(Robot_m, Ball_m, '+w'); % crosses, white
     
     subplot(2,1,2)
@@ -97,8 +97,10 @@ for s = 1:steps
     
     if(s==1)
         [m_values e_values] = history_init(Robot_m, Robot_e);
+    else
+        [m_values e_values] = history(m_values, e_values, Robot_m, Robot_e);
     end
-    [m_values e_values] = history(m_values, e_values, Robot_m, Robot_e);
+   
     
     pause(0.001);
     

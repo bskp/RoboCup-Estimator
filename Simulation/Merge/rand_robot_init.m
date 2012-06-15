@@ -1,4 +1,4 @@
-function Robot = dummy_init()
+function Robot = rand_robot_init()
 %DUMMY_INIT Initializes eight robots.
 %
 %   ROBOT = DUMMY_INIT() initializes eight structs which define robots on
@@ -26,4 +26,3 @@ function Robot = dummy_init()
     Robot(8) = struct('color', 'magenta', 'x', 2.5, 'y', 0, 'dir', pi);
 
 end
-

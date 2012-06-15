@@ -12,7 +12,7 @@ function plot_objects(Robot, Ball, style)
 %   +  Draws crosses
 %   #  Enumerate Robots
 %   V  Sight of view blue team
-%   Va  Sigh of view all teams 
+%   Va  Sight of view all teams 
 %
 %   Colors
 %   t  team-specific
@@ -164,7 +164,8 @@ function plot_objects(Robot, Ball, style)
             
             x = [0 cos(phi) 0];
             y = [0 sin(phi) 0];
-            plot(Robot(i).x + r*x,Robot(i).y + r*y,'k');
+            color = [0.4 0.4 0.4];
+            plot(Robot(i).x + r*x,Robot(i).y + r*y,'Color',color);
 
             xlim(xl);
             ylim(yl);

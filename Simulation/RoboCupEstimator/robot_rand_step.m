@@ -1,12 +1,14 @@
-function [RobotStep dOmega velocity] = dummy_step(Robot)
-%DUMMY_STEP Simulates the movement of all robots for one timestep.
+function [RobotStep dOmega velocity] = robot_rand_step(Robot)
+%ROBOT_RAND_STEP Simulates the movement of all robots for one timestep.
 %
-%   [ROBOTSTEP,D_OMEGA,VELOCITY] = DUMMY_STEP(ROBOT) takes all robot
+%   [ROBOTSTEP,DOMEGA,VELOCITY] = ROBOT_RAND_STEP(ROBOT) takes all robot
 %   structs as parameters and computes the next position of the robots on
 %   the field, i.e. generates new structs. The function also outputs the
-%   input values D_OMEGA, the change of the angular direction, and
+%   input values DOMEGA, the change of the angular direction, and
 %   VELOCITY, the velocity of a robot, for every robot. These inputs will
-%   be of further use with the extended Kalman filter.
+%   be of further use with the estimation filter. The function uses
+%   collison detection to handle collisions of robots between other robots
+%   or the boundaries.
 
     global RobotParam dt;
     global Field;
@@ -85,4 +87,3 @@ function [RobotStep dOmega velocity] = dummy_step(Robot)
     end
     
 end
-
