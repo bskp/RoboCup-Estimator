@@ -14,17 +14,17 @@ global dt;
 dt = 0.1; %[s/step]
 
 % Choice of Models
-robotInitMdl = 'robot';
-robot_init = str2func( [robotInitMdl '_init'] );
+robotInitMdl = 'standard';
+robot_init = str2func( ['robot_' robotInitMdl '_init'] );
 
-robotMdl = 'randpot_robot';  % Robot Model to use
-robot_step = str2func( [robotMdl '_step'] );
+robotMdl = 'randpot';  % Robot Model to use
+robot_step = str2func( ['robot_' robotMdl '_step'] );
 
 measureMdl = 'sight_of_view'; % Measurement Model to use
-robot_measure = str2func( [measureMdl '_measure'] );
+robot_measure = str2func( ['robot_' measureMdl '_measure'] );
 
-filterMdl = 'sight_of_view'; % Filter Model to use
-robot_ekf = str2func( [filterMdl '_filter'] );
+filterMdl = 'extended_kalman'; % Filter Model to use
+robot_ekf = str2func( ['robot_' filterMdl '_filter'] );
 
 % Field Parameter (Rules2011.pdf)
 global Field;
@@ -87,7 +87,7 @@ for s = 1:steps
     clf
     subplot(2,1,1)
     plot_env;
-    plot_objects(Robot, Ball, '0-tVa'); % circles, direction, team color
+    plot_objects(Robot, Ball, '0-tV'); % circles, direction, team color
     plot_objects(Robot_m, Ball_m, '+w'); % crosses, white
     
     subplot(2,1,2)
