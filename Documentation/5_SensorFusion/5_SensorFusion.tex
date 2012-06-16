@@ -69,7 +69,7 @@ In a final step, we are interested in the statistical properties of our fused me
     			 \sigma_Y^2 = E\left[ Y^2 \right] - E[Y]^2 &=& \frac{1}{\sum_{j=1}^n \sigma_j^{-2}}
 	\end{eqnarray}
 
-A short analysis reveals, that \(\sigma_Y^2 < \sigma_i^2, \; \forall i\); the covariance of the fused measurement is smaller than the covariance of every single measurement. Or in other words: The fused measurement is, from a statistical point of view, always more precise than the measurement of only one robot, even if we fuse a very good and a very bad measurement.
+A short analysis reveals, that \(\sigma_Y^2 < \sigma_i^2, \; \forall i\); the covariance of the fused measurement is smaller than the covariance of every single measurement. Or in other words: The fused measurement is, from a statistical point of view, always more precise than the measurement of only one robot, even if we fuse a very good and a very bad measurement. The effect on the covariances with fusion is similar to the effect of a parallel connection of several resistors in an electrical circuit. Regardless of the amount of resistors we connect in parallel: The overall resistance of the whole circuit will always be smaller than the smallest resistance in the circuit.
 
 
 \section{The implementation in MATLAB}
