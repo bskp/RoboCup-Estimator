@@ -22,7 +22,7 @@ function [RobotStep dAngle velocity] = robot_randpot_step(Robot, Ball)
 %----------- Behavior of Robots  -----------%
 
     % Only robots within the radius of ra affect an other robot
-    ra = 0.75; % [m]
+    ra = 5*RobotParam.radius; % [m]
     
     % A robot with a distance less than rf to the border gets repulsed.
     rf = 2*RobotParam.radius; % [m]
@@ -32,18 +32,16 @@ function [RobotStep dAngle velocity] = robot_randpot_step(Robot, Ball)
         dx = 0;
         dy = 0;
         % Weight of nominal direction
-        C = 0.1;
+        C = 0.3*ra;
         % Other robots
         for j=1:8
            % Distance between robot i and j
            r = sqrt((Robot(j).x-Robot(i).x).^2+(Robot(j).y-Robot(i).y).^2);
             
-           % Potential function to compute repulsion between robots. If
-           % the distance between two robots is r_a, we have unit repuls-
-           % ion.
+           % Potential function to compute repulsion between robots.
            if ( i~=j && (r <= ra) )
-               dx = dx + C*(Robot(i).x-Robot(j).x)./r.^3*ra.^2;
-               dy = dy + C*(Robot(i).y-Robot(j).y)./r.^3*ra.^2;
+               dx = dx + C./r.^2*(Robot(i).x-Robot(j).x);
+               dy = dy + C./r.^2*(Robot(i).y-Robot(j).y);
            end
         end
         

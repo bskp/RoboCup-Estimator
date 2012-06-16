@@ -33,7 +33,7 @@ This chapter focuses on the implementation of the plot functions and the computa
 Plotting a step in the simulation can be divided essentially in two parts. One part contain the static part e.g. the field an the other part all dynamic objects, as the robots and the ball.
 
 \subsection*{Plot of the field - \texttt{plot\_env()} }
-All graphical features concerning the playing field are implemented by the function {\fontfamily{pcr}\selectfont plot\_env()}. It is subdivided in two functions, which draw the field and, as a neat add on, the scorecounter seperately. The size of the field and goals we took from the RoboCup Nao Rule Book 2011 and are set in the global Struct \texttt{Field}.
+All graphical features concerning the playing field are implemented by the function {\fontfamily{pcr}\selectfont plot\_env()}. It is subdivided in two functions, which draw the field and, as a neat add on, the scorecounter seperately. The size of the field and of the goals we took from the RoboCup Nao Rule Book 2011 and are set in the global Struct \texttt{Field}.
 \begin{lstlisting}
 global Field;
     Field.width = 6; %[m]
@@ -80,7 +80,7 @@ where
 \begin{description}
 	\item[\texttt{Robot}] is a struct of robotstructs as described in section \ref{Robotsection}
 	\item[\texttt{Ball}] is a ballstruct as described in section \ref{Ballsection}
-	\item[\texttt{style}] is a string defining the robotershape, which contain an arbitrary number and order of following characters\\
+	\item[\texttt{style}] is a string defining the rooter shape, which contain an arbitrary number and order of following characters\\
 		\texttt{'0'} Draws circles in true size \\
 		\texttt{'@'} Same as above, but filled \\
 		\texttt{'-'} Includes the direction indicator\\
@@ -88,30 +88,134 @@ where
 		\texttt{'\#'} Enumerate Robots\\
 		\texttt{'V'} Sight of view for blue team only\\
 		\texttt{'Va'} Sight of view all robots \vspace{0.2cm} \\ 
-		and one of the following character to specify the color\\
+		and one of the following character to specify the robot color\\
 		\texttt{'t'} Team specific colors (blue and magenta) \\
 \end{description}
-Figure text color{red}{blabla} shows the playing filed after the execution of \texttt{plot\_env()} and \texttt{plot\_objects(Robot,Ball,'0-t')}.
+This different shape styles allows to display different robots, e.g. the real and the filtered robots, in a clear manner. 
+Figure \ref{Playing_field_robots} shows the playing filed after initialization of \texttt{plot\_env()} and the robots and the ball with the shape parameters \texttt{'0-t'}. Where \texttt{Robot} and \texttt{Ball} are the standard initialization structs as described in Section \ref{Robotsection} and \ref{Ballsection}.
+
+\begin{figure}[h]
+	\centering
+    	\includegraphics[width=12cm]{./2_Simulation/playing_field_robots}
+  	\caption{Playing field after initialization and \texttt{plot\_objects(Robot,Ball,'0-t')}.}
+  	\label{Playing_field_robots}
+\end{figure}
+
 
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \section{Robots} \label{Robotsection}
 
-Maybe the most important part of the simulation is the adequate depiction and behaviour of all eight robots. The latter task is split in three components: In a first step the robots are initialized, after that, their new positions on the field, according to their motion equations, are computed and in the end we are adding measurement noise for our filtering task. The initialization of the robots is quite simple. The function {\fontfamily{pcr}\selectfont dummy\_init().m} just creates eight structs with the essential informations for every robot, i.e. its horizontal and vertical position, its direction and its team affiliation. Furthermore the function defines the robot's radius and its maximum possible angular change for one timestep as global variables. In a latter stage of development we dropped the simplification of a global eye and assumed that a location of a robot's position is only possible if it is in the sight of view of at least one other robot. So in the second version {\fontfamily{pcr}\selectfont robot\_init().m} of this function, we additionally defined global variables for the robot's velocity, its distance of sight as well as its angle of sight. Once initialized we use the functions {\fontfamily{pcr}\selectfont dummy\_step(Robot).m} and {\fontfamily{pcr}\selectfont robot\_step(Robot,Ball).m} respectively to compute the attributes of all robots for every timestep. The key issue of both functions however is the recalculation of the position, i.e. the motion of the robots
+Maybe the most important part of the simulation is the adequate depiction and behaviour of all eight robots. The latter task is split in three components: In a first step the robots are initialized, after that, their new positions on the field, according to their motion equations, are computed and in the end we are adding measurement noise for our filtering task.
 
-\lstinputlisting[firstline=20, lastline=27]{../Simulation/Merge/dummy_step.m}
+\subsection*{Initialization}
+ The initialization of the robots is quite simple. The function {\fontfamily{pcr}\selectfont robot\_standard\_init()} creates a struct of eight structs with the essential informations for every robot, i.e. its horizontal and vertical position, its direction and its team affiliation. Following tabular depicts the structure of such a struct.
 
-Later on the non-linearity of these equations will make it necessary that we use an extended Kalman filter instead of a simple linear one. The addition of process noise and the collision handling of robots also happen in these functions. The process noise we use for our model is always white Gaussian noise with seperate covariances for the positions and the directions. The handling of collisions, between robots and the field's border, however is different for both step-functions. In {\fontfamily{pcr}\selectfont dummy\_step(Robot).m} we used a very simple model, assuming that if two robots collide, their directions swap such that they do not run into each other
-
-\lstinputlisting[firstline=52, lastline=53]{../Simulation/Merge/dummy_step.m}
+\begin{center}
+	\begin{tabular}{| l | l | c | l |} \hline
+		\texttt{Robot(1)} & \texttt{Robot(2)} & $\cdots$ & \texttt{Robot(8)}  \\ \hline
+		\texttt{.color} & \texttt{.color} & &\texttt{.color} \\
+		\texttt{.x} & \texttt{.x} & & \texttt{.x} \\
+		\texttt{.y} & \texttt{.y} & & \texttt{.y} \\
+		\texttt{.dir} & \texttt{.dir} & & \texttt{.dir}\\ \hline
+	\end{tabular}
+\end{center}
  
-This solution was not optimal for two reasons: First we had the problem that there was a bug which made it possible that two robots became wedged together and their further behaviour was messed up after they had contact. The second problem was, that our Kalman filter didn't work properly since the swapping of directions is a rapid change in states, which cannot be handled by our Kalman filter. The function {\fontfamily{pcr}\selectfont robot\_step(Robot,Ball).m} eliminates both issues because it doesn't use collision detection but collision avoidance. If the distance of two robots falls below a given radius, we assign a potential to both robots. The effect is now similar to this of a positive charge in an electrostatic field: The closer two robots are, the bigger is their mutual repulsion. As you can see below, we use the same \(r^{-2}\)-relation for the repulsing force as it is known from the analysis of electrostatic fields
+Furthermore the function defines some robot specific parameters in the global struct \texttt{RobotParam}. This are characteristics such as the robot's radius or its maximum possible angular change for one time step. In a latter stage of development we dropped the simplification of a global eye and assumed that a location of a robot's position is only possible if it is in the sight of view of at least one other robot. So additionally parameters of sight distance as well as its angle of sight are set in the initialization function.
+ %evtl. MATLAB-code von den variablen
+  
+\subsection*{Dynamics of the robots - Mathematical model}
+%Once initialized we use the functions {\fontfamily{pcr}\selectfont dummy\_step(Robot).m} and {\fontfamily{pcr}\selectfont robot\_step(Robot,Ball).m} respectively to compute the attributes of all robots for every timestep. The key issue of both functions however is the recalculation of the position, i.e. the motion of the robots
+To compute the next step of the robots we used the following simple non-linear discrete time motion equations
+\begin{eqnarray*}
+	x_{i_{k+1}} &=& x_{i_{k}} + v_{i_{k}} \cos(\varphi_{i_{k}}) \\
+	y_{i_{k+1}} &=& y_{i_{k}} + v_{i_{k}} \sin(\varphi_{i_{k}}) \\
+	\varphi_{i_{k+1}} &=& \varphi_{i_{k}} + d\omega_{i_k}
+\end{eqnarray*}
+with the boundary conditions, that the robots have to be on the playing field and can't covering the same disk as another robot:
+	\[ (x_{i_{k}},y_{i_{k}}) \in [-3+r_r,3-r_r]\times[-2+r_r,2-r_r] \quad \forall k, \forall i\in \{1,2,\ldots,8 \}
+	\]
+	\[ \sqrt{(x_{i_{k}}-x_{j_{k}})^2 + (y_{i_{k}}-y_{j_{k}})^2} =: d_{ij} \geq 2r_r \quad \forall k, \forall i, \forall j\neq i
+	\]
+Where 
 
-\lstinputlisting[firstline=35, lastline=46]{../Simulation/Merge/dummyPro_step.m}
+%\lstinputlisting[firstline=20, lastline=27]{../Simulation/Merge/dummy_step.m}
 
-The change of directions is now continuous, which makes tracking still possible for our Kalman filter. Additionally to the collision avoidance, the robots are now attracted to the ball if it near them. Up to this point we computed the behaviour of an ideal robot. Since our goal is to filter out the uncertainty of motion of the robot parameters, we artifically have to add some measurement noise which we can filter later on. The functions {\fontfamily{pcr}\selectfont dummy\_measure(Robot).m} and {\fontfamily{pcr}\selectfont robot\_measure(Robot).m} are implemented for that purpose. {\fontfamily{pcr}\selectfont dummy\_measure(Robot).m} simply adds white Gaussian noise to the position and the direction of every robot. Additionally with a certain possibillity there is no measurement at all, so the corresponding parameter is dropped. What we are assuming with this model is, that there is some global eye available which measures the position and direction of every robot with some given resolution. Since this scenario is not realistic in a RoboCup soccer match, because only the robots themselves can gain visual information, we developed the function {\fontfamily{pcr}\selectfont robot\_measure(Robot).m} to solve this problem. According to this philosophy, a measurement of a robot is only available if it stands in front of a characteristic point on the field or if it is within the distance of sight of another robot. Note that a robot only locates other robots if it is aware of its own position and that we get information from only one team, which will be the case for official RoboCup matches. If more than one measurement is available for a robot, the mean of all measurements is computed.\\
+%Later the non-linearity of these equations will make it necessary that we use an extended Kalman filter instead of a simple linear one. The addition of process noise and the collision handling of robots also happen in these functions. The process noise we use for our model is always white Gaussian noise with seperate covariances for the positions and the directions. 
+\subparagraph{Random Collision Roboter} To satisfy the boundary conditions we first used robots which collide into the sidelines and into each other. When they hit each other they swap direction 
+%. In {\fontfamily{pcr}\selectfont dummy\_step(Robot).m} we used a very simple model, assuming that if two robots collide, their directions swap such that they do not run into each other
+%\lstinputlisting[firstline=52, lastline=54]{../Simulation/Merge/dummy_step.m}
+and if they touch a sideline, they reflect after the law of reflection 
+\[ \Theta_{\textnormal{in}} = \Theta_{\textnormal{out}}.
+\]
+Those dynamics are implemented in \texttt{robot\_rand\_step(Robot)} with a random inputs $d\omega_{i_k}$ and constant velocities $v_{i_k} = v$. But this solution was not optimal for two reasons: First we had the problem that there was a bug which made it possible that two robots became wedged together and their further behaviour was messed up after they had contact. The second problem was, that our Kalman filter didn't work properly since the swapping of directions is a rapid change in states, which cannot be handled by our Kalman filter. 
+
+\subparagraph{Random Potential Roboter} 
+The function {\fontfamily{pcr}\selectfont robot\_randpot\_step(Robot,Ball)} eliminates both issues because it doesn't use collision detection but collision avoidance. If the distance of two robots falls below a given radius, we assign a potential to both robots. The effect is now similar to this of a positive charge in an electrostatic field: The closer two robots are, the bigger is their mutual repulsion. The force in a electric field is given by
+	\[ F = m\ddot{x} = C \frac{1}{x^2}.
+	\]
+Integration results in
+	\[ \dot{x} = \frac{dx}{dt} = \tilde{C} \frac{1}{x}.\]
+Or the same described in vector notation:
+	\[	\vec{F} = C \frac{\vec{r}}{|\vec{r}|^3} \qquad \Rightarrow \qquad \dot{\vec{r}} = \frac{d \vec{r}}{dt} = %
+			\tilde{C} \frac{\vec{r}}{|\vec{r}|^2} %
+	\]
+As you can in the code below, we use the same \(r^{-2}\)-relation for the repulsing force as it is known from the analysis of electrostatic fields
+\begin{lstlisting}
+        for j=1:8
+           % Distance between robot i and j
+           r = sqrt((Robot(j).x-Robot(i).x).^2+(Robot(j).y-Robot(i).y).^2);
+            
+           % Potential function to compute repulsion between robots.
+           if ( i~=j && (r <= ra) )
+               dx = dx + C./r.^2*(Robot(i).x-Robot(j).x);
+               dy = dy + C./r.^2*(Robot(i).y-Robot(j).y);
+           end
+        end
+\end{lstlisting}
+
+A related potential is also assigned to the sideline, if a robot is under a given distance to it. With those potentials, the change of directions is now continuous, which makes tracking possible for our Kalman filter. Additionally to the collision avoidance the robots are attracted to the ball if it's near them, like it had a negative charge. This leads to some more ball contacts than before.
+
+% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
+\section{Ball} \label{Ballsection}
+
+The treatment of the ball is quite similar to that of the robots. The ball object is also represented by a struct containing its horizontal and vertical position, its direction and other than the robot the velocity, too.
+\begin{center}
+	\begin{tabular}{| l |} \hline
+		Ball \\ \hline
+		.x \\
+		.y \\
+		.dir \\
+		.velocity \\ \hline
+	\end{tabular}
+\end{center}
+ These parameters are set by executing {\fontfamily{pcr}\selectfont ball\_init()}. This function also defines the ball's radius, its initial velocity and the friction towards the ground in the global struct \texttt{BallParam}
+ 
+\subsection*{Dynamics of the ball - Mathematical model}
+%The function {\fontfamily{pcr}\selectfont ball\_step(Ball,Robot).m} does, like the equivalent function for the robots, the computations of the ball's next position and direction on the field. These parameters however do not only depend on the ball's dynamics but also whether it collides with one of the robots. The following MATLAB code shows the algorithm for this collision detection
+
+\lstinputlisting[firstline=40, lastline=51]{../Simulation/Merge/ball_step.m}
+The dynamics of the ball are quite analog to those of the robots. Only the velocity is no longer an input but a state.
+The the non-linear motion equation for the ball are
+\begin{eqnarray*}
+	x_{{k+1}} &=& x_{k} + v_{k} \cos(\varphi_{k}) \\
+	y_{{k+1}} &=& y_{k} + v_{k} \sin(\varphi_{k}) \\
+	\varphi_{{k+1}} &=& \varphi_{k}\\
+	v_{{k+1}} &=& \varrho \cdot v_{k}
+\end{eqnarray*}
+With the boundary conditions, that the boll has to stay on the playing field and can't be under a robot
+	\[ (x_{k},y_{k}) \in [-3+r_b,3-r_b]\times[-2+r_b,2-r_b] \quad \forall k, 
+	\]
+	\[ \sqrt{(x_{k}-x_{_i{k}})^2 + (y_{k}-y_{j_{k}})^2} =: d_{bi} \geq r_r + r_b \quad \forall k, \forall i
+	\]
+To satisfy these conditions, we used again the law of reflection when the ball hits one of the sideline. and when collide with
+In our simple model we assume that if the ball collides with one of the robots, it regains its initial velocity and bounces away, perpendicular to the robot's position. Since the ball too is a subject of measurement, we also needed a measurement function for this object. {\fontfamily{pcr}\selectfont ball\_measure(Ball).m} adds measurement noise or, as the case may be, drops the measurement completely. Again, a measurement is only available if it is in the sight of view of at least one blue robot that knows its own position. For more than one measurement the mean value of all measurements is taken. After all computations are done, the ball is drawn on the field, together with the robots, with the function {\fontfamily{pcr}\selectfont plot\_robot(Robot,Ball,style).m}. All features of this function like coloration and drawing of different shapes are also available for the ball.
+
+% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
+\section{Noise}
+Up to this point we computed the behaviour of an ideal robot. Since our goal is to filter out the uncertainty of motion of the robot parameters, we artifically have to add some measurement noise which we can filter later on. The functions {\fontfamily{pcr}\selectfont dummy\_measure(Robot).m} and {\fontfamily{pcr}\selectfont robot\_measure(Robot).m} are implemented for that purpose. {\fontfamily{pcr}\selectfont dummy\_measure(Robot).m} simply adds white Gaussian noise to the position and the direction of every robot. Additionally with a certain possibillity there is no measurement at all, so the corresponding parameter is dropped. What we are assuming with this model is, that there is some global eye available which measures the position and direction of every robot with some given resolution. Since this scenario is not realistic in a RoboCup soccer match, because only the robots themselves can gain visual information, we developed the function {\fontfamily{pcr}\selectfont robot\_measure(Robot).m} to solve this problem. According to this philosophy, a measurement of a robot is only available if it stands in front of a characteristic point on the field or if it is within the distance of sight of another robot. Note that a robot only locates other robots if it is aware of its own position and that we get information from only one team, which will be the case for official RoboCup matches. If more than one measurement is available for a robot, the mean of all measurements is computed.\\
 
 After this computational part, the robots are added to the graphical environment by using the function
-{\fontfamily{pcr}\selectfont plot\_robot(Robot,Ball,style).m}. It provides several features such as the coloration, the shape and the label of the robots on the field. A sample output on the graphical interface after several timesteps is shown in figure \ref{Plot_robots} below
+{\fontfamily{pcr}\selectfont plot\_robot(Robot,Ball,style).m}. It provides several features such as the coloration, the shape and the label of the robots on the field. A sample output on the graphical interface after several timesteps is shown in figure \ref{Plot_robots} below.
 
 \begin{figure}[htbp]
 	\centering
@@ -121,17 +225,4 @@ After this computational part, the robots are added to the graphical environment
 \end{figure}
 
 Note that measurements (white crosses) are not available for most robots (blue and magenta circles).
-
-% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
-\section{Ball} \label{Ballsection}
-
-The treatment of the ball is quite similar to that of the robots. The ball object is also represented by a struct containing its horizontal and vertical position, its direction and the velocity. These parameters are set by executing {\fontfamily{pcr}\selectfont ball\_init().m}. This function also defines the ball's radius, its initial velocity and the friction towards the ground. The function {\fontfamily{pcr}\selectfont ball\_step(Ball,Robot).m} does, like the equivalent function for the robots, the computations of the ball's next position and direction on the field. These parameters however do not only depend on the ball's dynamics but also whether it collides with one of the robots. The following MATLAB code shows the algorithm for this collision detection
-
-\lstinputlisting[firstline=40, lastline=51]{../Simulation/Merge/ball_step.m}
-
-In our simple model we assume that if the ball collides with one of the robots, it regains its initial velocity and bounces away, perpendicular to the robot's position. Since the ball too is a subject of measurement, we also needed a measurement function for this object. {\fontfamily{pcr}\selectfont ball\_measure(Ball).m} adds measurement noise or, as the case may be, drops the measurement completely. Again, a measurement is only available if it is in the sight of view of at least one blue robot that knows its own position. For more than one measurement the mean value of all measurements is taken. After all computations are done, the ball is drawn on the field, together with the robots, with the function {\fontfamily{pcr}\selectfont plot\_robot(Robot,Ball,style).m}. All features of this function like coloration and drawing of different shapes are also available for the ball.
-
-% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
-\section{Measurement}
-
 
