@@ -100,7 +100,6 @@ for s = 1:steps
     else
         [m_values e_values] = history(m_values, e_values, Robot_m, Robot_e);
     end
-   
     
     pause(0.001);
     
