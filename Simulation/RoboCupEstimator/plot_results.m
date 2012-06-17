@@ -11,31 +11,31 @@
 
     load('plot', 'steps');
     load('plot', 'sRobot');
-    load('plot', 'sRobot_e');
+    load('plot', 'sRobotEstimate');
     load('plot', 'sBall');
-    load('plot', 'sBall_e');
+    load('plot', 'sBallEstimate');
 
-    load('plot', 'sP_norm');
-    load('plot', 'sP_ball_norm');
+    load('plot', 'sPnorm');
+    load('plot', 'sPballNorm');
 
 % Calculation of error for every Robot and the ball
 
     for s=1:steps
         for i=1:8
             Robot = sRobot(s,1,i);
-            Robot_e = sRobot_e(s,1,i);
+            RobotEstimate = sRobotEstimate(s,1,i);
          
-            e_x(i,s) = abs(Robot.x-Robot_e.x);
-            e_y(i,s) = abs(Robot.y-Robot_e.y);
-            e_dir(i,s) = abs(Robot.dir-Robot_e.dir);
+            ex(i,s) = abs(Robot.x-RobotEstimate.x);
+            ey(i,s) = abs(Robot.y-RobotEstimate.y);
+            edir(i,s) = abs(Robot.dir-RobotEstimate.dir);
         end
         % Calculation of error for the ball
         Ball = sBall(s);
-        Ball_e = sBall_e(s);
+        BallEstimate = sBallEstimate(s);
         
-        e_x(9,s) = abs(Ball.x-Ball_e.x);
-        e_y(9,s) = abs(Ball.y-Ball_e.y);
-        e_dir(9,s) = abs(Ball.dir-Ball_e.dir);
+        ex(9,s) = abs(Ball.x-BallEstimate.x);
+        ey(9,s) = abs(Ball.y-BallEstimate.y);
+        edir(9,s) = abs(Ball.dir-BallEstimate.dir);
     end
 
 
@@ -52,11 +52,11 @@
             i = j-4;
         end
         subplot(4,2,2*i-1);
-        plot(x, e_x(j,:), 'r');
+        plot(x, ex(j,:), 'r');
         hold on;
         %plot(x, e_y(j,:), 'g');
         %plot(x, P_det(j,:), 'k');
-        [AX,H1,H2] = plotyy(x, e_y(j,:), x, sP_norm(j,:));
+        [AX,H1,H2] = plotyy(x, ey(j,:), x, sPnorm(j,:));
         set(H2,'LineStyle','--', 'LineWidth', 1.2);
         grid on;
         titleString = ['Robot ' num2str(j)];
@@ -71,7 +71,7 @@
     
         subplot(4,2,2*i);
         %plot(x, e_dir(j,:), 'b');
-        [AX,H1,H2] = plotyy(x, e_dir(j,:), x, sP_norm(j,:));
+        [AX,H1,H2] = plotyy(x, edir(j,:), x, sPnorm(j,:));
         set(H1,'Color', 'k');
         set(H2,'LineStyle','--', 'LineWidth', 1.2);
         grid on;
@@ -92,10 +92,10 @@
     figure(3);
     
     subplot(1,2,1);
-    plot(x, e_x(9,:), 'r');
+    plot(x, ex(9,:), 'r');
     hold on;
     %plot(x, e_y(9,:), 'g');
-    [AX,H1,H2] = plotyy(x, e_y(9,:), x, sP_norm(j,:));
+    [AX,H1,H2] = plotyy(x, ey(9,:), x, sPnorm(j,:));
     set(H2,'LineStyle','--', 'LineWidth', 1.2);
     grid on;
     title('Ball');
@@ -107,7 +107,7 @@
     
     subplot(1,2,2);
     %plot(x, e_dir(9,:), 'b');
-    [AX,H1,H2] = plotyy(x, e_dir(9,:), x, sP_norm(j,:));
+    [AX,H1,H2] = plotyy(x, edir(9,:), x, sPnorm(j,:));
     set(H1,'Color', 'k');
     set(H2,'LineStyle','--', 'LineWidth', 1.2);
     grid on;

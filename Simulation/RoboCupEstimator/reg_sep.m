@@ -1,9 +1,9 @@
-function [ sep, r, m1, b1, m2, b2 ] = reg_sep( x, y, draw_plot )
+function [ sep, r, m1, b1, m2, b2 ] = reg_sep( x, y, drawPlot )
 %reg_sep Regressional separation of data into two linearly correlating sets
 %   ...
     
     if (nargin == 2)
-        draw_plot = false;
+        drawPlot = false;
     end
 
     n = length(x);
@@ -27,7 +27,7 @@ function [ sep, r, m1, b1, m2, b2 ] = reg_sep( x, y, draw_plot )
         end
     end
     
-    if (draw_plot)
+    if (drawPlot)
         hold on;
         axis equal;
         plot(x(1:sep-1),y(1:sep-1), 'or');

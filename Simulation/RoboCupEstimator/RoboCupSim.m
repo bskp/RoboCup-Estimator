@@ -63,42 +63,44 @@ global Score;
     Score.pink = 0;
     
 Robot = robot_init();
-Robot_e = Robot;
+RobotEstimate = Robot;
 for i = 1:8
     P(:,:,i) = eye(3);
 end
-P_ball = eye(4);
+Pball = eye(4);
 Ball = ball_init();
-Ball_e = Ball;
-m_values = 0;
-e_values = 0;
-v_pink = ones(1,4)*RobotParam.velocity;
+BallEstimate = Ball;
+mValues = 0;
+eValues = 0;
+vPink = ones(1,4)*RobotParam.velocity;
 
 %% - - - - - Loop - - - - - %
 for s = 1:steps
-    [Robot d_angle v] = robot_step(Robot, Ball);
+    [Robot dAngle v] = robot_step(Robot, Ball);
     Ball = ball_step(Ball,Robot);
-    Robot_m = robot_measure(Robot);
-    Ball_m = ball_measure(Robot, Ball);
+    RobotMeasure = robot_measure(Robot);
+    BallMeasure = ball_measure(Robot, Ball);
     
-    [Robot_e P v_pink] = robot_filter(Robot_m, Robot_e, m_values, e_values, d_angle, v, v_pink, P);
-    [Ball_e P_ball] = ball_ekf(Ball_e, Ball_m, P_ball);
+    [RobotEstimate P vPink] = robot_filter(RobotMeasure, RobotEstimate, ...
+        mValues, eValues, dAngle, v, vPink, P);
+    [BallEstimate Pball] = ball_ekf(BallEstimate, BallMeasure, Pball);
       
     clf
     subplot(2,1,1)
     plot_env;
     plot_objects(Robot, Ball, '0-tV'); % circles, direction, team color
-    plot_objects(Robot_m, Ball_m, '+w'); % crosses, white
+    plot_objects(RobotMeasure, BallMeasure, '+w'); % crosses, white
     
     subplot(2,1,2)
     plot_env;
     plot_objects(Robot, Ball, '@-t');    
-    plot_objects(Robot_e, Ball_e, '0-w');
+    plot_objects(RobotEstimate, BallEstimate, '0-w');
     
     if(s==1)
-        [m_values e_values] = history_init(Robot_m, Robot_e);
+        [mValues eValues] = history_init(RobotMeasure, RobotEstimate);
     else
-        [m_values e_values] = history(m_values, e_values, Robot_m, Robot_e);
+        [mValues eValues] = history(mValues, eValues, RobotMeasure, ...
+            RobotEstimate);
     end
     
     pause(0.001);

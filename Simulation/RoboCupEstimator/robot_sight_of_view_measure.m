@@ -29,14 +29,21 @@ function RobotMeasure = robot_sight_of_view_measure(Robot)
        for j = 1:8
             if (i == j)
                 if (positionIsValid(i))
-                   RobotAllMeasure(j).x(i) = Robot(i).x + randn*Noise.Measure.pos*Noise.Measure.sigma1;
-                   RobotAllMeasure(j).y(i) = Robot(i).y + randn*Noise.Measure.pos*Noise.Measure.sigma1;
-                   RobotAllMeasure(j).dir(i) = Robot(i).dir + randn*Noise.Measure.dir*Noise.Measure.sigma1;
-                   RobotAllMeasure(j).sigma(i) = Noise.Measure.pos*Noise.Measure.sigma1;
+                   RobotAllMeasure(j).x(i) = Robot(i).x + ...
+                       randn*Noise.Measure.pos*Noise.Measure.sigma1;
+                   RobotAllMeasure(j).y(i) = Robot(i).y + ...
+                       randn*Noise.Measure.pos*Noise.Measure.sigma1;
+                   RobotAllMeasure(j).dir(i) = Robot(i).dir + ...
+                       randn*Noise.Measure.dir*Noise.Measure.sigma1;
+                   RobotAllMeasure(j).sigma(i) = Noise.Measure.pos * ...
+                       Noise.Measure.sigma1;
                 end   
             else
-                if (sqrt((Robot(i).x-Robot(j).x).^2 + (Robot(i).y-Robot(j).y).^2) <= RobotParam.sightDistance)
-                    dirOtherRobot = atan((Robot(j).y-Robot(i).y)./(Robot(j).x-Robot(i).x));
+                if (sqrt((Robot(i).x-Robot(j).x).^2 + ...
+                        (Robot(i).y-Robot(j).y).^2) <= ...
+                        RobotParam.sightDistance)
+                    dirOtherRobot = atan((Robot(j).y-Robot(i).y)...
+                        ./(Robot(j).x-Robot(i).x));
                         
                     % Compute absolute angle in relation to the x-axis.
                     if (Robot(j).x < Robot(i).x)
@@ -52,15 +59,23 @@ function RobotMeasure = robot_sight_of_view_measure(Robot)
                         
                     if(relAngle < RobotParam.sightAngle) 
                         if positionIsValid(i)
-                            RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.Measure.pos*Noise.Measure.sigma2;
-                            RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.Measure.pos*Noise.Measure.sigma2;
-                            RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.Measure.dir*Noise.Measure.sigma2;
-                            RobotAllMeasure(j).sigma(i) = Noise.Measure.pos*Noise.Measure.sigma2;
+                            RobotAllMeasure(j).x(i) = Robot(j).x + ...
+                                randn*Noise.Measure.pos*Noise.Measure.sigma2;
+                            RobotAllMeasure(j).y(i) = Robot(j).y + ...
+                                randn*Noise.Measure.pos*Noise.Measure.sigma2;
+                            RobotAllMeasure(j).dir(i) = Robot(j).dir + ...
+                                randn*Noise.Measure.dir*Noise.Measure.sigma2;
+                            RobotAllMeasure(j).sigma(i) = ...
+                                Noise.Measure.pos*Noise.Measure.sigma2;
                         else
-                            RobotAllMeasure(j).x(i) = Robot(j).x + randn*Noise.Measure.pos*Noise.Measure.sigma3;
-                            RobotAllMeasure(j).y(i) = Robot(j).y + randn*Noise.Measure.pos*Noise.Measure.sigma3;
-                            RobotAllMeasure(j).dir(i) = Robot(j).dir + randn*Noise.Measure.dir*Noise.Measure.sigma3;
-                            RobotAllMeasure(j).sigma(i) = Noise.Measure.pos*Noise.Measure.sigma3;
+                            RobotAllMeasure(j).x(i) = Robot(j).x + ...
+                                randn*Noise.Measure.pos*Noise.Measure.sigma3;
+                            RobotAllMeasure(j).y(i) = Robot(j).y + ...
+                                randn*Noise.Measure.pos*Noise.Measure.sigma3;
+                            RobotAllMeasure(j).dir(i) = Robot(j).dir + ...
+                                randn*Noise.Measure.dir*Noise.Measure.sigma3;
+                            RobotAllMeasure(j).sigma(i) = ...
+                                Noise.Measure.pos*Noise.Measure.sigma3;
                         end
                     end
                 end
@@ -98,8 +113,10 @@ function pos = position_is_valid(robot)
     
     %Is a characetistic point in Sight of View ?
     for i = 1:length(CharPoint)
-        if (sqrt((CharPoint(i).x-robot.x).^2 + (CharPoint(i).y-robot.y).^2 ) <= RobotParam.sightDistance)
-            dirCharPoint = atan((CharPoint(i).y-robot.y)./(CharPoint(i).x-robot.x));
+        if (sqrt((CharPoint(i).x-robot.x).^2 + ...
+                (CharPoint(i).y-robot.y).^2 ) <= RobotParam.sightDistance)
+            dirCharPoint = atan((CharPoint(i).y-robot.y)...
+                ./(CharPoint(i).x-robot.x));
             
             % Compute absolute angle in relation to the x-axis.
             if (CharPoint(i).x < robot.x)

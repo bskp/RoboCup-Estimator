@@ -20,7 +20,8 @@ end
 function plot_field()
 
     global Field;
-    rectangle('position', [-Field.width./2 -Field.height./2 Field.width Field.height],'facecolor','green');
+    rectangle('position', [-Field.width./2 -Field.height./2 Field.width ...
+        Field.height],'facecolor','green');
     hold on;
     
     % CenterCircle
@@ -28,16 +29,23 @@ function plot_field()
     
     % Points
     draw_circle(0,0,Field.pointRadius,'k',0);
-    draw_circle(-Field.width./2 + Field.penaltyPointLocation, 0, Field.pointRadius,'k',0);
-    draw_circle(Field.width./2 - Field.penaltyPointLocation, 0, Field.pointRadius,'k',0); 
+    draw_circle(-Field.width./2 + Field.penaltyPointLocation, 0, ...
+        Field.pointRadius,'k',0);
+    draw_circle(Field.width./2 - Field.penaltyPointLocation, 0, ...
+        Field.pointRadius,'k',0); 
    
     %Penalty Area
-    rectangle('position', [ -Field.width./2 -Field.penaltyAreaHeight./2 Field.penaltyAreaWidth Field.penaltyAreaHeight]);
-    rectangle('position', [ Field.width./2-Field.penaltyAreaWidth -Field.penaltyAreaHeight./2 Field.penaltyAreaWidth Field.penaltyAreaHeight]);
+    rectangle('position', [ -Field.width./2 -Field.penaltyAreaHeight./2 ...
+        Field.penaltyAreaWidth Field.penaltyAreaHeight]);
+    rectangle('position', [ Field.width./2-Field.penaltyAreaWidth ...
+        -Field.penaltyAreaHeight./2 Field.penaltyAreaWidth ...
+        Field.penaltyAreaHeight]);
     
     %Goal
-    rectangle('position', [ -Field.width./2-0.01 -Field.goalHeight./2 Field.goalWidth Field.goalHeight], 'facecolor', 'r');
-    rectangle('position', [ Field.width./2-0.01 -Field.goalHeight./2 Field.goalWidth Field.goalHeight], 'facecolor', 'r');
+    rectangle('position', [ -Field.width./2-0.01 -Field.goalHeight./2 ...
+        Field.goalWidth Field.goalHeight], 'facecolor', 'r');
+    rectangle('position', [ Field.width./2-0.01 -Field.goalHeight./2 ...
+        Field.goalWidth Field.goalHeight], 'facecolor', 'r');
     
     %Center line
     line([0, 0],[-Field.height./2, Field.height./2],'Color','k');
@@ -48,5 +56,6 @@ end
 
 function plot_score()
     global Score;
-    text(0,2.4,[num2str(Score.blue),' : ', num2str(Score.pink)],'FontSize',16,'HorizontalAlignment','center');
+    text(0,2.4,[num2str(Score.blue),' : ', num2str(Score.pink)], ...
+        'FontSize',16,'HorizontalAlignment','center');
 end

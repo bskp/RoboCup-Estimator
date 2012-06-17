@@ -1,4 +1,4 @@
-function report(steps, RobotStep, RobotStep_e, BallStep, BallStep_e)
+function report(steps, RobotStep, RobotStepEstimate, BallStep, BallStepEstimate)
 %REPORT Creates a mat-File with data from robots and ball
 %
 %   REPORT(STEPS,ROBOTSTEP,ROBOTSTEP_E,BALLSTEP,BALLSTEP_E) takes the ideal
@@ -11,9 +11,9 @@ function report(steps, RobotStep, RobotStep_e, BallStep, BallStep_e)
 
       save('error', 'steps');
       save('error', 'RobotStep', '-append');
-      save('error', 'RobotStep_e', '-append');
+      save('error', 'RobotStepEstimate', '-append');
       save('error', 'BallStep', '-append');
-      save('error', 'BallStep_e', '-append');
+      save('error', 'BallStepEstimate', '-append');
 
 
 %     currentPath = pwd;
