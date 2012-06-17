@@ -3,7 +3,7 @@
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \chapter{Simulation}
 
-One main aspect of this group work among the design of a Kalman filter was the construction of a graphical environment for our work. So we decided to implement a simulation of a Nao soccer match in MATLAB. Therefore we made four independent modules which build the framework for the simulation. The four parts contain functions concerning the dynamics of the robots and the ball, the measurements and the plosts. Since these parts are constructed in a modular fashion, we can change one module without influencing the others. All functions mentioned below will build the core of a simple random simulation of a RoboCup soccer match. The simulation is called random because the input paramters of the robots, i.e. their velocity and their change of angular direction, are chosen randomly. The script {\fontfamily{pcr}\selectfont RoboCupSim.m} is essentially a finite loop with the described functions in it. Every step the in loop generates a new frame of our simulation. Most of the global variables are defined in {\fontfamily{pcr}\selectfont RoboCupSim.m} such as the dimensions of a real RoboCup playing field or all noise-relevant parameters. Also variables which cannot be initialized in a function, such as the covariance matrices for the Kalman filters which will be discussed later, are defined in this script. The pseudocode below shows the general structure of our simulation framework and emphasizes the modularity of our code
+One main aspect of this group work among the design of a Kalman filter was the construction of a graphical environment for our work. So we decided to implement a simulation of a Nao soccer match in MATLAB. Therefore we made four independent modules which build the framework for the simulation. The four parts contain functions concerning the dynamics of the robots and the ball, the measurements and the plots. Since these parts are constructed in a modular fashion, we can change one module without influencing the others. All functions mentioned below will build the core of a simple random simulation of a RoboCup soccer match. The simulation is called random because the input paramters of the robots, i.e. their velocity and their change of angular direction, are chosen randomly. The script {\fontfamily{pcr}\selectfont RoboCupSim.m} is essentially a finite loop with the described functions in it. Every step the in loop generates a new frame of our simulation. Most of the global variables are defined in {\fontfamily{pcr}\selectfont RoboCupSim.m} such as the dimensions of a real RoboCup playing field or all noise-relevant parameters. Also variables which cannot be initialized in a function, such as the covariance matrices for the Kalman filters, which will be discussed later, are defined in this script. The pseudocode below shows the general structure of our simulation framework and emphasizes the modularity of our code
 
 % Pseudocode
 \begin{verbatim}
@@ -26,11 +26,12 @@ One main aspect of this group work among the design of a Kalman filter was the c
       End Loop
 \end{verbatim}
 
-This chapter focuses on the implementation of the plot functions and the computation functions, i.e. the perturbed dynamics of the ball and the noised measurement. The filter task of the simulation will be discussed in chapter 4.
+This chapter focuses on the implementation of the plot functions and the computation functions. The filter task of the simulation will be discussed in chapter 4.
+The section about plots is mainly a documentation of the draw functions for the field and objects we made to illustrate the simulation, while the section about robots and ball also covers the mathematical background.
 
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \section{Plots}
-Plotting a step in the simulation can be divided essentially in two parts. One part contain the static part e.g. the field an the other part all dynamic objects, as the robots and the ball.
+Plotting a step in the simulation can be divided essentially in two parts. One part contain the static part, such as the field and the other part all dynamic objects, e.g. the robots and the ball.
 
 \subsection*{Plot of the field - \texttt{plot\_env()} }
 All graphical features concerning the playing field are implemented by the function {\fontfamily{pcr}\selectfont plot\_env()}. It is subdivided in two functions, which draw the field and, as a neat add on, the scorecounter seperately. The size of the field and of the goals we took from the RoboCup Nao Rule Book 2011 and are set in the global Struct \texttt{Field}.
@@ -48,7 +49,6 @@ global Field;
 \end{lstlisting}
 \vspace{+10pt}
 
-
 To draw the field we mostly use built-in MATLAB commands such as {\fontfamily{pcr}\selectfont rectangle()} or {\fontfamily{pcr}\selectfont line()}. Only for drawing circles we made the function
 	\[ \textnormal{\texttt{draw\_circle(x,y,r,color,isFilled)}}
 	\]
@@ -62,18 +62,18 @@ where
 	\texttt{= 1} the circle will be plotted filled in \texttt{color}
 \end{description}
 
-Figure \ref{Playing_field} shows the playing field after the execution of {\fontfamily{pcr}\selectfont plot\_env()}
+The playing field after the execution of {\fontfamily{pcr}\selectfont plot\_env()} is displayed in figure \ref{Playing_field}.
 
 \begin{figure}[h]
 	\centering
-    	\includegraphics[width=12cm]{./2_Simulation/playing_field}
-  	\caption{Playing field after initialization.}
+    	\includegraphics[width=14cm]{./2_Simulation/playing_field}
+  	\caption{Playing field with \texttt{plot\_env()}.}
   	\label{Playing_field}
 \end{figure}
 \pagebreak[4]
 
 \subsection*{Plot of the robots and ball - \texttt{plot\_objects(Robot,Ball,style)} }
-For the plot of the robots and ball we made the function
+To plot robots and ball we made the function
 	\[ \textnormal{\texttt{plot\_objects(Robot,Ball,style)}}
 	\]
 where
@@ -90,14 +90,15 @@ where
 		\texttt{'Va'} Sight of view all robots \vspace{0.2cm} \\ 
 		and one of the following character to specify the robot color\\
 		\texttt{'t'} Team specific colors (blue and magenta) \\
+		\texttt{'r','k','b',$\ldots$} other MATLAB colors
 \end{description}
 This different shape styles allows to display different robots, e.g. the real and the filtered robots, in a clear manner. 
-Figure \ref{Playing_field_robots} shows the playing filed after initialization of \texttt{plot\_env()} and the robots and the ball with the shape parameters \texttt{'0-t'}. Where \texttt{Robot} and \texttt{Ball} are the standard initialization structs as described in Section \ref{Robotsection} and \ref{Ballsection}.
+Figure \ref{Playing_field_robots} shows the playing filed after initialization and execution of \texttt{plot\_env()} and \texttt{plot\_objects(Robot,Ball,'@-t')}. Where \texttt{Robot} and \texttt{Ball} are the standard initialization structs as described in Section \ref{Robotsection} and \ref{Ballsection}.
 
 \begin{figure}[h]
 	\centering
-    	\includegraphics[width=12cm]{./2_Simulation/playing_field_robots}
-  	\caption{Playing field after initialization and \texttt{plot\_objects(Robot,Ball,'0-t')}.}
+    	\includegraphics[width=14cm]{./2_Simulation/playing_field_robots}
+  	\caption{Playing field after initialization and \texttt{plot\_objects(Robot,Ball,'@-t')}.}
   	\label{Playing_field_robots}
 \end{figure}
 
@@ -105,10 +106,11 @@ Figure \ref{Playing_field_robots} shows the playing filed after initialization o
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \section{Robots} \label{Robotsection}
 
-Maybe the most important part of the simulation is the adequate depiction and behaviour of all eight robots. The latter task is split in three components: In a first step the robots are initialized, after that, their new positions on the field, according to their motion equations, are computed and in the end we are adding measurement noise for our filtering task.
+Maybe the most important part of the simulation is the adequate depiction and behaviour of all eight robots. The task can be separated in two components: After the robots are initialized, their new positions on the field, according to their motion equations, are computed.
+%The latter task is split in three components: I and in the end we are adding measurement noise for our filtering task.
 
 \subsection*{Initialization}
- The initialization of the robots is quite simple. The function {\fontfamily{pcr}\selectfont robot\_standard\_init()} creates a struct of eight structs with the essential informations for every robot, i.e. its horizontal and vertical position, its direction and its team affiliation. Following tabular depicts the structure of such a struct.
+The initialization of the robots is quite simple. The function {\fontfamily{pcr}\selectfont robot\_standard\_init()} creates a struct of eight structs with the essential informations for every robot, i.e. its horizontal and vertical position, its direction and its team affiliation. Following tabular depicts the structure of such a struct.
 
 \begin{center}
 	\begin{tabular}{| l | l | c | l |} \hline
@@ -120,8 +122,15 @@ Maybe the most important part of the simulation is the adequate depiction and be
 	\end{tabular}
 \end{center}
  
-Furthermore the function defines some robot specific parameters in the global struct \texttt{RobotParam}. This are characteristics such as the robot's radius or its maximum possible angular change for one time step. In a latter stage of development we dropped the simplification of a global eye and assumed that a location of a robot's position is only possible if it is in the sight of view of at least one other robot. So additionally parameters of sight distance as well as its angle of sight are set in the initialization function.
- %evtl. MATLAB-code von den variablen
+Furthermore the initialization function defines some robot specific parameters in the global struct \texttt{RobotParam}. This are characteristics such as the robot's radius or its maximum possible angular change for one time step. In a latter stage of development we dropped the simplification of a global eye and assumed that a location of a robot's position is only possible if it is in the sight of view of at least one other robot. So additionally parameters of sight distance as well as its angle of sight are set in the initialization function. The MATLAB code below shows our assumptions for these parameters
+\begin{lstlisting}
+    global RobotParam dt;
+    RobotParam.radius = 0.15; %[m]
+    RobotParam.velocity = 0.1 * dt; %[m/step]
+    RobotParam.changeOfDir = 0.1 * 2*pi * dt; %[rad/step]
+    RobotParam.sightDistance = 2.5; %[m]
+    RobotParam.sightAngle = pi./6; %[rad]
+\end{lstlisting}
   
 \subsection*{Dynamics of the robots - Mathematical model}
 %Once initialized we use the functions {\fontfamily{pcr}\selectfont dummy\_step(Robot).m} and {\fontfamily{pcr}\selectfont robot\_step(Robot,Ball).m} respectively to compute the attributes of all robots for every timestep. The key issue of both functions however is the recalculation of the position, i.e. the motion of the robots
@@ -136,21 +145,23 @@ with the boundary conditions, that the robots have to be on the playing field an
 	\]
 	\[ \sqrt{(x_{i_{k}}-x_{j_{k}})^2 + (y_{i_{k}}-y_{j_{k}})^2} =: d_{ij} \geq 2r_r \quad \forall k, \forall i, \forall j\neq i
 	\]
-Where 
+Where $(x_i,y_i)$ is the position and $\varphi_i$ the direction of robot $i$ and $r_r$ the radius of a robot. The velocity $v_i$ and the change of direction $d\omega_i$ are inputs to the system.
 
 %\lstinputlisting[firstline=20, lastline=27]{../Simulation/Merge/dummy_step.m}
 
 %Later the non-linearity of these equations will make it necessary that we use an extended Kalman filter instead of a simple linear one. The addition of process noise and the collision handling of robots also happen in these functions. The process noise we use for our model is always white Gaussian noise with seperate covariances for the positions and the directions. 
-\subparagraph{Random Collision Roboter} To satisfy the boundary conditions we first used robots which collide into the sidelines and into each other. When they hit each other they swap direction 
+\subparagraph{Random Collision Roboter} To satisfy the boundary conditions we first used robots which rebounce when they collide into the sidelines and into each other. If they hit each other they swap direction 
 %. In {\fontfamily{pcr}\selectfont dummy\_step(Robot).m} we used a very simple model, assuming that if two robots collide, their directions swap such that they do not run into each other
 %\lstinputlisting[firstline=52, lastline=54]{../Simulation/Merge/dummy_step.m}
 and if they touch a sideline, they reflect after the law of reflection 
 \[ \Theta_{\textnormal{in}} = \Theta_{\textnormal{out}}.
 \]
-Those dynamics are implemented in \texttt{robot\_rand\_step(Robot)} with a random inputs $d\omega_{i_k}$ and constant velocities $v_{i_k} = v$. But this solution was not optimal for two reasons: First we had the problem that there was a bug which made it possible that two robots became wedged together and their further behaviour was messed up after they had contact. The second problem was, that our Kalman filter didn't work properly since the swapping of directions is a rapid change in states, which cannot be handled by our Kalman filter. 
+Those dynamics are implemented in \texttt{robot\_rand\_step(Robot)} with a random inputs $d\omega_{i_k} \sim \mathcal{N}(0,0.2\pi \cdot dt)$ and constant velocities $v_{i_k} = v = 0.1 m/s$.\\
+
+But this solution was not optimal for two reasons: First we had the problem that there was a bug which made it possible that two robots became wedged together and their further behaviour was messed up after they had contact. The second problem was, that our Kalman filter didn't work properly since the swapping of directions is a rapid change in states, which cannot be handled by a normal Kalman filter. 
 
 \subparagraph{Random Potential Roboter} 
-The function {\fontfamily{pcr}\selectfont robot\_randpot\_step(Robot,Ball)} eliminates both issues because it doesn't use collision detection but collision avoidance. If the distance of two robots falls below a given radius, we assign a potential to both robots. The effect is now similar to this of a positive charge in an electrostatic field: The closer two robots are, the bigger is their mutual repulsion. The force in a electric field is given by
+The function {\fontfamily{pcr}\selectfont robot\_randpot\_step(Robot,Ball)} eliminates both issues because it doesn't use collision detection but collision avoidance. If the distance of two robots falls below a given radius $r_a$, we assign a potential to both robots. The effect is now similar to this of a positive charge in an electrostatic field: The closer two robots are, the bigger is their mutual repulsion. The force in a electric field is given by
 	\[ F = m\ddot{x} = C \frac{1}{x^2}.
 	\]
 Integration results in
@@ -159,7 +170,7 @@ Or the same described in vector notation:
 	\[	\vec{F} = C \frac{\vec{r}}{|\vec{r}|^3} \qquad \Rightarrow \qquad \dot{\vec{r}} = \frac{d \vec{r}}{dt} = %
 			\tilde{C} \frac{\vec{r}}{|\vec{r}|^2} %
 	\]
-As you can in the code below, we use the same \(r^{-2}\)-relation for the repulsing force as it is known from the analysis of electrostatic fields
+As you can see in the code below, we use the same \(r^{-2}\)-relation for the repulsing force as it is known from the analysis of electrostatic fields
 \begin{lstlisting}
         for j=1:8
            % Distance between robot i and j
@@ -173,12 +184,17 @@ As you can in the code below, we use the same \(r^{-2}\)-relation for the repuls
         end
 \end{lstlisting}
 
-A related potential is also assigned to the sideline, if a robot is under a given distance to it. With those potentials, the change of directions is now continuous, which makes tracking possible for our Kalman filter. Additionally to the collision avoidance the robots are attracted to the ball if it's near them, like it had a negative charge. This leads to some more ball contacts than before.
+A related potential is also assigned to the sideline, if a robot is under a given distance $r_f$ to it. With those potentials, the change of directions is now continuous, which makes tracking possible for our Kalman filter. Additionally to the collision avoidance the robots are attracted to the ball if it's near them, like it had a negative charge. This leads to some more ball contacts than before.
+
+\textcolor{red}{evtl. Bild Potential}
+
+
+%In the simulation we used a radius 
 
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \section{Ball} \label{Ballsection}
 
-The treatment of the ball is quite similar to that of the robots. The ball object is also represented by a struct containing its horizontal and vertical position, its direction and other than the robot the velocity, too.
+The treatment of the ball is quite similar to that of the robots. The ball object is also represented by a struct containing its horizontal and vertical position, its direction and different than the robot also the velocity.
 \begin{center}
 	\begin{tabular}{| l |} \hline
 		Ball \\ \hline
@@ -193,9 +209,9 @@ The treatment of the ball is quite similar to that of the robots. The ball objec
 \subsection*{Dynamics of the ball - Mathematical model}
 %The function {\fontfamily{pcr}\selectfont ball\_step(Ball,Robot).m} does, like the equivalent function for the robots, the computations of the ball's next position and direction on the field. These parameters however do not only depend on the ball's dynamics but also whether it collides with one of the robots. The following MATLAB code shows the algorithm for this collision detection
 
-\lstinputlisting[firstline=40, lastline=51]{../Simulation/Merge/ball_step.m}
-The dynamics of the ball are quite analog to those of the robots. Only the velocity is no longer an input but a state.
-The the non-linear motion equation for the ball are
+%\lstinputlisting[firstline=40, lastline=51]{../Simulation/Merge/ball_step.m}
+The dynamics of the ball are fairly analog to those of the robots. Only that the velocity is no longer an input but now a state of the system and there is some friction between the ball and ground. 
+The the non-linear motion equation for the ball are therefore
 \begin{eqnarray*}
 	x_{{k+1}} &=& x_{k} + v_{k} \cos(\varphi_{k}) \\
 	y_{{k+1}} &=& y_{k} + v_{k} \sin(\varphi_{k}) \\
@@ -207,8 +223,7 @@ With the boundary conditions, that the boll has to stay on the playing field and
 	\]
 	\[ \sqrt{(x_{k}-x_{_i{k}})^2 + (y_{k}-y_{j_{k}})^2} =: d_{bi} \geq r_r + r_b \quad \forall k, \forall i
 	\]
-To satisfy these conditions, we used again the law of reflection when the ball hits one of the sideline. and when collide with
-In our simple model we assume that if the ball collides with one of the robots, it regains its initial velocity and bounces away, perpendicular to the robot's position. Since the ball too is a subject of measurement, we also needed a measurement function for this object. {\fontfamily{pcr}\selectfont ball\_measure(Ball).m} adds measurement noise or, as the case may be, drops the measurement completely. Again, a measurement is only available if it is in the sight of view of at least one blue robot that knows its own position. For more than one measurement the mean value of all measurements is taken. After all computations are done, the ball is drawn on the field, together with the robots, with the function {\fontfamily{pcr}\selectfont plot\_robot(Robot,Ball,style).m}. All features of this function like coloration and drawing of different shapes are also available for the ball.
+To satisfy these conditions, we used for the sidelines again the law of reflection.  And if the ball collides with one of the robots, it regains its initial velocity and bounces away, perpendicular to the robot's position. Like the robot had kicked the ball.
 
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \section{Noise}
@@ -217,12 +232,16 @@ Up to this point we computed the behaviour of an ideal robot. Since our goal is 
 After this computational part, the robots are added to the graphical environment by using the function
 {\fontfamily{pcr}\selectfont plot\_robot(Robot,Ball,style).m}. It provides several features such as the coloration, the shape and the label of the robots on the field. A sample output on the graphical interface after several timesteps is shown in figure \ref{Plot_robots} below.
 
-\begin{figure}[htbp]
-	\centering
-    	\includegraphics[width=12cm]{./2_Simulation/plot_robots}
-  	\caption{Capture of a regular simulation frame.}
-  	\label{Plot_robots}
-\end{figure}
+%\begin{figure}[htbp]
+%	\centering
+%    	\includegraphics[width=12cm]{./2_Simulation/plot_robots}
+%  	\caption{Capture of a regular simulation frame.}
+%  	\label{Plot_robots}
+%\end{figure}
 
 Note that measurements (white crosses) are not available for most robots (blue and magenta circles).
+
+
+
+Since the ball too is a subject of measurement, we also needed a measurement function for this object. {\fontfamily{pcr}\selectfont ball\_measure(Ball).m} adds measurement noise or, as the case may be, drops the measurement completely. Again, a measurement is only available if it is in the sight of view of at least one blue robot that knows its own position. For more than one measurement the mean value of all measurements is taken. After all computations are done, the ball is drawn on the field, together with the robots, with the function {\fontfamily{pcr}\selectfont plot\_robot(Robot,Ball,style).m}. All features of this function like coloration and drawing of different shapes are also available for the ball.
 

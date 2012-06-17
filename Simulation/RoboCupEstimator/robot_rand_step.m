@@ -68,7 +68,7 @@ function [RobotStep dOmega velocity] = robot_rand_step(Robot)
         end
         
         % Boundaries collision, floor and ceil
-        if ( abs(RobotStep(i).x) > Field.width - RobotParam.radius )
+        if ( abs(RobotStep(i).x) > Field.width./2 - RobotParam.radius )
             RobotStep(i).dir = pi - Robot(i).dir;
             RobotStep(i).x = velocity(i) * cos(RobotStep(i).dir) + ...
                 Robot(i).x;
@@ -77,7 +77,7 @@ function [RobotStep dOmega velocity] = robot_rand_step(Robot)
         end
         
         % Boundaries collision, sides
-        if ( abs(RobotStep(i).y) > Field.height - RobotParam.radius )
+        if ( abs(RobotStep(i).y) > Field.height./2 - RobotParam.radius )
             RobotStep(i).dir = -Robot(i).dir;
             RobotStep(i).x = velocity(i) * cos(RobotStep(i).dir) + ...
                 Robot(i).x;
