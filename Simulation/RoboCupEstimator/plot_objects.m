@@ -38,11 +38,11 @@ function plot_objects(Robot, Ball, style)
     
 %----------- Reading flag  -----------%
     
-    fn = fieldnames(c);
+    fn = fieldnames(C);
     for l = style
-        hit = strfind(c.letters, l);
+        hit = strfind(C.letters, l);
         if (hit)
-            color = c.(fn{hit});
+            color = C.(fn{hit});
         end
     end
 

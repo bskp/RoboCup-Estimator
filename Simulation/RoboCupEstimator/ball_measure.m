@@ -1,4 +1,4 @@
-function Ball_m = ball_measure(Robot, Ball)
+function BallMeasure = ball_measure(Robot, Ball)
 %BALL_MEASURE Addition of measurement noise to the ball.
 %
 %   BALL_M = BALL_MEASURE(ROBOT,BALL) determines whether BALL is
@@ -11,16 +11,16 @@ function Ball_m = ball_measure(Robot, Ball)
     global Noise; % Let's just assume the same noise values as for robots
     global RobotParam;
     
-    Ball_m.x = NaN;
-    Ball_m.y = NaN;
-    Ball_m.dir = NaN;
-    Ball_m.velocity = NaN;
+    BallMeasure.x = NaN;
+    BallMeasure.y = NaN;
+    BallMeasure.dir = NaN;
+    BallMeasure.velocity = NaN;
     
-    num_measurements = 0;   % Number of available measurements
-    at_least_one = false;   % Flag to determine whether at least one robot
+    numMeasurements = 0;   % Number of available measurements
+    atLeastOne = false;   % Flag to determine whether at least one robot
                             % gets a measurement.
-    pos_x = zeros(1,4)*NaN;
-    pos_y = zeros(1,4)*NaN;
+    posX = zeros(1,4)*NaN;
+    posY = zeros(1,4)*NaN;
     dir = zeros(1,4)*NaN;
     velocity = zeros(1,4)*NaN;
     sigma = zeros(1,4)*NaN;
@@ -32,7 +32,8 @@ for i=1:4           % Only the first 4 robots (the blue ones) get signals.
     if (position_is_valid(Robot(i)))
     end
 
-    if (sqrt((Robot(i).x-Ball.x).^2 + (Robot(i).y-Ball.y).^2) <= RobotParam.sightDistance)
+    if (sqrt((Robot(i).x-Ball.x).^2 + (Robot(i).y-Ball.y).^2) <= ...
+            RobotParam.sightDistance)
         dirBall = atan((Ball.y-Robot(i).y)./(Ball.x-Robot(i).x));
 
         % Compute absolute angle in relation to the x-axis.
@@ -50,18 +51,18 @@ for i=1:4           % Only the first 4 robots (the blue ones) get signals.
          % of the measurement, depending on the circumstances under which
          % the measurement was gained.
          if(relAngle < RobotParam.sightAngle) 
-            at_least_one = true;
-            num_measurements = num_measurements + 1;
+            atLeastOne = true;
+            numMeasurements = numMeasurements + 1;
             
             if (position_is_valid(Robot(i)))
-                pos_x(i) = Ball.x + randn*Noise.Measure.pos*Noise.Measure.sigma2;
-                pos_y(i) = Ball.y + randn*Noise.Measure.pos*Noise.Measure.sigma2;
+                posX(i) = Ball.x + randn*Noise.Measure.pos*Noise.Measure.sigma2;
+                posY(i) = Ball.y + randn*Noise.Measure.pos*Noise.Measure.sigma2;
                 dir(i) = Ball.dir + randn*Noise.Measure.dir*Noise.Measure.sigma2;
                 %velocity(i) = velocity(i) + Ball.velocity + randn*Noise.Measure.pos*Noise.Measure.sigma2;
                 sigma(i) = Noise.Measure.pos*Noise.Measure.sigma2;
             else
-                pos_x(i) = Ball.x + randn*Noise.Measure.pos*Noise.Measure.sigma3;
-                pos_y(i) = Ball.y + randn*Noise.Measure.pos*Noise.Measure.sigma3;
+                posX(i) = Ball.x + randn*Noise.Measure.pos*Noise.Measure.sigma3;
+                posY(i) = Ball.y + randn*Noise.Measure.pos*Noise.Measure.sigma3;
                 dir(i) = Ball.dir + randn*Noise.Measure.dir*Noise.Measure.sigma3;
                 %velocity(i) = velocity(i) + Ball.velocity + randn*Noise.Measure.pos*Noise.Measure.sigma3;
                 sigma(i) = Noise.Measure.pos*Noise.Measure.sigma3;
@@ -74,25 +75,26 @@ end
 
 
 % Take the weighted mean value of all measurements
-    if(at_least_one)
+    if(atLeastOne)
         k=0;
-        Ball_m.x = 0;
-        Ball_m.y = 0;
-        Ball_m.dir = 0;
-        Ball_m.velocity = 0;
+        BallMeasure.x = 0;
+        BallMeasure.y = 0;
+        BallMeasure.dir = 0;
+        BallMeasure.velocity = 0;
         for i=1:4
-            if(~isnan(pos_x(i)))
-                Ball_m.x = Ball_m.x + pos_x(i)./(sigma(i).^2);
-                Ball_m.y = Ball_m.y + pos_y(i)./(sigma(i).^2);
-                Ball_m.dir = Ball_m.dir + dir(i)./(sigma(i).^2);
-                Ball_m.velocity = Ball_m.velocity + velocity(i)./(sigma(i).^2);
+            if(~isnan(posX(i)))
+                BallMeasure.x = BallMeasure.x + posX(i)./(sigma(i).^2);
+                BallMeasure.y = BallMeasure.y + posY(i)./(sigma(i).^2);
+                BallMeasure.dir = BallMeasure.dir + dir(i)./(sigma(i).^2);
+                BallMeasure.velocity = BallMeasure.velocity + ...
+                    velocity(i)./(sigma(i).^2);
                 k = k + 1./(sigma(i).^2);
             end
         end
-        Ball_m.x = Ball_m.x./k;
-        Ball_m.y = Ball_m.y./k;
-        Ball_m.dir = Ball_m.dir./k;
-        Ball_m.velocity = Ball_m.velocity./k;
+        BallMeasure.x = BallMeasure.x./k;
+        BallMeasure.y = BallMeasure.y./k;
+        BallMeasure.dir = BallMeasure.dir./k;
+        BallMeasure.velocity = BallMeasure.velocity./k;
     end
 
 end

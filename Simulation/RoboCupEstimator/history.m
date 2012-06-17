@@ -1,4 +1,4 @@
-function [m_values e_values] = history(m_old,e_old, Robot_m, Robot_e)
+function [mValues eValues] = history(mOld, eOld, RobotMeasure, RobotEstimate)
 %HISTORY History of former measurements and estimations of the robots.
 %
 %   [M_VALUES,E_VALUES] = HISTORY(M_OLD,E_OLD,ROBOT_M,ROBOT_E) records the
@@ -11,32 +11,35 @@ function [m_values e_values] = history(m_old,e_old, Robot_m, Robot_e)
 
 %----------- Compute current history size  -----------%
 
-    s = size(m_old);
-    num_of_measurements = s(2);
+    s = size(mOld);
+    numOfMeasurements = s(2);
     BUFFER_SIZE = 30;   % Length of history
 
 
 %----------- Updating the history for every robot -----------%
 
 % If history has not yet BUFFER_SIZE elements
-    if(num_of_measurements < BUFFER_SIZE)
-        m_values = zeros(3,num_of_measurements+1,8);
-        e_values = zeros(3,num_of_measurements+1,8);
+    if(numOfMeasurements < BUFFER_SIZE)
+        mValues = zeros(3, numOfMeasurements+1, 8);
+        eValues = zeros(3, numOfMeasurements+1, 8);
     
         for i = 1:8
-            m_values(:,:,i) = [[Robot_m(i).x; Robot_m(i).y; Robot_m(i).dir], m_old(:,:,i)];
-            e_values(:,:,i) = [[Robot_e(i).x; Robot_e(i).y; Robot_e(i).dir], e_old(:,:,i)];
+            mValues(:,:,i) = [[RobotMeasure(i).x; RobotMeasure(i).y; ...
+                RobotMeasure(i).dir], mOld(:,:,i)];
+            eValues(:,:,i) = [[RobotEstimate(i).x; RobotEstimate(i).y; ...
+                RobotEstimate(i).dir], eOld(:,:,i)];
         end 
     
 % If history has already BUFFER_SIZE elements
     else
-        m_values = zeros(3,BUFFER_SIZE,8);
-        e_values = zeros(3,BUFFER_SIZE,8);
+        mValues = zeros(3, BUFFER_SIZE, 8);
+        eValues = zeros(3, BUFFER_SIZE, 8);
     
         for i = 1:8
-            m_values(:,:,i) = [[Robot_m(i).x; Robot_m(i).y; Robot_m(i).dir], m_old(:,1:end-1,i)];
-            e_values(:,:,i) = [[Robot_e(i).x; Robot_e(i).y; Robot_e(i).dir], e_old(:,1:end-1,i)];
+            mValues(:,:,i) = [[RobotMeasure(i).x; RobotMeasure(i).y; ...
+                RobotMeasure(i).dir], mOld(:,1:end-1,i)];
+            eValues(:,:,i) = [[RobotEstimate(i).x; RobotEstimate(i).y; ...
+                RobotEstimate(i).dir], eOld(:,1:end-1,i)];
         end 
     end
 end
-

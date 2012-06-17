@@ -1,4 +1,4 @@
-function [Ball_e P_e] = ball_ekf(Ball_oe, Ball_m, P_oe)
+function [BallEstimate Pe] = ball_ekf(BallOe, BallMeasure, Poe)
 %BALL_EKF Applies Extended Kalman filtering to the ball's measurements.
 %
 %   [BALL_E,P_E] = BALL_EKF(BALL_OE,BALL_M,P_OE) is an extended Kalman
@@ -20,11 +20,11 @@ function [Ball_e P_e] = ball_ekf(Ball_oe, Ball_m, P_oe)
     
 %--------- Handle a discrete event (like a boundary collision)  ---------%
     
-    x_oe = [Ball_oe.x ; Ball_oe.y ; Ball_oe.dir];
-    x_m = [Ball_m.x ; Ball_m.y ; Ball_m.dir;];
+    xOe = [BallOe.x ; BallOe.y ; BallOe.dir];
+    xMeasure = [BallMeasure.x ; BallMeasure.y ; BallMeasure.dir;];
 
-    if(norm(x_oe(1:2)-x_m(1:2))>0.5 || abs(x_oe(3)-x_m(3))>pi/2)
-        P_oe = eye(4);
+    if(norm(xOe(1:2) - xMeasure(1:2))>0.5 || abs(xOe(3) - xMeasure(3))>pi/2)
+        Poe = eye(4);
     end
     
     
@@ -35,8 +35,8 @@ function [Ball_e P_e] = ball_ekf(Ball_oe, Ball_m, P_oe)
     H = [1,0,0,0;0,1,0,0;0,0,1,0];  
     x_ = [0;0;0;0];      
 
-    A = [1 0 -BallParam.velocity*Ball_oe.velocity*sin(x_oe(3)) BallParam.velocity*cos(x_oe(3));
-      0 1 BallParam.velocity*Ball_oe.velocity*cos(x_oe(3)) BallParam.velocity*sin(x_oe(3));
+    A = [1 0 -BallParam.velocity*BallOe.velocity*sin(xOe(3)) BallParam.velocity*cos(xOe(3));
+      0 1 BallParam.velocity*BallOe.velocity*cos(xOe(3)) BallParam.velocity*sin(xOe(3));
       0 0 1 0 ;
       0 0 0 BallParam.friction];
 
@@ -44,15 +44,15 @@ function [Ball_e P_e] = ball_ekf(Ball_oe, Ball_m, P_oe)
 %--------- Kalman cycle  ---------%    
     
     % Time update (predict)
-    x_(1) = x_oe(1) + BallParam.velocity*Ball_oe.velocity*cos(x_oe(3));
-    x_(2) = x_oe(2) + BallParam.velocity*Ball_oe.velocity*sin(x_oe(3));
-    x_(3) = Ball_oe.dir;
-    x_(4) = Ball_oe.velocity*BallParam.friction;
+    x_(1) = xOe(1) + BallParam.velocity*BallOe.velocity*cos(xOe(3));
+    x_(2) = xOe(2) + BallParam.velocity*BallOe.velocity*sin(xOe(3));
+    x_(3) = BallOe.dir;
+    x_(4) = BallOe.velocity*BallParam.friction;
 
-    P_ = A*P_oe*A'+Q;
+    P_ = A*Poe*A'+Q;
 
     % Measurement update (correct)
-    z = [Ball_m.x; Ball_m.y; Ball_m.dir];
+    z = [BallMeasure.x; BallMeasure.y; BallMeasure.dir];
     %z = [ Ball_m.x;
     %      Ball_m.y;
     %      atan( (Ball_m.y-Ball_oe.y) / ( Ball_m.x-Ball_oe.x) ); %crappy, I know
@@ -60,19 +60,17 @@ function [Ball_e P_e] = ball_ekf(Ball_oe, Ball_m, P_oe)
     %      Q, R)
     if (isnan(z(1) * z(2)))
         x = x_;      % Measurement drop 
-        P_e = P_;
+        Pe = P_;
     else
         K = P_*H'/(H*P_*H'+R);
         x = x_ + K*(z - H*x_);
-        P_e = (eye(4) - K*H)*P_;
+        Pe = (eye(4) - K*H)*P_;
     end
 
     % Assemble output
 
-    Ball_e.x = x(1);
-    Ball_e.y = x(2);
-    Ball_e.dir = x(3);
-    Ball_e.velocity = x(4);
-
+    BallEstimate.x = x(1);
+    BallEstimate.y = x(2);
+    BallEstimate.dir = x(3);
+    BallEstimate.velocity = x(4);
 end
-

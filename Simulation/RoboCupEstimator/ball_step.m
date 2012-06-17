@@ -26,14 +26,18 @@ function BallStep = ball_step(Ball,Robot)
 
     if abs(BallStep.x) > 3 - BallParam.radius
          BallStep.dir = pi - Ball.dir;
-         BallStep.x = BallParam.velocity * Ball.velocity * cos(BallStep.dir) + Ball.x;
-         BallStep.y = BallParam.velocity * Ball.velocity * sin(BallStep.dir) + Ball.y;
+         BallStep.x = BallParam.velocity * Ball.velocity * ...
+             cos(BallStep.dir) + Ball.x;
+         BallStep.y = BallParam.velocity * Ball.velocity * ...
+             sin(BallStep.dir) + Ball.y;
          scorecounter;
     end
     if abs(BallStep.y) > 2 - BallParam.radius
          BallStep.dir = -Ball.dir;
-         BallStep.x = BallParam.velocity * Ball.velocity * cos(BallStep.dir) + Ball.x;
-         BallStep.y = BallParam.velocity * Ball.velocity * sin(BallStep.dir) + Ball.y;
+         BallStep.x = BallParam.velocity * Ball.velocity * ...
+             cos(BallStep.dir) + Ball.x;
+         BallStep.y = BallParam.velocity * Ball.velocity * ...
+             sin(BallStep.dir) + Ball.y;
     end
     
     
@@ -45,8 +49,10 @@ function BallStep = ball_step(Ball,Robot)
         if (dX.^2 + dY.^2 < (RobotParam.radius + BallParam.radius).^2)
             BallStep.dir = angle(dX + dY*j);
             BallStep.velocity = 1;
-            BallStep.x = BallParam.velocity * Ball.velocity * cos(BallStep.dir) + Ball.x;
-            BallStep.y = BallParam.velocity * Ball.velocity * sin(BallStep.dir) + Ball.y;
+            BallStep.x = BallParam.velocity * Ball.velocity * ...
+                cos(BallStep.dir) + Ball.x;
+            BallStep.y = BallParam.velocity * Ball.velocity * ...
+                sin(BallStep.dir) + Ball.y;
         end
     end
 end

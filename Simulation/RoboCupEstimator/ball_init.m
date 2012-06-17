@@ -20,4 +20,3 @@ function Ball = ball_init()
     Ball =  struct('x',0,'y',0,'dir',pi./2,'velocity',1);
 
 end
-

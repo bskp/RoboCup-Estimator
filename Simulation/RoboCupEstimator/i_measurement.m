@@ -1,4 +1,4 @@
-function [prob] = i_measurement(robot_m,m_values,e_values)
+function [prob] = i_measurement(RobotMeasure,mValues,eValues)
 %I_MEASUREMENT Dynamic adaption of covariance matrix.
 %
 %   [PROB] = I_MEASUREMENT(ROBOT_M,M_VALUES,E_VALUES) uses the former
@@ -12,9 +12,9 @@ function [prob] = i_measurement(robot_m,m_values,e_values)
 
 %----------- Initialization of angle vector and history size  -----------%
 
-    prob_x = zeros(1,8);
-    prob_y = zeros(1,8);
-    prob_dir = zeros(1,8);
+    probX = zeros(1,8);
+    probY = zeros(1,8);
+    probDir = zeros(1,8);
 
 
 %----------- Initialization of history for every robot  -----------%
@@ -26,14 +26,14 @@ function [prob] = i_measurement(robot_m,m_values,e_values)
         % Probabilities that the absolute differences of position and 
         % direction between estimates and measurements is bigger than the
         % actual differences.
-        x_abs = abs(e_values(1,1,i)-m_values(1,1,i));
-        y_abs = abs(e_values(2,1,i)-m_values(2,1,i));
-        dir_abs = abs(e_values(3,1,i)-m_values(3,1,i));
-        prob_x(i) = erfc(x_abs/(sqrt(robot_m(i).sigma)));
-        prob_y(i) = erfc(y_abs/(sqrt(robot_m(i).sigma)));
-        prob_dir(i) = erfc(dir_abs/(sqrt(robot_m(i).sigma*2*pi)));
+        xAbs = abs(eValues(1,1,i) - mValues(1,1,i));
+        yAbs = abs(eValues(2,1,i) - mValues(2,1,i));
+        dirAbs = abs(eValues(3,1,i) - mValues(3,1,i));
+        probX(i) = erfc(xAbs/(sqrt(RobotMeasure(i).sigma)));
+        probY(i) = erfc(yAbs/(sqrt(RobotMeasure(i).sigma)));
+        probDir(i) = erfc(dirAbs/(sqrt(RobotMeasure(i).sigma*2*pi)));
         
-        prob = [prob_x; prob_y; prob_dir]; 
+        prob = [probX; probY; probDir]; 
     end    
 end
 

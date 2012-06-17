@@ -1,4 +1,4 @@
-function [d_omega_step,v_step] = input_approximation(robot_m,m_values,v)
+function [dOmegaStep,vStep] = input_approximation(RobotMeasure,mValues,v)
 %INPUT_APPROXIMATION Approximates the input of the pink robots.
 %
 %   [D_OMEGA_STEP,V_STEP] = INPUT_APPROXIMATION(ROBOT_M,M_VALUES,V) takes
@@ -15,24 +15,26 @@ function [d_omega_step,v_step] = input_approximation(robot_m,m_values,v)
     
 %--------- Init of performance variables and vectors  ---------%
 
-    s = size(m_values);
-    window_size = 5;            % Amount of time steps over which we take
+    s = size(mValues);
+    windowSize = 5;            % Amount of time steps over which we take
                                 % the mean of the velocity.
-    d_omega_step = zeros(4,1);
-    v_step = zeros(4,1);
+    dOmegaStep = zeros(4,1);
+    vStep = zeros(4,1);
     
     
 %--------- Input approximation for pink robots  ---------%
 
     for i=5:8
         
-        if(s < 2 | isnan(robot_m(i).x*robot_m(i).y*robot_m(i).dir) | isnan(m_values(1,1,i)*m_values(2,1,i)*m_values(3,1,i)))
-            d_omega_step(i-4) = 0;
-            v_step(i-4) = RobotParam.velocity;
+        if(s < 2 | isnan(RobotMeasure(i).x*RobotMeasure(i).y*RobotMeasure(i).dir) ...
+                | isnan(mValues(1,1,i)*mValues(2,1,i)*mValues(3,1,i)))
+            dOmegaStep(i-4) = 0;
+            vStep(i-4) = RobotParam.velocity;
         else
-            d_omega_step(i-4) = robot_m(i).dir - m_values(3,1,i);
-            v_new = dt*sqrt((robot_m(i).x-m_values(1,1,i)).^2+(robot_m(i).y-m_values(2,1,i)).^2);
-            v_step(i-4) = (v(i-4)*(window_size-1)+v_new)/window_size;
+            dOmegaStep(i-4) = RobotMeasure(i).dir - mValues(3,1,i);
+            vNew = dt*sqrt((RobotMeasure(i).x - mValues(1,1,i)).^2 + ...
+                (RobotMeasure(i).y - mValues(2,1,i)).^2);
+            vStep(i-4) = (v(i-4)*(windowSize-1)+vNew)/windowSize;
         end
         
     end
