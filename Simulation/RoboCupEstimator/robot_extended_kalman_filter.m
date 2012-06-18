@@ -70,6 +70,7 @@ function [robotStep Pstep vPinkStep] = ...
        if(i>4)
            v(i) = vPinkStep(i-4);
            dOmega(i) = dOmegaPink(i-4);
+           % applying estimated control values
        end
 
        % Time update (predict)   
