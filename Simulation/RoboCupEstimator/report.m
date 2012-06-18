@@ -1,9 +1,9 @@
 function report(steps, RobotStep, RobotStepEstimate, BallStep, BallStepEstimate)
 %REPORT Creates a mat-File with data from robots and ball
 %
-%   REPORT(STEPS,ROBOTSTEP,ROBOTSTEP_E,BALLSTEP,BALLSTEP_E) takes the ideal
-%   and the estimated values for the robots and the ball and saves them in
-%   the file error.mat.
+%   REPORT(STEPS,ROBOTSTEP,ROBOTSTEPESTIMATE,BALLSTEP,BALLSTEPESTIMATE)
+%   takes the ideal and the estimated values for the robots and the ball
+%   and saves them in the file error.mat.
 
     
 %     RobotStep{s} = Robot;

@@ -1,7 +1,7 @@
 function BallMeasure = ball_measure(Robot, Ball)
 %BALL_MEASURE Addition of measurement noise to the ball.
 %
-%   BALL_M = BALL_MEASURE(ROBOT,BALL) determines whether BALL is
+%   BALLMEASURE = BALL_MEASURE(ROBOT,BALL) determines whether BALL is
 %   measurable and adds measurement noise to it. With the struct ROBOT the
 %   function checks, whether there is at least one blue robot which gets 
 %   visual information about the ball. If no robot sees the ball, the 

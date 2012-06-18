@@ -23,9 +23,9 @@ In the RoboCup case all the types can occur. The sensor configuration is complem
 
 We have chosen a situation-based statistical model for our purposes. The covariance of a measurement depends on the situation at which a robot gains the positon and the angle of another robot. Differently said: There are several scenarios under which a robot can get visual information and each scenario is characterized by the quality of a measurement, implying the value of the covariance. In our case, the measurement of the \(i\)-th robot looks as follows
 
-	\[ %\label{measurement}
+	 \begin{eqnarray}\label{measurement}
     			\hat{X}_{i} = X + w_i.
-	\]
+	\end{eqnarray}
 
 \(X\) is the deterministic variable we want to know (i.e. position or direction) and \(w_i\) is white Gaussian noise with a certain covariance \(\sigma_i^2\), depending on the condition under which a robot got the information, so \(w_i \sim \mathcal{N}(0,\sigma_i^2)\). A fusion of \(n\) measurements now looks as follows
 
@@ -74,13 +74,13 @@ A short analysis reveals, that \(\sigma_Y^2 < \sigma_i^2, \; \forall i\); the co
 
 \section{The implementation in MATLAB}
 
-The sensor fusing methods for our simulation are embedded in the measurement functions {\fontfamily{pcr}\selectfont robot\_sight\_of\_view\_measure.m} and {\fontfamily{pcr}\selectfont ball\_measure.m}. There are three scenarios under which visual information is obtained: In the first case a blue robot determines its own position by recognizing a characteristic point on the field. This kind of measurement has the lowest possible covariance in our model. In the other two scenarions, blue robots measure the position and direction of other robots or the ball, either with or without the knowledge of their own position. It is clear that the covariance of the former case must be smaller, so the worst measurement we can get is one we get from a blue robot which is not aware of its own position. All measurements and the covariances which are associated with them, are stored in an array of structs for the blue robots. After the measuring is done, every blue robot presents its records, if there are some, of a certain robot or the ball and adds it to the fused measurement. The code shows how this is done for the robots
+The sensor fusing methods for our simulation are embedded in the measurement functions \texttt{ robot\_sight\_of\_view\_measure.m} and \texttt{ ball\_measure.m}. There are three scenarios under which visual information is obtained: In the first case a blue robot determines its own position by recognizing a characteristic point on the field. This kind of measurement has the lowest possible covariance in our model. In the other two scenarions, blue robots measure the position and direction of other robots or the ball, either with or without the knowledge of their own position. It is clear that the covariance of the former case must be smaller, so the worst measurement we can get is one we get from a blue robot which is not aware of its own position. All measurements and the covariances which are associated with them, are stored in an array of structs for the blue robots. After the measuring is done, every blue robot presents its records, if there are some, of a certain robot or the ball and adds it to the fused measurement. The code shows how this is done for the robots
 
 %\lstinputlisting[firstline=139, lastline=147]{../Simulation/Merge/dummyPro_measure.m}
 \lstinputlisting[firstline=157, lastline=167]{../Simulation/RoboCupEstimator/robot_sight_of_view_measure.m}
 \parskip 20pt
 
-Note that {\fontfamily{pcr}\selectfont sigma2} is the standard deviation and not the covariance. After this step all variables are simply divided by the sum of the inverse values of all covariances as stated in the theory above. 
+Note that \texttt{ sigma2} is the standard deviation and not the covariance. After this step all variables are simply divided by the sum of the inverse values of all covariances as stated in the theory above. 
 
 %\lstinputlisting[firstline=150, lastline=155]{../Simulation/Merge/dummyPro_measure.m}
 \lstinputlisting[firstline=169, lastline=175]{../Simulation/RoboCupEstimator/robot_sight_of_view_measure.m}

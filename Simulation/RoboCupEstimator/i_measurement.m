@@ -1,9 +1,9 @@
 function [prob] = i_measurement(RobotMeasure,mValues,eValues)
 %I_MEASUREMENT Dynamic adaption of covariance matrix.
 %
-%   [PROB] = I_MEASUREMENT(ROBOT_M,M_VALUES,E_VALUES) uses the former
-%   measurements from the robots M_VALUES and the former estimation from
-%   the robots E_VALUES in order to compute correction parameters for the
+%   [PROB] = I_MEASUREMENT(ROBOTMEASURE,MVALUES,EVALUES) uses the former
+%   measurements from the robots MVALUES and the former estimation from
+%   the robots EVALUES in order to compute correction parameters for the
 %   covariance matrix R, used in the extended Kalman filtering algorithm.
 %   We use a probabilistic model.
 

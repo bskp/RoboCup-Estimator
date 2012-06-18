@@ -1,10 +1,10 @@
 function draw_circle(x, y, r, color, isFilled)
 %DRAW_CIRCLE Drawing function for circles.
 %
-%   DRAW_CIRCLE(POS_X,POS_Y,R,COLOR,FILLED) draws objects, like the ball or
-%   the robots, at the position (POS_X,POS_Y) on the playing field. The
-%   objects are represented by circles with radius R and the color given by
-%   the parameter COLOR. The flag FILLED is used to specify whether the 
+%   DRAW_CIRCLE(X,Y,R,COLOR,ISFILLED) draws objects, like the ball or the
+%   robots, at the position (X,Y) on the playing field. The objects are
+%   represented by circles with radius R and the color given by the 
+%   parameter COLOR. The flag ISFILLED is used to specify whether the
 %   circles are filled with a given color or not.
 
 xl = xlim;      % Store limits in order to avoid dynamic alignment of the

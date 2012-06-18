@@ -4,7 +4,7 @@ function [RobotStep dAngle velocity] = robot_randpot_step(Robot, Ball)
 %   [ROBOTSTEP,DANGLE,VELOCITY] = ROBOT_RANDPOT_STEP(ROBOT,BALL) takes all
 %   robot structs as parameters and computes the next position of the
 %   robots on the field, i.e. generates new structs. The function also 
-%   outputs the input values D_ANGLE, the change of the angular direction, 
+%   outputs the input values DANGLE, the change of the angular direction, 
 %   and VELOCITY, the velocity of a robot, for every robot. These inputs 
 %   will be of further use with the extended Kalman filter. The function 
 %   also handles collisions with other robots and the boundaries by using
@@ -22,7 +22,7 @@ function [RobotStep dAngle velocity] = robot_randpot_step(Robot, Ball)
 %----------- Behavior of Robots  -----------%
 
     % Only robots within the radius of ra affect an other robot
-    ra = 5*RobotParam.radius; % [m]
+    ra = 3.5*RobotParam.radius; % [m]
     
     % A robot with a distance less than rf to the border gets repulsed.
     rf = 2*RobotParam.radius; % [m]
@@ -40,8 +40,8 @@ function [RobotStep dAngle velocity] = robot_randpot_step(Robot, Ball)
             
            % Potential function to compute repulsion between robots.
            if ( i~=j && (r <= ra) )
-               dx = dx + C./r.^2*(Robot(i).x-Robot(j).x);
-               dy = dy + C./r.^2*(Robot(i).y-Robot(j).y);
+               dx = dx + C./r.^3*(Robot(i).x-Robot(j).x);
+               dy = dy + C./r.^3*(Robot(i).y-Robot(j).y);
            end
         end
         

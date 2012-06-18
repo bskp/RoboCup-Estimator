@@ -1,7 +1,7 @@
 function BallMeasure = ball_random_measure(Ball)
 %BALL_RANDOM_MEASURE Addition of measurement noise to the ball.
 %
-%   BALLMEASURE = BALL_RANDOM_MEASURE(ROBOT) takes the parameter BALL
+%   BALLMEASURE = BALL_RANDOM_MEASURE(BALL) takes the parameter BALL
 %   and adds measurement noise to the position and the direction of it.
 %   A new ball is created with the noisy measurements.
 %   Furthermore, with a certain probability, the measurement is dropped
