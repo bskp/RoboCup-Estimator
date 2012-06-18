@@ -1,10 +1,10 @@
 function [dOmegaStep,vStep] = input_approximation(RobotMeasure,mValues,v)
 %INPUT_APPROXIMATION Approximates the input of the pink robots.
 %
-%   [D_OMEGA_STEP,V_STEP] = INPUT_APPROXIMATION(ROBOT_M,M_VALUES,V) takes
-%   the current (ROBOT_M) and former (M_VALUES) measurement values of all
-%   robots and computes the estimated input variables for the change of the
-%   angular position, D_OMEGA_STEP and the velocity, V_STEP. This is only
+%   [DOMEGASTEP,VSTEP] = INPUT_APPROXIMATION(ROBOTMEASURE,MVALUES,V) takes
+%   the current (ROBOTMEASURE) and former (MVALUES) measurement values of
+%   all robots and computes the estimated input variables for the change of
+%   the angular position, DOMEGASTEP and the velocity, VSTEP. This is only
 %   necessary for the pink robots, data of all blue robots is not needed.
 %   Furthermore the former computed velocity V is needed, to get the mean
 %   value of the velocity over several time steps. This improves

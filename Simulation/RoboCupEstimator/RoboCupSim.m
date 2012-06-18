@@ -9,7 +9,7 @@
 clear all;
 
 steps = 2000;
-video_on = true;
+video_on = false;
 % hint for videos: if the animation is stopped by ctr-c, you need to 
 % close the video Object manually through:
 % close(vidObj)
@@ -98,12 +98,12 @@ for s = 1:steps
     [BallEstimate Pball] = ball_ekf(BallEstimate, BallMeasure, Pball);
       
     clf
-    h1 = subplot(2,1,1)
+    h1 = subplot(2,1,1);
     plot_env;
     plot_objects(Robot, Ball, '0-tV'); % circles, direction, team color
     plot_objects(RobotMeasure, BallMeasure, '+w'); % crosses, white
     
-    h2 = subplot(2,1,2)
+    h2 = subplot(2,1,2);
     plot_env;
     plot_objects(Robot, Ball, '@-t');    
     plot_objects(RobotEstimate, BallEstimate, '0-w');

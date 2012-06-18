@@ -1,13 +1,13 @@
 function [BallEstimate Pe] = ball_ekf(BallOe, BallMeasure, Poe)
 %BALL_EKF Applies Extended Kalman filtering to the ball's measurements.
 %
-%   [BALL_E,P_E] = BALL_EKF(BALL_OE,BALL_M,P_OE) is an extended Kalman
-%   filter for the ball object on the field. The function takes the
-%   parameters BALL_OE, the estimates of the previous Kalman cycle and
-%   BALL_M, the measurements and computes the new estimates BALL_E. P_EO
-%   and P_E denote the error covariance matrices of the old and the new
-%   estimates respectively. The function also takes rapid changes of the
-%   ball's motion, like boundary collisions, into account.
+%   [BALLESTIMATE,PE] = BALL_EKF(BALLOE,BALLMEASURE,POE) is an extended
+%   Kalman filter for the ball object on the field. The function takes the
+%   parameters BALLOE, the estimates of the previous Kalman cycle and
+%   BALLMEASURE, the measurements and computes the new estimates
+%   BALLESTIMATE. PEO and PE denote the error covariance matrices of the
+%   old and the new estimates respectively. The function also takes rapid
+%   changes of the ball's motion, like boundary collisions, into account.
 %   
 %   Indices:
 %   _m:  measurement
