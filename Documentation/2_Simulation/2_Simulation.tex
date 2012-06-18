@@ -179,8 +179,8 @@ As you can see in the code below, we use the same \(r^{-2}\)-relation for the re
             
            % Potential function to compute repulsion between robots.
            if ( i~=j && (r <= ra) )
-               dx = dx + C./r.^2*(Robot(i).x-Robot(j).x);
-               dy = dy + C./r.^2*(Robot(i).y-Robot(j).y);
+               dx = dx + C./r.^3*(Robot(i).x-Robot(j).x);
+               dy = dy + C./r.^3*(Robot(i).y-Robot(j).y);
            end
         end
 \end{lstlisting}

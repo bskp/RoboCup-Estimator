@@ -22,7 +22,7 @@ function [RobotStep dAngle velocity] = robot_randpot_step(Robot, Ball)
 %----------- Behavior of Robots  -----------%
 
     % Only robots within the radius of ra affect an other robot
-    ra = 5*RobotParam.radius; % [m]
+    ra = 3.5*RobotParam.radius; % [m]
     
     % A robot with a distance less than rf to the border gets repulsed.
     rf = 2*RobotParam.radius; % [m]
@@ -40,8 +40,8 @@ function [RobotStep dAngle velocity] = robot_randpot_step(Robot, Ball)
             
            % Potential function to compute repulsion between robots.
            if ( i~=j && (r <= ra) )
-               dx = dx + C./r.^2*(Robot(i).x-Robot(j).x);
-               dy = dy + C./r.^2*(Robot(i).y-Robot(j).y);
+               dx = dx + C./r.^3*(Robot(i).x-Robot(j).x);
+               dy = dy + C./r.^3*(Robot(i).y-Robot(j).y);
            end
         end
         
@@ -62,8 +62,8 @@ function [RobotStep dAngle velocity] = robot_randpot_step(Robot, Ball)
         % the robots are repulsive.
         r = sqrt((Ball.x-Robot(i).x).^2+(Ball.y-Robot(i).y).^2);
         if ( r <= ra )
-            dx = dx + C*(Ball.x-Robot(i).x)./r.^2*ra.^2/2;
-            dy = dy + C*(Ball.y-Robot(i).y)./r.^2*ra.^2/2;
+            dx = dx + C*(Ball.x-Robot(i).x)./r.^3*ra.^2/2;
+            dy = dy + C*(Ball.y-Robot(i).y)./r.^3*ra.^2/2;
         end
         
         % Nominal directions
