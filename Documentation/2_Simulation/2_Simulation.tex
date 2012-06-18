@@ -135,11 +135,12 @@ Furthermore the initialization function defines some robot specific parameters i
 \subsection*{Dynamics of the robots - Mathematical model}
 %Once initialized we use the functions {\fontfamily{pcr}\selectfont dummy\_step(Robot).m} and {\fontfamily{pcr}\selectfont robot\_step(Robot,Ball).m} respectively to compute the attributes of all robots for every timestep. The key issue of both functions however is the recalculation of the position, i.e. the motion of the robots
 To compute the next step of the robots we used the following simple non-linear discrete time motion equations
-\begin{eqnarray*}
-	x_{i_{k+1}} &=& x_{i_{k}} + v_{i_{k}} \cos(\varphi_{i_{k}}) \\
+\begin{eqnarray}
+	x_{i_{k+1}} &=& x_{i_{k}} + v_{i_{k}} \cos(\varphi_{i_{k}}) 	\label{robot_motion_first} \\
 	y_{i_{k+1}} &=& y_{i_{k}} + v_{i_{k}} \sin(\varphi_{i_{k}}) \\
 	\varphi_{i_{k+1}} &=& \varphi_{i_{k}} + d\omega_{i_k}
-\end{eqnarray*}
+	\label{robot_motion_last}
+\end{eqnarray}
 with the boundary conditions, that the robots have to be on the playing field and can't covering the same disk as another robot:
 	\[ (x_{i_{k}},y_{i_{k}}) \in [-3+r_r,3-r_r]\times[-2+r_r,2-r_r] \quad \forall k, \forall i\in \{1,2,\ldots,8 \}
 	\]
@@ -204,7 +205,13 @@ The treatment of the ball is quite similar to that of the robots. The ball objec
 		.velocity \\ \hline
 	\end{tabular}
 \end{center}
- These parameters are set by executing {\fontfamily{pcr}\selectfont ball\_init()}. This function also defines the ball's radius, its initial velocity and the friction towards the ground in the global struct \texttt{BallParam}
+ These parameters are set by executing {\fontfamily{pcr}\selectfont ball\_init()}. This function also defines the ball's radius, its initial velocity and the friction towards the ground in the global struct \texttt{BallParam}. In our simulation we used following parameters for the ball
+\begin{lstlisting}
+    global BallParam dt;
+    BallParam.radius = 0.05; %[m]
+    BallParam.velocity = 0.4 *dt; %[m/step]
+    BallParam.friction = 0.995;
+\end{lstlisting}
  
 \subsection*{Dynamics of the ball - Mathematical model}
 %The function {\fontfamily{pcr}\selectfont ball\_step(Ball,Robot).m} does, like the equivalent function for the robots, the computations of the ball's next position and direction on the field. These parameters however do not only depend on the ball's dynamics but also whether it collides with one of the robots. The following MATLAB code shows the algorithm for this collision detection
@@ -212,25 +219,41 @@ The treatment of the ball is quite similar to that of the robots. The ball objec
 %\lstinputlisting[firstline=40, lastline=51]{../Simulation/Merge/ball_step.m}
 The dynamics of the ball are fairly analog to those of the robots. Only that the velocity is no longer an input but now a state of the system and there is some friction between the ball and ground. 
 The the non-linear motion equation for the ball are therefore
-\begin{eqnarray*}
-	x_{{k+1}} &=& x_{k} + v_{k} \cos(\varphi_{k}) \\
+\begin{eqnarray}
+	x_{{k+1}} &=& x_{k} + v_{k} \cos(\varphi_{k}) 	\label{ball_motion_first} \\
 	y_{{k+1}} &=& y_{k} + v_{k} \sin(\varphi_{k}) \\
 	\varphi_{{k+1}} &=& \varphi_{k}\\
 	v_{{k+1}} &=& \varrho \cdot v_{k}
-\end{eqnarray*}
-With the boundary conditions, that the boll has to stay on the playing field and can't be under a robot
+	\label{ball_motion_last}
+\end{eqnarray}
+With the boundary conditions, that the ball has to stay on the playing field and can't be under a robot
 	\[ (x_{k},y_{k}) \in [-3+r_b,3-r_b]\times[-2+r_b,2-r_b] \quad \forall k, 
 	\]
 	\[ \sqrt{(x_{k}-x_{_i{k}})^2 + (y_{k}-y_{j_{k}})^2} =: d_{bi} \geq r_r + r_b \quad \forall k, \forall i
 	\]
-To satisfy these conditions, we used for the sidelines again the law of reflection.  And if the ball collides with one of the robots, it regains its initial velocity and bounces away, perpendicular to the robot's position. Like the robot had kicked the ball.
+To satisfy these conditions, we used for the sidelines again the law of reflection.  And if the ball collides with one of the robots, it regains its initial velocity and bounces away, perpendicular to the robot's position. Like the robot had kicked the ball. These dynamics are implemented in the function \texttt{ball\_step(Ball)}.
 
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \section{Noise}
-Up to this point we computed the behaviour of an ideal robot. Since our goal is to filter out the uncertainty of motion of the robot parameters, we artifically have to add some measurement noise which we can filter later on. The functions {\fontfamily{pcr}\selectfont dummy\_measure(Robot).m} and {\fontfamily{pcr}\selectfont robot\_measure(Robot).m} are implemented for that purpose. {\fontfamily{pcr}\selectfont dummy\_measure(Robot).m} simply adds white Gaussian noise to the position and the direction of every robot. Additionally with a certain possibillity there is no measurement at all, so the corresponding parameter is dropped. What we are assuming with this model is, that there is some global eye available which measures the position and direction of every robot with some given resolution. Since this scenario is not realistic in a RoboCup soccer match, because only the robots themselves can gain visual information, we developed the function {\fontfamily{pcr}\selectfont robot\_measure(Robot).m} to solve this problem. According to this philosophy, a measurement of a robot is only available if it stands in front of a characteristic point on the field or if it is within the distance of sight of another robot. Note that a robot only locates other robots if it is aware of its own position and that we get information from only one team, which will be the case for official RoboCup matches. If more than one measurement is available for a robot, the mean of all measurements is computed.\\
+Up to this point we computed the behavior of an ideal robot and ideal ball. Since our goal is to filter out the uncertainty of motion of the robot parameters, we artifically have to add some measurement noise which we can filter later on. %The functions {\fontfamily{pcr}\selectfont dummy\_measure(Robot)} and {\fontfamily{pcr}\selectfont robot\_measure(Robot)} are implemented for that purpose.
+Also we added some process noise to the dynamics of robots and ball, which can't be filtered.
+Hence the motion equations get extended as followed
+\begin{eqnarray*}
+	x_{k+1} &=& {f}({x}_k,{u}_k) + {w}_k \\
+	{z}_{k} &=& {x}_k + v_k
+\end{eqnarray*}
+where $x$ is the state, $z$ the output, $f()$ the nonlinear system of equations in (\ref{robot_motion_first}-\ref{robot_motion_last}) or (\ref{ball_motion_first}-\ref{ball_motion_last}), $w$ the process noise vector and $v$ the measurement noise vector.\\
 
-After this computational part, the robots are added to the graphical environment by using the function
-{\fontfamily{pcr}\selectfont plot\_robot(Robot,Ball,style).m}. It provides several features such as the coloration, the shape and the label of the robots on the field. A sample output on the graphical interface after several timesteps is shown in figure \ref{Plot_robots} below.
+The process noise $w$ we added in the specific step functions for robots and ball as white Gaussian noise.
+The measurement noise is white Gaussian, too. But additionally we made two different implementations, which determine if there is a measurement at all or the corresponding parameters are just dropped.
+
+\subparagraph{Random measurement}
+The function {\fontfamily{pcr}\selectfont robot\_random\_measure(Robot)} simply adds white Gaussian noise to the position and the direction of every robot. Additionally with a certain possibility there is no measurement at all.  \texttt{ball\_random\_measure(ball)} does the same for the ball. What we are assuming with this model is, that there is some global eye available which measures the position and direction of every robot with some given resolution. But this scenario is not realistic in a RoboCup soccer match, because only the robots themselves can gain visual information.
+
+\subparagraph{Sight of view measurement} The functions \texttt{robot\_sight\_of\_view\_measure(Robot)} for the robots and \texttt{ball\_sight\_of\_view\_measure(Ball)} for the ball solve this problem. According to a sight of view, a measurement of a robot is only available if it stands in front of a characteristic point on the field or if it is within the distance of sight of another robot. Note that a robot only locates other robots if it is aware of its own position and that we get information from only one team, which will be the case for official RoboCup matches.
+
+%After this computational part, the robots are added to the graphical environment by using the function
+%{\fontfamily{pcr}\selectfont plot\_robot(Robot,Ball,style).m}. It provides several features such as the coloration, the shape and the label of the robots on the field. A sample output on the graphical interface after several timesteps is shown in figure \ref{Plot_robots} below.
 
 %\begin{figure}[htbp]
 %	\centering
@@ -239,9 +262,9 @@ After this computational part, the robots are added to the graphical environment
 %  	\label{Plot_robots}
 %\end{figure}
 
-Note that measurements (white crosses) are not available for most robots (blue and magenta circles).
+%Note that measurements (white crosses) are not available for most robots (blue and magenta circles).
 
 
 
-Since the ball too is a subject of measurement, we also needed a measurement function for this object. {\fontfamily{pcr}\selectfont ball\_measure(Ball).m} adds measurement noise or, as the case may be, drops the measurement completely. Again, a measurement is only available if it is in the sight of view of at least one blue robot that knows its own position. For more than one measurement the mean value of all measurements is taken. After all computations are done, the ball is drawn on the field, together with the robots, with the function {\fontfamily{pcr}\selectfont plot\_robot(Robot,Ball,style).m}. All features of this function like coloration and drawing of different shapes are also available for the ball.
+%Since the ball too is a subject of measurement, we also needed a measurement function for this object. {\fontfamily{pcr}\selectfont ball\_measure(Ball).m} adds measurement noise or, as the case may be, drops the measurement completely. Again, a measurement is only available if it is in the sight of view of at least one blue robot that knows its own position. For more than one measurement the mean value of all measurements is taken. After all computations are done, the ball is drawn on the field, together with the robots, with the function {\fontfamily{pcr}\selectfont plot\_robot(Robot,Ball,style).m}. All features of this function like coloration and drawing of different shapes are also available for the ball.
 
