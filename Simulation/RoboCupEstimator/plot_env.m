@@ -8,8 +8,10 @@ function plot_env
 
 %----------- Defining the dimensions and subfunctions  -----------%
 
-    axis([-3.7 3.7 -2.7 2.7]);
+    axis([-3.1 3.1 -2.2 2.2]);
     axis equal;
+    set(gca, 'YTick', []);
+    set(gca, 'XTick', []);
     plot_field();
     plot_score();
 end
