@@ -14,6 +14,7 @@ isRecording = true;
 % close the video Object manually through:
 % close(vidObj)
 
+
 global dt;
 dt = 0.1; %[s/step]
 
