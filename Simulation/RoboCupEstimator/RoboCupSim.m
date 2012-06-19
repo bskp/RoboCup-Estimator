@@ -104,7 +104,7 @@ for s = 1:steps
     plot_env;
     plot_char_points();
     plot_objects(Robot, Ball, '0-tV'); % circles, direction, team color
-    plot_objects(RobotMeasure, BallMeasure, '+w'); % crosses, white
+    plot_objects(RobotMeasure, BallMeasure, '+k'); % crosses, black
     
     h2 = subplot(2,1,2);
     plot_env;
