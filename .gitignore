@@ -26,4 +26,5 @@
 *.asv
 DocGroupWork.pdf
 *error.mat
+*plot.mat
 Simulation/RoboCupEstimator/videos

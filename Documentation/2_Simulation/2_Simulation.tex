@@ -30,10 +30,10 @@ The section about plots is mainly a documentation of the draw functions for the 
 
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \section{Plots}
-Plotting a step in the simulation can be divided essentially in two parts. One part contain the static part, such as the field and the other part all dynamic objects, e.g. the robots and the ball.
+Plotting a step in the simulation can be divided essentially in two parts. One part contain the static part, such as the field or goals and the other part all dynamic objects, e.g. the robots and the ball.
 
 \subsection*{Plot of the field - \texttt{plot\_env()} }
-All graphical features concerning the playing field are implemented by the function \texttt{ plot\_env()}. It is subdivided in two functions, which draw the field and, as a neat add on, the scorecounter seperately. The size of the field and of the goals we took from the RoboCup Nao Rule Book 2011 and are set in the global Struct \texttt{Field}.
+All graphical features concerning the playing field are implemented by the function \texttt{ plot\_env()}. It is subdivided in two functions, which draw the field and, as a neat add on, the scorecounter seperately. The size of the field and of the goals we took from the RoboCup Nao Rule Book 2011 and are defined in the global Struct \texttt{Field}.
 \begin{lstlisting}
 global Field;
     Field.width = 6; %[m]
