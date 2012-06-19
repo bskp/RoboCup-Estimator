@@ -2,7 +2,7 @@
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \chapter{Simulation}
 
-One main aspect of this group work among the design of a Kalman filter was the construction of a graphical environment for our work. So we decided to implement a simulation of a Nao soccer match in MATLAB. Therefore we made four independent modules which build the framework for the simulation. The four parts contain functions concerning the dynamics of the robots and ball, the measurements and the plots. Since these parts are constructed in a modular fashion, we can change one module without influencing the others. All functions mentioned below will build the core of a simple random simulation of a RoboCup soccer match. The simulation is called random because the input paramters of the robots, i.e. their velocity and their change of angular direction, are chosen randomly. The script {\fontfamily{pcr}\selectfont RoboCupSim.m} is essentially a finite loop with the described functions in it. Every step the in loop generates a new frame of our simulation. Most of the global variables are defined in {\fontfamily{pcr}\selectfont RoboCupSim.m} such as the dimensions of a real RoboCup playing field or all noise-relevant parameters. Also variables which cannot be initialized in a function, such as the covariance matrices for the Kalman filters, which will be discussed later, are defined in this script. The pseudocode below shows the general structure of our simulation framework and emphasizes the modularity of our code
+One main aspect of this group work among the design of a Kalman filter was the simulation of Nao soccer match in MATLAB. It don't have to simulate a real scenario, but should provide data to test the filter. Therefore we made four independent modules which build the framework for the simulation. The four parts contain functions concerning the dynamics of the robots and ball, the measurements and the plots. Since these parts are constructed in a modular fashion, we can change one module without influencing the others. All functions mentioned below will build the core of a simple random simulation of a RoboCup soccer match. The simulation is called random because the input paramters of the robots, i.e. their velocity and their change of angular direction, are chosen randomly. The script {\fontfamily{pcr}\selectfont RoboCupSim.m} is essentially a finite loop with the described functions in it. Every step the in loop generates a new frame of our simulation. Most of the global variables are defined in {\fontfamily{pcr}\selectfont RoboCupSim.m} such as the dimensions of a real RoboCup playing field or all noise-relevant parameters. Also variables which cannot be initialized in a function, such as the covariance matrices for the Kalman filters, which will be discussed later, are defined in this script. The pseudocode below shows the general structure of our simulation framework and emphasizes the modularity of our code
 
 % Pseudocode
 \begin{verbatim}
@@ -105,7 +105,7 @@ Figure \ref{Playing_field_robots} shows the playing filed after initialization a
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \section{Robots} \label{Robotsection}
 
-Maybe the most important part of the simulation is the adequate depiction and behaviour of all eight robots. The task can be separated in two components: After the robots are initialized, their new positions on the field, according to their motion equations, are computed.
+A important part of the simulation is the adequate depiction and behaviour of all eight robots. The task can be separated in two components: After the robots are initialized, their new positions on the field, according to their motion equations, are computed.
 %The latter task is split in three components: I and in the end we are adding measurement noise for our filtering task.
 
 \subsection*{Initialization}
@@ -121,7 +121,7 @@ The initialization of the robots is quite simple. The function \texttt{ robot\_s
 	\end{tabular}
 \end{center}
  
-Furthermore the initialization function defines some robot specific parameters in the global struct \texttt{RobotParam}. This are characteristics such as the robot's radius or its maximum possible angular change for one time step. In a latter stage of development we dropped the simplification of a global eye and assumed that a location of a robot's position is only possible if it is in the sight of view of at least one other robot. So additionally parameters of sight distance as well as its angle of sight are set in the initialization function. The MATLAB code below shows our assumptions for these parameters
+Furthermore the initialization function defines some robot specific parameters in the global struct \texttt{RobotParam}. These are characteristics such as the robot's radius or its maximum possible angular change for one time step. In a latter stage of development we dropped the simplification of a global eye and assumed that a location of a robot's position is only possible if it is in the sight of view of at least one other robot. So additionally parameters of sight distance as well as its angle of sight are set in the initialization function. The MATLAB code below shows our assumptions for these parameters
 \begin{lstlisting}
     global RobotParam dt;
     RobotParam.radius = 0.15; %[m]
@@ -186,11 +186,6 @@ As you can see in the code below, we use the same \(r^{-2}\)-relation for the re
 
 A related potential is also assigned to the sideline, if a robot is under a given distance $r_f$ to it. With those potentials, the change of directions is now continuous, which makes tracking possible for our Kalman filter. Additionally to the collision avoidance the robots are attracted to the ball if it's near them, like it had a negative charge. This leads to some more ball contacts than before.
 
-\textcolor{red}{evtl. Bild Potential}
-
-
-%In the simulation we used a radius 
-
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \section{Ball} \label{Ballsection}
 
@@ -216,7 +211,7 @@ The treatment of the ball is quite similar to that of the robots. The ball objec
 %The function \texttt{ ball\_step(Ball,Robot).m} does, like the equivalent function for the robots, the computations of the ball's next position and direction on the field. These parameters however do not only depend on the ball's dynamics but also whether it collides with one of the robots. The following MATLAB code shows the algorithm for this collision detection
 
 %\lstinputlisting[firstline=40, lastline=51]{../Simulation/Merge/ball_step.m}
-The dynamics of the ball are fairly analog to those of the robots. Only that the velocity is no longer an input but now a state of the system and there is some friction between the ball and ground. 
+The dynamics of the ball are fairly analog to those of the robots. Only that the velocity is no longer an input but now a state of the system, there is some friction between the ball and ground and the direction is constant.
 The the non-linear motion equation for the ball are therefore
 \begin{eqnarray}
 	x_{{k+1}} &=& x_{k} + v_{k} \cos(\varphi_{k}) \Delta t	\label{ball_motion_first} \\
@@ -247,9 +242,23 @@ The process noise $w$ we added in the specific step functions for robots and bal
 The measurement noise is white Gaussian, too. But additionally we made two different implementations, which determine if there is a measurement at all or the corresponding parameters are just dropped.
 
 \subparagraph{Random measurement}
-The function \texttt{ robot\_random\_measure(Robot)} simply adds white Gaussian noise to the position and the direction of every robot. Additionally with a certain possibility there is no measurement at all.  \texttt{ball\_random\_measure(ball)} does the same for the ball. What we are assuming with this model is, that there is some global eye available which measures the position and direction of every robot with some given resolution. But this scenario is not realistic in a RoboCup soccer match, because only the robots themselves can gain visual information.
+The function \texttt{ robot\_random\_measure(Robot)} simply adds white Gaussian noise to the position and the direction of every robot. Additionally with a certain possibility there is no measurement at all.  \texttt{ball\_random\_measure(ball)} does the same for the ball. What we are assuming with this model is, that there is some global eye available which measures the position and direction of every robot with some given resolution. But this scenario is not realistic in a RoboCup soccer match, because only the robots themselves can gain visual information. Figure \ref{Playing_field_globa} shows random measurement as black crosses.
 
-\subparagraph{Sight of view measurement} The functions \texttt{robot\_sight\_of\_view\_measure(Robot)} for the robots and \texttt{ball\_sight\_of\_view\_measure(Ball)} for the ball solve this problem. According to a sight of view, a measurement of a robot is only available if it stands in front of a characteristic point on the field or if it is within the distance of sight of another robot. Note that a robot only locates other robots if it is aware of its own position and that we get information from only one team, which will be the case for official RoboCup matches.
+\begin{figure}[h]
+	\centering
+    	\includegraphics[width=12cm]{./2_Simulation/playing_field_global_noise}
+  	\caption{Robots on field and Random measurement (+).}
+  	\label{Playing_field_global}
+\end{figure}
+
+\subparagraph{Sight of view measurement} The functions \texttt{robot\_sight\_of\_view\_measure(Robot)} for the robots and \texttt{ball\_sight\_of\_view\_measure(Ball)} for the ball solve this problem. According to a sight of view, a measurement of a robot is only available if it stands in front of a characteristic point on the field or if it is within the distance of sight of another robot. Note that a robot only locates other robots if it is aware of its own position and that we get information from only one team, which will be the case for official RoboCup matches. Figure \ref{Playing_field_sight} shows measurements generated with these functions.
+
+\begin{figure}[h]
+	\centering
+    	\includegraphics[width=12cm]{./2_Simulation/playing_field_sight}
+  	\caption{Robots on field and measurement in sight of view.}
+  	\label{Playing_field_sight}
+\end{figure}
 
 %After this computational part, the robots are added to the graphical environment by using the function
 %\texttt{ plot\_robot(Robot,Ball,style).m}. It provides several features such as the coloration, the shape and the label of the robots on the field. A sample output on the graphical interface after several timesteps is shown in figure \ref{Plot_robots} below.
