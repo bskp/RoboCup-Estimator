@@ -8,7 +8,7 @@
 
 clear all;
 
-steps = 500;
+steps = 800;
 isRecording = true;
 % hint for videos: if the animation is stopped by ctr-c, you need to 
 % close the video Object manually through:
@@ -82,7 +82,7 @@ vPink = ones(1,4)*RobotParam.velocity;
 % VIDEO
 if(isRecording)
     vidObj= VideoWriter(['videos/estimator ' datestr(now) '.avi']);
-    set(vidObj,'FrameRate',10);
+    set(vidObj,'FrameRate',25);
     set(vidObj,'Quality',90);
     open(vidObj);
 end
