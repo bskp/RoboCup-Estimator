@@ -23,7 +23,7 @@ function plot_field()
 
     global Field;
     rectangle('position', [-Field.width./2 -Field.height./2 Field.width ...
-        Field.height],'facecolor','green');
+        Field.height],'facecolor',[170 230 80]/255);
     hold on;
     
     % CenterCircle

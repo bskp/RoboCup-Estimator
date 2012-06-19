@@ -8,8 +8,8 @@
 
 clear all;
 
-steps = 2000;
-video_on = false;
+steps = 100;
+video_on = true;
 % hint for videos: if the animation is stopped by ctr-c, you need to 
 % close the video Object manually through:
 % close(vidObj)
@@ -101,7 +101,7 @@ for s = 1:steps
     h1 = subplot(2,1,1);
     plot_env;
     plot_objects(Robot, Ball, '0-tV'); % circles, direction, team color
-    plot_objects(RobotMeasure, BallMeasure, '+w'); % crosses, white
+    plot_objects(RobotMeasure, BallMeasure, '+k'); % crosses, black
     
     h2 = subplot(2,1,2);
     plot_env;
