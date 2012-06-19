@@ -135,9 +135,9 @@ Furthermore the initialization function defines some robot specific parameters i
 %Once initialized we use the functions \texttt{ dummy\_step(Robot).m} and \texttt{ robot\_step(Robot,Ball).m} respectively to compute the attributes of all robots for every timestep. The key issue of both functions however is the recalculation of the position, i.e. the motion of the robots
 To compute the next step of the robots we used the following simple non-linear discrete time motion equations
 \begin{eqnarray}
-	x_{i_{k+1}} &=& x_{i_{k}} + v_{i_{k}} \cos(\varphi_{i_{k}}) 	\label{robot_motion_first} \\
-	y_{i_{k+1}} &=& y_{i_{k}} + v_{i_{k}} \sin(\varphi_{i_{k}}) \\
-	\varphi_{i_{k+1}} &=& \varphi_{i_{k}} + d\omega_{i_k}
+	x_{i_{k+1}} &=& x_{i_{k}} + v_{i_{k}} \cos(\varphi_{i_{k}}) \Delta t 	\label{robot_motion_first} \\
+	y_{i_{k+1}} &=& y_{i_{k}} + v_{i_{k}} \sin(\varphi_{i_{k}}) \Delta t \\
+	\varphi_{i_{k+1}} &=& \varphi_{i_{k}} + d\omega_{i_k} \Delta t
 	\label{robot_motion_last}
 \end{eqnarray}
 with the boundary conditions, that the robots have to be on the playing field and can't covering the same disk as another robot:
@@ -219,8 +219,8 @@ The treatment of the ball is quite similar to that of the robots. The ball objec
 The dynamics of the ball are fairly analog to those of the robots. Only that the velocity is no longer an input but now a state of the system and there is some friction between the ball and ground. 
 The the non-linear motion equation for the ball are therefore
 \begin{eqnarray}
-	x_{{k+1}} &=& x_{k} + v_{k} \cos(\varphi_{k}) 	\label{ball_motion_first} \\
-	y_{{k+1}} &=& y_{k} + v_{k} \sin(\varphi_{k}) \\
+	x_{{k+1}} &=& x_{k} + v_{k} \cos(\varphi_{k}) \Delta t	\label{ball_motion_first} \\
+	y_{{k+1}} &=& y_{k} + v_{k} \sin(\varphi_{k}) \Delta t \\
 	\varphi_{{k+1}} &=& \varphi_{k}\\
 	v_{{k+1}} &=& \varrho \cdot v_{k}
 	\label{ball_motion_last}
