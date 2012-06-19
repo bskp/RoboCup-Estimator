@@ -82,7 +82,7 @@ function [robotStep Pstep vPinkStep Knorm] = ...
        % Measurement update (correct)
        if isnan(robotMeasure(i).x * robotMeasure(i).y * robotMeasure(i).dir)
            estimates = xApriori;   % Measurement drop
-           Knorm(i) = 0;
+           Knorm(i) = NaN;
        else
            z = [robotMeasure(i).x; robotMeasure(i).y; robotMeasure(i).dir];
            K(:,:,i) =  (Pstep(:,:,i)*H')/(H*Pstep(:,:,i)*H'+V*R*V');

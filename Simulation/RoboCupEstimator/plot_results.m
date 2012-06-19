@@ -68,8 +68,8 @@
             xlabel('steps');
             %ylabel('estimation error of directions [m]');
             set(get(AX(1),'Ylabel'),'String','estimation error of directions [m]');
-            set(get(AX(2),'Ylabel'),'String','Norm of matrix P');
-            legend('direction x', 'direction y', 'Norm P matrix', 0);
+            set(get(AX(2),'Ylabel'),'String','Norm of matrix K');
+            legend('direction x', 'direction y', 'Norm K matrix', 0);
         end
     
         subplot(4,2,2*i);
@@ -85,8 +85,8 @@
             xlabel('steps');
             %ylabel('estimation error of angle [rad]');
             set(get(AX(1),'Ylabel'),'String','estimation error of angle [rad]') 
-            set(get(AX(2),'Ylabel'),'String','Norm of matrix P') 
-            legend('Angle phi', 'Norm P matrix', 0);
+            set(get(AX(2),'Ylabel'),'String','Norm of matrix K') 
+            legend('Angle phi', 'Norm K matrix', 0);
         end
     end
     
@@ -107,8 +107,8 @@
     xlabel('steps');
     %ylabel('estimation error of directions [m]');
     set(get(AX(1),'Ylabel'),'String','estimation error of directions [m]');
-    set(get(AX(2),'Ylabel'),'String','Norm of matrix P');
-    legend('Direction x', 'Direction y', 'Norm P matrix');
+    set(get(AX(2),'Ylabel'),'String','Norm of matrix K');
+    legend('Direction x', 'Direction y', 'Norm K matrix');
     
     subplot(1,2,2);
     %plot(x, e_dir(9,:), 'b');
@@ -121,8 +121,8 @@
     xlabel('steps');
     %ylabel('estimation error of angle [rad]');
     set(get(AX(1),'Ylabel'),'String','estimation error of angle [rad]') 
-    set(get(AX(2),'Ylabel'),'String','Norm of matrix P') 
-    legend('Angle phi', 'Norm P matrix');
+    set(get(AX(2),'Ylabel'),'String','Norm of matrix K') 
+    legend('Angle phi', 'Norm K matrix');
     
 % Maximize Plot
     for i=1:3
