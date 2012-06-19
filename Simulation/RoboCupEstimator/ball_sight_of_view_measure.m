@@ -104,8 +104,7 @@ end
 
 function pos = position_is_valid(robot)
 
-    global Field;
-    global RobotParam;
+    global Field RobotParam;
     
     pos = false;
     

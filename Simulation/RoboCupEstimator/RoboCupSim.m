@@ -56,6 +56,7 @@ global Noise;
     
     Noise.Measure.prob = 0.2;
 
+
 %% - - - - - Initalization - - - - - %
 close all;
 figure('units','normalized','position',[0.1,0,0.4,0.9]);
@@ -94,13 +95,14 @@ for s = 1:steps
     RobotMeasure = robot_measure(Robot);
     BallMeasure = ball_measure(Robot, Ball);
     
-    [RobotEstimate P vPink] = robot_filter(RobotMeasure, RobotEstimate, ...
+    [RobotEstimate P vPink Knorm] = robot_filter(RobotMeasure, RobotEstimate, ...
         mValues, eValues, dAngle, v, vPink, P);
-    [BallEstimate Pball] = ball_ekf(BallEstimate, BallMeasure, Pball);
+    [BallEstimate Pball KBnorm] = ball_ekf(BallEstimate, BallMeasure, Pball);
       
     clf
     h1 = subplot(2,1,1);
     plot_env;
+    plot_char_points();
     plot_objects(Robot, Ball, '0-tV'); % circles, direction, team color
     plot_objects(RobotMeasure, BallMeasure, '+k'); % crosses, black
     
