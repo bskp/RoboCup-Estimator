@@ -1,4 +1,5 @@
 clear;
+clf;
 
 %-----Values for simulation-----%
 n=30;               %length of the simulation
@@ -9,7 +10,7 @@ A=1;                %System matrix
 H=1;                %Measuring matrix
 
 %Define of noise variances
-Q=0.1;             %process error variance
+Q=0.01;             %process error variance
 R=0.1;             %Measuring error variance
 
 %Calculate normally distributed pseudorandom numbers for noise
