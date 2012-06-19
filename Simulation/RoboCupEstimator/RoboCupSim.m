@@ -9,7 +9,7 @@
 clear all;
 
 steps = 500;
-isRecording = true;
+isRecording = false;
 % hint for videos: if the animation is stopped by ctr-c, you need to 
 % close the video Object manually through:
 % close(vidObj)
@@ -56,6 +56,7 @@ global Noise;
     
     Noise.Measure.prob = 0.2;
 
+
 %% - - - - - Initalization - - - - - %
 close all;
 figure('units','normalized','position',[0.1,0,0.4,0.9]);
@@ -101,6 +102,7 @@ for s = 1:steps
     clf
     h1 = subplot(2,1,1);
     plot_env;
+    plot_char_points();
     plot_objects(Robot, Ball, '0-tV'); % circles, direction, team color
     plot_objects(RobotMeasure, BallMeasure, '+w'); % crosses, white
     
