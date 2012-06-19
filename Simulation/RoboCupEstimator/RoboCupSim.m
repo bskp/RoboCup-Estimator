@@ -8,11 +8,12 @@
 
 clear all;
 
-steps = 100;
-video_on = true;
+steps = 500;
+isRecording = true;
 % hint for videos: if the animation is stopped by ctr-c, you need to 
 % close the video Object manually through:
 % close(vidObj)
+
 
 global dt;
 dt = 0.1; %[s/step]
@@ -79,11 +80,11 @@ eValues = 0;
 vPink = ones(1,4)*RobotParam.velocity;
 
 % VIDEO
-if(video_on)
-vidObj= VideoWriter(['videos/estimator ' datestr(now) '.avi']);
-set(vidObj,'FrameRate',10);
-set(vidObj,'Quality',90);
-open(vidObj);
+if(isRecording)
+    vidObj= VideoWriter(['videos/estimator ' datestr(now) '.avi']);
+    set(vidObj,'FrameRate',10);
+    set(vidObj,'Quality',90);
+    open(vidObj);
 end
 
 %% - - - - - Loop - - - - - %
@@ -117,7 +118,7 @@ for s = 1:steps
     
     pause(0.001);
     
-    if (video_on)
+    if (isRecording)
         fig1=getframe(h1);
         fig2=getframe(h2);
         currentFrame.colormap = [];
@@ -129,6 +130,6 @@ for s = 1:steps
 
 end
 
-if (video_on)
+if (isRecording)
 close(vidObj);
 end 

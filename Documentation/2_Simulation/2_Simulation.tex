@@ -1,9 +1,8 @@
-
 %-----Chapter 2: Simulation-------%
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \chapter{Simulation}
 
-One main aspect of this group work among the design of a Kalman filter was the construction of a graphical environment for our work. So we decided to implement a simulation of a Nao soccer match in MATLAB. Therefore we made four independent modules which build the framework for the simulation. The four parts contain functions concerning the dynamics of the robots and the ball, the measurements and the plots. Since these parts are constructed in a modular fashion, we can change one module without influencing the others. All functions mentioned below will build the core of a simple random simulation of a RoboCup soccer match. The simulation is called random because the input paramters of the robots, i.e. their velocity and their change of angular direction, are chosen randomly. The script \texttt{ RoboCupSim.m} is essentially a finite loop with the described functions in it. Every step the in loop generates a new frame of our simulation. Most of the global variables are defined in \texttt{ RoboCupSim.m} such as the dimensions of a real RoboCup playing field or all noise-relevant parameters. Also variables which cannot be initialized in a function, such as the covariance matrices for the Kalman filters, which will be discussed later, are defined in this script. The pseudocode below shows the general structure of our simulation framework and emphasizes the modularity of our code
+One main aspect of this group work among the design of a Kalman filter was the construction of a graphical environment for our work. So we decided to implement a simulation of a Nao soccer match in MATLAB. Therefore we made four independent modules which build the framework for the simulation. The four parts contain functions concerning the dynamics of the robots and ball, the measurements and the plots. Since these parts are constructed in a modular fashion, we can change one module without influencing the others. All functions mentioned below will build the core of a simple random simulation of a RoboCup soccer match. The simulation is called random because the input paramters of the robots, i.e. their velocity and their change of angular direction, are chosen randomly. The script {\fontfamily{pcr}\selectfont RoboCupSim.m} is essentially a finite loop with the described functions in it. Every step the in loop generates a new frame of our simulation. Most of the global variables are defined in {\fontfamily{pcr}\selectfont RoboCupSim.m} such as the dimensions of a real RoboCup playing field or all noise-relevant parameters. Also variables which cannot be initialized in a function, such as the covariance matrices for the Kalman filters, which will be discussed later, are defined in this script. The pseudocode below shows the general structure of our simulation framework and emphasizes the modularity of our code
 
 % Pseudocode
 \begin{verbatim}
@@ -31,10 +30,10 @@ The section about plots is mainly a documentation of the draw functions for the 
 
 % -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - %
 \section{Plots}
-Plotting a step in the simulation can be divided essentially in two parts. One part contain the static part, such as the field and the other part all dynamic objects, e.g. the robots and the ball.
+Plotting a step in the simulation can be divided essentially in two parts. One part contain the static part, such as the field or goals and the other part all dynamic objects, e.g. the robots and the ball.
 
 \subsection*{Plot of the field - \texttt{plot\_env()} }
-All graphical features concerning the playing field are implemented by the function \texttt{ plot\_env()}. It is subdivided in two functions, which draw the field and, as a neat add on, the scorecounter seperately. The size of the field and of the goals we took from the RoboCup Nao Rule Book 2011 and are set in the global Struct \texttt{Field}.
+All graphical features concerning the playing field are implemented by the function \texttt{ plot\_env()}. It is subdivided in two functions, which draw the field and, as a neat add on, the scorecounter seperately. The size of the field and of the goals we took from the RoboCup Nao Rule Book 2011 and are defined in the global Struct \texttt{Field}.
 \begin{lstlisting}
 global Field;
     Field.width = 6; %[m]
@@ -66,7 +65,7 @@ The playing field after the execution of \texttt{ plot\_env()} is displayed in f
 
 \begin{figure}[h]
 	\centering
-    	\includegraphics[width=14cm]{./2_Simulation/playing_field}
+    	\includegraphics[width=12cm]{./2_Simulation/playing_field}
   	\caption{Playing field with \texttt{plot\_env()}.}
   	\label{Playing_field}
 \end{figure}
@@ -97,7 +96,7 @@ Figure \ref{Playing_field_robots} shows the playing filed after initialization a
 
 \begin{figure}[h]
 	\centering
-    	\includegraphics[width=14cm]{./2_Simulation/playing_field_robots}
+    	\includegraphics[width=12cm]{./2_Simulation/playing_field_robots}
   	\caption{Playing field after initialization and \texttt{plot\_objects(Robot,Ball,'@-t')}.}
   	\label{Playing_field_robots}
 \end{figure}
