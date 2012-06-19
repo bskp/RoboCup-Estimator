@@ -8,7 +8,7 @@
 
 clear all;
 
-steps = 2000;
+steps = 200;
 
 global dt;
 dt = 0.1; %[s/step]
