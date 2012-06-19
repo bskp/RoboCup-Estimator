@@ -1,6 +1,7 @@
 j=1:n;
 
 %-----Plot states and state estimates-----%
+figure(1);
 c=linspace(0,n);
 subplot(221);
 %h1=plot(j+0.25,X_apriori,'b.','Marker','square');
@@ -12,7 +13,7 @@ h3=plot(c,x1,'k');
 h4=plot(j,x,'r.','Marker','*');
 hold off
 %Formatting of the plot
-legend([h1(1) h2(1) h3(1) h4(1)],'a priori','a posteriori','truth value','noisy measurements');
+legend([h1(1) h2(1) h3(1) h4(1)],'a priori','a posteriori','true value','noisy measurements');
 title('State with a priori and a posteriori elements');
 ylabel('State, x');
 xlim=[0 length(j)+1];
@@ -53,7 +54,9 @@ title('Kalman gain');
 ylabel('Kalman gain, k');
 set(gca,'XLim',xlim); %Set limits the same as first graph
 
-
+for i=1:n
+    const(i)=x1+w(i);
+end
 figure(2);
 c=linspace(0,n);
 %h1=plot(j+0.25,X_apriori,'b.','Marker','square');
@@ -61,11 +64,11 @@ h1=plot(j,X_apriori,'b');
 hold on
 %h2=plot(j+0.5,X_aposteriori,'g.','Marker','square');
 h2=plot(j,X_aposteriori,'g');
-h3=plot(c,x1,'k');
-h4=plot(j,x,'r.','Marker','*');
+h3=plot(j,const,'k');
+h4=plot(j,z,'r.','Marker','*');
 hold off
 %Formatting of the plot
-legend([h1(1) h2(1) h3(1) h4(1)],'a priori','a posteriori','truth value','noisy measurements');
+legend([h1(1) h2(1) h3(1) h4(1)],'a priori','a posteriori','true value (with process noise)','noisy measurements');
 title('State with a priori and a posteriori elements');
 ylabel('State, x');
 xlim=[0 length(j)+1];

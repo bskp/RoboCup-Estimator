@@ -61,7 +61,7 @@ function [BallEstimate Pe KBnorm] = ball_ekf(BallOe, BallMeasure, Poe)
     if (isnan(z(1) * z(2)))
         x = x_;      % Measurement drop 
         Pe = P_;
-        KBnorm = 0;
+        KBnorm = NaN;
     else
         K = P_*H'/(H*P_*H'+R);
         KBnorm = norm(K);
