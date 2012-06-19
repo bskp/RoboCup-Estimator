@@ -1,4 +1,4 @@
-function [robotStep Pstep vPinkStep] = ...
+function [robotStep Pstep vPinkStep Knorm] = ...
     robot_extended_kalman_filter(robotMeasure,robotEstimate,mValues,eValues,dOmega,v,vPink,P)
 %ROBOT_EXTENDED_KALMAN_FILTER Position-estimation for the robots.
 %
@@ -82,9 +82,11 @@ function [robotStep Pstep vPinkStep] = ...
        % Measurement update (correct)
        if isnan(robotMeasure(i).x * robotMeasure(i).y * robotMeasure(i).dir)
            estimates = xApriori;   % Measurement drop
+           Knorm(i) = 0;
        else
            z = [robotMeasure(i).x; robotMeasure(i).y; robotMeasure(i).dir];
            K(:,:,i) =  (Pstep(:,:,i)*H')/(H*Pstep(:,:,i)*H'+V*R*V');
+           Knorm(i) = norm(K(:,:,i));
            estimates = xApriori+K(:,:,i)*(z - xApriori);
            Pstep(:,:,i) = (eye(3)-K(:,:,i)*H)*Pstep(:,:,i);
        end

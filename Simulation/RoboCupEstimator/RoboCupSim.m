@@ -8,7 +8,7 @@
 
 clear all;
 
-steps = 2000;
+steps = 200;
 video_on = false;
 % hint for videos: if the animation is stopped by ctr-c, you need to 
 % close the video Object manually through:
@@ -94,9 +94,9 @@ for s = 1:steps
     RobotMeasure = robot_measure(Robot);
     BallMeasure = ball_measure(Robot, Ball);
     
-    [RobotEstimate P vPink] = robot_filter(RobotMeasure, RobotEstimate, ...
+    [RobotEstimate P vPink Knorm] = robot_filter(RobotMeasure, RobotEstimate, ...
         mValues, eValues, dAngle, v, vPink, P);
-    [BallEstimate Pball] = ball_ekf(BallEstimate, BallMeasure, Pball);
+    [BallEstimate Pball KBnorm] = ball_ekf(BallEstimate, BallMeasure, Pball);
       
     clf
     h1 = subplot(2,1,1);

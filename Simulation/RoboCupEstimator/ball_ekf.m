@@ -1,4 +1,4 @@
-function [BallEstimate Pe] = ball_ekf(BallOe, BallMeasure, Poe)
+function [BallEstimate Pe KBnorm] = ball_ekf(BallOe, BallMeasure, Poe)
 %BALL_EKF Applies Extended Kalman filtering to the ball's measurements.
 %
 %   [BALLESTIMATE,PE] = BALL_EKF(BALLOE,BALLMEASURE,POE) is an extended
@@ -61,8 +61,10 @@ function [BallEstimate Pe] = ball_ekf(BallOe, BallMeasure, Poe)
     if (isnan(z(1) * z(2)))
         x = x_;      % Measurement drop 
         Pe = P_;
+        KBnorm = 0;
     else
         K = P_*H'/(H*P_*H'+R);
+        KBnorm = norm(K);
         x = x_ + K*(z - H*x_);
         Pe = (eye(4) - K*H)*P_;
     end
