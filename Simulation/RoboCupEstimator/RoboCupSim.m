@@ -8,7 +8,12 @@
 
 clear all;
 
-steps = 200;
+steps = 2000;
+video_on = false;
+% hint for videos: if the animation is stopped by ctr-c, you need to 
+% close the video Object manually through:
+% close(vidObj)
+
 
 global dt;
 dt = 0.1; %[s/step]
@@ -74,6 +79,14 @@ mValues = 0;
 eValues = 0;
 vPink = ones(1,4)*RobotParam.velocity;
 
+% VIDEO
+if(video_on)
+vidObj= VideoWriter(['videos/estimator ' datestr(now) '.avi']);
+set(vidObj,'FrameRate',10);
+set(vidObj,'Quality',90);
+open(vidObj);
+end
+
 %% - - - - - Loop - - - - - %
 for s = 1:steps
     [Robot dAngle v] = robot_step(Robot, Ball);
@@ -86,12 +99,12 @@ for s = 1:steps
     [BallEstimate Pball] = ball_ekf(BallEstimate, BallMeasure, Pball);
       
     clf
-    subplot(2,1,1)
+    h1 = subplot(2,1,1);
     plot_env;
     plot_objects(Robot, Ball, '0-tV'); % circles, direction, team color
     plot_objects(RobotMeasure, BallMeasure, '+w'); % crosses, white
     
-    subplot(2,1,2)
+    h2 = subplot(2,1,2);
     plot_env;
     plot_objects(Robot, Ball, '@-t');    
     plot_objects(RobotEstimate, BallEstimate, '0-w');
@@ -105,6 +118,18 @@ for s = 1:steps
     
     pause(0.001);
     
+    if (video_on)
+        fig1=getframe(h1);
+        fig2=getframe(h2);
+        currentFrame.colormap = [];
+        currentFrame.cdata = [fig1.cdata; fig2.cdata];
+        writeVideo(vidObj,currentFrame);
+    end
+    
     save_results; % Save the designated results of the simulation to a .mat file
 
 end
+
+if (video_on)
+close(vidObj);
+end 

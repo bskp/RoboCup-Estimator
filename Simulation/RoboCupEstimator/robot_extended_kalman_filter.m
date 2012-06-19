@@ -2,17 +2,17 @@ function [robotStep Pstep vPinkStep] = ...
     robot_extended_kalman_filter(robotMeasure,robotEstimate,mValues,eValues,dOmega,v,vPink,P)
 %ROBOT_EXTENDED_KALMAN_FILTER Position-estimation for the robots.
 %
-%   [ROBOT_STEP,P_STEP, V_PINK_STEP] =
-%   ROBOT_EXTENDED_KALMAN_FILTER(ROBOT_M,ROBOT_E,M_VALUES,E_VALUES,D_OMEGA,V,V_PINK,P)
+%   [ROBOTSTEP,PSTEP, VPINKSTEP] =
+%   ROBOT_EXTENDED_KALMAN_FILTER(ROBOTMEASURE,ROBOTESTIMATE,MVALUES,EVALUES,DOMEGA,V,VPINK,P)
 %   implements the extended Kalman filter cycle for the given motion model
-%   after which the robots behave. The structs ROBOT_M and ROBOT_E refer to
-%   the measured robot parameters and the previously estimated robot
-%   parameters respectively. D_OMEGA (change of angular direction) and V
-%   (velocity) are the inputs used to simulate the robot's motion and P is
-%   the error covariance from the previous Kalman cycle. The new estimated
-%   position of the robots and the new error covariance are the function's
-%   outputs. Additional functionality is implemented for pink robots in
-%   order to get their inputs and to track them properly.
+%   after which the robots behave. The structs ROBOTMEASURE and
+%   ROBOTESTIMATE refer to the measured robot parameters and the previously
+%   estimated robot parameters respectively. DOMEGA (change of angular
+%   direction) and V (velocity) are the inputs used to simulate the robot's
+%   motion and P is the error covariance from the previous Kalman cycle.
+%   The new estimated position of the robots and the new error covariance
+%   are the function's outputs. Additional functionality is implemented for
+%   pink robots in order to get their inputs and to track them properly.
 
     global Noise RobotParam;
     
@@ -70,6 +70,7 @@ function [robotStep Pstep vPinkStep] = ...
        if(i>4)
            v(i) = vPinkStep(i-4);
            dOmega(i) = dOmegaPink(i-4);
+           % applying estimated control values
        end
 
        % Time update (predict)   

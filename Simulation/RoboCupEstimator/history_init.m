@@ -1,9 +1,9 @@
 function [mValues, eValues] = history_init(RobotMeasure, RobotEstimate)
 %HISTORY_INIT Initialization of new history.
 %
-%   [M_VALUES,E_VALUES] = HISTORY_INIT(ROBOT_M,ROBOT_E) creates the two new
-%   recordings M_VALUES and E_VALUES by adding all relevant parameters from
-%   ROBOT_M and ROBOT_E.
+%   [MVALUES,EVALUES] = HISTORY_INIT(ROBOTMEASURE,ROBOTESTIMATE) creates
+%   the two new recordings MVALUES and EVALUES by adding all relevant
+%   parameters from ROBOTMEASURE and ROBOTESTIMATE.
 
 
 %----------- Initialization of history for every robot  -----------%

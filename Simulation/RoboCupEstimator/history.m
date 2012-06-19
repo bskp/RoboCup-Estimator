@@ -1,13 +1,13 @@
 function [mValues eValues] = history(mOld, eOld, RobotMeasure, RobotEstimate)
 %HISTORY History of former measurements and estimations of the robots.
 %
-%   [M_VALUES,E_VALUES] = HISTORY(M_OLD,E_OLD,ROBOT_M,ROBOT_E) records the
-%   last few measurements and estimations of every robot in order to use
-%   the data for later calculations. The old values M_OLD and E_OLD get
-%   updated by the latest parameters from ROBOT_M and ROBOT_E and the new
-%   values M_VALUES and E_VALUES appear as output. Note that also dropped
-%   measuremetns are recorded and will appear in the history as "NaN".
-
+%   [MVALUES,EVALUES] = HISTORY(MOLD,EOLD,ROBOTMEASURE,ROBOTESTIMATE)
+%   records the last few measurements and estimations of every robot in
+%   order to use the data for later calculations. The old values MOLD are
+%   updated by the latest parameters from ROBOTMEASURE and ROBOTESTIMATE
+%   updates EOLD. MVALUES and EVALUES will appear as outputs. Note that
+%   also dropped measuremetns are recorded and will appear in the history
+%   as "NaN".
 
 %----------- Compute current history size  -----------%
 

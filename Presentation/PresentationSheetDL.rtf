@@ -1,0 +1,60 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;\red255\green0\blue0;\red102\green177\blue50;\red255\green39\blue18;
+\red217\green11\blue0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww12020\viewh14520\viewkind1
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 (ENTWURF)\cf2 \
+\'85Fabio
+\b \cf0 \
+Mathematical Model\
+
+\b0 To study the problem we first made a Simulation of a random RoboCup-Game in MATLAB. For it, we had to find an accurate model for the robots and ball.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf3 Modularit\'e4t hervorheben???\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf4 Next Slide - Player Model\cf0 \
+For the robot we use these simple, but nonlinear discrete time motion equations, where\
+	- x, y is the position in Cartesian coordinates of the robot i and\
+	- phi is the looking and moving direction of the robot\
+	- domega the change of direction and the velocity are inputs to the system.
+\fs28 \
+
+\fs24 \
+The boundaries conditions here simply describing that all the robots have to stay the whole time on the playing field and can't be on the same place. r_r is the radius of a robot, which we assume as a disk.\
+\cf5 Next Slide - Ball Model\
+\cf0 The dynamics of the ball are quite analog to those of the robots. Only that the velocity is no longer an input but now a state and that there is some friction between the ball and ground. The boundary conditions are quite the same, too. Only that here appears a radius of the ball.\
+\cf5 Next Slide - Random Collision\cf0 \
+To satisfy these boundary conditions we first used robots which rebounce when colliding. If they hit each other they swap direction and if they touch a sideline, they reflect after the law of reflection theta_in = theta_out.\
+The ball reflects the same way on a sideline and when it collides with one of the robots, it regains its initial velocity and bounces away, perpendicular to the robot\'92s position, like the robot had kicked it.\
+The change of direction we've chosen random but not too large and the velocity constant. You could think as they are riding on a unicycle. \cf4 -> Picture Unicycle
+\f1 \cf0 \
+
+\f0 \cf5 Next Slide - Simulation 1\
+\cf0 Here these guidelines in action: \cf5 Play\
+\cf0 But this robot model had the problem, that swapping direction is a rapid change in states, which couldn't be handled by our Kalman filte. And anyway it isn't really realistic that the robots collide all the time.\cf5 \
+Next Slide - Random Potential\
+\cf0 Therefore we made another robot-step-function, which doesn\'92t use collision detection but collision avoidance. If the distance between two robots falls below a given value we assign a potential to both robots. The same is attached to the sidelines if a robot is near it. You can think, that the robots and the sidelines have a positive charge, which leads to a force and they avoid each other. Like in the analysis of electrostatic fields we used a 1/r^2 relation, too.\
+In the same way, we gave the ball a negative charge, hence the robots are attracted to the ball, which leads to some more ball contacts.\cf5 \
+\
+Next Slide - Simulation 2\
+\
+Next Slide - Noise\
+\cf0 Since our goal is to filter out the uncertainty of motion of the robot parameters, we artifically have to add some measurement noise which we can filter later. Also we added some process noise to the dynamics of robots and ball, which can\'92t be filtered. Hence the motion equations get extended like this.\
+	- the function f is the nonlinear system of equation describing the motion of the 		robots or the ball\
+	- w is the process noise and\
+	- v the measurement noise, both white noise, where the process noise is 			much smaller than the measurement noise.\
+\
+\cf5 Next Slide - Simulation 3 - Random\
+\cf0 Here we have to different methods of getting measurements, too. First we assumed a global eye: there are measurements for all robots, but with a certian possibility there is no measurement. You can see the measurement here as white crosses.\cf5 \
+\
+Next Slide - Simulation 4 - Sight Of View\
+\cf0 Then we also have a measurement function, which is nearer on our problem description. \cf4 Play\cf0  With only the sight of views of the blue robots available a blue robot gets only a measurement of its own position if he sees a characteristic point, such as the goal, or a corner. And we get only a measurement of another robot or the ball if they are in the sigth of view of one of the blue robots.\
+\
+With these parts we had a Simulation of a Game, on which we could apply a Filter, like a Kalman Filter. Daniel is now going to present the basics of Kalman Filtering\
+\
+
+\b Kalman Filter Theory
+\b0 \
+\cf4 Daniel...}
