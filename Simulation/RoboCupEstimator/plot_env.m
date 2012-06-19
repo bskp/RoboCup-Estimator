@@ -12,6 +12,8 @@ function plot_env
     axis equal;
     set(gca, 'YTick', []);
     set(gca, 'XTick', []);
+    set(gca, 'Visible', 'off');
+    set(gcf, 'Color', 'w');
     plot_field();
     plot_score();
 end
