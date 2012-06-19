@@ -8,8 +8,8 @@
 
 clear all;
 
-steps = 8;
-isRecording = true;
+steps = 800;
+isRecording = false;
 % hint for videos: if the animation is stopped by ctr-c, you need to 
 % close the video Object manually through:
 % close(vidObj)
