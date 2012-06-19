@@ -58,6 +58,6 @@ end
 
 function plot_score()
     global Score;
-    text(0,2.4,[num2str(Score.blue),' : ', num2str(Score.pink)], ...
+    text(0,2.2,[num2str(Score.blue),' : ', num2str(Score.pink)], ...
         'FontSize',16,'HorizontalAlignment','center');
 end
