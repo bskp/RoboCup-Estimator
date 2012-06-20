@@ -8,7 +8,7 @@
 
 clear all;
 
-steps = 800;
+steps = 1600;
 isRecording = true;
 % hint for videos: if the animation is stopped by ctr-c, you need to 
 % close the video Object manually through:
@@ -27,6 +27,9 @@ robot_step = str2func( [robotMdl '_step'] );
 
 measureMdl = 'robot_sight_of_view'; % Measurement Model to use
 robot_measure = str2func( [measureMdl '_measure'] );
+
+measureMdlB = 'ball_sight_of_view'; % Measurement Model to use
+ball_measure = str2func( [measureMdlB '_measure'] );
 
 filterMdl = 'robot_extended_kalman'; % Filter Model to use
 robot_filter = str2func( [filterMdl '_filter'] );

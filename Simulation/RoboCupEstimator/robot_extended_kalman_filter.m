@@ -16,6 +16,8 @@ function [robotStep Pstep vPinkStep Knorm] = ...
 
     global Noise RobotParam;
     
+    isEstimatingPink = true; % Wheter to estimate or measure the opponent
+                              % team's steering inputs.
     
 %--------- Init of covariance matrices and linearized matrices  ---------%
 
@@ -31,7 +33,6 @@ function [robotStep Pstep vPinkStep Knorm] = ...
 %--------- Approximation of the enemy's input  ---------%
 
     [dOmegaPink,vPinkStep] = input_approximation(robotMeasure,mValues,vPink);
-
     
 %-------- Enable usage of adaptive measurement covariance matrix  --------%    
 
@@ -67,7 +68,7 @@ function [robotStep Pstep vPinkStep Knorm] = ...
        A = [1 0 -v(i)*sin(robotEstimate(i).dir);0 1 v(i) * ...
            cos(robotEstimate(i).dir);0 0 1]; 
        
-       if(i>4)
+       if(isEstimatingPink && i>4)
            v(i) = vPinkStep(i-4);
            dOmega(i) = dOmegaPink(i-4);
            % applying estimated control values
